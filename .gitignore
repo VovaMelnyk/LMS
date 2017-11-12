@@ -1,0 +1,12 @@
+[Tt]humbs.db
+*.DS_Store
+logs
+*.log
+.idea/
+.vscode
+node_modules/
+npm-debug.log
+.sass-cache/
+*.css.map
+dist/
+package-lock.json
