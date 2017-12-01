@@ -5,17 +5,20 @@
 	@return #{$rems}rem;
 }
 // Colors:
-$white: #fff; 			//white
-$black: #000;			//black
-$red: #ff0000;			//text, stars, close
-$orange: #ff6c00;		//buttons, logo, icons
-$cyan: #00ffff;			//moduls theme, sidebar text
-$light-gray: #f5f5f5;	//content color
-$light-green: #00ff00;	//check mark, counters
-$dark-bg: #062037;		//bg for header, enter, registration
-$grey-bg: #e5e5e5;		//bg for main
-$dark-text: #202b52;	//
+$white: #fff; //white
+$black: #000; //black
+$red: #ff0000; //text, stars, close
+$orange: #ff6c00; //buttons, logo, icons
+$cyan: #00ffff; //moduls theme, sidebar text
+$light-gray: #f5f5f5; //content color
+$light-green: #00ff00; //check mark, counters
+$dark-bg: #062037; //bg for header, enter, registration
+$grey-bg: #e5e5e5; //bg for main
+$dark-text: #202b52; //
 $light-text: #808080;
 $grey-input: #838b93;
 $grey-pholder: #cbcbcb;
 $dark-button: #061f36;
+//fonts
+$title-font: "BebasNeueRegular", "Arial", sans-serif;
+$text-font: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
