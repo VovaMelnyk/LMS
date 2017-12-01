@@ -1,0 +1,11 @@
+// Function pixels to rems:
+// You can wright only rem(ANY), its means that you transformed ANYpx to rem in your code
+
+@function rem($px) {
+	$rems: $px / 16;
+	@return #{$rems}rem;
+}
+
+// Colors:
+$white: #fff;                  //white
+$black: #000;
