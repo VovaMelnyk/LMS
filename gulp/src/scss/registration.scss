@@ -1,0 +1,42 @@
+.registration {
+    display: none;
+    color: #fff;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 25px;
+        flex-direction: column;
+        text-align: right;
+        padding-right: 40px;
+    }
+
+    &__checkbox {
+        margin-left: 80px;
+        margin-right: 16px;
+    }
+
+    &__item {
+        min-height: 30px;
+        min-width: 50%;
+        margin-left: 40px;
+        margin-bottom: 20px;
+        color: #fff;
+        background-color: #717e8a;
+        justify-content: space-between;
+    }
+
+    &__social {
+        margin: 72px auto 24px;
+    }
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+}

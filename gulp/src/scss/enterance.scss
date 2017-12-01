@@ -1,0 +1,102 @@
+@import "mixins.scss";
+@import '_theme.scss';
+
+.enterance {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+
+    &__title {
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        color: #38ffff;
+        font-size: 40px;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+
+    &__email {
+        margin: 0 auto;
+    }
+
+    &__pass {
+        margin: 20px auto;
+    }
+
+    &__remember-pass {
+        padding-right: 40px;
+        font-size: 22px;
+    }
+
+    &__checkbox {
+        margin-right: 16px;
+    }
+
+    &__forgot-pass {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        text-decoration: none;
+        color: #38ffff;
+        font-size: 20px;
+
+        &:hover {
+            color: #f75300;
+        }
+    }
+}
+
+.email {
+    min-width: 60%;
+    min-height: 36px;
+    margin-left: 70px;
+    border: none;
+    background-color: #717a85;
+    font-size: 20px;
+}
+
+.pass {
+    min-width: 60%;
+    min-height: 36px;
+    margin-left: 30px;
+    border: none;
+    background-color: #717a85;
+    font-size: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin: auto;
+
+    &__link {
+        @include links;
+    }
+
+    &__icon {
+        &--facebook {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url('../img/facebook.svg')0 0/100% no-repeat;
+        }
+
+        &--google {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("../img/google.svg") 0 0/100% no-repeat;
+        }
+
+        &--linkedin {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url("../img/linkedin.svg") 0 0/100% no-repeat;
+        }
+    }
+}
