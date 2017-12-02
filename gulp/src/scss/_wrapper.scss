@@ -1,0 +1,7 @@
+.c-wrapper {
+    width: 100%;
+    background-color: $dark-bg;
+    &--light-gray {
+        background-color: $grey-bg;
+    }
+}
