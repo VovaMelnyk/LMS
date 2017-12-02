@@ -1,6 +1,6 @@
 .c-main {
-    min-height: 150px;
-    height: 720px;
+    display: flex;
     width: 100%;
+    min-height: 150px;
     background-color: $light-gray;
 }

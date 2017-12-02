@@ -1,7 +1,7 @@
 .c-main-block {
     display: flex;
-    flex-direction: row;
-    padding: 64px 0 112px;
+    padding: 64px 0 0;
+    min-height: 720px;
 
     &__c-main {
         margin-left: 32px;
