@@ -1,7 +1,8 @@
 .c-left-nav {
-    // width: 136px;
+    display: flex;
     min-height: 150px;
     background: $dark-button;
-    display: flex;
-    flex-basis: 18%;
+    flex-grow: 1;
+    // width: 136px;
+    // flex-basis: 18%;
 }
