@@ -30,7 +30,7 @@ obj/
 [Dd]ebug*/
 [Rr]elease*/
 Ankh.NoLoad
-
+.vscode/
 # WebStorm files
 .idea/
 
@@ -46,3 +46,5 @@ node_modules/
 # dist folder files
 
 dist/
+
+package-lock.json
