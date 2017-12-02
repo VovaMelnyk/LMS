@@ -1,6 +1,6 @@
 .c-main {
-    display: flex;
-    width: 100%;
     min-height: 150px;
     background-color: $light-gray;
+    flex-basis: 80%;
+    position: relative;
 }
