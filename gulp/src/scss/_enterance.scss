@@ -10,48 +10,52 @@
   color       : $white;
 
   font-family : $text-font;
-  
+
   &__btn {
     margin-top : 56px;
   }
-  
+
   &__email {
     margin-top : 72px;
 
     font-size  : 32px;
   }
-  
+
   &__pass {
     margin    : 40px auto 0;
 
     font-size : 32px;
   }
-  
+
   &__remember-pass {
     font-size     : 24px;
   }
-  
+
   &__checkbox {
     margin-top   : 40px;
     margin-right : 16px;
   }
-  
+
+  &__error {
+      margin-top: 64px;
+  }
+
   &__forgot-pass {
     display         : block;
 
-    margin-top      : 50px;
+    margin-top      : 16px;
 
     text-decoration : none;
 
     color           : $cyan;
 
     font-size       : 32px;
-    
+
     &:hover {
       color : #f75300;
     }
   }
-  
+
   &__social {
     margin : 40px auto 0;
   }
@@ -66,7 +70,7 @@
   background-color : $grey-input;
 
   font-size        : 32px;
-  
+
   &__lable {
     margin-left : 88px;
   }
@@ -81,7 +85,7 @@
   background-color : $grey-input;
 
   font-size        : 24px;
-  
+
   &__lable {
     margin-left : 24px;
   }
@@ -97,25 +101,32 @@
   justify-content : space-around;
 
   width           : 240px;
-  
+
   &__link {
     @include links;
   }
+}
+.a-error {
+    visibility: hidden;
+
+    color: $red;
+
+    font-size: 24px;
 }
 
 .icon {
   &:hover {
     background-color : $orange;
   }
-  
+
   &--facebook {
     background : url('../img/facebook.svg')0 0/100% no-repeat;
   }
-  
+
   &--google {
     background : url("../img/google.svg") 0 0/100% no-repeat;
   }
-  
+
   &--linkedin {
     background : url("../img/linkedin.svg") 0 0/100% no-repeat;
   }
