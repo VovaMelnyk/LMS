@@ -6,16 +6,24 @@
     color: #38ffff;
 
     font-size: 25px;
+
+    &:hover {
+        color: $orange;
+    }
 }
+
 .modal-window {
     position: absolute;
     top: 50%;
     left: 50%;
 
     display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    width: 35%;
-    padding: 40px 40px 100px;
+    width: 69%;
+    padding: 72px 0 80px;
 
     transform: translate(-50%, -50%);
 
@@ -32,7 +40,8 @@
 
     color: #38ffff;
 
-    font-size: 40px;
+    font-family:$title-font;
+    font-size: 91px;
     font-weight: 400;
 }
 
