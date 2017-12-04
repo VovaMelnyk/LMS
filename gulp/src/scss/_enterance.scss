@@ -1,0 +1,125 @@
+@import "mixins.scss";
+
+.enterance {
+    display: block;
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 28px;
+
+    &__title {
+        margin-bottom: 100px;
+
+        text-transform: uppercase;
+
+        color: #38ffff;
+
+        font-size: 40px;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+
+    &__email {
+        margin: 0 auto;
+    }
+
+    &__pass {
+        margin: 20px auto;
+    }
+
+    &__remember-pass {
+        padding-right: 40px;
+
+        font-size: 22px;
+    }
+
+    &__checkbox {
+        margin-right: 16px;
+    }
+
+    &__forgot-pass {
+        display: block;
+
+        margin-top: 50px;
+        margin-bottom: 40px;
+
+        text-decoration: none;
+
+        color: #38ffff;
+
+        font-size: 20px;
+
+        &:hover {
+            color: #f75300;
+        }
+    }
+}
+.icon {
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    // background-color: $orange;
+}
+
+.email {
+    min-width: 60%;
+    min-height: 36px;
+    margin-left: 70px;
+
+    border: none;
+    background-color: #717a85;
+
+    font-size: 20px;
+}
+
+.pass {
+    min-width: 60%;
+    min-height: 36px;
+    margin-left: 30px;
+
+    border: none;
+    background-color: #717a85;
+
+    font-size: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+
+    width: 30%;
+    margin: auto;
+
+    &__link {
+        @include links;
+    }
+}
+
+.icon {
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: #f75300;
+
+    &--facebook {
+        //  background: url('../img/facebook.svg')0 0/100% no-repeat;
+    }
+
+    &--google {
+        background: url("../img/google.svg") 0 0/100% no-repeat;
+    }
+
+    &--linkedin {
+        background: url("../img/linkedin.svg") 0 0/100% no-repeat;
+    }
+}

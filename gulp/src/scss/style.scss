@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'var';
+@import 'mixins';
 @import 'theme';
 @import 'header';
 @import 'container';
@@ -9,3 +10,5 @@
 @import 'left-nav';
 @import 'main';
 @import 'right-nav';
+@import 'modal-window';
+@import 'enterance';
