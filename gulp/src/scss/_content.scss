@@ -1,6 +1,6 @@
 .content {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+
+    min-height: 960px;
     padding: 64px 0 112px;
-    min-height: 720px;
 }

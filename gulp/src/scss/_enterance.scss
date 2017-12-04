@@ -3,41 +3,42 @@
 .enterance {
     display: block;
 
+    max-width: 608px;
+
     text-align: center;
 
-    color: #fff;
+    color: $white;
 
-    font-size: 28px;
+    font-family: $text-font;
 
     &__title {
-        margin-bottom: 100px;
-
-        text-transform: uppercase;
-
-        color: #38ffff;
-
-        font-size: 40px;
+        margin-top: 68px;
     }
 
     &__btn {
-        margin-top: 40px;
+        margin-top: 56px;
     }
 
     &__email {
-        margin: 0 auto;
+        margin-top: 72px;
+
+        font-size: 32px;
     }
 
     &__pass {
-        margin: 20px auto;
+        margin: 40px auto 0;
+
+        font-size: 32px;
     }
 
     &__remember-pass {
-        padding-right: 40px;
+        padding-right: 24px;
 
-        font-size: 22px;
+        font-size: 24px;
     }
 
     &__checkbox {
+        margin-top: 40px;
         margin-right: 16px;
     }
 
@@ -45,57 +46,57 @@
         display: block;
 
         margin-top: 50px;
-        margin-bottom: 40px;
 
         text-decoration: none;
 
-        color: #38ffff;
+        color: $cyan;
 
-        font-size: 20px;
+        font-size: 32px;
 
         &:hover {
             color: #f75300;
         }
     }
-}
-.icon {
-    display: block;
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-    // background-color: $orange;
+    &__social {
+        margin: 40px auto 0;
+    }
 }
 
 .email {
-    min-width: 60%;
-    min-height: 36px;
-    margin-left: 70px;
+    min-width: 432px;
+    min-height: 52px;
 
+    color: $white;
     border: none;
-    background-color: #717a85;
+    background-color: $grey-input;
 
-    font-size: 20px;
+    font-size: 32px;
+
+    &__lable {
+        margin-left: 88px;
+    }
 }
 
 .pass {
-    min-width: 60%;
-    min-height: 36px;
-    margin-left: 30px;
+    min-width: 432px;
+    min-height: 52px;
 
+    color: $white;
     border: none;
-    background-color: #717a85;
+    background-color: $grey-input;
 
-    font-size: 20px;
+    font-size: 24px;
+
+    &__lable {
+        margin-left: 24px;
+    }
 }
 
 .social {
     display: flex;
     justify-content: space-around;
 
-    width: 30%;
-    margin: auto;
+    width: 240px;
 
     &__link {
         @include links;
@@ -103,16 +104,12 @@
 }
 
 .icon {
-    display: block;
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-    background-color: #f75300;
+    &:hover {
+        background-color: $orange;
+    }
 
     &--facebook {
-        //  background: url('../img/facebook.svg')0 0/100% no-repeat;
+        background: url('../img/facebook.svg')0 0/100% no-repeat;
     }
 
     &--google {
