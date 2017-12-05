@@ -13,7 +13,7 @@ let count = 0;
 
 function createBall() {
 
-  var ball = document.createElement("DIV");
+  let ball = document.createElement("DIV");
   ball.innerText = item1[count];
   count = count + 1;
   main[0].appendChild(ball);
