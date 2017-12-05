@@ -1,0 +1,138 @@
+@import "mixins.scss";
+
+.a-registration  {
+  display     : block;
+
+  width: 67%;
+  ///background-color: rgba(140, 115, 115,05);
+
+  text-align  : center;
+display: flex;
+  color       : white;
+  flex-direction: column;
+
+  //font-family : $text-font;
+
+
+  &__btn {
+    margin-top : 56px;
+  }
+
+  &__email {
+    margin-top : 72px;
+
+    font-size  : 32px;
+  }
+
+  &__pass {
+    margin    : 40px auto 0;
+
+    font-size : 32px;
+  }
+
+  &__remember-pass {
+    font-size     : 24px;
+  }
+
+  &__checkbox {
+    margin-top   : 40px;
+    margin-right : 16px;
+  }
+
+  &__error {
+      margin-top: 64px;
+  }
+
+  &__forgot-pass {
+    display         : block;
+
+    margin-top      : 16px;
+
+    text-decoration : none;
+
+    color           : cyan;
+
+    font-size       : 32px;
+
+    &:hover {
+      color : #f75300;
+    }
+  }
+
+  &__social {
+    margin : 40px auto 0;
+  }
+
+
+.a-email {
+  min-width        : 432px;
+  min-height       : 52px;
+
+  color            : white;
+  border           : none;
+  background-color : grey;
+
+  font-size        : 32px;
+
+  &__lable {
+    margin-left : 88px;
+  }
+}
+
+.a-pass {
+  min-width        : 432px;
+  min-height       : 52px;
+
+  color            : white;
+  border           : none;
+  background-color : grey;
+
+  font-size        : 24px;
+
+  &__lable {
+    margin-left : 24px;
+  }
+}
+
+.a-checkbox {
+  width  : 16px;
+  height : 16px;
+}
+
+.a-social {
+  display         : flex;
+  justify-content : space-around;
+
+  width           : 240px;
+
+  &__link {
+    @include links;
+  }
+}
+.a-error {
+    visibility: hidden;
+
+    color: red;
+
+    font-size: 24px;
+}
+
+.icon {
+  &:hover {
+    background-color : orange;
+  }
+
+  &--facebook {
+    background : url('../img/facebook.svg')0 0/100% no-repeat;
+  }
+
+  &--google {
+    background : url("../img/google.svg") 0 0/100% no-repeat;
+  }
+
+  &--linkedin {
+    background : url("../img/linkedin.svg") 0 0/100% no-repeat;
+  }
+}
+
+}
