@@ -38,8 +38,10 @@
         (!document.hidden) ? timerStart()
         : timerStop()
     }
-    if (time) {
-        document.addEventListener("DOMContentLoaded", init);
-        document.addEventListener("visibilitychange", init);
-    }
+    document.addEventListener("DOMContentLoaded", ()=>{
+        if (time) {
+            init()
+            document.addEventListener("visibilitychange", init);
+        }
+    });
 })(document);
