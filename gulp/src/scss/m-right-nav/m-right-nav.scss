@@ -1,0 +1,39 @@
+.right-nav {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+}
+.m-right-nav__item {
+	position: relative;
+
+	width: 32px;
+	height: 32px;
+
+	background-size: contain;
+	&-chat {
+		background: url('../img/m-right-nav/chat.png')no-repeat;
+		background-size: 90%;
+		transition: linear 0.3s;
+	}
+	&:hover {
+		background-size: 100%;
+	}
+	&:hover::after {
+		position: absolute;
+
+		display: inline-block;
+		width: max-content;
+		padding: 4px 10px;
+
+		font-size: rem(14);
+		color: $black;
+
+		background: rgba(0, 255, 255, 0.7);
+		border-radius: 40px;
+		border-top-right-radius: 0;
+		content: attr(prompt);
+		transform: translate(-105%, 25%);
+	}
+}
