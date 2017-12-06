@@ -72,4 +72,4 @@ function moveBall(ball) {
 
 
 var i = 4;
-while (i--) createBall();
+///while (i--) createBall();

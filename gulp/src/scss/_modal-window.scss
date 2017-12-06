@@ -13,27 +13,18 @@
 }
 
 .modal-window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
 
-    display: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 
-    width: 69%;
-    padding: 72px 0 80px;
 
-    transform: translate(-50%, -50%);
 
-    background-color: #0a1829;
+
 
     &__close {
         top: 10px;
         right: 20px;
     }
-}
+
+
 
 .title {
     text-transform: uppercase;
@@ -47,4 +38,5 @@
 
 .a-content {
     position: relative;
+}
 }

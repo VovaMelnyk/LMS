@@ -1,133 +1,145 @@
 @import "mixins.scss";
 
-.a-enterance {
-  display     : block;
+.enterance-background {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  /* фиксированное поцизионирование */
+  cursor: default; /* тип курсара */
 
-  max-width   : 608px;
+  .modal-window__enterance {
+    background-color: #0a1829;
+    width: 50%;
+    min-width: 608px;
+    padding-top: 20px;
+    position: relative;
+    left: 20%;
+    top: 10%;
+    padding-bottom: 50px;
+    bottom: 10%;
+    text-align: center;
 
-  text-align  : center;
 
-  color       : $white;
+    .a-enterance {
 
-  font-family : $text-font;
 
-  &__btn {
-    margin-top : 56px;
-  }
+      text-align: center;
+      color: $white;
+      font-family: $text-font;
 
-  &__email {
-    margin-top : 72px;
+      &__btn {
+        margin-top: 56px;
+      }
 
-    font-size  : 32px;
-  }
+      &__email {
+        margin-top: 72px;
+        font-size: 32px;
+      }
 
-  &__pass {
-    margin    : 40px auto 0;
+      &__pass {
+        margin: 40px auto 0;
+        font-size: 32px;
+      }
 
-    font-size : 32px;
-  }
+      &__remember-pass {
+        font-size: 24px;
+      }
 
-  &__remember-pass {
-    font-size     : 24px;
-  }
+      &__checkbox {
+        margin-top: 40px;
+        margin-right: 16px;
+      }
 
-  &__checkbox {
-    margin-top   : 40px;
-    margin-right : 16px;
-  }
+      &__error {
+        margin-top: 64px;
+      }
 
-  &__error {
-      margin-top: 64px;
-  }
+      &__forgot-pass {
+        display: block;
+        margin-top: 16px;
+        text-decoration: none;
+        color: $cyan;
+        font-size: 32px;
 
-  &__forgot-pass {
-    display         : block;
+        &:hover {
+          color: #f75300;
+        }
+      }
 
-    margin-top      : 16px;
-
-    text-decoration : none;
-
-    color           : $cyan;
-
-    font-size       : 32px;
-
-    &:hover {
-      color : #f75300;
+      &__social {
+        margin: 40px auto 0;
+      }
     }
-  }
 
-  &__social {
-    margin : 40px auto 0;
-  }
-}
+    .a-email {
+      min-width: 432px;
+      min-height: 52px;
+      color: $white;
+      border: none;
+      background-color: $grey-input;
+      font-size: 32px;
 
-.a-email {
-  min-width        : 432px;
-  min-height       : 52px;
+      &__lable {
+        margin-left: 88px;
+      }
+    }
 
-  color            : $white;
-  border           : none;
-  background-color : $grey-input;
+    .a-pass {
+      min-width: 432px;
+      min-height: 52px;
+      color: $white;
+      border: none;
+      background-color: $grey-input;
+      font-size: 24px;
 
-  font-size        : 32px;
+      &__lable {
+        margin-left: 24px;
+      }
+    }
 
-  &__lable {
-    margin-left : 88px;
-  }
-}
+    .a-checkbox {
+      width: 16px;
+      height: 16px;
+    }
 
-.a-pass {
-  min-width        : 432px;
-  min-height       : 52px;
+    .a-social {
+      display: flex;
+      justify-content: space-around;
+      width: 240px;
 
-  color            : $white;
-  border           : none;
-  background-color : $grey-input;
+      &__link {
+        @include links;
+      }
+    }
 
-  font-size        : 24px;
+    .a-error {
+      visibility: hidden;
+      color: $red;
+      font-size: 24px;
+    }
 
-  &__lable {
-    margin-left : 24px;
-  }
-}
+    .icon {
+      &:hover {
+        background-color: $orange;
+      }
 
-.a-checkbox {
-  width  : 16px;
-  height : 16px;
-}
+      &--facebook {
+        background: url('../img/facebook.svg')0 0/100% no-repeat;
+      }
 
-.a-social {
-  display         : flex;
-  justify-content : space-around;
+      &--google {
+        background: url("../img/google.svg") 0 0/100% no-repeat;
+      }
 
-  width           : 240px;
-
-  &__link {
-    @include links;
-  }
-}
-.a-error {
-    visibility: hidden;
-
-    color: $red;
-
-    font-size: 24px;
-}
-
-.icon {
-  &:hover {
-    background-color : $orange;
-  }
-
-  &--facebook {
-    background : url('../img/facebook.svg')0 0/100% no-repeat;
-  }
-
-  &--google {
-    background : url("../img/google.svg") 0 0/100% no-repeat;
-  }
-
-  &--linkedin {
-    background : url("../img/linkedin.svg") 0 0/100% no-repeat;
+      &--linkedin {
+        background: url("../img/linkedin.svg") 0 0/100% no-repeat;
+      }
+    }
   }
 }
