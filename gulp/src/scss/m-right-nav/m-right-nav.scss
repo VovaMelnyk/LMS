@@ -17,6 +17,12 @@
 		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat;
 		background-size: 90%;
 	}
+	&-reminder {
+		transition: linear 0.3s;
+
+		background: url('../img/m-right-nav/remind-me-later.png')no-repeat;
+		background-size: 90%;
+	}
 	&-chat {
 		transition: linear 0.3s;
 
