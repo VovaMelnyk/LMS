@@ -29,8 +29,23 @@
 		background: url('../img/m-right-nav/chat.png')no-repeat;
 		background-size: 90%;
 	}
+	&-mentor {
+		transition: linear 0.3s;
+
+		background: url('../img/m-right-nav/ask-a-mentor.png')no-repeat;
+		background-size: 90%;
+	}
+	&-select {
+		transition: linear 0.3s;
+
+		background: url('../img/m-right-nav/select-text.png')no-repeat;
+		background-size: 90%;
+	}
 	&:hover {
 		background-size: 100%;
+	}
+	&-mentor:hover{
+		background: url('../img/m-right-nav/ask-a-mentor-hover.png')no-repeat;
 	}
 	&:hover::after {
 		position: absolute;
