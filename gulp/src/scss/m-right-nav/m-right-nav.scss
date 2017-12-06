@@ -4,50 +4,52 @@
 	flex-direction: column;
 	justify-content: space-around;
 }
+
 .m-right-nav__item {
 	position: relative;
-
 	width: 32px;
 	height: 32px;
-
 	background-size: contain;
+
 	&-favorites {
 		transition: linear 0.3s;
-
 		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat;
 		background-size: 90%;
 	}
+
 	&-reminder {
 		transition: linear 0.3s;
-
 		background: url('../img/m-right-nav/remind-me-later.png')no-repeat;
 		background-size: 90%;
 	}
+
+	&-forum {
+		transition: linear 0.3s;
+		background: url('../img/m-right-nav/forum.png')no-repeat;
+		background-size: 90%;
+	}
+
 	&-chat {
 		transition: linear 0.3s;
-
 		background: url('../img/m-right-nav/chat.png')no-repeat;
 		background-size: 90%;
 	}
+
 	&:hover {
 		background-size: 100%;
 	}
+
 	&:hover::after {
 		position: absolute;
-
 		display: inline-block;
-
 		width: max-content;
 		padding: 4px 10px;
-
 		content: attr(prompt);
 		transform: translate(-105%, 25%);
-
 		color: $black;
 		border-radius: 40px;
 		border-top-right-radius: 0;
 		background: rgba(0, 255, 255, 0.7);
-
 		font-size: rem(14);
 	}
 }
