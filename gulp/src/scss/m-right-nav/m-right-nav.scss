@@ -1,38 +1,41 @@
 .right-nav {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+
+	align-items: center;
 	justify-content: space-around;
 }
 
 .m-right-nav__item {
 	position: relative;
+
 	width: 32px;
 	height: 32px;
+
 	background-size: contain;
 
 	&-favorites {
-		transition: linear 0.3s;
-		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat;
+		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
 		background-size: 90%;
+		transition: linear 0.3s;
 	}
 
 	&-reminder {
-		transition: linear 0.3s;
-		background: url('../img/m-right-nav/remind-me-later.png')no-repeat;
+		background: url('../img/m-right-nav/remind-me-later.png')no-repeat center;
 		background-size: 90%;
+		transition: linear 0.3s;
 	}
 
 	&-forum {
-		transition: linear 0.3s;
-		background: url('../img/m-right-nav/forum.png')no-repeat;
+		background: url('../img/m-right-nav/forum.png')no-repeat center;
 		background-size: 90%;
+		transition: linear 0.3s;
 	}
 
 	&-chat {
-		transition: linear 0.3s;
-		background: url('../img/m-right-nav/chat.png')no-repeat;
+		background: url('../img/m-right-nav/chat.png')no-repeat center;
 		background-size: 90%;
+		transition: linear 0.3s;
 	}
 
 	&:hover {
@@ -41,15 +44,18 @@
 
 	&:hover::after {
 		position: absolute;
+
 		display: inline-block;
 		width: max-content;
 		padding: 4px 10px;
-		content: attr(prompt);
-		transform: translate(-105%, 25%);
+
+		font-size: rem(14);
 		color: $black;
+
+		background: rgba(0, 255, 255, 0.7);
 		border-radius: 40px;
 		border-top-right-radius: 0;
-		background: rgba(0, 255, 255, 0.7);
-		font-size: rem(14);
+		content: attr(prompt);
+		transform: translate(-105%, 25%);
 	}
 }
