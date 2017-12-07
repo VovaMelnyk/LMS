@@ -1,104 +1,55 @@
 .right-nav {
 	display: flex;
-<<<<<<< HEAD
 	flex-direction: column;
 
 	align-items: center;
 	justify-content: space-around;
 }
-
-=======
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
-}
->>>>>>> 442a37fdec6d7ae3396466b862f90422f11eebf5
 .m-right-nav__item {
 	position: relative;
 
 	width: 32px;
 	height: 32px;
 
-<<<<<<< HEAD
-	background-size: contain;
+	transition: linear 0.3s;
 
 	&-favorites {
 		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
-		background-size: 90%;
-		transition: linear 0.3s;
+		background-size: 90% 90%;
 	}
-
 	&-reminder {
 		background: url('../img/m-right-nav/remind-me-later.png')no-repeat center;
-		background-size: 90%;
-		transition: linear 0.3s;
+		background-size: 90% 90%;
 	}
-
 	&-forum {
 		background: url('../img/m-right-nav/forum.png')no-repeat center;
-		background-size: 90%;
-		transition: linear 0.3s;
+		background-size: 90% 90%;
 	}
-
 	&-chat {
 		background: url('../img/m-right-nav/chat.png')no-repeat center;
-		background-size: 90%;
-		transition: linear 0.3s;
-	}
-
-	&:hover {
-		background-size: 100%;
-	}
-
-=======
-	background-size: contain;
-	&-favorites {
-		transition: linear 0.3s;
-
-		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat;
-		background-size: 90%;
-	}
-	&-reminder {
-		transition: linear 0.3s;
-
-		background: url('../img/m-right-nav/remind-me-later.png')no-repeat;
-		background-size: 90%;
-	}
-	&-forum {
-		transition: linear 0.3s;
-		background: url('../img/m-right-nav/forum.png')no-repeat;
-		background-size: 90%;
-	}
-	&-chat {
-		transition: linear 0.3s;
-
-		background: url('../img/m-right-nav/chat.png')no-repeat;
-		background-size: 90%;
+		background-size: 90% 90%;
+		&:hover {
+			background: url('../img/m-right-nav/chat-hover.png')no-repeat center;
+		}
 	}
 	&-mentor {
-		transition: linear 0.3s;
-
-		background: url('../img/m-right-nav/ask-a-mentor.png')no-repeat;
-		background-size: 90%;
+		background: url('../img/m-right-nav/ask-a-mentor.png')no-repeat center;
+		background-size: 90% 90%;
+		&:hover {
+			background: url('../img/m-right-nav/ask-a-mentor-hover.png')no-repeat center;
+		}
 	}
 	&-select {
-		transition: linear 0.3s;
-
-		background: url('../img/m-right-nav/select-text.png')no-repeat;
-		background-size: 90%;
+		background: url('../img/m-right-nav/select-text.png')no-repeat center;
+		background-size: 90% 90%;
 	}
 	&:hover {
-		background-size: 100%;
+		background-size: 100% 100%;
+		transition: linear 0.3s;
 	}
-	&-mentor:hover{
-		background: url('../img/m-right-nav/ask-a-mentor-hover.png')no-repeat;
-	}
->>>>>>> 442a37fdec6d7ae3396466b862f90422f11eebf5
 	&:hover::after {
 		position: absolute;
 
-		display: inline-block;
-<<<<<<< HEAD
 		width: max-content;
 		padding: 4px 10px;
 
@@ -112,20 +63,3 @@
 		transform: translate(-105%, 25%);
 	}
 }
-=======
-
-		width: max-content;
-		padding: 4px 10px;
-
-		content: attr(prompt);
-		transform: translate(-105%, 25%);
-
-		color: $black;
-		border-radius: 40px;
-		border-top-right-radius: 0;
-		background: rgba(0, 255, 255, 0.7);
-
-		font-size: rem(14);
-	}
-}
->>>>>>> 442a37fdec6d7ae3396466b862f90422f11eebf5
