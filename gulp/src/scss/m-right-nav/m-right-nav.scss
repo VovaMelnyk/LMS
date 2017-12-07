@@ -1,4 +1,5 @@
-.right-nav {
+.m-right-nav {
+	padding: 8px 0;
 	display: flex;
 	flex-direction: column;
 
@@ -7,12 +8,15 @@
 }
 .m-right-nav__item {
 	position: relative;
-
+	display: block;
+	margin-bottom: 8px;
 	width: 32px;
 	height: 32px;
-
 	transition: linear 0.3s;
 
+	&:last-child {
+		margin-bottom: 0px;
+	}
 	&-favorites {
 		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
 	}
