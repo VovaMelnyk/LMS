@@ -2,41 +2,47 @@
     height: 128px;
     padding: 40px 0;
 }
+
 .c-logo {
-    font-family: $text-font;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 150%; 
-	width: 160px;
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	color: $dark-text;
-	text-transform: uppercase;
-	background: $dark-bg;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: $dark-text;
+    text-transform: uppercase;
+    background: $dark-bg;
 }
 
 .c-logo__elem {
-	width: 72px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    font-family: $text-font;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 8px;
 }
 
 .c-logo__elem-white {
-	background: $white;
+    background: $white;
 }
 
-.c-logo__elem-white:after {
-	content: "";
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	border-left: 16px solid $white;
-	position: absolute;
-	left: 157px;
+.c-logo__elem-white::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 16px solid $white;
+    position: absolute;
+    left: 150px;
+    top: 40px;
 }
+
 .c-logo__elem-orange {
-	background: $orange;
+    background: $orange;
 }
