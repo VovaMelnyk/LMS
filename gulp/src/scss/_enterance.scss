@@ -22,7 +22,7 @@
   }
 
   &__pass {
-    margin    : 40px auto 0;
+    margin-top: 40px;
 
     font-size : 32px;
   }
@@ -32,8 +32,7 @@
   }
 
   &__checkbox {
-    margin-top   : 40px;
-    margin-right : 16px;
+    margin   : 40px 16px 0 24px;
   }
 
   &__error {
@@ -62,23 +61,8 @@
 }
 
 .a-email {
-  min-width        : 432px;
-  min-height       : 52px;
-
-  color            : $white;
-  border           : none;
-  background-color : $grey-input;
-
-  font-size        : 32px;
-
-  &__lable {
-    margin-left : 88px;
-  }
-}
-
-.a-pass {
-  min-width        : 432px;
-  min-height       : 52px;
+  min-width        : 376px;
+  min-height       : 48px;
 
   color            : $white;
   border           : none;
@@ -87,10 +71,28 @@
   font-size        : 24px;
 
   &__lable {
-    margin-left : 24px;
+    margin-left : 88px;
   }
 }
 
+.a-pass {
+  min-width        : 376px;
+  min-height       : 48px;
+
+  color            : $white;
+  border           : none;
+  background-color : $grey-input;
+
+  font-size        : 24px;
+
+  &__lable {
+    margin-left : 32px;
+  }
+}
+
+.a-inputs-lable {
+    font-size: 30px;
+}
 .a-checkbox {
   width  : 16px;
   height : 16px;
