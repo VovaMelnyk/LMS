@@ -1,18 +1,9 @@
 .m-btn-test {
     display: block;
     margin-top: 24px;
-    width: 144px;
-    height: 40px;
-    text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    color: $white;
-    border-radius: 40px;
-    background-color: $orange;
     box-shadow: 0 0 2px $black;
-    font-family: $title-font;
-    font-size: 1.3rem;
-    line-height: 2;
+
 
     &:visited {
         color: $white;
