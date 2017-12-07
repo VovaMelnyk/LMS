@@ -1,4 +1,4 @@
-let modal = document.getElementsByClassName('modal-window__enterance');
+let modal = document.getElementsByClassName('modal-window__registration');
 
 
 let item1 = ["[password]", "<h>", "<p/>", "<h/>", "<>", "<>"];
@@ -6,13 +6,13 @@ let item1 = ["[password]", "<h>", "<p/>", "<h/>", "<>", "<>"];
 
 var W = 500,
   H = 500,
-  R = 20,
+
   S = 2;
 let position = modal[0].getBoundingClientRect();
 console.log(position.width);
 console.log("bottom " +position.bottom);
-console.log("left " +position.left);
-console.log("width " + modal[0].style.width);
+console.log("right " +position.right);
+console.log("left random" + (Math.floor(Math.random() * (position.right-position.left )+position.left)));
 
 
 var balls = [];
@@ -22,14 +22,16 @@ function createBall() {
 
   let ball = document.createElement("DIV");
   ball.innerText = item1[count];
-  console.log("randomTop " + item1[count] + " " + (Math.floor((Math.random() * (position.bottom - position.top)) + position.top)-position.top));
+  console.log("randomTop " + item1[count] + " " + (Math.floor(Math.random() * ((position.top +modal[0].style.height)-position.top )+position.top)));
   count = count + 1;
   modal[0].appendChild(ball);
 
-  ball.style.cssText = "margin-top: " + (Math.floor(Math.random() * 500 ))  +
-  "px; margin-left:" + (Math.floor(Math.random() * position.width-100))  +
+  ball.style.cssText = "left: " + (Math.floor(Math.random() * ((position.right-60)-position.left )+position.left))  +
+  "px; top:" + (Math.floor(Math.random() * ((position.bottom-40) -position.top ) +position.top))  +
   "px; " +
-    "px; position: absolute; z-index: -1; width: 30px; color: #3a8a94; background-color: red;  border-radius: " + R + "px";
+    "px; position: absolute; z-index: 2;   color: #04bcc2; font-size: 20px; ";
+    ball.classList.add('animTeg');
+
   ball.direction = Math.random() * 6.28;
   var pos = ball.getBoundingClientRect();
   ball.realTop = pos.top;
@@ -40,7 +42,7 @@ function createBall() {
 
 
   setInterval(function() {
-    //moveBall(ball)
+    moveBall(ball)
   }, 17);
   balls.push(ball);
 }
@@ -62,7 +64,7 @@ function moveBall(ball) {
   ball.realTop += Math.sin(ball.direction) * S;
   ball.realLeft += Math.cos(ball.direction) * S;
 
-  if (ball.realTop  > position.bottom+position.top || ball.realLeft > position.right || ball.realTop < ball.offsetTop || ball.realLeft < ball.offsetLeft) {
+  if (ball.realTop  > (position.bottom-40)|| ball.realLeft > (position.right-60) || ball.realTop < position.top || ball.realLeft < position.left) {
     ball.direction += Math.PI / 2;
     return moveBall(ball);
   }
@@ -71,5 +73,5 @@ function moveBall(ball) {
 }
 
 
-var i = 4;
+var i = 5;
 while (i--) createBall();
