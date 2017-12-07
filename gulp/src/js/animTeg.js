@@ -1,4 +1,4 @@
-let modal = document.getElementsByClassName('modal-window');
+let modal = document.getElementsByClassName('modal-window__enterance');
 
 
 let item1 = ["[password]", "<h>", "<p/>", "<h/>", "<>", "<>"];
@@ -72,4 +72,4 @@ function moveBall(ball) {
 
 
 var i = 4;
-///while (i--) createBall();
+while (i--) createBall();

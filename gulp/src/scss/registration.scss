@@ -1,8 +1,7 @@
 @import "mixins.scss";
 
-
-
 .registration-background {
+  padding: 50px 0;
   top: 0;
   right: 0;
   bottom: 0;
@@ -13,36 +12,129 @@
   background-color: rgba(0, 0, 0, 0.65);
   position: fixed;
   /* фиксированное поцизионирование */
-  cursor: default; /* тип курсара */
-
+  cursor: default;
+  /* тип курсара */
   .modal-window__registration {
     background-color: #0a1829;
-    width: 50%;
-    min-width: 608px;
+    margin: 0 auto;
+    width: 700px;
     padding-top: 20px;
-    position: relative;
-    left: 20%;
-    top: 10%;
     padding-bottom: 50px;
-    bottom: 10%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .a-registration__title {
 
-
-    .a-registration {
-
-
-      text-align: center;
-      color: white;
+      text-transform: uppercase;
+      color: #38ffff;
       font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-      &__title {
-          text-transform: uppercase;
-          color: #38ffff;
-          font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-          font-size: 60px;
-          font-weight: 400;
-      }
+      font-size: 70px;
+      font-weight: 400;
+
+    }
+  }
+  label {
+    color: white;
+    font-size: 32px;
+    font-family:"Museo Sans Cyrl W03 300", "Arial", sans-serif;
+  }
+
+  .a-registration__close {
+    position: relative;
+    border: 2 px solid green;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #38ffff;
+    width: 20px;
+    left: 670px;
+    font-size: 25px;
+
+    &:hover {
+        color: #ff6c00;
+    }
 
 
+  }
+
+  .form-window__registration {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 520px;
+    margin: 0 auto;
+    height: 500px;
+    text-align: center;
+    input {
+      margin-left: 20px;
+      line-height: 40px;
+      width: 300px;
+      background-color: #838b93;
+      border: none;
+      font-size: 35px;
+      font-family:"Museo Sans Cyrl W03 300", "Arial", sans-serif;
+    }
+.necessarily {
+  color: #ff6c00;
 }
+
+
+  .a-registration {
+    max-width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+    font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
+
+
+  }
+}
+.a-registration__checkbox {
+  font-size: 10px;
+  input {
+    width: 25px;
+    height: 25px;
+    color: #838b93;
+    border: none;
+  }
+}
+.a-registration__social {
+
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  width: 240px;
+  margin-top: 30px;
+
+  &__link {
+    @include links;
+  }
+}
+
+.icon {
+  &:hover {
+    background-color: #ff6c00;
+  }
+
+  &--facebook {
+    background: url('../img/facebook.svg')0 0/100% no-repeat;
+  }
+
+  &--google {
+    background: url("../img/google.svg") 0 0/100% no-repeat;
+  }
+
+  &--linkedin {
+    background: url("../img/linkedin.svg") 0 0/100% no-repeat;
+  }
+}
+.a-registration__btn {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+
 }
 }
