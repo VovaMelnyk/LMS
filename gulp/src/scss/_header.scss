@@ -33,14 +33,14 @@
 
 .c-logo__elem-white::after {
     content: "";
+    display: inline-block;
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-left: 16px solid $white;
-    position: absolute;
-    left: 150px;
-    top: 40px;
+    position: relative;
+    right: -17px;
 }
 
 .c-logo__elem-orange {
