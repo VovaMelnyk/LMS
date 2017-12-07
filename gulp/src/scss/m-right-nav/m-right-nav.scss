@@ -15,32 +15,29 @@
 
 	&-favorites {
 		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
-		background-size: 90% 90%;
 	}
 	&-reminder {
 		background: url('../img/m-right-nav/remind-me-later.png')no-repeat center;
-		background-size: 90% 90%;
 	}
 	&-forum {
 		background: url('../img/m-right-nav/forum.png')no-repeat center;
-		background-size: 90% 90%;
 	}
 	&-chat {
 		background: url('../img/m-right-nav/chat.png')no-repeat center;
-		background-size: 90% 90%;
 		&:hover {
 			background: url('../img/m-right-nav/chat-hover.png')no-repeat center;
 		}
 	}
 	&-mentor {
 		background: url('../img/m-right-nav/ask-a-mentor.png')no-repeat center;
-		background-size: 90% 90%;
 		&:hover {
 			background: url('../img/m-right-nav/ask-a-mentor-hover.png')no-repeat center;
 		}
 	}
 	&-select {
 		background: url('../img/m-right-nav/select-text.png')no-repeat center;
+	}
+	& {
 		background-size: 90% 90%;
 	}
 	&:hover {
