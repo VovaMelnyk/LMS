@@ -1,6 +1,10 @@
 .header {
     height: 128px;
     padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .c-logo {
@@ -43,4 +47,10 @@
 
 .c-logo__elem-orange {
     background: $orange;
+}
+
+.c-photo__student {
+    width: 50px;
+    height: 50px;
+    border-radius: 25em;
 }
