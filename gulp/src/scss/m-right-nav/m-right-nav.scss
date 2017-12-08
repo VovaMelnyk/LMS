@@ -1,0 +1,66 @@
+.m-right-nav {
+	padding: 8px 0;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: space-around;
+}
+.m-right-nav__item {
+	position: relative;
+	display: block;
+	margin-bottom: 8px;
+	width: 32px;
+	height: 32px;
+	transition: linear 0.3s;
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	&-favorites {
+		background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
+	}
+	&-reminder {
+		background: url('../img/m-right-nav/remind-me-later.png')no-repeat center;
+	}
+	&-forum {
+		background: url('../img/m-right-nav/forum.png')no-repeat center;
+	}
+	&-chat {
+		background: url('../img/m-right-nav/chat.png')no-repeat center;
+		&:hover {
+			background: url('../img/m-right-nav/chat-hover.png')no-repeat center;
+		}
+	}
+	&-mentor {
+		background: url('../img/m-right-nav/ask-a-mentor.png')no-repeat center;
+		&:hover {
+			background: url('../img/m-right-nav/ask-a-mentor-hover.png')no-repeat center;
+		}
+	}
+	&-select {
+		background: url('../img/m-right-nav/select-text.png')no-repeat center;
+	}
+	& {
+		background-size: 90% 90%;
+	}
+	&:hover {
+		background-size: 100% 100%;
+		transition: linear 0.3s;
+	}
+	&:hover::after {
+		position: absolute;
+
+		width: max-content;
+		padding: 4px 10px;
+
+		font-size: rem(14);
+		color: $black;
+
+		background: rgba(0, 255, 255, 0.7);
+		border-radius: 40px;
+		border-top-right-radius: 0;
+		content: attr(prompt);
+		transform: translate(-105%, 25%);
+	}
+}
