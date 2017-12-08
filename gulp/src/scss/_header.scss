@@ -22,25 +22,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 50px;
-    text-align: center;
-    padding-left: 8px;
 }
 
 .c-logo__elem-white {
     background: $white;
+    padding-left: 32px;
 }
 
 .c-logo__elem-white::after {
     content: "";
-    display: inline-block;
+    display: block;
     width: 0;
     height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-left: 16px solid $white;
     position: relative;
-    right: -17px;
+    right: -5px;
 }
 
 .c-logo__elem-orange {
