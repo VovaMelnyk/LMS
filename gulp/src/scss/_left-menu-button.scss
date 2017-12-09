@@ -1,17 +1,19 @@
 .container-button {
     display: flex;
     min-height: 150px;
-    flex-basis: 12%;
+    min-width: 120px;
+    flex-basis: 100%;
+    background-color: $grey-pholder;
 }
+
 .c-left-menu-button {
-    padding: 8px 32px;
+    padding: 8px 16px;
     letter-spacing: 2.25px;
     text-transform: uppercase;
     border: none;
     border-radius: 15px;
-
-
 }
+
 .c-title-button {
     color: $light-green;
     font-family: $title-font;
