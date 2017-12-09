@@ -1,9 +1,11 @@
-.container-button {
+.c-container-button {
     display: flex;
     min-height: 150px;
-    min-width: 120px;
-    flex-basis: 100%;
-    background-color: $grey-pholder;
+    min-width: 100%;
+    background-color: $light-gray;
+    box-shadow: 4px 0 8px $grey-pholder;
+
+
 }
 
 .c-left-menu-button {
@@ -11,11 +13,12 @@
     letter-spacing: 2.25px;
     text-transform: uppercase;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
+    background-color: $dark-button;
 }
 
 .c-title-button {
-    color: $light-green;
+    color: $cyan;
     font-family: $title-font;
     font-size: 14px;
 }
