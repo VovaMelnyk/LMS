@@ -1,14 +1,13 @@
 @import '_left-nav.scss';
 
 .c-container-button {
-    // display: flex;
+
     min-height: 48px;
-    // min-width: 100%;
+
     background-color: $dark-bg;
     border-radius: 8px;
 
-    // padding: 13px 10px;
-
+    margin-bottom: 8px;
 }
 
 .c-container-item {
@@ -18,18 +17,7 @@
     border: none;
     color: $cyan;
     font-family: $title-font;
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2.25px;
 }
-
-
-
-.container-button ul {
-    list-style: none;
-    // display: block;
-}
-// .container-button ul li input[type=checkbox] {
-//     position: absolute;
-//     cursor: pointer;
-// }
