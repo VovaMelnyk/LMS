@@ -17,14 +17,14 @@
         right: rem(10);
     }
 
-    &__enterance {
-        display: block;
+    &__entrance {
+        display: none;
 
         margin: 0 auto;
     }
 
     &__registration {
-        display: none;
+        display: block;
 
         margin: 0 auto;
     }
