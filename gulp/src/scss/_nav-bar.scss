@@ -1,0 +1,22 @@
+.header__nav-bar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 208px;
+    height: 48px;
+    margin-left: 192px;
+}
+
+.header__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    border-radius: 50%;
+    background: $orange;
+}
+
+.header__icon-img {
+    width: 32px;
+    height: 32px;
+}
