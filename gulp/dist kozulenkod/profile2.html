@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/profile2.css">
-    <title>LMS</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="header">
-                _header</div>
-        </div>
-    </div>
-    <div class="wrapper wrapper--light-gray">
-        <div class="container">
-            <div class="content">
-                <div class="left-nav">
-                    _left-nav
-                </div>
-                <div class="main">
-                    _main
-                    <div class="right-nav">
-                        _right-nav
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<main>
+	<div class="profile-wrapper">
+		<div class="photo-block">
+			<div class="photo-block--icon icon shad"></div>
+			<div class="photo-block--icon-info">
+				<p class="block-heading-text">Изменить фото профиля</p>
+				<input type="text" class="photo-block--icon-info--input shad input-st" placeholder="Сделать фото">
+				<input type="text" class="photo-block--icon-info--input shad input-st" placeholder="Загрузить фото">
+			</div>
+		</div>
+		<div class="info-block">
+			<div class="info-block--main-info">
+				<p class="block-heading-text">Основная информация</p>
+				<input type="text" class="info-block--input shad input-st" placeholder="Имя">
+				<input type="text" class="info-block--input shad input-st" placeholder="Фамилия">
+				<input type="text" class="info-block--input shad input-st" placeholder="email">
+			</div>
+			<div class="info-block--pass-info">
+				<p class="block-heading-text">Изменить пароль</p>
+				<input type="text" class="info-block--input shad input-st" placeholder="Старый пароль">
+				<input type="text" class="info-block--input shad input-st" placeholder="Новый пароль">
+				<input type="text" class="info-block--input shad input-st" placeholder="Повторить новый пароль">
+			</div>
+		</div>
+		<div class="social-block">
+			<p class="block-heading-text">Социальные сети</p>
+			<div class="social-block--inputs">
+				<div class="social-block--inputs-block">
+					<div class="social-block--inputs-block--icon icon"><img src="img/facebook.png" alt=""></div>
+					<input type="text" class="social-block--inputs-block--input input-st shad">
+				</div>
+				<div class="social-block--inputs-block">
+					<div class="social-block--inputs-block--icon icon"><img src="img/google.png" alt=""></div>
+					<input type="text" class="social-block--inputs-block--input input-st shad">
+				</div>
+				<div class="social-block--inputs-block">
+					<div class="social-block--inputs-block--icon icon"><img src="img/in.png" alt=""></div>
+					<input type="text" class="social-block--inputs-block--input input-st shad">
+				</div>
+			</div>
+		</div>
+		<div class="button-block">
+			<button class="button-big">сохранить</button>
+		</div>
+	</div>
+	</main>
 </body>
-
 </html>

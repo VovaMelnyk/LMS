@@ -1,0 +1,67 @@
+.profile-wrapper {
+	max-width: 560px;
+}
+.photo-block {
+	margin-bottom: 32px;
+}
+.photo-block--icon {
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin-right: 16px;
+	background-color: $grey-bg;
+}
+.shad {
+	box-shadow: 3px 3px 6px $grey-bg;
+}
+.block-heading-text {
+	margin-bottom: 16px;
+	font-family: $text-font;
+	color: $orange;
+}
+.input-st {
+	display: block;
+	width: 180px;
+	height: 32px;
+	margin-bottom: 16px;
+	padding-left: 24px;
+	font-family: $text-font;
+	font-size: 18px;
+	color: $dark-text;
+	border: 0;
+	&::placeholder {
+		color: $grey-pholder;
+	}
+}
+.info-block {
+	display: flex;
+	margin-bottom: 16px;
+	justify-content: space-between;
+}
+.info-block--input {
+	width: 264px;
+}
+.social-block {
+	margin-bottom: 40px;
+}
+.social-block--inputs {
+	display: flex;
+	justify-content: space-between;
+}
+.social-block--inputs-block--icon {
+	float: left;
+	width: 32px;
+	height: 32px;
+	margin-right: 4px;
+	padding: 2px;
+	text-align: center;
+	background-color: transparent;
+	border: 2px solid $dark-text;
+}
+.social-block--inputs-block--input {
+	width: 136px;
+}
+
+.button-block {
+	text-align: center;
+}
