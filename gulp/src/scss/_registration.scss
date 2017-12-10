@@ -1,0 +1,82 @@
+.a-registration {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: rem(608);
+    text-align: center;
+    color: $white;
+    font-family: $text-font;
+
+    &__title {
+        align-self: center;
+    }
+
+    &__name {
+        @include regInput;
+    }
+
+    &__lastname {
+        @include regInput;
+    }
+
+    &__email {
+        @include regInput;
+    }
+
+    &__password {
+        @include regInput;
+    }
+
+    &__password--confirm {
+        @include regInput;
+    }
+
+    &__private {
+        font-size: 24px;
+        margin: 20px 212px 0 0;
+
+        &--checkbox {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__label {
+        text-align: right;
+        vertical-align: super;
+    }
+
+    &__btn {
+        margin-top: 56px;
+        align-self: center;
+    }
+}
+
+.star {
+    margin: -20px 30px 0 -3px;
+    color: red;
+
+    &__last {
+        margin: -50px 30px 0 -3px;
+        color: red;
+    }
+
+    &__private {
+        color: red;
+        margin: 0;
+    }
+}
+
+.success {
+    margin: 0 -40px 0 20px;
+}
+
+.a-input {
+    max-width: 432px;
+    min-height: 52px;
+    padding-left: 16px;
+    color: $white;
+    border: none;
+    background-color: $grey-input;
+    font-size: 32px;
+}
