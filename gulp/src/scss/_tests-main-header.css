@@ -1,3 +1,54 @@
-.t-title__subtitle {
-    color: red;
+.t.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 200 px;
 }
+.t-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__subtitle {
+        font-family: $text-font;
+        /*font-weight: 400;*/
+        font-size: 35px;
+        color: $light-text;
+    }
+    &__number {
+        font-family: $title-font;
+        font-size: 58px;
+        color: $dark-text;
+    }
+}
+
+.t-theme {
+    font-family: $title-font;
+    font-size: 58px;
+    background-color: $cyan;
+    color: $dark-text;
+}
+.t-timer {
+    font-family: $text-font;
+    font-size: 10px;
+    color: $dark-text;
+
+}
+
+
+
+
+/*<div class="t-header">
+    <div class="t-title">  <!-- заголовок тестов -->
+        <h1 class="t-title__subtitle">Тесты</h1>
+        <h2 class="t-title__number">Тема 2</h2>
+    </div>
+    <div class="t-theme">
+        <h2 class="t-theme__name">[XXXXXX_]</h2>
+    </div>
+    <div class="t-timer">
+        <p class="t-timer__time">15 m</p>
+        <p class="t-timer__text">на прохождение</p>
+        <img class="t-timer__clock" src="" alt="clock-img">
+    </div>
+</div>*/
