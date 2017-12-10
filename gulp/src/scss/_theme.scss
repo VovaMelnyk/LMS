@@ -43,11 +43,12 @@
 
     width: rem(40);
     height: rem(40);
-    padding-top: rem(4);
 
     text-decoration: none;
 
     color: $orange;
+    border: rem(3) solid transparent;
+    border-radius: 50%;
 
     font-size: rem(25);
 
