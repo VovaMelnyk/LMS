@@ -17,7 +17,7 @@ var path = {
   src : {
       html: 'src/*.html',
       sass: 'src/scss/**/*.scss',
-      js: 'src/js/*.js',
+      js: 'src/js/**/*.js',
       img: 'src/img/**/*.+(png|jpg|gif|svg)',
       fonts: 'src/fonts/**/*.*'
   },
@@ -51,7 +51,7 @@ var serverConfig = {
       gulp.src(path.src.html)
       .pipe(rigger())
       .pipe(gulp.dest(path.dist.html))
-      .pipe(browserSync.reload({stream: true}))    
+      .pipe(browserSync.reload({stream: true}))
   });
 
   // sass to css
@@ -81,7 +81,7 @@ var serverConfig = {
       .pipe(browserSync.reload({stream: true}));
   })
 
-  // img 
+  // img
   gulp.task('bundleImg', function() {
       return gulp.src(path.src.img)
       .pipe(imagemin({
