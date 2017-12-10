@@ -1,4 +1,4 @@
-.header__nav-bar {
+.c-header__nav-bar {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -7,16 +7,25 @@
     margin-left: 192px;
 }
 
-.header__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.c-header__icon {
     width: 48px;
     border-radius: 50%;
-    background: $orange;
-}
 
-.header__icon-img {
-    width: 32px;
-    height: 32px;
+    &-calendar {
+        background: url(../img/calendar-icon.svg) no-repeat center;
+        background-size: 40px 40px;
+        background-color: $orange;
+    }
+
+    &-chat {
+        background: url(../img/chat-icon.svg) no-repeat center;
+        background-size: 32px 32px;
+        background-color: $orange;
+    }
+
+    &-billboard {
+        background: url(../img/billboard-icon.svg) no-repeat center;
+        background-size: 32px 32px;
+        background-color: $orange;
+    }
 }
