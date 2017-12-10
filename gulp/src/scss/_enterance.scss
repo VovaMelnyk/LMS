@@ -48,6 +48,7 @@
 
         &:hover {
             color: $orange;
+            
         }
     }
 
@@ -69,8 +70,9 @@
 
     &__input {
         width: 68%;
+        padding-left: 8px;
 
-        color: $white;
+        color: $black;
         border: none;
         background-color: $grey-input;
 

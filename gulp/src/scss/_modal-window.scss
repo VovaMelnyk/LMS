@@ -1,11 +1,10 @@
-
-
 .modal-window {
     position: absolute;
     top: 50%;
     left: 50%;
 
     width: 50%;
+    min-width: 800px;
     padding: 72px 100px 80px;
 
     transform: translate(-50%, -50%);
@@ -17,6 +16,7 @@
         top: 10px;
         right: 20px;
     }
+
     &__enterance {
         display: block;
 
@@ -27,20 +27,28 @@
         display: none;
 
         margin: 0 auto;
-
     }
 }
+
 .close {
     position: absolute;
 
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+
     text-decoration: none;
 
-    color: #38ffff;
+    color: $orange;
 
     font-size: 25px;
 
     &:hover {
-        color: $orange;
+        cursor: default;
+
+        color: $cyan;
+        border: 3px solid $orange;
+        border-radius: 50%;
     }
 }
 
@@ -49,7 +57,7 @@
 
     color: #38ffff;
 
-    font-family:$title-font;
+    font-family: $title-font;
     font-size: 91px;
     font-weight: 400;
 }
