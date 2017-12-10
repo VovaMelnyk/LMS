@@ -3,7 +3,7 @@
 .a-enterance {
     display: block;
 
-    max-width: 608px;
+    max-width: rem(608);
 
     text-align: center;
 
@@ -12,48 +12,43 @@
     font-family: $text-font;
 
     &__btn {
-        margin-top: 56px;
+        margin-top: rem(56);
     }
 
     &__input-block {
-        margin-top: 40px;
+        margin-top: rem(40);
 
         &--first {
-            margin-top: 88px;
+            margin-top: rem(88);
         }
     }
 
     &__remember-pass {
-        font-size: 24px;
-    }
-
-    &__checkbox {
-        margin: 40px 16px 0 24px;
+        font-size: rem(24);
     }
 
     &__error {
-        margin-top: 64px;
+        margin-top: rem(64);
     }
 
     &__forgot-pass {
         display: block;
 
-        margin-top: 16px;
+        margin-top: rem(16);
 
         text-decoration: none;
 
         color: $cyan;
 
-        font-size: 32px;
+        font-size: rem(32);
 
         &:hover {
             color: $orange;
-            
         }
     }
 
     &__social {
-        margin: 40px auto 0;
+        margin: rem(40) auto 0;
     }
 }
 
@@ -65,31 +60,49 @@
     width: 100%;
 
     &__label {
-        font-size: 32px;
+        font-size: rem(32);
     }
 
     &__input {
         width: 68%;
-        padding-left: 8px;
+        padding-left: rem(8);
 
         color: $black;
         border: none;
         background-color: $grey-input;
 
-        font-size: 32px;
+        font-size: rem(32);
     }
 }
 
-.a-checkbox {
-    width: 16px;
-    height: 16px;
+.a-checkbox-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: rem(32);
+    padding-right: rem(40);
+
+    &__label {
+        font-size: rem(24);
+    }
+
+    &__checkbox {
+        display: block;
+
+        width: rem(16);
+        height: rem(16);
+        margin-right: rem(16);
+        margin-left: rem(64);
+    }
 }
+
 
 .a-social {
     display: flex;
     justify-content: space-around;
 
-    width: 240px;
+    width: rem(240);
 
     &__link {
         @include links;
@@ -101,7 +114,7 @@
 
     color: $red;
 
-    font-size: 24px;
+    font-size: rem(24);
 }
 
 .icon {
