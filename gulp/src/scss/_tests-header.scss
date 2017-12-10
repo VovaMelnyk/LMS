@@ -1,0 +1,49 @@
+$blue : #3F4869;
+
+
+.t-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 40px;
+}
+
+.t-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+
+	&__subtitle {
+		font-size: 35px;
+		color: #949494;
+		font-family: MuseoSansCyrl, Sans-serif;
+	}
+
+	&__number {
+		font-size: 58px;
+		color: $blue;
+		display: inline-block;
+		font-family: BebasNeueRegular, Sans-serif;
+	}
+
+	&__name {
+		@extend .t-title__number;
+		margin-left: 176px;
+		background: #00FFFF;
+	}
+
+}
+
+.t-thumb {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	&__minutes {
+		padding: 10px;
+	}
+}

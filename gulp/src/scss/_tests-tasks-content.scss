@@ -1,3 +1,55 @@
-.t-content__question {
-    color: green;
+.t-question {
+	align-items:stretch;
+	text-align: center;
+	font-family: "MuseoSansCyrl";
+	font-size: 35px;
+
+	&__point {
+		color: #FF6C00;
+		text-transform: uppercase;
+		font-size: 36px;
+	}
+
+
+  	&__task {
+		font-size: 36px;
+	}
 }
+
+.t-answers {
+	/*text-align: center;*/
+	display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:flex-start;
+
+	&__choice {
+		font-size: 24px;
+		padding: 12px 8px;
+	}
+
+	&__item {
+		background: green;
+	}
+}
+
+.t-navigation {
+	text-align: center;
+	font-size: 24px;
+
+	&__arrow {
+		font-weight: 900;
+	    font-size: 40px;
+	}
+
+	&__number {
+		background: #E5E5E5;
+		padding: 0 10px;
+		font-size: 16px;
+
+		&--blue {
+			background: #06FFFF;
+		}
+	}
+}
+
