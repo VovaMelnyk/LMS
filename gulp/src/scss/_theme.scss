@@ -1,31 +1,48 @@
 .button-big {
-    padding: 16px 72px;
-    letter-spacing: 2.25px;
+    padding: rem(16) rem(72);
+    letter-spacing: rem(2.25);
     text-transform: uppercase;
     color: $white;
     border: none;
-    border-radius: 10px;
+    border-radius: rem(10);
     background-color: $orange;
     font-family: $title-font;
-    font-size: 45px;
+    font-size: rem(45);
 }
 
 .button-small {
-    padding: 8px 32px;
-    letter-spacing: 2.25px;
+    padding: rem(8) rem(32);
+    letter-spacing: rem(2.25);
     text-transform: uppercase;
     color: $white;
     border: none;
-    border-radius: 15px;
+    border-radius: rem(15);
     background-color: $orange;
     font-family: $title-font;
-    font-size: 14px;
+    font-size: rem(14);
 }
 
 .icon {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: $orange;
+}
+
+.close {
+    position: absolute;
+    width: rem(40);
+    height: rem(40);
+    padding-top: rem(4);
+    text-decoration: none;
+    color: $orange;
+    font-size: rem(25);
+
+    &:hover {
+        cursor: default;
+        color: $cyan;
+        border: rem(3) solid $orange;
+        border-radius: 50%;
+    }
 }

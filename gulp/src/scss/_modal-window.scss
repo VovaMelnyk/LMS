@@ -2,16 +2,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50%;
-    min-width: 800px;
-    padding: 72px 100px 80px;
+    width: 69%;
+    min-width: rem(800);
+    padding: rem(72) rem(100) rem(80);
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: #0a1829;
 
     &__close {
-        top: 10px;
-        right: 20px;
+        top: rem(10);
+        right: rem(10);
     }
 
     &__enterance {
@@ -46,7 +46,7 @@
     text-transform: uppercase;
     color: #38ffff;
     font-family: $title-font;
-    font-size: 91px;
+    font-size: rem(91);
     font-weight: 400;
 }
 

@@ -5,8 +5,9 @@
     justify-content: flex-end;
     margin-top: 48px;
     font-size: 32px;
-    @mixin links {
-        display: block;
-        text-decoration: none;
-        color: $white;
-    }
+}
+@mixin links {
+    display: block;
+    text-decoration: none;
+    color: $white;
+}
