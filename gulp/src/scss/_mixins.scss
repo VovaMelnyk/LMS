@@ -3,3 +3,11 @@
     color: #fff;
     text-decoration: none;
 }
+@mixin regInput {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 48px;
+    font-size: 32px;
+}
