@@ -1,5 +1,6 @@
 //tests variables
-$header-size: 190px;
+$header-size: 190px; // нельзя задавать высоту если что padding
 $content-size: 430px;
 $footer-size: 100px;
 $footer-font:  24px;
+// файл с переменными не надо
