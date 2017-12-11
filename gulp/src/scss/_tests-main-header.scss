@@ -40,12 +40,14 @@
         font-family: $text-font;
         font-size: 10px;
         color: $dark-text;
+        text-align: right;
     }
     &__clock {
-        background: url(../img/header-img/clock.png)no-repeat;
-		background-size: contain;
+        min-height: 50px;
+        background-image: url(src/img/header_img/clock.png);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
-
 }
 
 
