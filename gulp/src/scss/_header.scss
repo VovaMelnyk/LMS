@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    height: 130px;
+    height: 128px;
     padding: 40px 0;
 }
 
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     width: 160px;
-    height: 50px;
+    // height: 50px;
     color: $dark-text;
     text-transform: uppercase;
     background: $dark-bg;
@@ -18,24 +18,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 72px;
-        font-family: Arial;
+        width: 70px;
+        font-family: Arial, sans-serif;
         font-size: 30px;
         font-weight: 900;
         letter-spacing: 4px;
 
         &-white {
             justify-content: flex-start;
-            padding-left: 14px;
+            padding-left: 12px;
             background: $white;
 
             &::after {
                 display: block;
                 width: 0;
                 height: 0;
-                border-top: 25px solid transparent;
-                border-bottom: 25px solid transparent;
-                border-left: 16px solid $white;
+                border-top: 24px solid transparent;
+                border-bottom: 24px solid transparent;
+                border-left: 18px solid $white;
                 content: "";
             }
         }
@@ -46,7 +46,6 @@
     }
 }
 .c-header__profile-photo {
-    width: 50px;
-    height: 50px;
+    width: 48px;
     border-radius: 50%;
 }
