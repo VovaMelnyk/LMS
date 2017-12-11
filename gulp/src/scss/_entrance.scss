@@ -1,0 +1,139 @@
+@import "mixins.scss";
+
+.a-entrance {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: rem(608);
+margin: auto;
+
+    text-align: center;
+
+    color: $white;
+
+    font-family: $text-font;
+
+    &__btn {
+        margin-top: rem(56);
+    }
+
+    &__input-block {
+        margin-top: rem(40);
+
+        &--first {
+            margin-top: rem(88);
+        }
+    }
+
+    &__remember-pass {
+        font-size: rem(24);
+    }
+
+    &__error {
+        margin-top: rem(64);
+    }
+
+    &__forgot-pass {
+        display: block;
+
+        margin-top: rem(16);
+
+        text-decoration: none;
+
+        color: $cyan;
+
+        font-size: rem(32);
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__social {
+        margin: rem(40) auto 0;
+    }
+}
+
+.a-input-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    &__label {
+        font-size: rem(32);
+    }
+
+    &__input {
+        width: 68%;
+        padding-left: rem(8);
+
+        color: $black;
+        border: none;
+        background-color: $grey-input;
+
+        font-size: rem(32);
+    }
+}
+
+.a-checkbox-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: rem(32);
+    padding-right: rem(40);
+
+    &__label {
+        font-size: rem(24);
+    }
+
+    &__checkbox {
+        display: block;
+
+        width: rem(16);
+        height: rem(16);
+        margin-right: rem(16);
+        margin-left: rem(64);
+    }
+}
+
+
+.a-social {
+    display: flex;
+    justify-content: space-around;
+
+    width: rem(240);
+
+    &__link {
+        @include links;
+    }
+}
+
+.a-error {
+    visibility: hidden;
+
+    color: $red;
+
+    font-size: rem(24);
+}
+
+.icon {
+    &:hover {
+        background-color: $orange;
+    }
+
+    &--facebook {
+        background: url('../img/facebook.svg')0 0/100% no-repeat;
+    }
+
+    &--google {
+        background: url("../img/google.svg") 0 0/100% no-repeat;
+    }
+
+    &--linkedin {
+        background: url("../img/linkedin.svg") 0 0/100% no-repeat;
+    }
+}
