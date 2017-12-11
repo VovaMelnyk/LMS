@@ -35,35 +35,25 @@
     }
 }
 .t-timer {
-    display:flex;
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+    align-items: start;
+    padding-right: 36px;
+
     &__time {
+        padding-top: 30px;
         font-family: $text-font;
         font-size: 10px;
+        font-weight: 500;
         color: $dark-text;
         text-align: right;
+
     }
     &__clock {
-        min-height: 50px;
-        background-image: url(src/img/header_img/clock.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+        padding-top: 20px;
+        // background-image: url(src/img/header_img/clock.png);
+        // background-repeat: no-repeat;
+        // background-size: contain;
     }
 }
-
-
-
-
-/*<div class="t-header">
-    <div class="t-title">  <!-- заголовок тестов -->
-        <h1 class="t-title__subtitle">Тесты</h1>
-        <h2 class="t-title__number">Тема 2</h2>
-    </div>
-    <div class="t-theme">
-        <h2 class="t-theme__name">[XXXXXX_]</h2>
-    </div>
-    <div class="t-timer">
-        <p class="t-timer__time">15 m</p>
-        <p class="t-timer__text">на прохождение</p>
-        <img class="t-timer__clock" src="" alt="clock-img">
-    </div>
-</div>*/
