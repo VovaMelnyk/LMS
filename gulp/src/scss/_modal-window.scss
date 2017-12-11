@@ -8,7 +8,6 @@
     padding: rem(72) rem(100) rem(80);
 
     transform: translate(-50%, -50%);
-    text-align: center;
 
     background-color: $dark-bg;
 
@@ -17,17 +16,17 @@
         right: rem(10);
     }
 
-    &__enterance {
-        display: block;
-
-        margin: 0 auto;
-    }
-
-    &__registration {
-        display: none;
-
-        margin: 0 auto;
-    }
+    // // &__enterance {
+    // //     display: block;
+    // //
+    // //     margin: 0 auto;
+    // // }
+    //
+    // &__registration {
+    //     display: none;
+    //
+    //     margin: 0 auto;
+    // }
 }
 
 

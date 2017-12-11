@@ -1,9 +1,12 @@
 @import "mixins.scss";
 
-.a-enterance {
-    display: block;
+.a-entrance {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     max-width: rem(608);
+margin: auto;
 
     text-align: center;
 
