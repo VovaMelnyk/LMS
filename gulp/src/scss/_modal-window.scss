@@ -2,11 +2,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 69%;
+
+    width: 50%;
     min-width: rem(800);
     padding: rem(72) rem(100) rem(80);
+
     transform: translate(-50%, -50%);
     text-align: center;
+
     background-color: #0a1829;
 
     &__close {
@@ -15,24 +18,26 @@
     }
 
     &__enterance {
-        display: none;
+        display: block;
+
         margin: 0 auto;
     }
 
     &__registration {
-        display: block;
+        display: none;
+
         margin: 0 auto;
     }
 }
 
+
+
 .title {
     text-transform: uppercase;
+
     color: #38ffff;
+
     font-family: $title-font;
     font-size: rem(91);
     font-weight: 400;
-}
-
-.a-content {
-    position: relative;
 }
