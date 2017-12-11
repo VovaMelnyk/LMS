@@ -3,6 +3,7 @@
 
     background-color: $dark-bg;
 
+
     &--light-gray {
         background-color: $grey-bg;
     }
@@ -15,6 +16,12 @@
         min-height: 100vh;
 
         background-color: transparentize($grey-bg, 0.5);
+        &--enterance {
+          display: none;
+        }
+        &--registration {
+          display: none;
+        }
     }
 
 }
