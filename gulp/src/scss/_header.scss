@@ -1,46 +1,52 @@
 .header {
-    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
     padding: 40px 0;
 }
 
 .c-logo {
-    width: 160px;
-    height: 50px;
     display: flex;
     justify-content: space-between;
+    width: 160px;
+    height: 50px;
     color: $dark-text;
     text-transform: uppercase;
     background: $dark-bg;
-}
 
-.c-logo__elem {
-    font-family: $text-font;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    width: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    &__elem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 72px;
+        font-family: Arial;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 4px;
 
-.c-logo__elem-white {
-    background: $white;
-    padding-left: 32px;
-}
+        &-white {
+            justify-content: flex-start;
+            padding-left: 14px;
+            background: $white;
 
-.c-logo__elem-white::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 16px solid $white;
-    position: relative;
-    right: -5px;
-}
+            &::after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 25px solid transparent;
+                border-bottom: 25px solid transparent;
+                border-left: 16px solid $white;
+                content: "";
+            }
+        }
 
-.c-logo__elem-orange {
-    background: $orange;
+        &-orange {
+            background: $orange;
+        }
+    }
+}
+.c-header__profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
