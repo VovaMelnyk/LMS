@@ -1,8 +1,14 @@
 .t-content__results {
-  padding-top: 50px; }
+  padding-top: 100px; }
  .t-content__marks {
   font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-  font-size: 35px; }
+  font-size: 64px; }
   .t-content__summ-time {
   font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
   font-size: 14px; }
+  .t-content__list {
+  list-style-type: decimal;	
+  }
+  .t-content__description {
+  	font-size: 20px;
+  }
