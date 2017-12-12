@@ -8,40 +8,18 @@
     padding: rem(72) rem(100) rem(80);
 
     transform: translate(-50%, -50%);
-    text-align: center;
 
-    background-color: #0a1829;
+    background-color: $dark-bg;
 
     &__close {
         top: rem(10);
         right: rem(10);
     }
 
-    &__entrance {
-        display: none;
-
-        margin: 0 auto;
-    }
-
-    &__registration {
-        display: block;
-
-        margin: 0 auto;
-    }
-}
-
-
-
 .title {
     text-transform: uppercase;
-
-    color: #38ffff;
-
+    color: $cyan;
     font-family: $title-font;
     font-size: rem(91);
     font-weight: 400;
-}
-
-.a-content {
-    position: relative;
 }
