@@ -48,3 +48,14 @@
             max-height: rem(40);
         }
 }
+.policylink {
+    color: $white;
+    text-decoration: none;
+    font-size: rem(24);
+}
+
+.a-checkbox-block__label::before {
+    color: $orange;
+    content: " *";
+
+    }

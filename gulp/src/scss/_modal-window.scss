@@ -2,24 +2,22 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 50%;
     min-width: rem(800);
     padding: rem(72) rem(100) rem(80);
-
     transform: translate(-50%, -50%);
-
     background-color: $dark-bg;
 
     &__close {
         top: rem(10);
         right: rem(10);
     }
-
-.title {
-    text-transform: uppercase;
-    color: $cyan;
-    font-family: $title-font;
-    font-size: rem(91);
-    font-weight: 400;
 }
+
+    .title {
+        text-transform: uppercase;
+        color: $cyan;
+        font-family: $title-font;
+        font-size: rem(91);
+        font-weight: 400;
+    }
