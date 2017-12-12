@@ -1,6 +1,6 @@
-<!-- шапка  3 основных блока и флексом-->
 <div class="t-header">
-    <div class="t-title">  <!-- заголовок тестов -->
+<!-- start t-title -->
+    <div class="t-title"> 
         <h1 class="t-title__subtitle">Тесты</h1>
         <h2 class="t-title__number">Тема 2</h2>
     </div>
@@ -8,16 +8,13 @@
         <h2 class="t-theme__name">[ XXXXXXX _ ]</h2>
     </div>
     <div class="t-timer">
-        <p class="t-timer__time">15 m <br> на прохождение </p>
-        <!-- <p class="t-timer__text">на прохождение</p> -->
-        <img class="t-timer__clock" src="img/header_img/clock.png" alt="clock-img">
-        <!-- <div class="t-timer__clock"></div> -->
-    </div>
-</div>
-
+        <p class="t-timer__time">14:09</p>
+        <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
+    </div><!-- end t-title -->
+</div> 
 <!-- start t-content -->
 <div class="t-content">
-    <div class="t-content-result">
+    <div class="t-content-results">
         <p class="t-content__marks">8/10 баллов</p>
         <p class="t-content__summ-time">Пройдено за 14:25м</p>
     </div> 
@@ -29,15 +26,21 @@
             <li class="t-content__description"></li>
             <li class="t-content__description"></li>
         </ul>
-    </div> 
+    </div> <!-- end t-content__mistakes -->
     <!-- start t-btn -->
     <div class="t-btn">
         <button class="button-big t-content__button">Пройти ещё раз
         </button>
-    </div>
+    </div><!-- end t-btn -->
 </div> <!-- end t-content -->
 <!-- start t-footer -->
 <div class="t-footer">
-    <p class="t-control t-control__back">Вернутся к теории</p>
-    <p class="t-control t-control__next">Дальше к дз</p>
-</div>
+    <div class="t-control t-control__back">
+    	<img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
+		<p class="t-control__word">Вернутся к теории</p>
+	</div>
+	<div class="t-control t-control__next">
+    	<img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
+		<p class="t-control__word">Дальше к дз</p>
+	</div>
+</div> <!-- end t-footer -->

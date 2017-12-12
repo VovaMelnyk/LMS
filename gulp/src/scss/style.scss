@@ -2,9 +2,6 @@
 @import 'fonts';
 @import 'var';
 @import 'theme';
-<<<<<<< HEAD
-@import 'mixins';
-=======
 @import 'header';
 @import 'container';
 @import 'wrapper';
@@ -13,8 +10,12 @@
 @import 'main';
 @import 'right-nav';
 //////tests////////
-@import 'tests-var';
-@import 'tests-main-header';
+@import 'tests-header';
+@import 'tests-content';
 @import 'tests-main-content';
-@import 'tests-main-footer';
->>>>>>> testsMain
+@import 'tests-results-content';
+@import 'tests-footer';
+////////////////////////////
+@import 'mixins';
+
+
