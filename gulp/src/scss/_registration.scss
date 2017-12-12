@@ -5,7 +5,6 @@
         margin: 0 auto;
     }
 }
-
 // звездочки
     .star::after {
         color: $orange;
@@ -27,7 +26,6 @@
 
 .a-input-block {
 // Уменьшаем размер блоков, выравниваем подписи по правому краю
-
     &__label {
         font-size: rem(28);
         width: 35%;
@@ -53,9 +51,9 @@
     text-decoration: none;
     font-size: rem(24);
 }
-
-.a-checkbox-block__label::before {
+.policylink::before {
     color: $orange;
     content: " *";
-
-    }
+    position: relative;
+    left: -30%;
+}
