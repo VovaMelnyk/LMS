@@ -14,14 +14,13 @@
         background-color: transparentize($grey-bg, 0.5);
 
         &--entrance {
-            display: block;
+            display: none;
         }
         &--registration {
-            display: block;
-
+            display: none;
         }
         &--end-registration {
-            display: block;
+            display: none;
         }
 
     }
