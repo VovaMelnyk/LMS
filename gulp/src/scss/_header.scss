@@ -31,6 +31,8 @@
 
             &::after {
                 display: block;
+                position: relative;
+                right: -4px;
                 width: 0;
                 height: 0;
                 border-top: 25px solid transparent;
@@ -42,9 +44,11 @@
 
         &-orange {
             background: $orange;
+            padding-left: 8px;
         }
     }
 }
+
 .c-header__profile-photo {
     width: 50px;
     height: 50px;
