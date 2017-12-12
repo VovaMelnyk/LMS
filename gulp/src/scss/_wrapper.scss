@@ -1,6 +1,5 @@
 .wrapper {
     min-width: 1024px;
-
     background-color: $dark-bg;
 
     &--light-gray {
@@ -18,7 +17,7 @@
             display: block;
         }
         &--registration {
-            display: block;
+            display: none;
 
         }
 
