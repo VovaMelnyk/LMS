@@ -14,7 +14,7 @@
     &__name {
         @include regInput;
     }
-
+    //сделать класс
     &__lastname {
         @include regInput;
     }
@@ -62,7 +62,7 @@
     }
 
     &__private {
-        color: red;
+        color: $red;
         margin: 0;
     }
 }
