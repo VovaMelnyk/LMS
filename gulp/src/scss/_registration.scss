@@ -1,93 +1,73 @@
-.a-registration {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+@import "mixins.scss";
 
-    max-width: rem(608);
-
-    text-align: center;
-
-    color: $white;
-
-    font-family: $text-font;
-
-    &__title {
-        align-self: center;
+.a-entrance {
+    &--centered {
+        margin: 0 auto;
     }
+}
+// звездочки
 
-    &__name {
-        @include regInput;
-    }
+.star::after {
+    position: absolute;
 
-    &__lastname {
-        @include regInput;
-    }
+    content: " *";
 
-    &__email {
-        @include regInput;
-    }
+    color: $orange;
+}
+// галочка напротив поля "Подтвердить пароль"
+.correctpass {
+    position: relative;
+    bottom: 40%;
+    left: 304%;
 
-    &__password {
-        @include regInput;
-    }
+    display: block;
 
-    &__password--confirm {
-        @include regInput;
-    }
+    width: 10px;
+    height: 10px;
 
-    &__private {
-        margin: 20px 212px 0 0;
+    color: #00ff00;
 
-        font-size: 24px;
+    font-size: rem(32);
+}
 
-        &--checkbox {
-            width: 15px;
-            height: 15px;
-        }
-    }
+.a-input-block {
+    // Уменьшаем размер блоков, выравниваем подписи по правому краю
 
     &__label {
-        text-align: right;
-        vertical-align: super;
+        display: block;
+
+        width: 35%;
+        margin-right: 36px;
+
+        font-size: rem(28);
+
+        &--rightaligned {
+            text-align: right;
+        }
     }
+    // добавляем белый цвет текста, уменьшаем размер
+    &__input--whitetext--size {
+        max-width: 60%;
+        max-height: rem(40);
 
-    &__btn {
-        align-self: center;
+        color: $white;
 
-        margin-top: 56px;
-    }
-}
-
-.star {
-    margin: -20px 30px 0 -3px;
-
-    color: red;
-
-    &__last {
-        margin: -50px 30px 0 -3px;
-
-        color: red;
-    }
-
-    &__private {
-        margin: 0;
-
-        color: red;
+        font-family: $text-font;
+        font-size: rem(28);
     }
 }
 
-.success {
-    margin: 0 -40px 0 20px;
+.policylink {
+    font-size: rem(24);
+
+    @include links;
 }
 
-.a-input {
-    max-width: 432px;
-    min-height: 52px;
-    padding-left: 16px;
+.policylink::before {
+    position: relative;
+    left: -30%;
 
-    color: $white;
-    border: none;
-    background-color: $grey-input;
+    content: " *";
 
-    font-size: 32px;
+    color: $orange;
 }

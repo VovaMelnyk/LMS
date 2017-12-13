@@ -1,16 +1,5 @@
-@mixin regInput {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-top: rem(48);
-
-    font-size: rem(28);
-}
 @mixin links {
     display: block;
-
+    color: #fff;
     text-decoration: none;
-
-    color: $white;
 }

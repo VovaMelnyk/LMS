@@ -4,14 +4,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
     max-width: rem(608);
-margin: auto;
-
+    margin: auto;
     text-align: center;
-
     color: $white;
-
     font-family: $text-font;
 
     &__btn {
@@ -36,13 +32,9 @@ margin: auto;
 
     &__forgot-pass {
         display: block;
-
         margin-top: rem(16);
-
         text-decoration: none;
-
         color: $cyan;
-
         font-size: rem(32);
 
         &:hover {
@@ -69,11 +61,9 @@ margin: auto;
     &__input {
         width: 68%;
         padding-left: rem(8);
-
         color: $black;
         border: none;
         background-color: $grey-input;
-
         font-size: rem(32);
     }
 }
@@ -82,7 +72,6 @@ margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-top: rem(32);
     padding-right: rem(40);
 
@@ -92,7 +81,6 @@ margin: auto;
 
     &__checkbox {
         display: block;
-
         width: rem(16);
         height: rem(16);
         margin-right: rem(16);
@@ -104,7 +92,6 @@ margin: auto;
 .a-social {
     display: flex;
     justify-content: space-around;
-
     width: rem(240);
 
     &__link {
@@ -114,9 +101,7 @@ margin: auto;
 
 .a-error {
     visibility: hidden;
-
     color: $red;
-
     font-size: rem(24);
 }
 
