@@ -6,54 +6,68 @@
     }
 }
 // звездочки
-    .star::after {
-        color: $orange;
-        content: " *";
-        position: absolute;
-        }
 
+.star::after {
+    position: absolute;
+
+    content: " *";
+
+    color: $orange;
+}
 // галочка напротив поля "Подтвердить пароль"
-    .correctpass {
-        font-size: rem(32);
-        display: block;
-        position: relative;
-        left: 304%;
-        bottom: 40%;
-        color: #00ff00;
-        width: 10px;
-        height: 10px;
-    }
+.correctpass {
+    position: relative;
+    bottom: 40%;
+    left: 304%;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    color: #00ff00;
+
+    font-size: rem(32);
+}
 
 .a-input-block {
-// Уменьшаем размер блоков, выравниваем подписи по правому краю
+    // Уменьшаем размер блоков, выравниваем подписи по правому краю
+
     &__label {
-        font-size: rem(28);
-        width: 35%;
         display: block;
+
+        width: 35%;
         margin-right: 36px;
+
+        font-size: rem(28);
 
         &--rightaligned {
             text-align: right;
         }
     }
-
-// добавляем белый цвет текста, уменьшаем размер
+    // добавляем белый цвет текста, уменьшаем размер
     &__input--whitetext--size {
-            color: $white;
-            font-family: $text-font;
-            max-width: 60%;
-            font-size: rem(28);
-            max-height: rem(40);
-        }
+        max-width: 60%;
+        max-height: rem(40);
+
+        color: $white;
+
+        font-family: $text-font;
+        font-size: rem(28);
+    }
 }
+
 .policylink {
-    color: $white;
-    text-decoration: none;
     font-size: rem(24);
+
+    @include links;
 }
+
 .policylink::before {
-    color: $orange;
-    content: " *";
     position: relative;
     left: -30%;
+
+    content: " *";
+
+    color: $orange;
 }

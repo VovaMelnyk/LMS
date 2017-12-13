@@ -1,28 +1,31 @@
 .wrapper {
     min-width: 1024px;
+
     background-color: $dark-bg;
 
     &--light-gray {
         background-color: $grey-bg;
     }
+
     &__modal-window {
         position: fixed;
         top: 0;
         left: 0;
+
         width: 100%;
         min-height: 100vh;
+
         background-color: transparentize($grey-bg, 0.5);
 
         &--entrance {
             display: none;
         }
+
         &--registration {
-            display: none;
+            display: block;
         }
         &--end-registration {
             display: none;
         }
-
     }
-
 }
