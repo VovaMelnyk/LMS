@@ -1,14 +1,26 @@
 .t-content__results {
   padding-top: 100px; }
- .t-content__marks {
-  font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-  font-size: 64px; }
+  .t-content__marks {
+    font-family: $text-font;
+    font-size: 58px; 
+    padding-top: 20px;
+    padding-left: 40px;
+    font-weight: bold;
+    color: $dark-text;
+    text-shadow: 2px 2px 10px $light-green; }
+
   .t-content__summ-time {
-  font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-  font-size: 14px; }
-  .t-content__list {
-  list-style-type: decimal;	
-  }
+    font-family: $text-font;
+    font-size: 18px; 
+    color: $light-text;
+    text-align: center; }
+
+.t-content__list {
+  padding-top: 20px; }
+
   .t-content__description {
-  	font-size: 20px;
-  }
+    color: $dark-text;
+    font-family: $text-font;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 30px; }
