@@ -8,13 +8,11 @@ function delTeg() {
   }
 
 }
-function animTT() {
+function animTT(argument) {
 
 
-let modal_login1 = document.getElementsByClassName('wrapper__modal-window--entrance');
+let modal =  argument[0].children[0];
 
-let modal =  modal_login1[0].children[0];
-console.log(modal);
 
 
 
@@ -38,7 +36,7 @@ function createBall() {
   count = count + 1;
 
 
-  ball.style.cssText = "left: " + 200  +
+  ball.style.cssText = "left: " + 100  +
   "px; top:" + 200  +
   "px; " +
     "px; position: absolute; width: 100px; z-index: 2;  height: 20px;  color: #04bcc2; font-size: 20px; ";
@@ -51,13 +49,13 @@ function createBall() {
 
   ball.realTop = pos.top;
   ball.realLeft = pos.left;
-  console.log("родитель ширна "+position.width);
-  console.log("родитель высота " +position.height);
-  console.log("родитель сверху " +position.top);
-
-console.log("тег справа " + ball.innerText + " "+ pos.right);
-console.log("тег слева "+ ball.innerText + " "+ pos.left);
-console.log("тег сверху "+ ball.innerText + " "+ ball.style.top);
+//   console.log("родитель ширна "+position.width);
+//   console.log("родитель высота " +position.height);
+//   console.log("родитель сверху " +position.top);
+//
+// console.log("тег справа " + ball.innerText + " "+ pos.right);
+// console.log("тег слева "+ ball.innerText + " "+ pos.left);
+// console.log("тег сверху "+ ball.innerText + " "+ ball.style.top);
 
 
 
@@ -85,7 +83,7 @@ function moveBall(ball) {
   ball.realTop += Math.sin(ball.direction) * S;
   ball.realLeft += Math.cos(ball.direction) * S;
 
-  if (ball.realTop  > position.top+(position.height-95)|| ball.realLeft < position.left-200 || ball.realTop < position.top-80 || ball.realLeft > position.left+300 ) {
+  if (ball.realTop  > (position.height-50)|| ball.realLeft < 0 || ball.realTop < 0 || ball.realLeft > position.width-100 ) {
     ball.direction += Math.PI / 2;
     return moveBall(ball);
   }

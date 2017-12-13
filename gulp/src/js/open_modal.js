@@ -9,7 +9,7 @@ let close_login = document.getElementsByClassName('modal-window__close');
 open_login.addEventListener("click", function () {
 
   modal_login[0].style.display = "block";
-  animTT();
+  animTT(modal_login);
 
 });
 close_login[0].addEventListener("click", function () {
@@ -19,9 +19,16 @@ close_login[0].addEventListener("click", function () {
   modal_login[0].style.display = "none";
 
 });
-//open_signin.addEventListener("click", function () {
+open_signin.addEventListener("click", function () {
 
-  //modal_login1[0].style.display = "block";
-  //animTT();
+  modal_login1[0].style.display = "block";
+  animTT(modal_login1);
 
-//});
+});
+
+close_login[1].addEventListener("click", function () {
+
+    delTeg();
+
+  modal_login1[0].style.display = "none";
+});
