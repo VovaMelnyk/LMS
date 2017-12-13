@@ -28,6 +28,11 @@
 
         margin: 0 auto;
     }
+    
+    &__end-registration {
+        min-width: rem(698);
+        padding: rem(152) rem(192);
+    }
 }
 
 
@@ -40,10 +45,4 @@
     font-family: $title-font;
     font-size: rem(91);
     font-weight: 400;
-}
-
-    &__end-registration {
-        min-width: rem(698);
-        padding: rem(152) rem(192);
-    }
 }
