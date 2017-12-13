@@ -45,8 +45,28 @@
         }
     }
 }
-.c-header__profile-photo {
+.c-header__photo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-upper {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $light-text;
+        margin-top: 2px;
+    }
+
+    &-lower {
+        width: 35px;
+        height: 20px;
+        background-color: $light-text;
+        border-radius: 50px 50px 0 0;
+    }
 }
+
