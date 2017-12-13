@@ -3,9 +3,11 @@
 
     background-color: $dark-bg;
 
+
     &--light-gray {
         background-color: $grey-bg;
     }
+
     &__modal-window {
         position: fixed;
         top: 0;
@@ -15,6 +17,16 @@
         min-height: 100vh;
 
         background-color: transparentize($grey-bg, 0.5);
-    }
 
+        &--entrance {
+            display: none;
+        }
+
+        &--registration {
+            display: none;
+        }
+        &--end-registration {
+            display: none;
+        }
+    }
 }
