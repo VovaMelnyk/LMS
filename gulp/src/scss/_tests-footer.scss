@@ -1,21 +1,12 @@
 .t-footer {
-	width: 90%;
-	display: flex;
-	flex-direction:row;
-	justify-content:space-between;
-	align-items:flex-end;
-  margin: 40px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding: 60px 40px 40px 40px;
 }
-
 .t-control {
-  color: #0D47A1;
-  font-size: 23px;
-  font-family: "MuseoSansCyrl";
-  color: rgb(152, 152, 152);
-
+    font-family: $text-font;
+    font-size: 23px;
+    color: $light-text;
 }
-
-
-
-
-

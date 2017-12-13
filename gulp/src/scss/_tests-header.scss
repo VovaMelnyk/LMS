@@ -1,49 +1,51 @@
-$blue : #3F4869;
-
-
 .t-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
-	margin: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px;
 }
-
 .t-title {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-
-
-	&__subtitle {
-		font-size: 35px;
-		color: #949494;
-		font-family: MuseoSansCyrl, Sans-serif;
-	}
-
-	&__number {
-		font-size: 58px;
-		color: $blue;
-		display: inline-block;
-		font-family: BebasNeueRegular, Sans-serif;
-	}
-
-	&__name {
-		@extend .t-title__number;
-		margin-left: 176px;
-		background: #00FFFF;
-	}
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 30px;
+    &__subtitle {
+        font-family: $text-font;
+        font-size: 35px;
+        color: $light-text;
+    }
+    &__number {
+        font-family: $title-font;
+        font-size: 58px;
+        color: $dark-text;
+    }
 }
-
-.t-thumb {
-	display: flex;
+.t-theme {
+    display:flex;
+    align-items: flex-end;
+    &__name {
+        font-family: $title-font;
+        font-size: 58px;
+        color: $dark-text;
+        background-color: $cyan;
+    }
+}
+.t-timer {
+    display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
-
-	&__minutes {
-		padding: 10px;
-	}
+    align-items: start;
+    padding-right: 36px;
+    &__time {
+        padding-top: 30px;
+        font-family: $text-font;
+        font-size: 10px;
+        font-weight: 700;
+        color: $dark-text;
+        text-align: right;
+    }
+    &__clock {
+        padding-top: 20px;
+    }
 }
