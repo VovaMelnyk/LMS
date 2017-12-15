@@ -5,3 +5,23 @@
     padding: 40px;
     background-color: $light-gray;
 }
+.m-content {
+    padding:16px 56px 48px 16px;
+    &__text {
+        margin-bottom:16px;
+        line-height:140%;
+        text-indent:16px;
+        text-align: justify;
+    }
+}
+
+.m-btn-up{
+    position: fixed;
+    right: 140px;
+    top: 528px;
+    opacity: 0.7;
+    &__arrow{
+        margin-top: -16px;
+        border: 16px solid transparent;	border-bottom: 16px solid white;
+    }
+}
