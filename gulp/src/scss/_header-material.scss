@@ -1,0 +1,13 @@
+@import 'headerMaterial_temporarily/caption-block';
+@import 'headerMaterial_temporarily/test-btn';
+@import 'headerMaterial_temporarily/timer-block';
+
+.m-header-line{
+    display: flex;
+    justify-content: space-between;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

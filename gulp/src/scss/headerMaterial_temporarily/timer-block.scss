@@ -1,0 +1,21 @@
+.m-timer {
+	position: relative;
+
+	font-family: $text-font;
+
+	align-self: flex-end;
+	&__time {
+		position: absolute;
+
+		width: max-content;
+		line-height: 1.4;
+		font-size: rem(12);
+		text-align: right;
+
+		transform: translate(-105%, 25%);
+	}
+	&__img {
+		background: url(../img/materialHeader/time.png)no-repeat;
+		background-size: contain;
+	}
+}
