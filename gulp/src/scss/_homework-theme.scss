@@ -1,0 +1,28 @@
+
+.d-theme {
+  padding-top: 16px;
+    &__number {
+        display: inline-block;
+        font-family: $title-font;
+        text-transform: uppercase;
+        color: $dark-text;
+        font-size: 54px;
+        width: 200px;
+        padding-left: 36px;
+    }
+    &__title {
+        display: inline-block;
+        font-family: $title-font;
+        text-transform: uppercase;
+        text-align: center;
+        color: $dark-text;
+        font-size: 54px;
+        width: calc(100% - 400px);
+    }
+    &__desc {
+        font-family: $text-font;
+        font-size: 16px;
+        color: $dark-text;
+        margin: 16px 200px 0;
+    }
+}
