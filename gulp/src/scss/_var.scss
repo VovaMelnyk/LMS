@@ -1,9 +1,10 @@
 // Function pixels to rems:
 // You can wright only rem(ANY), its means that you transformed ANYpx to rem in your code
 @function rem($px) {
-	$rems: $px / 16;
-	@return #{$rems}rem;
+    $rems: $px / 16;
+    @return #{$rems}rem;
 }
+
 // Colors:
 $white: #fff; //white
 $black: #000; //black
@@ -20,5 +21,16 @@ $grey-input: #838b93;
 $grey-pholder: #cbcbcb;
 $dark-button: #061f36;
 //fonts
-$title-font: "BebasNeueRegular", "Arial", sans-serif;
-$text-font: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
+$title-font: "BebasNeueRegular",
+"Arial",
+sans-serif;
+$text-font: "Museo Sans Cyrl W03 300",
+"Arial",
+sans-serif;
+@mixin arrow {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+}
