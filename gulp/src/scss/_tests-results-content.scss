@@ -2,7 +2,7 @@
   padding-top: 100px; }
   .t-content__marks {
     font-family: $text-font;
-    font-size: 58px; 
+    font-size: 58px;
     padding-top: 20px;
     padding-left: 40px;
     font-weight: bold;
@@ -11,9 +11,9 @@
 
   .t-content__summ-time {
     font-family: $text-font;
-    font-size: 20px; 
+    font-size: 20px;
     color: $light-text;
-    text-align: center; 
+    text-align: center;
     padding-top: 5px;}
 
 .t-content__list {
@@ -25,3 +25,21 @@
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 30px; }
+.t-content__mistakes {
+    width: 600px;
+}
+    .t-content__number {
+    color: $light-green;
+}
+    .t-content__number-red {
+    color: red;
+}
+    .t-content__link {
+    margin-top: -30px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    font-family: $text-font;
+}
+    .t-content__href .t-content__gaps {
+    font-family: $text-font;
+}
