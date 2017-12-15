@@ -1,0 +1,13 @@
+.m-timer {
+    font-family: $text-font;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__time {
+        font-size: rem(12);
+        text-align: right;
+    }
+    &__img {
+        background: url(../img/materialHeader/time.png)no-repeat center / cover;
+    }
+}

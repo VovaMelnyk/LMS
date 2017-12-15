@@ -1,0 +1,21 @@
+@import "../var";
+
+.m-caption{
+    &__title{
+        font-family: 'Museo Sans Cyrl W03 300';
+        font-weight: 400;
+        font-size: 32px;
+        color: $light-text;
+    }
+    &_footer-text{
+        margin-top: 18px;
+        font-size: 56px;
+        color: $dark-text;
+    }
+    &__name{
+        align-self: flex-end;
+        padding: 7px 10px;
+        background: $cyan;
+    }
+
+}
