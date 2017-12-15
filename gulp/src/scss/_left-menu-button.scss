@@ -5,44 +5,137 @@
     background-color: $dark-bg;
     border-radius: 8px;
     margin-bottom: 8px;
+
+    .c-container-item {
+        padding: 8px;
+        color: $cyan;
+        font-family: $title-font;
+        font-size: 20px;
+        letter-spacing: 2.25px;
+    }
+
+    .c-container-path {
+        background-image: url("../img/path.png");
+        width: 25px;
+        height: 15px;
+    }
 }
 
-.c-container-item {
-    padding: 8px;
-    // letter-spacing: 2.25px;
-    // text-transform: uppercase;
-    // border: none;
-    color: $cyan;
-    font-family: $title-font;
-    font-size: 20px;
-    // text-transform: uppercase;
-    letter-spacing: 2.25px;
+//  -------
 
-    &::after {
+/* Формируем блоки с содерханием */
+.c-container-accordion {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+	p {
+	}
 
-        // для айтемов по темам
-        display: block;
-        transform: translate(112px, 0);
-        width: 10px;
-        height: 10px;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        border-left: 1px solid $cyan;
-        content: "";
-        margin-left: 16px;
-        // для айтемов по темам
+}
 
-        // content: '';
-        // border-color: $cyan;
-        // display: block;
-        // left: 0;
-        // top: 50%;
-        // margin: -20px 0 0 -21px;
-        // border-right: none;
-        // border-top: none;
-        // border-width: 4.5px;
-        // width: 40px;
-        // height: 40px;
-        // transform: rotate(45deg);
-    }
+
+// /* Позаботимся о небольших экранах */
+// @media (max-width: 550px) {
+//   .accordion {
+//     box-sizing: border-box;
+//     transform: translate(0, 0);
+//     max-width: 100%;
+//     min-height: 100%;
+//     margin: 0;
+//     left: 0;
+//   }
+// }
+
+/* Формируем неупорядоченный список */
+.accordion ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+/* Определяем и формируем отдельный элемент списка
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* устанавливаем время ожидания перед воспроизведением анимации
+ * на основе нумерации в дереве элементов
+*/
+.accordion ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+/* Сформируем  указатель переключения состояния аккордеона */
+.c-container-button ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+/* расположим указатель на панели заголовка справа */
+  right: 25px;
+}
+
+/* "Рисуем " сам указатель */
+.c-container-button ul li i:before, .c-container-button ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+}
+/* Добавляем элемент трансформации указателя при переключении */
+.c-container-button ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+/* Делаем чекбокс скрытым*/
+.c-container-button ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+/* Когда у флажка установлен checked
+ * блок с содержанием скрыт
+*/
+.c-container-button ul li input[type=checkbox]:checked ~ div.c-container-accordion {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+/* А указатель показывает вниз */
+.c-container-button ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.c-container-button ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя
+*/
+div.c-container-accordion, ul li i:before, ul li i:after {
+    transition: all 0.5s ease-in-out;
 }
