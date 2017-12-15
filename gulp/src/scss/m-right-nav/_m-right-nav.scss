@@ -1,3 +1,10 @@
+.m-right-nav {
+    padding: 8px 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
 .m-right-nav__item {
     position: relative;
     display: block;
