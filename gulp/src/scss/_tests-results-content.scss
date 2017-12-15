@@ -45,6 +45,9 @@
     font-family: $text-font;
     color: $dark-text;
 }
-    .t-content__href .t-content__gaps {
+    .t-content__material .t-content__gaps {
     font-family: $text-font;
+}
+.t-content__material {
+    font-weight: bold;
 }
