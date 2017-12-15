@@ -27,18 +27,23 @@
     padding-bottom: 30px; }
 .t-content__mistakes {
     width: 65%;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
     .t-content__number {
     color: $light-green;
+    font-family: $text-font;
 }
     .t-content__number-red {
     color: $red;
+    font-family: $text-font;
 }
     .t-content__link {
     margin-top: -30px;
     margin-left: 35px;
     margin-bottom: 10px;
     font-family: $text-font;
+    color: $dark-text;
 }
     .t-content__href .t-content__gaps {
     font-family: $text-font;
