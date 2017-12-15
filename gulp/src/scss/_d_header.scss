@@ -1,0 +1,34 @@
+.d-header {
+    display: flex;
+    padding: 33px 33px 0;
+    justify-content: space-between;
+}
+
+.d-page-title {
+    width: 303px;
+    height: 30px;
+    color: #808080;
+    font-family: "Museo Sans Cyrl -300";
+    font-size: 35px;
+}
+
+.d-timeCounter {
+    display: flex;
+    align-items: center;
+}
+
+.d-timeCounter__text {
+    width: 70px;
+    color: #202b52;
+    font-family: "Museo Sans Cyrl -500";
+    font-size: 10px;
+    text-indent: 46px;
+}
+
+.d-timeCounter__img {
+    width: 42px;
+    height: 42px;
+    background: url('../img/clock.png');
+    background-size: contain;
+}
+
