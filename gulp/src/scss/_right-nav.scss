@@ -1,9 +1,12 @@
+@import 'm-right-nav/m-right-nav';
 .m-right-nav {
-	position: absolute;
-	top: calc(50% - 248px/2);
-	right: 0;
-
-	width: 48px;
-
-	background-color: $white;
+    position: absolute;
+    top: calc(50% - 248px/2);
+    right: 0;
+    width: 48px;
+    background-color: $white;
+    padding: 8px 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
