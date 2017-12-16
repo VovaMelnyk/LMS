@@ -21,121 +21,28 @@
     }
 }
 
-//  -------
-
-/* Формируем блоки с содерханием */
 .c-container-accordion {
-  position: relative;
-  overflow: hidden;
-  max-height: 800px;
-  opacity: 1;
-  transform: translate(0, 0);
-	p {
-	}
-
-}
+    overflow: hidden;
 
 
-// /* Позаботимся о небольших экранах */
-// @media (max-width: 550px) {
-//   .accordion {
-//     box-sizing: border-box;
-//     transform: translate(0, 0);
-//     max-width: 100%;
-//     min-height: 100%;
-//     margin: 0;
-//     left: 0;
-//   }
-// }
-
-/* Формируем неупорядоченный список */
-.accordion ul {
-  list-style: none;
-  perspective: 900;
-  padding: 0;
-  margin: 0;
+    &--item {
+        color: $light-text;
+        border-top: 50px solid transparent;
+        border-right: 100px solid #959FB0;
+        border-bottom: 50px solid transparent;}
+    }
 }
 
-/* Определяем и формируем отдельный элемент списка
- * в который поместим скрытый флажек,
- * заголовок панелей и блок с содержанием
-*/
-.accordion ul li {
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-
-/* устанавливаем время ожидания перед воспроизведением анимации
- * на основе нумерации в дереве элементов
-*/
-.accordion ul li:nth-of-type(1) {
-  animation-delay: 0.5s;
-}
-.accordion ul li:nth-of-type(2) {
-  animation-delay: 0.75s;
-}
-.accordion ul li:nth-of-type(3) {
-  animation-delay: 1s;
-}
-.accordion ul li:last-of-type {
-  padding-bottom: 0;
-}
-
-/* Сформируем  указатель переключения состояния аккордеона */
-.c-container-button ul li i {
-  position: absolute;
-  transform: translate(-6px, 0);
-  margin-top: 16px;
-/* расположим указатель на панели заголовка справа */
-  right: 25px;
-}
-
-/* "Рисуем " сам указатель */
-.c-container-button ul li i:before, .c-container-button ul li i:after {
-  content: "";
-  position: absolute;
-  background-color: #eee;
-  width: 3px;
-  height: 9px;
-}
-/* Добавляем элемент трансформации указателя при переключении */
-.c-container-button ul li i:before {
-  transform: translate(-2px, 0) rotate(45deg);
-}
-.accordion ul li i:after {
-  transform: translate(2px, 0) rotate(-45deg);
-}
-
-/* Делаем чекбокс скрытым*/
 .c-container-button ul li input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
-/* Когда у флажка установлен checked
- * блок с содержанием скрыт
-*/
+
 .c-container-button ul li input[type=checkbox]:checked ~ div.c-container-accordion {
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  transform: translate(0, 50%);
-}
-/* А указатель показывает вниз */
-.c-container-button ul li input[type=checkbox]:checked ~ i:before {
-  transform: translate(2px, 0) rotate(45deg);
-}
-.c-container-button ul li input[type=checkbox]:checked ~ i:after {
-  transform: translate(-2px, 0) rotate(-45deg);
-}
-/*  Устанавливаем эффект перехода
- * между двумя состояниями указателя
-*/
-div.c-container-accordion, ul li i:before, ul li i:after {
-    transition: all 0.5s ease-in-out;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
 }
