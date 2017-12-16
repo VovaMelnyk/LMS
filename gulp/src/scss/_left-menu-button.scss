@@ -22,19 +22,19 @@
 }
 
 .c-container-accordion {
-    overflow: hidden;
-
-
+      position: relative;
+      overflow: hidden;
+      max-height: 800px;
+      opacity: 1;
+      transform: translate(0, 0);
+  
     &--item {
         color: $light-text;
-        border-top: 50px solid transparent;
-        border-right: 100px solid #959FB0;
-        border-bottom: 50px solid transparent;}
-    }
+
 }
 
 .c-container-button ul li input[type=checkbox] {
-    position: absolute;
+    // position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
