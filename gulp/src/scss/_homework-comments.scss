@@ -43,13 +43,13 @@
 .d-comments__form__right{
     width: 113px;
 }
-.d-done{
+.d-comments__send{
     position: relative;
     width: 112px;
     height: 0;
     border: none;
 }
-.d-done::after{
+.d-comments__send::after{
     content: "Отправить";
     position: absolute;
     top: -4px;
