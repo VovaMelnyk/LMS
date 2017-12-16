@@ -42,7 +42,7 @@
   font-family: $title-font;
   font-size: 24px;
   display: block;
-  padding: 24px 16px 0 16px;
+  padding: 24px 40px 0;
 }
 .small-btn li:last-child{
     padding-bottom: 24px;
@@ -77,6 +77,10 @@
   margin-top: 19px;
   right: 25px;
 }
+.accord  ul li .small-btn i {
+  margin-top: 32px;
+  left: 24px;
+}
 .accord ul li b{
   position: absolute;
   transform: translate(-6px, 0);
@@ -90,6 +94,10 @@
   width: 2px;
   height: 18px;
 }
+.accord  ul li .small-btn i:after, .accord ul li .small-btn i:before {
+     width: 3px;
+    height: 12px;
+}
 .accord ul li b:before {
   height: 24px;
   transform: translate(0, 0) rotate(90deg);
@@ -99,6 +107,12 @@
 }
 .accord ul li i:after {
   transform: translate(6px, 0) rotate(45deg);
+}
+.accord ul li .small-btn i:before {
+  transform: translate(3px, 4px) rotate(140deg);
+}
+.accord ul li .small-btn i:after {
+  transform: translate(3px, -4px) rotate(-140deg);
 }
 .accord ul li input[type=checkbox]:checked ~ i:before {
   transform: translate(6px, 6px) rotate(225deg);
