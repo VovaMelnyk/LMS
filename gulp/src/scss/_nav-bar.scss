@@ -8,6 +8,7 @@
 }
 
 .c-header__icon {
+    position: relative;
     width: 48px;
     border-radius: 50%;
 
@@ -31,6 +32,15 @@
 }
 .c-header__tooltip {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    font-family: $text-font;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    background: $light-green;
+    border-radius: 50%;
 }
