@@ -1,18 +1,21 @@
 .m-content {
-    padding: 16px 56px 48px 16px;
+    padding-top: 20px;
+    padding-right: 10px;
+    font-family: $text-font;
+    word-wrap: break-word;
+    font-size: rem(14);
     &__text {
+        display: block;
         margin-bottom: 16px;
-        line-height: 140%;
-        text-indent: 16px;
-        text-align: justify;
     }
 }
 
 .m-btn-up {
     position: absolute;
-    right: 40px;
-    bottom: 80px;
-    opacity: 0.7;
+    right: 24px;
+    bottom: 32px;
+    opacity: 0.5;
+    z-index: 1;
     &__arrow {
         height: 100%;
         clip-path: polygon(15% 70%, 50% 15%, 85% 70%);
