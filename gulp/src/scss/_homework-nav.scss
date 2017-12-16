@@ -1,0 +1,24 @@
+        .d-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 60px 40px 40px 40px;
+            &__left,
+            &__right {
+                text-decoration: none;
+                font-family: $text-font;
+                font-size: 23px;
+                color: $light-text;
+            }
+            &__left:before {
+                @include arrow;
+                margin-right: 10px;
+                border-right: 10px solid $grey-pholder;
+            }
+            &__right:after {
+                @include arrow;
+                margin-left: 10px;
+                border-left: 10px solid $grey-pholder;
+            }
+        }
