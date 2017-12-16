@@ -15,6 +15,11 @@
     right: 24px;
     bottom: 32px;
     opacity: 0.5;
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    background: $orange;
     z-index: 1;
     &__arrow {
         height: 100%;
