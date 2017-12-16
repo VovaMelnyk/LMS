@@ -49,7 +49,7 @@
   padding: 0;
   opacity: 0;
 }
-.accord ul li input[type=checkbox]:checked ~ div.msg {
+.accord ul li input[type=checkbox]:checked ~ div.small-btn {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
