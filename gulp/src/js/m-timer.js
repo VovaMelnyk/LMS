@@ -13,7 +13,7 @@
 
             if( minute > 0 ) {
                 minute--;
-                time.innerHTML = `${minute} м`;
+                time.innerHTML = `${minute} мин`;
             } else{
                 second = 60;
 

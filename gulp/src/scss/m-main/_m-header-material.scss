@@ -7,11 +7,6 @@
 		font-family: $title-font;
 		font-size: 48px;
 		color: $dark-text;
-		& > h1 {
-			font-family: $text-font;
-			font-size: 24px;
-			color: $light-text;
-		}
 	}
 	&__title {
 		padding: 0 16px 0 8px;
@@ -22,6 +17,12 @@
 
 		background: $cyan;
 	}
+}
+
+.caption__title {
+	font-family: $text-font;
+	font-size: 24px;
+	color: $light-text;
 }
 
 .m-btn-test {
