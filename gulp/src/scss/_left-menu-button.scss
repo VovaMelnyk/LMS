@@ -24,17 +24,17 @@
 .c-container-accordion {
       position: relative;
       overflow: hidden;
-      max-height: 800px;
       opacity: 1;
       transform: translate(0, 0);
-  
+
     &--item {
         color: $light-text;
+    &--item::before {
 
+    }
 }
 
 .c-container-button ul li input[type=checkbox] {
-    // position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
