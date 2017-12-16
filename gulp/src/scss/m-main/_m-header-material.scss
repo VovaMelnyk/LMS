@@ -1,43 +1,50 @@
 .m-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    &__caption {
-        font-size: 48px;
-        color: $dark-text;
-        font-family: $title-font;
-        &>h1 {
-            font-family: $text-font;
-            font-size: 24px;
-            color: $light-text;
-        }
-    }
-    &__title {
-        font-family: $title-font;
-        font-size: 48px;
-        color: $dark-text;
-        background: $cyan;
-        padding: 0 16px 0 8px;
-    }
+	display: flex;
+
+	justify-content: space-between;
+	align-items: flex-end;
+	&__caption {
+		font-family: $title-font;
+		font-size: 48px;
+		color: $dark-text;
+		& > h1 {
+			font-family: $text-font;
+			font-size: 24px;
+			color: $light-text;
+		}
+	}
+	&__title {
+		padding: 0 16px 0 8px;
+
+		font-family: $title-font;
+		font-size: 48px;
+		color: $dark-text;
+
+		background: $cyan;
+	}
 }
 
 .m-btn-test {
-    display: block;
-    margin-top: 24px;
-    text-decoration: none;
-    box-shadow: 0 0 2px $black;
+	display: block;
+	margin-top: 24px;
+
+	text-decoration: none;
+
+	box-shadow: 0 0 2px $black;
 }
 
 .m-timer {
-    font-family: $text-font;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
-    &__time {
-        font-size: rem(12);
-        text-align: right;
-    }
-    &__img {
-        background: url(../img/materialHeader/time.png)no-repeat center / cover;
-    }
+	display: inline-flex;
+
+	font-family: $text-font;
+
+	align-items: center;
+	justify-content: flex-end;
+	&__time {
+		font-size: rem(12);
+		text-align: right;
+	}
+	&__img {
+		background: url(../img/materialHeader/time.png)no-repeat center / cover;
+	}
 }

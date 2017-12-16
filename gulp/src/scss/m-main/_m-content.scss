@@ -1,29 +1,35 @@
 .m-content {
-    padding-top: 20px;
-    padding-right: 10px;
-    font-family: $text-font;
-    word-wrap: break-word;
-    font-size: rem(14);
-    &__text {
-        display: block;
-        margin-bottom: 16px;
-    }
+	padding-top: 20px;
+	padding-right: 10px;
+
+	font-family: $text-font;
+	font-size: rem(14);
+	word-wrap: break-word;
+	&__text {
+		display: block;
+		margin-bottom: 16px;
+	}
 }
 
 .m-btn-up {
-    position: absolute;
-    right: 24px;
-    bottom: 32px;
-    opacity: 0.5;
-    height: 40px;
-    width: 40px;
-    display: block;
-    border-radius: 50%;
-    background: $orange;
-    z-index: 1;
-    &__arrow {
-        height: 100%;
-        clip-path: polygon(15% 70%, 50% 15%, 85% 70%);
-        background: white;
-    }
+	position: absolute;
+	right: 24px;
+	bottom: 32px;
+	z-index: 1;
+
+	display: block;
+	width: 40px;
+	height: 40px;
+
+	background: $orange;
+	border-radius: 50%;
+	opacity: 0.5;
+	&__arrow {
+		height: 100%;
+
+		background: white;
+
+		clip-path: polygon(15% 70%, 50% 15%, 85% 70%);
+	}
 }
+

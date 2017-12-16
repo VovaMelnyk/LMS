@@ -1,6 +1,6 @@
 .m-right-nav {
-    padding: 8px 0;
     display: flex;
+    padding: 8px 0;
     flex-flow: wrap;
     justify-content: center;
 }
@@ -8,12 +8,12 @@
 .m-right-nav__item {
     position: relative;
     display: block;
-    margin-bottom: 8px;
     width: 32px;
     height: 32px;
+    margin-bottom: 8px;
     transition: linear 0.3s;
     &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     &-favorites {
         background: url('../img/m-right-nav/add-to-favorites.png')no-repeat center;
@@ -64,7 +64,7 @@
         padding: 4px 10px;
         font-size: rem(14);
         color: $black;
-        background: rgba(0, 255, 255, 0.9);
+        background: rgba(0, 255, 255, 0.8);
         border-radius: 40px;
         border-top-right-radius: 0;
         content: attr(prompt);
