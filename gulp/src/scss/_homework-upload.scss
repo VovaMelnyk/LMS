@@ -1,79 +1,72 @@
-.d-rating{
+.d-rating {
     margin: 0 200px;
     padding-top: 16px;
-}
-.d-rating__form{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.d-rating__form__left{
-    width: 43px;
-}
-.d-rating__form__center{
-    position: relative;
-    width: 100%;
-    padding: 0 16px;
-}
-.d-rating__form__choose{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #fff url(../img/choose.png) no-repeat 98% center;
-}
-.d-rating__form__choose:focus{
-    outline: none;
-}
-// .d-rating__form__center:after{
-//     content: "";
-//     position: absolute;
-//     top: 7px;
-//     right: 21px;
-//     display: block;
-//     width: 10px;
-//     height: 10px;
-//     background: #fff url(../img/choose.png) no-repeat;
-// }
-.d-rating__form__right{
-    width: 113px;
-}
-.d-done{
-    position: relative;
-    width: 112px;
-    height: 0;
-    border: none;
-}
-.d-done::after{
-    content: "Готово";
-    position: absolute;
-    top: -4px;
-    left: 0;
-    display: block;
-    font-family: $title-font;
-    font-size: 13px;
-    color: $white;
-    line-height: 24px;
-    text-transform: uppercase;
-    width: 112px;
-    height: 24px;
-    background: $orange;
-    border-radius: 10px;
-}
-.d-rating__line{
-    color: $dark-text;
-    font-size: 36px;
-    font-family: $text-font;
-    padding-left: 57px;
-    padding-top: 25px;
-    letter-spacing: 5px;
-    line-height: 48px;
-    font-weight: bold;
-}
-.line-digit{
-    font-weight: bold;
-    text-shadow: 0px 0px 5px $red;
+
+    &-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__left {
+            width: 43px;
+        }
+        &__center {
+            position: relative;
+            width: 100%;
+            padding: 0 16px;
+        }
+        &__right {
+            width: 113px;
+        }
+    }
+    &__choose {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: #fff url(../img/choose.png) no-repeat 98% center;
+    }
+    &__choose:focus {
+        outline: none;
+    }
+
+    &__done {
+        position: relative;
+        width: 112px;
+        height: 0;
+        border: none;
+    }
+    &__done::after {
+        content: "Готово";
+        position: absolute;
+        top: -4px;
+        left: 0;
+        display: block;
+        font-family: $title-font;
+        font-size: 13px;
+        color: $white;
+        line-height: 24px;
+        text-transform: uppercase;
+        width: 112px;
+        height: 24px;
+        background: $orange;
+        border-radius: 10px;
+    }
+    &__line {
+        color: $dark-text;
+        font-size: 36px;
+        font-family: $text-font;
+        padding-left: 57px;
+        padding-top: 25px;
+        letter-spacing: 5px;
+        line-height: 48px;
+        font-weight: bold;
+    }
+    &__digit {
+        font-weight: bold;
+        text-shadow: 0px 0px 5px $red;
+    }
 }
