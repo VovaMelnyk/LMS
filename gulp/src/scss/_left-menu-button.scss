@@ -5,6 +5,7 @@
     background-color: $dark-bg;
     border-radius: 8px;
     margin-bottom: 8px;
+    // justify-content: space-between;
 
     .c-container-item {
         padding: 8px;
@@ -12,43 +13,62 @@
         font-family: $title-font;
         font-size: 20px;
         letter-spacing: 2.25px;
+        // position: absolute;
+
     }
 
     .c-container-path {
         background-image: url("../img/path.png");
         width: 25px;
         height: 15px;
+        // padding-right: 10px;
+        position: relative;
+        bottom: 28px;
+        left: 112px;
     }
+    .c-container-path::after {
+      transform: rotate(90deg);
+    }
+
 }
 
 .c-container-accordion {
-      position: relative;
-      overflow: hidden;
-      opacity: 1;
-      max-height: 800px;
-      transform: translate(0, 0);
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transform: translate(0, 0);
 
     &--item {
         color: $light-text;
-    // &--item:before {
-    //     content: "&lt;"
+        background-color: $grey-bg;
+        padding-top: 16px;
+        padding-left: 8px;
+        font-size: 20px;
+        }
+    &--item::before {
+        content: url(../img/item.png);
+        padding-right: 8px;
+        top: 6px;
+        position: relative;
     }
+
 }
 
-
 .c-container-button ul li input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 
 .c-container-button ul li input[type=checkbox]:checked ~ div.c-container-accordion {
-    // margin-top: 0;
-    // max-height: 0;
+    margin-top: 0;
+    max-height: 0;
     opacity: 0;
-    transform: translate(0, 50%);
+    // transform: translate(0, 50%);
 }
+
+// .c-container-path::before {
+//   transform: rotate(45deg);
+// }
