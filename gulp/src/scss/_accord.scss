@@ -66,28 +66,40 @@
   opacity: 0;
   transform: translate(0, 50%);
 }
-.accord ul li i {
+.accord ul li i{
   position: absolute;
   transform: translate(-6px, 0);
   margin-top: 16px;
   right: 25px;
 }
-.accord ul li i:before, .accord ul li i:after {
+.accord ul li b{
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 9px;
+  right: 25px;
+}
+.accord ul li i:before, .accord ul li i:after, .accord ul li b:before {
   content: "";
   position: absolute;
   background-color: $cyan;
   width: 3px;
-  height: 9px;
+  height: 16px;
+}
+.accord ul li b:before {
+  height: 20px;
 }
 .accord ul li i:before {
-  transform: translate(-2px, 0) rotate(45deg);
+  transform: translate(-5px, 0) rotate(45deg);
 }
 .accord ul li i:after {
-  transform: translate(2px, 0) rotate(-45deg);
+  transform: translate(5px, 0) rotate(-45deg);
 }
 .accord ul li input[type=checkbox]:checked ~ i:before {
-  transform: translate(2px, 0) rotate(45deg);
+  transform: translate(5px, 0) rotate(45deg);
 }
 .accord ul li input[type=checkbox]:checked ~ i:after {
-  transform: translate(-2px, 0) rotate(-45deg);
+  transform: translate(-5px, 0) rotate(-45deg);
+}
+.accord ul li b:before {
+  transform: translate(0, 0) rotate(90deg);
 }
