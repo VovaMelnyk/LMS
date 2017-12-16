@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 8px;
+    padding-top: 40px;
 }
 .t-title {
     display: flex;
@@ -30,6 +30,9 @@
         color: $dark-text;
         background-color: $cyan;
     }
+    &__results {
+        margin-right: 150px;
+    }
 }
 .t-timer {
     display: flex;
@@ -48,7 +51,4 @@
     &__clock {
         padding-top: 20px;
     }
-}
-.t-theme__result {
-    margin-right: 150px;
 }

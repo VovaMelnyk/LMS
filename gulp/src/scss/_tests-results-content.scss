@@ -1,53 +1,58 @@
-.t-content__results {
-  padding-top: 100px; }
-  .t-content__marks {
-    font-family: $text-font;
-    font-size: 58px;
-    padding-top: 20px;
-    padding-left: 40px;
-    font-weight: bold;
-    color: $dark-text;
-    text-shadow: 2px 2px 10px $light-green; }
+.t-results {
+    padding-top: 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__marks {
+        font-family: $text-font;
+        font-size: 58px;
+        padding-left: 40px;
+        font-weight: bold;
+        color: $dark-text;
+        text-shadow: 2px 2px 10px $light-green; }
 
-  .t-content__summ-time {
-    font-family: $text-font;
-    font-size: 20px;
-    color: $light-text;
-    text-align: center;
-    padding-top: 5px;}
-
-.t-content__list {
-  padding-top: 20px; }
-
-  .t-content__description {
-    color: $dark-text;
-    font-family: $text-font;
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 30px; }
-.t-content__mistakes {
+    &__summ-time {
+        font-family: $text-font;
+        font-size: 20px;
+        color: $light-text;
+        text-align: center;
+        padding-top: 5px;}
+}
+.t-mistakes {
     width: 65%;
     margin-top: 10px;
     margin-bottom: 20px;
-}
-    .t-content__number {
-    color: $light-green;
-    font-family: $text-font;
-}
-    .t-content__number-red {
-    color: $red;
-    font-family: $text-font;
-}
-    .t-content__link {
-    margin-top: -30px;
-    margin-left: 35px;
-    margin-bottom: 10px;
-    font-family: $text-font;
-    color: $dark-text;
-}
-    .t-content__material .t-content__gaps {
-    font-family: $text-font;
-}
-.t-content__material {
-    font-weight: bold;
+    &__list {
+        padding-top: 20px;
+        margin-left: 100px;       
+    }
+    &__description {
+        color: $dark-text;
+        font-family: $text-font;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+    &__numbers {
+        color: $light-green;
+        font-family: $text-font;
+        margin-right: 10px;
+    }
+    &__numbers-wrong {
+        color: $red;
+        font-family: $text-font;
+    }
+    &__explanation {
+        margin-top: -30px;
+        margin-left: 45px;
+        margin-bottom: 25px;
+        font-family: $text-font;
+        color: $dark-text;
+        font-weight: bold;
+    }
+    &__link {
+        font-family: $text-font;
+        font-weight: bold;
+    }  
 }
