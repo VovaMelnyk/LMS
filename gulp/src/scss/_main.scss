@@ -4,23 +4,22 @@
     min-height: 150px;
     background-color: $light-gray;
 }
-.m-content {
-    padding:16px 56px 48px 16px;
-    &__text {
-        margin-bottom:16px;
-        line-height:140%;
-        text-indent:16px;
-        text-align: justify;
-    }
-}
-
 .m-btn-up{
     position: fixed;
-    right: 140px;
-    top: 528px;
-    opacity: 0.7;
+    right: 8px;
+    bottom: 8px;
+    opacity: 0.5;
     &__arrow{
-        margin-top: -16px;
-        border: 16px solid transparent;	border-bottom: 16px solid white;
+        margin-left: 8px;
+        width: 20px;
+        border: 16px solid transparent;
+        border-bottom: 16px solid white;
     }
+}
+.m-btn-up ::after{
+    position: relative;
+    margin: -8px;
+    width: 20px;
+    border: 16px solid transparent;
+    border-bottom: 16px solid white;
 }

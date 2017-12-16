@@ -4,3 +4,12 @@
     padding: 64px 0 112px;
     min-height: 720px;
 }
+.m-content {
+    padding:16px 56px 48px 16px;
+    &__text {
+        margin-bottom:16px;
+        line-height:140%;
+        text-indent:16px;
+        text-align: justify;
+    }
+}
