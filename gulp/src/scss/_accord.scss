@@ -4,24 +4,35 @@
   width: 100%;
   min-height: 0;
   display: block;
+  overflow: hidden;
   margin: 0 auto;
   padding: 0;
-  overflow: hidden;
 }
-.button{
+.button, .button-one{
   width: 100%;
-  min-height: 48px;
+  min-width: 136px;
+  height: 56px;
   background-color: $dark-bg;
   border-radius: 8px;
+  padding: 0;
+  margin-bottom: 4px;
+  box-shadow: 4px 0 8px $grey-pholder;
 }
-.button h2{
+.button h2, .button-one h2{
   padding: 12px 16px;
   letter-spacing: 2.25px;
   text-transform: uppercase;
   border: none;
   color: $cyan;
   font-family: $title-font;
-  font-size: 16px;
+  font-size: 24px;
+  text-align: center;
+  padding: 2px;
+  line-height: 26px;
+  box-sizing: border-box;
+}
+.button-one h2{
+  line-height: 54px;
 }
 .small-btn{
   overflow: hidden;
@@ -32,7 +43,7 @@
 .small-btn li{
   text-transform: uppercase;
   font-family: $title-font;
-  font-size: 14px;
+  font-size: 24px;
 }
 .accord ul {
   list-style: none;
@@ -54,4 +65,29 @@
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
+}
+.accord ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 25px;
+}
+.accord ul li i:before, .accord ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: $cyan;
+  width: 3px;
+  height: 9px;
+}
+.accord ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accord ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accord ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accord ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
 }
