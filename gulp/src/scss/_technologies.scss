@@ -1,0 +1,33 @@
+.t-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+.t-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 30px;
+    &__subtitle {
+        font-family: $text-font;
+        font-size: 35px;
+        color: $light-text;
+    }
+    &__number {
+        font-family: $title-font;
+        font-size: 58px;
+        color: $dark-text;
+    }
+}
+.t-theme {
+    display:flex;
+    align-items: flex-end;
+    &__name {
+        font-family: $title-font;
+        font-size: 58px;
+        color: $dark-text;
+        background-color: $cyan;
+    }
+}
