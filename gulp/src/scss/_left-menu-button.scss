@@ -1,75 +1,141 @@
-@import '_left-nav.scss';
-
-.c-container-button {
-    min-height: 48px;
-    background-color: $dark-bg;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    display: inline-flex;
-
-    &--input[type=checkbox] {
-        justify-content:
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-    }
-
-
-    .c-container-item {
-        padding: 8px;
-        color: $cyan;
-        font-family: $title-font;
-        font-size: 20px;
-        letter-spacing: 2.25px;
-        // position: absolute;
-    }
-
-    .c-container-path {
-        display: flex;
-        background-image: url("../img/path.png");
-        width: 25px;
-        height: 15px;
-        position: relative;
-        bottom: 28px;
-        left: 112px;
-    }
-}
-
-.c-container-accordion {
-    position: relative;
-    overflow: hidden;
-    opacity: 1;
-    transform: translate(0, 0);
-
-    &--item {
-        color: $light-text;
-        background-color: $grey-bg;
-        padding-top: 16px;
-        padding-left: 8px;
-        font-size: 20px;
-
-    }
-
-    &--item::before {
-        content: url("../img/item.png");
-        padding-right: 8px;
-        top: 6px;
-        position: relative;
-    }
-}
-
-// .c-container-button input[type=checkbox] {
-//     position: absolute;
-//     cursor: pointer;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0;
+// .left-nav{
+//   width: 100%;
+//   min-height: 0;
+//   display: block;
+//   overflow: hidden;
+//   margin: 0 auto;
+//   padding: 0;
 // }
 
-.c-container-button ul li input[type=checkbox]:checked ~ div.c-container-accordion {
-    margin-top: 0;
-    max-height: 0;
-    opacity: 0;
-    // transform: translate(0, 50%);
+.left-nav__button{
+  // width: 100%;
+  // min-width: 136px;
+  display: flex;
+  height: 56px;
+  background-color: $dark-button;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  // padding: 0px 24px 0px 6px;
+  box-shadow: 4px 0 8px $grey-pholder;
+  color: $cyan;
+  font-family: $title-font;
+  font-size: 24px;
+  letter-spacing: 1.24px;
+  // text-transform: uppercase;
+}
+// .button h2, .button-one h2{
+//   letter-spacing: 2.25px;
+//   text-transform: uppercase;
+//   border: none;
+//   color: $cyan;
+//   font-family: $title-font;
+//   font-size: 24px;
+//   text-align: center;
+//   padding: 2px;
+//   line-height: 26px;
+//   box-sizing: border-box;
+// }
+// .button-one h2{
+//   line-height: 54px;
+// }
+.left-nav__list {
+  overflow: hidden;
+  max-height: 400px;
+  opacity: 1;
+  transform: translate(0, 0);
+  background-color: $light-gray;
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// .left-nav__list li{
+//   // text-transform: uppercase;
+//   // font-family: $title-font;
+//   // font-size: 24px;
+//   // display: block;
+//   // padding: 24px 40px 0;
+//
+// }
+.left-nav__list li:last-child{
+    // padding-bottom: 24px;
+}
+.left-nav__menu {
+  // list-style: none;
+  perspective: 900;
+}
+.left-nav ul li input[type=checkbox] {
+  position: absolute;
+  // cursor: pointer;
+  // width: 100%;
+  // height: 100%;
+  // margin: 0;
+  // padding: 0;
+  opacity: 0;
+}
+.left-nav ul li input[type=checkbox]:checked ~ div.small-btn{
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.left-nav ul li input[type=checkbox]:checked ~ div.button{
+    margin-bottom: 8px;
+}
+.left-nav ul li i{
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 19px;
+  right: 25px;
+}
+.left-nav  ul li .small-btn i {
+  margin-top: 32px;
+  left: 24px;
+}
+.left-nav ul li b{
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 10px;
+  right: 25px;
+}
+.left-nav ul li i:before, .left-nav ul li i:after, .left-nav ul li b:before {
+  content: "";
+  position: absolute;
+  background-color: $cyan;
+  width: 2px;
+  height: 18px;
+}
+.left-nav  ul li .small-btn i:after, .left-nav ul li .small-btn i:before {
+     width: 3px;
+    height: 12px;
+}
+.left-nav ul li b:before {
+  height: 24px;
+  transform: translate(0, 0) rotate(90deg);
+}
+.left-nav ul li i:before {
+  transform: translate(-6px, 0) rotate(-45deg);
+}
+.left-nav ul li i:after {
+  transform: translate(6px, 0) rotate(45deg);
+}
+.left-nav ul li .small-btn i:before {
+  transform: translate(3px, 4px) rotate(140deg);
+}
+.left-nav ul li .small-btn i:after {
+  transform: translate(3px, -4px) rotate(-140deg);
+}
+.left-nav ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(6px, 6px) rotate(225deg);
+}
+.left-nav ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(6px, -6px) rotate(-225deg);
+}
+.left-nav ul li input[type=checkbox]:checked ~ b:before {
+  transform: translate(0, 0) rotate(180deg);
+  margin-top: 6px;
 }
