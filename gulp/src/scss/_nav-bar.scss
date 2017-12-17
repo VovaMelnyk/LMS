@@ -4,40 +4,42 @@
     justify-content: space-between;
     width: 208px;
     height: 48px;
+    font-family: $text-font;
     margin-left: 192px;
 }
 
 .c-header__icon {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 48px;
+    height: 48px;
+    text-decoration: none;
+    background-color: $orange;
     border-radius: 50%;
 
     &-calendar {
         background: url(../img/calendar-icon.svg) no-repeat center;
-        background-color: $orange;
     }
 
-    &-chat {
+    &-messenger {
         background: url(../img/messenger-icon.svg) no-repeat center;
-        background-color: $orange;
     }
 
-    &-billboard {
+    &-adv {
         background: url(../img/adv-icon.svg) no-repeat center;
-        background-color: $orange;
     }
 }
 .c-header__tooltip {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     width: 16px;
     height: 16px;
-    font-family: $text-font;
     font-size: 10px;
     font-weight: bold;
     line-height: 16px;
     text-align: center;
     background: $light-green;
     border-radius: 50%;
+}
+.c-header__tooltip:hover {
+    transform: scale(1.1);
 }
