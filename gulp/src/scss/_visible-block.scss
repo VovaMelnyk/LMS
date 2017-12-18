@@ -1,6 +1,7 @@
 @import "var";
 
 .m-highlight {
+    display :none;
     width: 96px;
     height: 48px;
     border-radius: 6px;
@@ -8,7 +9,7 @@
 
     &__visible {
         position: relative;
-        display: flex;
+        display: none;
         justify-content: space-around;
         width: 92px;
         height: 44px;
