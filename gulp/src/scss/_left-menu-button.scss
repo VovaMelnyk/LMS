@@ -1,47 +1,34 @@
-.left-nav{
-  width: 100%;
-  min-height: 0;
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0;
+.left-nav {
+    width: 100%;
+    min-height: 0;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.left-nav__menu {
+    perspective: 900;
 }
 
 .left-nav__button {
-    // width: 100%;
-    // min-width: 136px;
+    width: 100%;
+    min-width: 136px;
     display: flex;
     height: 56px;
     background-color: $dark-button;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
-    // padding: 0px 24px 0px 6px;
     box-shadow: 4px 0 8px $grey-pholder;
     color: $cyan;
     font-family: $title-font;
     font-size: 24px;
     letter-spacing: 1.24px;
-    // text-transform: uppercase;
+    box-sizing: border-box;
 }
-// .button h2, .button-one h2{
-//   letter-spacing: 2.25px;
-//   text-transform: uppercase;
-//   border: none;
-//   color: $cyan;
-//   font-family: $title-font;
-//   font-size: 24px;
-//   text-align: center;
-//   padding: 2px;
-//   line-height: 26px;
-//   box-sizing: border-box;
-// }
-// .button-one h2{
-//   line-height: 54px;
-// }
 
 .left-nav__list {
-    overflow: hidden;
     max-height: 400px;
     opacity: 1;
     transform: translate(0, 0);
@@ -49,48 +36,41 @@
     text-transform: uppercase;
     font-family: $title-font;
     font-size: 24px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-// .left-nav__list li{
-//   // text-transform: uppercase;
-//   // font-family: $title-font;
-//   // font-size: 24px;
-//   // display: block;
-//   // padding: 24px 40px 0;
-//
-// }
-// .left-nav__list li:last-child{
-//     // padding-bottom: 24px;
-// }
 
-.left-nav__menu {
-    // list-style: none;
-    perspective: 900;
+    &--li:last-child {
+        padding-bottom: 24px;
+    }
+
+    li {
+        text-transform: uppercase;
+        font-family: $title-font;
+        font-size: 24px;
+        display: block;
+        padding: 24px 40px 0;
+    }
+    i {
+        margin-top: 32px;
+    }
 }
+
 
 .left-nav__input {
     position: absolute;
     cursor: pointer;
     width: 100%;
     height: 100%;
-    // margin: 0;
-    // padding: 0;
+    margin: 0;
+    padding: 0;
     opacity: 0;
 }
 
-.left-nav__input ~ div.left-nav__list {
+.left-nav__menu input[type=checkbox]:checked ~ ul.left-nav__list {
     margin-top: 0;
     max-height: 0;
     opacity: 0;
     transform: translate(0, 50%);
 }
-
-// .left-nav__input ~ div.left-nav__button {
-//     margin-bottom: 8px;
-// }
 
 .left-nav__menu--item i {
     position: absolute;
@@ -99,10 +79,7 @@
     right: 25px;
 }
 
-.left-nav__list i {
-    margin-top: 32px;
-    // left: 24px;
-}
+
 
 .left-nav__menu--item b {
     position: absolute;
