@@ -1,7 +1,4 @@
 .left-nav {
-    display: flex;
     background: $grey-bg;
-    min-width: 12%;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-basis: 12%;
 }
