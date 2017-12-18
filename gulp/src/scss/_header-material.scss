@@ -4,8 +4,4 @@
 .m-header-line {
     display: flex;
     justify-content: space-between;
-    &__items {
-        display: flex;
-        flex-direction: column;
-    }
 }

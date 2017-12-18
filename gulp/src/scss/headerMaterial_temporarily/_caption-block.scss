@@ -1,20 +1,24 @@
 @import "../var";
+@mixin text-56-dark(){
+    font-size: 56px;
+    color: $dark-text;
+}
 
-.m-caption{
+.m-header-line{
     &__title{
         font-family: 'Museo Sans Cyrl W03 300';
         font-weight: 400;
         font-size: 32px;
         color: $light-text;
     }
-    &_footer-text{
-        margin-top: 18px;
-        font-size: 56px;
-        color: $dark-text;
+    &__number-theme{
+        margin-top: 16px;
+        @include text-56-dark()
     }
     &__name{
         align-self: flex-end;
         padding: 7px 10px;
+        @include text-56-dark();
         background: $cyan;
     }
 
