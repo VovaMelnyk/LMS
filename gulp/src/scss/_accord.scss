@@ -14,14 +14,12 @@
     height: 56px;
     background-color: $dark-bg;
     border-radius: 8px;
-    padding: 0;
-    margin-bottom: 4px;
+    padding: 0 24px 0 6px;
     box-shadow: 4px 0 8px $grey-pholder;
 }
 
 .button h2,
 .button-one h2 {
-    padding: 12px 16px;
     letter-spacing: 2.25px;
     text-transform: uppercase;
     border: none;
@@ -43,12 +41,19 @@
     max-height: 400px;
     opacity: 1;
     transform: translate(0, 0);
+    background-color: $light-gray;
 }
 
 .small-btn li {
     text-transform: uppercase;
     font-family: $title-font;
     font-size: 24px;
+    display: block;
+    padding: 24px 40px 0;
+}
+
+.small-btn li:last-child {
+    padding-bottom: 24px;
 }
 
 .accord ul {
@@ -75,17 +80,26 @@
     transform: translate(0, 50%);
 }
 
+.accord ul li input[type=checkbox]:checked ~ div.button {
+    margin-bottom: 8px;
+}
+
 .accord ul li i {
     position: absolute;
     transform: translate(-6px, 0);
-    margin-top: 16px;
+    margin-top: 19px;
     right: 25px;
+}
+
+.accord ul li .small-btn i {
+    margin-top: 32px;
+    left: 24px;
 }
 
 .accord ul li b {
     position: absolute;
     transform: translate(-6px, 0);
-    margin-top: 9px;
+    margin-top: 10px;
     right: 25px;
 }
 
@@ -95,30 +109,46 @@
     content: "";
     position: absolute;
     background-color: $cyan;
+    width: 2px;
+    height: 18px;
+}
+
+.accord ul li .small-btn i:after,
+.accord ul li .small-btn i:before {
     width: 3px;
-    height: 16px;
+    height: 12px;
 }
 
 .accord ul li b:before {
-    height: 20px;
+    height: 24px;
+    transform: translate(0, 0) rotate(90deg);
 }
 
 .accord ul li i:before {
-    transform: translate(-5px, 0) rotate(45deg);
+    transform: translate(-6px, 0) rotate(-45deg);
 }
 
 .accord ul li i:after {
-    transform: translate(5px, 0) rotate(-45deg);
+    transform: translate(6px, 0) rotate(45deg);
+}
+
+.accord ul li .small-btn i:before {
+    transform: translate(3px, 4px) rotate(140deg);
+}
+
+.accord ul li .small-btn i:after {
+    transform: translate(3px, -4px) rotate(-140deg);
 }
 
 .accord ul li input[type=checkbox]:checked ~ i:before {
-    transform: translate(5px, 0) rotate(45deg);
+    transform: translate(6px, 6px) rotate(225deg);
 }
 
 .accord ul li input[type=checkbox]:checked ~ i:after {
-    transform: translate(-5px, 0) rotate(-45deg);
+    transform: translate(6px, -6px) rotate(-225deg);
 }
 
-.accord ul li b:before {
-    transform: translate(0, 0) rotate(90deg);
+.accord ul li input[type=checkbox]:checked ~ b:before {
+    transform: translate(0, 0) rotate(180deg);
+    margin-top: 6px;
 }
