@@ -22,7 +22,9 @@
     border-radius: 50%;
     opacity: 0.5;
     transition: 0.5s;
-    &__arrow {
+    &::after {
+        display: block;
+        content: '';
         height: 100%;
         background: white;
         clip-path: polygon(15% 70%, 50% 15%, 85% 70%);
