@@ -1,63 +1,47 @@
 .d-comments {
-    margin: 0 200px;
-    padding-top: 200px;
+    width: 60%;
+    margin: 200px auto 0;
 
     &-form {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+    }
 
-            &__left {
-                width: 43px;
-            }
-            &__center {
-                position: relative;
-                width: 100%;
-                padding: 0 16px;
-            }
-            &__center::before {
-                content: "Комментарии";
-                position: absolute;
-                top: -16px;
-                left: 16px;
-                display: block;
-                font-family: $text-font;
-                color: $dark-text;
-                font-size: 15px;
-                font-weight: bold;
-            }
-            &__right {
-                width: 113px;
-            }
-        }
+    &__name{
+        position: relative;
+    }
+
+    &__name::before {
+        content: "Комментарии";
+        position: absolute;
+        top: -32px;
+        left: 16px;
+        display: block;
+        font-family: $text-font;
+        color: $dark-text;
+        font-size: 15px;
+        font-weight: bold;
+    }
 
     &__title {
-        width: 100%;
+        width: 70%;
         font-family: $text-font;
         font-size: 13px;
         text-transform: none;
         color: $black;
         border: none;
         border-radius: 10px;
-        padding: 0 16px;
+        padding: 4px 16px;
+        margin: 0 auto;
     }
     &__title:focus {
         outline: none;
     }
 
     &__send {
-        position: relative;
-        width: 112px;
-        height: 0;
         border: none;
-    }
-    &__send::after {
-        content: "Отправить";
-        position: absolute;
-        top: -4px;
-        left: 0;
-        display: block;
         font-family: $title-font;
         font-size: 13px;
         color: $white;

@@ -1,50 +1,30 @@
 .d-rating {
-    margin: 0 200px;
-    padding-top: 16px;
+    width: 60%;
+    margin: 16px auto 0;
 
     &-form {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-
-        &__left {
-            width: 43px;
-        }
-        &__center {
-            position: relative;
-            width: 100%;
-            padding: 0 16px;
-        }
-        &__right {
-            width: 113px;
-        }
     }
     &__choose {
-        width: 100%;
+        width: 70%;
+        font-family: $text-font;
+        font-size: 13px;
+        text-transform: none;
+        color: $black;
         border: none;
         border-radius: 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: #fff url(../img/choose.png) no-repeat 98% center;
+        padding: 4px 16px;
+        margin: 0 auto;
     }
     &__choose:focus {
         outline: none;
     }
 
     &__done {
-        position: relative;
-        width: 112px;
-        height: 0;
         border: none;
-    }
-    &__done::after {
-        content: "Готово";
-        position: absolute;
-        top: -4px;
-        left: 0;
-        display: block;
         font-family: $title-font;
         font-size: 13px;
         color: $white;
@@ -55,12 +35,13 @@
         background: $orange;
         border-radius: 10px;
     }
+
     &__line {
         color: $dark-text;
         font-size: 36px;
         font-family: $text-font;
         padding-left: 57px;
-        padding-top: 25px;
+        margin-top: 25px;
         letter-spacing: 5px;
         line-height: 48px;
         font-weight: bold;
