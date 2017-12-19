@@ -1,5 +1,4 @@
 .profile-wrapper {
- // /
 	// max-width: 560px;
 }
 .photo-block {
@@ -34,6 +33,22 @@
 		color: $grey-pholder;
 	}
 }
+.input-but-st {
+	@extend .input-st;
+	position: relative;
+	color: $grey-pholder;
+	line-height: 32px;
+}
+.icon-info--input--svg {
+	position: absolute;
+	top: 4px;
+	left: 8px;
+	height: 24px;
+	width: 24px;
+	path, polygon {
+		fill: $grey-pholder;
+	}
+}
 .info-block {
 	display: flex;
 	margin-bottom: 16px;
@@ -43,7 +58,7 @@
 	width: 264px;
 }
 .social-block {
-	// margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 .social-block--inputs {
 	display: flex;
@@ -58,6 +73,17 @@
 	text-align: center;
 	background-color: transparent;
 	border: 2px solid $dark-text;
+}
+.social-block--inputs-block--icon--svg {
+	height: 24px;
+	width: 24px;
+	path {
+		fill: $dark-text;
+	}
+}
+.social-block--inputs-block:last-child .social-block--inputs-block--icon--svg {
+	height: 21px;
+	width: 16px;
 }
 .social-block--inputs-block--input {
 	width: 136px;
