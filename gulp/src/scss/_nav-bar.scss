@@ -16,25 +16,21 @@
     height: 48px;
     text-decoration: none;
     border-radius: 50%;
+    background-color: $orange;
 
     &-calendar {
-        background: url(../img/calendar-icon.svg) no-repeat center;
-        background-color: $orange;
-
+        background: url("../img/calendar-icon.svg") no-repeat center;
     }
 
     &-messenger {
-        background: url(../img/messenger-icon.svg) no-repeat center;
-        background-color: $orange;
-
+        background: url("../img/messenger-icon.svg") no-repeat center;
     }
 
     &-adv {
-        background: url(../img/adv-icon.svg) no-repeat center;
-        background-color: $orange;
-
+        background: url("../img/adv-icon.svg") no-repeat center;
     }
 }
+
 .c-header__tooltip {
     width: 16px;
     height: 16px;
@@ -45,6 +41,7 @@
     background: $light-green;
     border-radius: 50%;
 }
+
 .c-header__tooltip:hover {
     transform: scale(1.1);
 }
