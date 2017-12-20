@@ -1,18 +1,17 @@
-.t-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: $content-size;
+.t-content--position {
+    padding-top: 100px;
 }
-.t-content__question, .t-content__attempts  {
-    font-family: "Museo Sans Cyrl W03 300";
+
+.t-content__attempts,
+.t-content__question {
+    font-family: $text-font;
     font-size: 35px;
 }
+
 .t-content__amount {
     color: $orange;
 }
+
 .t-btn__start {
     margin-top: 128px;
 }
-
