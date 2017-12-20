@@ -20,20 +20,22 @@
             justify-content: flex-start;
             padding-left: 12px;
             background: $white;
+        }
 
-            &::after {
+        &-orange {
+            background: $orange;
+
+            &::before {
                 display: block;
                 width: 0;
                 height: 0;
                 border-top: 24px solid transparent;
                 border-bottom: 24px solid transparent;
-                border-left: 18px solid $white;
-                content: "";              
+                border-left: 18px solid #fff;
+                content: "";
+                position: relative;
+                left: -29px;
             }
-        }
-
-        &-orange {
-            background: $orange;
         }
     }
 }
