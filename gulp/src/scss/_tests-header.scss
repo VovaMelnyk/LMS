@@ -2,19 +2,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 8px;
 }
 .t-title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-left: 30px;
+
     &__subtitle {
         font-family: $text-font;
         font-size: 35px;
         color: $light-text;
     }
+
     &__number {
         font-family: $title-font;
         font-size: 58px;
@@ -34,18 +33,19 @@
 .t-timer {
     display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
-    align-items: start;
-    padding-right: 36px;
+	justify-content: space-between;
+    align-items: center;
+    flex-basis: 80px;
+
     &__time {
-        padding-top: 30px;
         font-family: $text-font;
         font-size: 10px;
         font-weight: 700;
         color: $dark-text;
         text-align: right;
     }
+
     &__clock {
-        padding-top: 20px;
+
     }
 }
