@@ -1,8 +1,4 @@
 .left-nav {
-    display: flex;
-    // min-height: 150px;
-    background: $light-gray;
-    min-width: 12%;
-    flex-direction: column;
-    box-shadow: 4px 0 8px $grey-pholder;
+    background: $grey-bg;
+    flex-basis: 12%;
 }
