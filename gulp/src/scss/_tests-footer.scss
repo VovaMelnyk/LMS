@@ -1,10 +1,24 @@
-.t-footer {
+/*.t-footer {
     display: flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:flex-end;
     padding: 60px 40px 40px 40px;
 }
+.t-control {
+    font-family: $text-font;
+    font-size: 23px;
+    color: $light-text;
+}
+*/
+.t-footer {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top: 32px;
+}
+
 .t-control {
     font-family: $text-font;
     font-size: 23px;
