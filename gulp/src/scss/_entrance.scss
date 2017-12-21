@@ -15,10 +15,10 @@
     }
 
     &__input-block {
-        margin-top: rem(24);
+        margin-top: rem(32);
 
         &--first {
-            margin-top: rem(72);
+            margin-top: rem(40);
         }
     }
 
@@ -27,7 +27,7 @@
     }
 
     &__error {
-        margin-top: rem(40);
+        margin-top: rem(48);
     }
 
     &__forgot-pass {
@@ -59,20 +59,21 @@
             display: block;
 
             width: 35%;
-            margin-right: 24px;
+            margin-right: 8px;
 
-            font-size: rem(24);
+            font-size: rem(28);
             text-align: right;
+
 
     }
 
     &__input {
-        width: 72%;
-        padding-left: rem(32);
+        width: 100%;
+        padding-left: rem(16);
         color: $black;
         border: none;
         background-color: $grey-input;
-        font-size: rem(24);
+        font-size: rem(30);
     }
 }
 
@@ -81,19 +82,19 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-top: rem(16);
+    margin-top: rem(24);
     padding-right: rem(8);
 
     &__label {
-        font-size: rem(20);
+        font-size: rem(17);
     }
 
     &__checkbox {
         display: block;
         width: rem(16);
         height: rem(16);
-        margin-right: rem(16);
-        margin-left: rem(80);
+        margin-right: rem(8);
+        margin-left: rem(8);
     }
 }
 
@@ -101,7 +102,7 @@
 .a-social {
     display: flex;
     justify-content: space-around;
-    width: rem(264);
+    width: rem(216);
     z-index: 10;
 
     &__link {
@@ -110,7 +111,7 @@
 }
 
 .a-error {
-    visibility: hidden;
+    visibility: visible;
     color: $red;
     font-size: rem(16);
     z-index: 10;

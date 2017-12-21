@@ -3,9 +3,9 @@
     top: 50%;
     left: 50%;
 
-    width: 40%;
+    width: 30%;
     min-width: rem(640);
-    padding: rem(32) rem(64) rem(56);
+    padding: rem(32) rem(96) rem(64);
 
     transform: translate(-50%, -50%);
     text-align: center;
@@ -43,6 +43,7 @@
     color: $cyan;
 
     font-family: $title-font;
-    font-size: rem(80);
+    font-size: rem(72);
     font-weight: 400;
+
 }

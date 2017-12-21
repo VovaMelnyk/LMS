@@ -27,7 +27,7 @@
 
     color: #00ff00;
 
-    font-size: rem(32);
+    font-size: rem(24);
 }
 
 .a-input-block {
@@ -37,9 +37,9 @@
         display: block;
 
         width: 35%;
-        margin-right: 36px;
+        margin-right: 32px;
 
-        font-size: rem(28);
+        font-size: rem(24);
 
         &--rightaligned {
             text-align: right;
@@ -48,24 +48,29 @@
     // добавляем белый цвет текста, уменьшаем размер
     &__input--whitetext--size {
         max-width: 60%;
-        max-height: rem(40);
+        max-height: rem(32);
 
         color: $white;
 
         font-family: $text-font;
-        font-size: rem(28);
+        font-size: rem(24);
     }
 }
 
 .policylink {
-    font-size: rem(24);
+    font-size: rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: rem(8);
+    padding-right: rem(8);
 
     @include links;
 }
 
 .policylink::before {
     position: relative;
-    left: -30%;
+    left: -38%;
 
     content: " *";
 

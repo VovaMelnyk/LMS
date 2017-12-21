@@ -1,5 +1,5 @@
 .button-big {
-    padding: rem(8) rem(72);
+    padding: rem(8) rem(56);
     letter-spacing: rem(2.25);
     text-transform: uppercase;
     color: $white;
@@ -7,7 +7,7 @@
     border-radius: rem(10);
     background-color: $orange;
     font-family: $title-font;
-    font-size: rem(40);
+    font-size: rem(32);
 }
 
 .button-small {
@@ -24,26 +24,26 @@
 
 .icon {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: $orange;
 }
 
 .close {
     position: absolute;
-    width: rem(42);
-    height: rem(42);
+    width: rem(32);
+    height: rem(32);
     color: $orange;
-    border: rem(3) solid transparent;
+    border: rem(2) solid transparent;
     border-radius: 50%;
-    font-size: rem(25);
+    font-size: rem(20);
     text-align: center;
 
     &:hover {
         cursor: default;
         color: $cyan;
-        border: rem(3) solid $orange;
+        border: rem(2) solid $orange;
         border-radius: 50%;
     }
 }
