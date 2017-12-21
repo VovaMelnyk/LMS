@@ -1,5 +1,5 @@
 .button-big {
-    padding: rem(16) rem(72);
+    padding: rem(8) rem(72);
     letter-spacing: rem(2.25);
     text-transform: uppercase;
     color: $white;
@@ -7,7 +7,7 @@
     border-radius: rem(10);
     background-color: $orange;
     font-family: $title-font;
-    font-size: rem(45);
+    font-size: rem(40);
 }
 
 .button-small {
@@ -32,8 +32,8 @@
 
 .close {
     position: absolute;
-    width: rem(40);
-    height: rem(40);
+    width: rem(42);
+    height: rem(42);
     color: $orange;
     border: rem(3) solid transparent;
     border-radius: 50%;
