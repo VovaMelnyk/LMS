@@ -9,10 +9,10 @@
 @import 'left-nav';
 @import 'main';
 @import 'right-nav';
-@import 'tests-main';
+//////tests////////
 @import 'tests-header';
-@import 'tests-results-header';
-@import 'tests-content';	
+@import 'tests-content';
 @import 'tests-results-content';
 @import 'tests-footer';
-
+////////////////////////////
+@import 'mixins';
