@@ -7,8 +7,6 @@
         text-transform: uppercase;
         color: $dark-text;
         font-size: 54px;
-        width: 200px;
-        padding-left: 36px;
     }
     &__title {
         display: inline-block;
@@ -17,12 +15,14 @@
         text-align: center;
         color: $dark-text;
         font-size: 54px;
-        width: calc(100% - 400px);
+        width:60%;
+        margin: 0 auto;
     }
     &__desc {
         font-family: $text-font;
         font-size: 16px;
         color: $dark-text;
-        margin: 16px 200px 0;
+        width:60%;
+        margin: 0 auto;
     }
 }
