@@ -7,6 +7,7 @@
         text-transform: uppercase;
         color: $dark-text;
         font-size: 54px;
+        width: 20%; //mainWidth=60%, (100-60)/2=20%
     }
     &__title {
         display: inline-block;
