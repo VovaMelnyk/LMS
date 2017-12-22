@@ -17,17 +17,17 @@
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
-    bottom: 40%;
-    left: 304%;
+    bottom: 16%;
+    left: 352%;
 
     display: block;
 
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
 
     color: #00ff00;
 
-    font-size: rem(24);
+    font-size: rem(20);
 }
 
 .a-input-block {
@@ -36,41 +36,71 @@
     &__label {
         display: block;
 
-        width: 35%;
+
         margin-right: 32px;
 
-        font-size: rem(24);
+        font-size: rem(22);
 
         &--rightaligned {
             text-align: right;
+            line-height: 12px;
+
+            width: 32%;
+            margin-right: 32px;
+
+            font-size: rem(22);
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
     &__input--whitetext--size {
-        max-width: 60%;
-        max-height: rem(32);
+        max-width: 64%;
+        max-height: rem(28);
+        padding-left: rem(16);
 
-        color: $white;
+        color: $dark-bg;
 
         font-family: $text-font;
-        font-size: rem(24);
+        font-size: rem(22);
     }
 }
 
-.policylink {
-    font-size: rem(20);
+.a-checkbox-block-reg {
+  z-index: 10;
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-top: rem(8);
-    padding-right: rem(8);
+    margin-top: rem(16);
+    padding-left: rem(16);
+    margin-bottom: rem(32);
+
+    &__label {
+        margin-left: rem(8);
+
+    }
+
+    &__checkbox {
+        display: block;
+        width: rem(16);
+        height: rem(16);
+
+
+    }
+}
+
+
+.policylink {
+    font-size: rem(18);
+    display: center;
+    align-items: right;
+    justify-content: right;
+
 
     @include links;
 }
 
 .policylink::before {
     position: relative;
-    left: -38%;
+    left: -32%;
 
     content: " *";
 

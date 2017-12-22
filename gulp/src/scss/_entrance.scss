@@ -11,14 +11,15 @@
     font-family: $text-font;
 
     &__btn {
-        margin-top: rem(40);
+        margin-top: rem(32);
     }
 
     &__input-block {
-        margin-top: rem(32);
+        margin-top: rem(24);
 
         &--first {
-            margin-top: rem(40);
+            margin-top: rem(32);
+            max-height: rem(32);
         }
     }
 
@@ -61,7 +62,7 @@
             width: 35%;
             margin-right: 8px;
 
-            font-size: rem(28);
+            font-size: rem(22);
             text-align: right;
 
 
@@ -72,8 +73,9 @@
         padding-left: rem(16);
         color: $black;
         border: none;
+        max-height: rem(32);
         background-color: $grey-input;
-        font-size: rem(30);
+        font-size: rem(22);
     }
 }
 
