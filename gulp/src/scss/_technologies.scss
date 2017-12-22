@@ -21,17 +21,3 @@
 //         color: $dark-text;
 //     }
 // }
-.t-theme {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    &__name {
-        font-family: $title-font;
-        font-size: 58px;
-        color: $dark-text;
-        background-color: $cyan;
-        text-align: center;
-        justify-content: center;
-    }
-}
