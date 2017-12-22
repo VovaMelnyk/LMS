@@ -17,8 +17,8 @@
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
-    bottom: 16%;
-    left: 352%;
+    bottom: 40%;
+    left: 350%;
 
     display: block;
 
@@ -28,6 +28,7 @@
     color: #00ff00;
 
     font-size: rem(20);
+    vertical-align: bottom;
 }
 
 .a-input-block {
@@ -36,14 +37,13 @@
     &__label {
         display: block;
 
-
         margin-right: 32px;
 
         font-size: rem(22);
 
+
         &--rightaligned {
             text-align: right;
-            line-height: 12px;
 
             width: 32%;
             margin-right: 32px;
@@ -69,12 +69,11 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-top: rem(16);
     padding-left: rem(16);
     margin-bottom: rem(32);
 
     &__label {
-        margin-left: rem(8);
+        margin-left: rem(16);
 
     }
 
@@ -82,7 +81,6 @@
         display: block;
         width: rem(16);
         height: rem(16);
-
 
     }
 }
@@ -100,7 +98,8 @@
 
 .policylink::before {
     position: relative;
-    left: -32%;
+    left: -40%;
+    font-size: rem(22);
 
     content: " *";
 
