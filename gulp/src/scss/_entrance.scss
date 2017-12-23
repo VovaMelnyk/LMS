@@ -59,7 +59,7 @@
     &__label {
             display: block;
 
-            width: 35%;
+            width: 38%;
             margin-right: 8px;
 
             font-size: rem(22);
@@ -71,7 +71,7 @@
     &__input {
         width: 100%;
         padding-left: rem(16);
-        color: $black;
+        color: $dark-bg;
         border: none;
         max-height: rem(32);
         background-color: $grey-input;
@@ -85,10 +85,10 @@
     align-items: center;
     justify-content: right;
     margin-top: rem(24);
-    padding-right: rem(8);
+    padding-left: rem(16);
 
     &__label {
-        font-size: rem(17);
+        font-size: rem(18);
     }
 
     &__checkbox {
@@ -112,7 +112,7 @@
 }
 
 .a-error {
-    visibility: visible;
+    visibility: hidden;
     color: $red;
     font-size: rem(16);
     z-index: 10;

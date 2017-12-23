@@ -45,7 +45,7 @@
         &--rightaligned {
             text-align: right;
 
-            width: 32%;
+            width: 30%;
             margin-right: 32px;
 
             font-size: rem(22);
@@ -63,28 +63,6 @@
         font-size: rem(22);
     }
 }
-
-.a-checkbox-block-reg {
-  z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-left: rem(16);
-    margin-bottom: rem(32);
-
-    &__label {
-        margin-left: rem(16);
-
-    }
-
-    &__checkbox {
-        display: block;
-        width: rem(16);
-        height: rem(16);
-
-    }
-}
-
 
 .policylink {
     font-size: rem(18);
