@@ -1,12 +1,14 @@
+@import 'var';
 @import 'reset';
 @import 'fonts';
-@import 'var';
 @import 'theme';
 @import 'header';
+@import 'logo';
+@import 'nav-bar';
+@import 'photo-profile';
 @import 'container';
 @import 'wrapper';
 @import 'content';
-@import 'left-nav';
 @import 'main';
 @import 'right-nav';
 @import 'tests-main';
@@ -14,4 +16,9 @@
 @import 'tests-content';
 @import 'tests-main-content';
 @import 'tests-footer';
-
+@import './m-right-nav/m-right-nav';
+@import 'left-menu-button';
+@import 'left-nav';
+//////tests////////
+@import 'tests-main-content';
+@import 'accord';
