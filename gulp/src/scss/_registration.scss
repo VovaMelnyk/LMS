@@ -47,11 +47,11 @@
         }
 
         &:last-child {
-            line-height: rem(8); // ИСПРАВИТЬ НА РЕМ!
+            line-height: rem(8);
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
-    &__input--size { // УБРАТЬ ОДИН МОДИФИКАТОР!
+    &__input--size { 
         max-width: 64%;
         max-height: rem(24);
         padding-left: rem(16);
