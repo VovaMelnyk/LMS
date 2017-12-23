@@ -1,8 +1,8 @@
 .right-nav {
-    width: 48px;
-    height: 240px;
+    width: rem(48);
+    height: rem(240);
     background-color: $white;
     position: absolute;
     right: 0;
-    top: calc(50% - 240px/2);
+    top: calc(50% - rem(240)/2);
 }

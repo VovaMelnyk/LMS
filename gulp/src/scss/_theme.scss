@@ -11,7 +11,7 @@
 }
 
 .button-small {
-    padding: rem(8) rem(32);
+    padding: rem(8) rem(24);
     letter-spacing: rem(2.25);
     text-transform: uppercase;
     color: $white;
@@ -24,8 +24,9 @@
 
 .icon {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: rem(40);
+    height: rem(40);
+    border: none;
     border-radius: 50%;
     background-color: $orange;
 }
@@ -45,5 +46,12 @@
         color: $cyan;
         border: rem(2) solid $orange;
         border-radius: 50%;
+    }
+}
+
+.logo {
+    width: rem(60);
+    &__img{
+        width: rem(104);
     }
 }

@@ -22,10 +22,10 @@
 
     display: block;
 
-    width: 8px;
-    height: 8px;
+    width: rem(8);
+    height: rem(8);
 
-    color: #00ff00;
+    color: #0f0;
 
     font-size: rem(20);
     vertical-align: bottom;
@@ -37,7 +37,7 @@
     &__label {
         display: block;
 
-        margin-right: 32px;
+        margin-right: rem(32);
 
         font-size: rem(22);
 
@@ -46,17 +46,17 @@
             text-align: right;
 
             width: 30%;
-            margin-right: 32px;
+            margin-right: rem(32);
 
             font-size: rem(22);
         }
 
         &:last-child {
-            line-height: 8px;
+            line-height: rem(8); // ИСПРАВИТЬ НА РЕМ!
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
-    &__input--whitetext--size {
+    &__input--whitetext--size { // УБРАТЬ ОДИН МОДИФИКАТОР!
         max-width: 64%;
         max-height: rem(28);
         padding-left: rem(16);
