@@ -21,12 +21,8 @@ $grey-input: #838b93;
 $grey-pholder: #cbcbcb;
 $dark-button: #061f36;
 //fonts
-$title-font: "BebasNeueRegular",
-"Arial",
-sans-serif;
-$text-font: "Museo Sans Cyrl W03 300",
-"Arial",
-sans-serif;
+$title-font: "BebasNeueRegular","Arial",sans-serif;
+$text-font: "Museo Sans Cyrl W03 300","Arial",sans-serif;
 @mixin arrow {
     content: '';
     display: inline-block;
@@ -34,3 +30,5 @@ sans-serif;
     box-sizing: border-box;
     border: 10px solid transparent;
 }
+// $title-font: "BebasNeueRegular", "Arial", sans-serif;
+// $text-font: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
