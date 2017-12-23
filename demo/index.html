@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/registration.css">
+    <title>LMS</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                <img class="logo__img" src="img/logo.png" alt="LOGO">
+                </div>
+                <form class="" action="index.html" method="post">
+                <button class="button-small" id="open_login" type="button" name="button">Log In</button>
+                <button class="button-small" id="open_signin" type="button" name="button">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper wrapper--light-gray">
+        <div class="container">
+            <div class="content">
+
+                    <div class="wrapper__modal-window wrapper__modal-window--entrance">
+                        <div class="modal-window">
+                            <div class="close modal-window__close">&#10005;</div>
+                            <form method="post" class="a-entrance">
+                                <h2 class="title a-entrance__title">[ вход _]</h2>
+                                <div class="a-input-block a-entrance__input-block--first">
+                                    <label class="a-input-block__label" for="email">Email</label>
+                                    <input class="a-input-block__input" type="email" name="email" id="email">
+                                </div>
+                                <div class="a-input-block a-entrance__input-block">
+                                    <label class="a-input-block__label" for="pass">Пароль</label>
+                                    <input class="a-input-block__input" type="password" name="pass" id="pass">
+                                </div>
+                                <div class="a-checkbox-block">
+                                    <input class="a-checkbox-block__checkbox" id="remember-pass" type="checkbox" name="" value="" checked>
+                                    <label class="a-checkbox-block__label">Запомнить пароль</label>
+                                </div>
+                                <p class="a-error a-entrance__error">Вы ввели неверный пароль/ник</p>
+                                <!-- для отображения ошибки меняем на visibility: visible -->
+                                <a class="a-entrance__forgot-pass" href="#">Забыли пароль? Мы напомним!</a>
+                                <div class="a-social a-entrance__social">
+                                    <a class="a-social__link" href="#"><i class="icon icon--facebook"></i></a>
+                                    <a class="a-social__link" href="#"><i class="icon icon--google"></i></a>
+                                    <a class="a-social__link" href="#"><i class="icon icon--linkedin"></i></a>
+                                </div>
+                                <a class="button-big a-entrance__btn" href="profile.html">ВОЙТИ</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="wrapper__modal-window wrapper__modal-window--registration">
+                      <div class="modal-window">
+                        <div class="close modal-window__close">&#10005;</div>
+                        <!-- использованы стили из Entrance, чтобы не дублировать -->
+                        <form method="#" class="a-entrance a-entrance--centered">
+                          <h2 class="title a-entrance__title">[ регистрация _]</h2>
+                          <div class="a-input-block a-entrance__input-block">
+                            <label class="a-input-block__label a-input-block__label--rightaligned star" for="name">Имя</label>
+                            <input class="a-input-block__input  a-input-block__input--size" type="text" name="name" id="name" value="Александр">
+                          </div>
+                          <div class="a-input-block a-entrance__input-block">
+                            <label class="a-input-block__label a-input-block__label--rightaligned star" for="surname">Фамилия</label>
+                            <input class="a-input-block__input  a-input-block__input--size" type="text" name="surname" id="surname" value="Разумовский">
+                          </div>
+                          <div class="a-input-block a-entrance__input-block">
+                            <label class="a-input-block__label a-input-block__label--rightaligned star" for="email">Email</label>
+                            <input class="a-input-block__input  a-input-block__input--size" type="email" name="email" id="email" value="Alex123@gmail.com">
+                          </div>
+                          <div class="a-input-block a-entrance__input-block">
+                            <label class="a-input-block__label a-input-block__label--rightaligned star" for="pass">Пароль</label>
+                            <input class="a-input-block__input a-input-block__input--size" type="password" name="pass" id="pass">
+                          </div>
+                          <div class="a-input-block a-entrance__input-block">
+                            <label class="a-input-block__label a-input-block__label--rightaligned" for="confpass">Подтвердить<span class="star"></span><br>пароль<span class="correctpass">&#10003;</span></label>
+                            <input class="a-input-block__input a-input-block__input--size" type="password" name="confpass" id="confpass" class="confpass">
+                          </div>
+                          <div class="a-checkbox-block">
+                            <input class="a-checkbox-block__checkbox" id="policy" type="checkbox" name="policy" value="" checked>
+                            <label class="a-checkbox-block__label "> <a href="#" class="policylink ">Private Policy</a></label>
+                          </div>
+                          <div class="a-social a-entrance__social">
+                            <a class="a-social__link" href="#"><i class="icon icon--facebook"></i></a>
+                            <a class="a-social__link" href="#"><i class="icon icon--google"></i></a>
+                            <a class="a-social__link" href="#"><i class="icon icon--linkedin"></i></a>
+                          </div>
+                          <a class="button-big a-entrance__btn" href="profile.html">ВОЙТИ</a>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="wrapper__modal-window wrapper__modal-window--end-registration">
+                        <div class="modal-window modal-window__end-registration">
+                            <div class="close modal-window__close">&#10005;</div>
+                            <p class="end-registration__text">Для завершения регистрации кликните по <span class="end-registration__text--link">ссылке </span> в полученном на <span class="end-registration__text--mail">[email _]</span> письме.</p>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+</body>
+
+</html>
