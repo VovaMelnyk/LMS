@@ -17,7 +17,7 @@
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
-    bottom: 40%;
+    bottom: 84%;
     left: 350%;
 
     display: block;
@@ -49,6 +49,10 @@
             margin-right: 32px;
 
             font-size: rem(22);
+        }
+
+        &:last-child {
+            line-height: 8px;
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
