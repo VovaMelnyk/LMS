@@ -17,7 +17,7 @@
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
-    bottom: 84%;
+    bottom: 92%;
     left: 350%;
 
     display: block;
@@ -26,9 +26,6 @@
     height: rem(8);
 
     color: #0f0;
-
-    font-size: rem(20);
-    vertical-align: bottom;
 }
 
 .a-input-block {
@@ -39,14 +36,12 @@
 
         margin-right: rem(32);
 
-        font-size: rem(22);
-
-
         &--rightaligned {
             text-align: right;
 
             width: 30%;
             margin-right: rem(32);
+
 
             font-size: rem(22);
         }
@@ -56,15 +51,15 @@
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
-    &__input--whitetext--size { // УБРАТЬ ОДИН МОДИФИКАТОР!
+    &__input--size { // УБРАТЬ ОДИН МОДИФИКАТОР!
         max-width: 64%;
-        max-height: rem(28);
+        max-height: rem(24);
         padding-left: rem(16);
 
         color: $dark-bg;
 
         font-family: $text-font;
-        font-size: rem(22);
+        font-size: rem(20);
     }
 }
 
@@ -73,7 +68,6 @@
     display: center;
     align-items: right;
     justify-content: right;
-
 
     @include links;
 }

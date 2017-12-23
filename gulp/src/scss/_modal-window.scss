@@ -5,7 +5,7 @@
 
     width: 35%;
     min-width: rem(640);
-    padding: rem(32) rem(80) rem(64);
+    padding: rem(24) rem(80) rem(48);
 
     transform: translate(-50%, -50%);
     text-align: center;
@@ -18,7 +18,7 @@
     }
 
     &__end-registration {
-        min-width: rem(698);
+        min-width: rem(640);
         padding: rem(152) rem(192);
     }
 }
@@ -31,7 +31,6 @@
     color: $cyan;
 
     font-family: $title-font;
-    font-size: rem(70);
+    font-size: rem(60);
     font-weight: 400;
-
 }

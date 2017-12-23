@@ -15,12 +15,17 @@
     }
 
     &__input-block {
-        margin-top: rem(24);
+        margin-top: rem(16);
 
-        &--first {
-            margin-top: rem(32);
+        &:first-child {
+            margin-top: rem(64);
             max-height: rem(32);
         }
+
+        // &--first {
+        //     margin-top: rem(32);
+        //     max-height: rem(32);
+        // }
     }
 
     &__remember-pass {
@@ -56,16 +61,19 @@
 
     width: 100%;
 
+    &:first-of-type {
+        margin-top: rem(40);
+        max-height: rem(40);
+    }
+
     &__label {
             display: block;
 
             width: 38%;
             margin-right: rem(8);
 
-            font-size: rem(22);
+            font-size: rem(20);
             text-align: right;
-
-
     }
 
     &__input {
@@ -75,7 +83,7 @@
         border: none;
         max-height: rem(32);
         background-color: $grey-input;
-        font-size: rem(22);
+        font-size: rem(20);
     }
 }
 

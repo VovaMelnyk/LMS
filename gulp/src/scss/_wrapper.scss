@@ -10,13 +10,13 @@
 
     &__modal-window {
         position: absolute;
-        top: 0;
+        top: -40px;
         left: 0;
 
         width: 100%;
         min-height: 100vh;
 
-        background-color: transparentize($grey-bg, 0.5);
+        // background-color: transparentize($grey-bg, 0.5);
 
         &--entrance {
             display: none;
