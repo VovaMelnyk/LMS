@@ -1,3 +1,30 @@
+.profile__photo-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 192px;
+    background-color: $white;
+    border-radius: 50%;
+
+    &-circle {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 2px;
+        background-color: $grey-bg;
+        border-radius: 50%;
+    }
+
+    &-semicircle {
+        width: 126px;
+        height: 60px;
+        background-color: $grey-bg;
+        border-radius: 78px 78px 0 0;
+    }
+}
+
+
 
 .profile{
   display: flex;
