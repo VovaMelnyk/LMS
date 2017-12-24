@@ -9,14 +9,14 @@
     }
 
     &__modal-window {
-        position: absolute;
-        top: rem(-40);
+        position: fixed;
+        top: 0;
         left: 0;
 
         width: 100%;
         min-height: 100vh;
 
-        // background-color: transparentize($grey-bg, 0.5);
+        background-color: transparentize($grey-bg, 0.5);
 
         &--entrance {
             display: none;
