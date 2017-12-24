@@ -11,6 +11,7 @@
     height: 120px;
     background-color: $white;
     border-radius: 50%;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
     &-circle {
         width: 46px;
@@ -37,7 +38,8 @@
 	width: 120px;
 	height: 120px;
 	margin-right: 16px;
-	background-color: $grey-bg;
+	padding-top: 8px;
+	// background-color: $grey-bg;
 }
 .shad {
 	box-shadow: 3px 3px 6px $grey-bg;
