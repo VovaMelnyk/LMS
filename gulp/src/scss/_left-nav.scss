@@ -1,4 +1,5 @@
 .left-nav {
-    background: $grey-bg;
+    min-width: 168px;
     flex-basis: 12%;
-} 
+    background: $grey-bg;
+}
