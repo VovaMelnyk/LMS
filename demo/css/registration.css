@@ -151,11 +151,12 @@ button, input[type=button] {
   .wrapper--light-gray {
     background-color: #e5e5e5; }
   .wrapper__modal-window {
-    position: absolute;
-    top: -2.5rem;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh; }
+    min-height: 100vh;
+    background-color: rgba(229, 229, 229, 0.5); }
     .wrapper__modal-window--entrance {
       display: none; }
     .wrapper__modal-window--registration {
@@ -208,7 +209,7 @@ button, input[type=button] {
     right: 0.5rem; }
   .modal-window__end-registration {
     min-width: 40rem;
-    padding: 9.5rem 12rem; }
+    padding: 8rem; }
 
 .title {
   text-transform: uppercase;

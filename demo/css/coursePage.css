@@ -128,6 +128,7 @@ button, input[type=button] {
           justify-content: space-between;
   width: 160px;
   color: #202b52;
+  text-decoration: none;
   text-transform: uppercase;
   background: #062037; }
   .c-logo__elem {
@@ -280,6 +281,7 @@ button, input[type=button] {
   background-color: #fff; }
 
 .technologies {
+  font-family: 'Museo Sans Cyrl W03 300';
   padding: 8px 32px 32px 32px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -316,7 +318,6 @@ button, input[type=button] {
 
 .item {
   font-size: 18px;
-  font-family: 'Museo Sans Cyrl W03 300';
   color: #202b52;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -325,19 +326,16 @@ button, input[type=button] {
 
 .item_skils {
   font-size: 18px;
-  font-family: 'Museo Sans Cyrl W03 300';
   color: #202b52;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: justify;
   padding: 0 64px; }
 
-h2 {
+.technologies h2 {
   text-align: center;
   font-size: 40px;
   font-weight: bolder;
-  font-family: 'Museo Sans Cyrl W03 300';
-  padding-bottom: 8px;
   color: #202b52; }
 
 .technologies--skills {
@@ -348,11 +346,12 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.technologies__title-h2 {
+  padding-top: 40px; }
+
 ul {
   font-size: 20px;
   font-weight: bolder;
-  font-family: 'Museo Sans Cyrl W03 300';
-  padding-bottom: 32px;
   color: #202b52;
   float: left;
   list-style-type: disc;
@@ -361,11 +360,6 @@ ul {
 .courses h2 {
   text-transform: uppercase;
   color: #ff6c00; }
-
-p {
-  font-size: 18px;
-  font-family: 'Museo Sans Cyrl W03 300';
-  color: #202b52; }
 
 .courseteam {
   display: -webkit-box;
@@ -379,15 +373,15 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-  color: #202b52; }
+  color: #202b52;
+  padding-top: 20px; }
   .courseteam__title {
-    margin: 16px;
     font-size: 26px;
     font-weight: bold; }
     .courseteam__title-orange {
       color: grey;
       text-align: center;
-      margin-bottom: 16px; }
+      padding-bottom: 16px; }
 
 .slider {
   position: relative;
@@ -438,8 +432,7 @@ p {
   font-size: 21px;
   padding-bottom: 15px; }
 
-.m-right-nav {
-  padding: 8px 0;
+.courspage__photo-profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,18 +440,47 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  width: 160px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 6px #e5e5e5;
+          box-shadow: 3px 3px 6px #e5e5e5; }
+  .courspage__photo-profile-circle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 2px;
+    background-color: #e5e5e5;
+    border-radius: 50%; }
+  .courspage__photo-profile-semicircle {
+    width: 100px;
+    height: 50px;
+    background-color: #e5e5e5;
+    border-radius: 48px 48px 0 0; }
+
+.m-right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 0;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .m-right-nav__item {
   position: relative;
   display: block;
-  margin-bottom: 8px;
   width: 32px;
   height: 32px;
+  margin-bottom: 8px;
   -webkit-transition: linear 0.3s;
   -o-transition: linear 0.3s;
   transition: linear 0.3s; }
@@ -466,10 +488,16 @@ p {
     margin-bottom: 0; }
   .m-right-nav__item-favorites {
     background: url("../img/m-right-nav/add-to-favorites.png") no-repeat center; }
+    .m-right-nav__item-favorites:hover {
+      background: url("../img/m-right-nav/add-to-favorites-hover.png") no-repeat center; }
   .m-right-nav__item-reminder {
     background: url("../img/m-right-nav/remind-me-later.png") no-repeat center; }
+    .m-right-nav__item-reminder:hover {
+      background: url("../img/m-right-nav/remind-me-later-hover.png") no-repeat center; }
   .m-right-nav__item-forum {
     background: url("../img/m-right-nav/forum.png") no-repeat center; }
+    .m-right-nav__item-forum:hover {
+      background: url("../img/m-right-nav/forum-hover.png") no-repeat center; }
   .m-right-nav__item-chat {
     background: url("../img/m-right-nav/chat.png") no-repeat center; }
     .m-right-nav__item-chat:hover {
@@ -480,6 +508,8 @@ p {
       background: url("../img/m-right-nav/ask-a-mentor-hover.png") no-repeat center; }
   .m-right-nav__item-select {
     background: url("../img/m-right-nav/select-text.png") no-repeat center; }
+    .m-right-nav__item-select:hover {
+      background: url("../img/m-right-nav/select-text-hover.png") no-repeat center; }
   .m-right-nav__item {
     background-size: 90% 90%; }
   .m-right-nav__item:hover {
@@ -495,7 +525,7 @@ p {
     padding: 4px 10px;
     font-size: 0.875rem;
     color: #000;
-    background: rgba(0, 255, 255, 0.7);
+    background: rgba(0, 255, 255, 0.8);
     border-radius: 40px;
     border-top-right-radius: 0;
     content: attr(prompt);
@@ -521,138 +551,10 @@ p {
   letter-spacing: 2.25px; }
 
 .left-nav {
-  background: #e5e5e5;
+  min-width: 168px;
   -ms-flex-preferred-size: 12%;
-      flex-basis: 12%; }
-
-.t-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 200 px; }
-
-.t-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 20px;
-  padding-left: 30px; }
-  .t-title__subtitle {
-    padding-bottom: 20px;
-    font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-    font-size: 35px;
-    color: #808080; }
-  .t-title__number {
-    font-family: "BebasNeueRegular", "Arial", sans-serif;
-    font-size: 58px;
-    color: #202b52; }
-
-.t-theme {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
-  .t-theme__name {
-    font-family: "BebasNeueRegular", "Arial", sans-serif;
-    font-size: 58px;
-    color: #202b52;
-    background-color: #00ffff; }
-
-.t-timer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  padding-right: 36px; }
-  .t-timer__time {
-    padding-top: 30px;
-    font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    color: #202b52;
-    text-align: right; }
-  .t-timer__clock {
-    padding-top: 20px; }
-
-.t-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 430px; }
-
-.t-content__question, .t-content__attempts {
-  font-family: "Museo Sans Cyrl W03 300";
-  font-size: 35px; }
-
-.t-content__amount {
-  color: #ff6c00; }
-
-.t-btn__start {
-  margin-top: 128px; }
-
-.t-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100px;
-  font-family: "Museo Sans Cyrl W03 300";
-  font-size: 24px;
-  color: #808080; }
-
-.t-control {
-  position: relative;
-  width: 300px;
-  margin-left: 44px; }
-
-.t-control::before {
-  content: '';
-  position: absolute;
-  left: -32px;
-  top: 5px;
-  border: 8px solid transparent;
-  border-right: 8px solid #808080; }
+      flex-basis: 12%;
+  background: #e5e5e5; }
 
 .accord {
   width: 100%;

@@ -128,6 +128,7 @@ button, input[type=button] {
           justify-content: space-between;
   width: 160px;
   color: #202b52;
+  text-decoration: none;
   text-transform: uppercase;
   background: #062037; }
   .c-logo__elem {
@@ -400,26 +401,22 @@ button, input[type=button] {
   color: #808080; }
 
 .m-right-nav {
-  padding: 8px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  padding: 8px 0;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .m-right-nav__item {
   position: relative;
   display: block;
-  margin-bottom: 8px;
   width: 32px;
   height: 32px;
+  margin-bottom: 8px;
   -webkit-transition: linear 0.3s;
   -o-transition: linear 0.3s;
   transition: linear 0.3s; }
@@ -427,10 +424,16 @@ button, input[type=button] {
     margin-bottom: 0; }
   .m-right-nav__item-favorites {
     background: url("../img/m-right-nav/add-to-favorites.png") no-repeat center; }
+    .m-right-nav__item-favorites:hover {
+      background: url("../img/m-right-nav/add-to-favorites-hover.png") no-repeat center; }
   .m-right-nav__item-reminder {
     background: url("../img/m-right-nav/remind-me-later.png") no-repeat center; }
+    .m-right-nav__item-reminder:hover {
+      background: url("../img/m-right-nav/remind-me-later-hover.png") no-repeat center; }
   .m-right-nav__item-forum {
     background: url("../img/m-right-nav/forum.png") no-repeat center; }
+    .m-right-nav__item-forum:hover {
+      background: url("../img/m-right-nav/forum-hover.png") no-repeat center; }
   .m-right-nav__item-chat {
     background: url("../img/m-right-nav/chat.png") no-repeat center; }
     .m-right-nav__item-chat:hover {
@@ -441,6 +444,8 @@ button, input[type=button] {
       background: url("../img/m-right-nav/ask-a-mentor-hover.png") no-repeat center; }
   .m-right-nav__item-select {
     background: url("../img/m-right-nav/select-text.png") no-repeat center; }
+    .m-right-nav__item-select:hover {
+      background: url("../img/m-right-nav/select-text-hover.png") no-repeat center; }
   .m-right-nav__item {
     background-size: 90% 90%; }
   .m-right-nav__item:hover {
@@ -456,7 +461,7 @@ button, input[type=button] {
     padding: 4px 10px;
     font-size: 0.875rem;
     color: #000;
-    background: rgba(0, 255, 255, 0.7);
+    background: rgba(0, 255, 255, 0.8);
     border-radius: 40px;
     border-top-right-radius: 0;
     content: attr(prompt);
@@ -482,9 +487,10 @@ button, input[type=button] {
   letter-spacing: 2.25px; }
 
 .left-nav {
-  background: #e5e5e5;
+  min-width: 168px;
   -ms-flex-preferred-size: 12%;
-      flex-basis: 12%; }
+      flex-basis: 12%;
+  background: #e5e5e5; }
 
 .t-content--position {
   padding-top: 100px; }
