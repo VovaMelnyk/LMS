@@ -36,6 +36,7 @@ close_login[1].addEventListener("click", function () {
 });
 
 but_signin[1].addEventListener("click", function () {
+  delTeg();
   event.preventDefault();
 
   let mail_user = document.getElementById("new_email").value;
