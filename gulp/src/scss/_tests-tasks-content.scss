@@ -1,12 +1,13 @@
 .t-content--withmargin {
 	padding: 0 72px;
 	margin-top: 32px;
+	font-family: $text-font;
 }
 
 .t-question {
 	align-items:stretch;
 	text-align: center;
-	font-family: "MuseoSansCyrl";
+	
 	font-size: 35px;
 
 	&__point {
@@ -18,11 +19,11 @@
 
   	&__task {
 		font-size: 36px;
+		padding: 16px;
 	}
 }
 
 .t-answers {
-	/*text-align: center;*/
 	display: flex;
     flex-direction:column;
     justify-content:space-around;
