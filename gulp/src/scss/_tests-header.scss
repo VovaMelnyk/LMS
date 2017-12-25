@@ -33,10 +33,9 @@
 }
 .t-timer {
     display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    flex-basis: 80px;
 
     &__time {
         font-family: $text-font;
@@ -49,5 +48,4 @@
     &__clock {
 
     }
-
 }
