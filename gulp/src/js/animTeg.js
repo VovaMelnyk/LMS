@@ -36,8 +36,8 @@ function createBall() {
   count = count + 1;
 
 
-  ball.style.cssText = "left: " + 100  +
-  "px; top:" + 200  +
+  ball.style.cssText = "left: " + (-50)   +
+  "px; top:" + 50  +
   "px; " +
     "px; position: absolute; width: 100px; z-index: 2;  height: 20px;  color: #04bcc2; font-size: 20px; ";
 
