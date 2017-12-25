@@ -46,7 +46,7 @@
 
 ///////
 
-h2 {
+.technologies h2 {
   text-align: center;
   font-size: 40px;
   font-weight: bolder;
@@ -83,11 +83,11 @@ ul {
     color: $orange;
 }
 
-p{
-    font-size: 18px;
-    font-family: 'Museo Sans Cyrl W03 300';
-    color: #202b52;
-}
+// .courses p{
+//     font-size: 18px;
+//     font-family: 'Museo Sans Cyrl W03 300';
+//     color: #202b52;
+// }
 
 
 ///////// Vlad
@@ -103,6 +103,7 @@ p{
         font-size: 26px;
         font-weight: bold;
         &-orange{
+            font-family: 'Museo Sans Cyrl W03 300';
             color: grey;
             text-align: center;
             margin-bottom: 16px;
@@ -164,5 +165,31 @@ p{
     &__prof {
         font-size: 21px;
         padding-bottom: 15px;
+    }
+}
+.courspage__photo-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 125px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 6px $grey-bg;
+
+    &-circle {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 2px;
+        background-color: $grey-bg;
+        border-radius: 50%;
+    }
+
+    &-semicircle {
+        width: 80px;
+        height: 40px;
+        background-color: $grey-bg;
+        border-radius: 48px 48px 0 0;
     }
 }
