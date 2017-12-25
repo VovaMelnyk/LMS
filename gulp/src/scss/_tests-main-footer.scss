@@ -1,0 +1,22 @@
+.t-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: $footer-size;
+    font-family: "Museo Sans Cyrl W03 300";
+    font-size: $footer-font;
+    color: $light-text;
+}
+.t-control {
+    position: relative;
+    width: 300px;
+    margin-left: 44px;
+}
+// .t-control::before {
+//     content: '';
+//     position: absolute;
+//     left: -32px;
+//     top: 5px;
+//     border: 8px solid transparent;
+//     border-right: 8px solid $light-text;
+// }

@@ -1,0 +1,45 @@
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.accountPhoto{
+  // min-width: 160px;
+  // min-height: 168px;
+
+  position: relative;
+  display: flex;
+  //justify-content: center;
+  // align-items: center;
+}
+
+p {
+
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: 'Museo Sans Cyrl W03 300';
+  margin-bottom: 32px;
+
+}
+
+.name{
+  display: flex;
+  margin-top: 16px;
+  position: relative;
+  color: #202b52;
+  font-weight: bolder;
+}
+
+.social_icon{
+  display: flex;
+  margin-top: 24px;
+}
+
+.google, .linkiden {
+  margin-left: 24px;
+}
