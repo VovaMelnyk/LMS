@@ -1,6 +1,7 @@
 
 ///// Настя
 .technologies{
+    font-family: 'Museo Sans Cyrl W03 300';
   padding: 8px 32px 32px 32px;
   justify-content: center;
   align-items: center;
@@ -27,7 +28,7 @@
 }
 .item {
     font-size: 18px;
-    font-family: 'Museo Sans Cyrl W03 300';
+    // font-family: 'Museo Sans Cyrl W03 300';
     color: #202b52;
     justify-content: space-around;
     text-align: justify;
@@ -36,7 +37,7 @@
 }
 .item_skils {
     font-size: 18px;
-    font-family: 'Museo Sans Cyrl W03 300';
+    // font-family: 'Museo Sans Cyrl W03 300';
     color: #202b52;
     justify-content: space-around;
     text-align: justify;
@@ -50,8 +51,6 @@
   text-align: center;
   font-size: 40px;
   font-weight: bolder;
-  font-family: 'Museo Sans Cyrl W03 300';
-  padding-bottom: 8px;
   color: #202b52;
 }
 
@@ -59,19 +58,14 @@
   display: flex;
   justify-content: center;
 }
-// h2 {
-//   text-align: center;
-//   font-size: 40px;
-//   font-weight: bolder;
-//   font-family: 'Museo Sans Cyrl W03 300';
-//   margin-bottom: 8px;
-//   color: #202b52;
-// }
+.technologies__title-h2{
+    padding-top: 40px;
+}
+
+
 ul {
   font-size: 20px;
   font-weight: bolder;
-  font-family: 'Museo Sans Cyrl W03 300';
-  padding-bottom: 32px;
   color: #202b52;
   float: left;
   list-style-type: disc;
@@ -81,14 +75,8 @@ ul {
 .courses h2 {
     text-transform: uppercase;
     color: $orange;
+
 }
-
-// .courses p{
-//     font-size: 18px;
-//     font-family: 'Museo Sans Cyrl W03 300';
-//     color: #202b52;
-// }
-
 
 ///////// Vlad
 .courseteam {
@@ -97,16 +85,15 @@ ul {
     flex-direction: column;
     font-family: $text-font;
     color: $dark-text;
+    padding-top: 20px;
 
     &__title {
-        margin: 16px;
         font-size: 26px;
         font-weight: bold;
         &-orange{
-            font-family: 'Museo Sans Cyrl W03 300';
             color: grey;
             text-align: center;
-            margin-bottom: 16px;
+            padding-bottom: 16px;
         }
     }
 }
@@ -172,23 +159,23 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 125px;
-    height: 125px;
+    width: 160px;
+    height: 160px;
     background-color: $white;
     border-radius: 50%;
     box-shadow: 3px 3px 6px $grey-bg;
 
     &-circle {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin-bottom: 2px;
         background-color: $grey-bg;
         border-radius: 50%;
     }
 
     &-semicircle {
-        width: 80px;
-        height: 40px;
+        width: 100px;
+        height: 50px;
         background-color: $grey-bg;
         border-radius: 48px 48px 0 0;
     }
