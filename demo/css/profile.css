@@ -105,7 +105,26 @@ button, input[type=button] {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #ff6c00; }
+  background-color: #ff6c00; 
+}
+
+.icon-profile1{
+  display: block;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background-color: #ff6c00;
+  margin-top:16px;
+}
+
+.svg-social-icon{
+  width: 120%;
+  height: 120%;
+}
+
+.icon-profile1Left{
+  margin-left: 48px;
+}
 
 .header {
   display: -webkit-box;
