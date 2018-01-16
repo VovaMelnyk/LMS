@@ -11,23 +11,24 @@
     font-family: $text-font;
 
     &__btn {
-        margin-top: rem(56);
+        margin-top: rem(32);
     }
 
     &__input-block {
-        margin-top: rem(40);
+        margin-top: rem(16);
 
-        &--first {
-            margin-top: rem(88);
+        &:first-child {
+            margin-top: rem(64);
+            max-height: rem(32);
         }
     }
 
     &__remember-pass {
-        font-size: rem(24);
+        font-size: rem(16);
     }
 
     &__error {
-        margin-top: rem(64);
+        margin-top: rem(48);
     }
 
     &__forgot-pass {
@@ -35,7 +36,7 @@
         margin-top: rem(16);
         text-decoration: none;
         color: $cyan;
-        font-size: rem(32);
+        font-size: rem(24);
 
         &:hover {
             color: $orange;
@@ -43,40 +44,54 @@
     }
 
     &__social {
-        margin: rem(40) auto 0;
+        margin: rem(32) auto 0;
     }
 }
 
 .a-input-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
+    z-index: 10;
 
     width: 100%;
 
+    &:first-of-type {
+        margin-top: rem(40);
+        max-height: rem(40);
+    }
+
     &__label {
-        font-size: rem(32);
+            display: block;
+
+            width: 38%;
+            margin-right: rem(8);
+
+            font-size: rem(20);
+            text-align: right;
     }
 
     &__input {
-        width: 68%;
-        padding-left: rem(8);
-        color: $black;
+        width: 100%;
+        padding-left: rem(16);
+        color: $dark-bg;
         border: none;
+        max-height: rem(32);
         background-color: $grey-input;
-        font-size: rem(32);
+        font-size: rem(20);
     }
 }
 
 .a-checkbox-block {
+  z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: rem(32);
-    padding-right: rem(40);
+    justify-content: right;
+    margin-top: rem(24);
+    padding-left: rem(16);
 
     &__label {
-        font-size: rem(24);
+        font-size: rem(18);
     }
 
     &__checkbox {
@@ -84,7 +99,6 @@
         width: rem(16);
         height: rem(16);
         margin-right: rem(16);
-        margin-left: rem(64);
     }
 }
 
@@ -92,7 +106,8 @@
 .a-social {
     display: flex;
     justify-content: space-around;
-    width: rem(240);
+    width: rem(216);
+    z-index: 10;
 
     &__link {
         @include links;
@@ -102,7 +117,8 @@
 .a-error {
     visibility: hidden;
     color: $red;
-    font-size: rem(24);
+    font-size: rem(16);
+    z-index: 10;
 }
 
 .icon {

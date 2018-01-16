@@ -1,6 +1,6 @@
 .main {
     position: relative;
     flex-basis: 85%;
-    min-height: 150px;
+    min-height: rem(150);
     background-color: $light-gray;
 }

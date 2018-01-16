@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "mixins.scss";
 
 .a-entrance {
@@ -58,3 +59,88 @@
     content: " *";
     color: $orange;
 }
+=======
+@import "mixins.scss";
+
+.a-entrance {
+    &--centered {
+        margin: 0 auto;
+    }
+}
+// звездочки
+
+.star::after {
+    position: absolute;
+
+    content: " *";
+
+    color: $orange;
+}
+// галочка напротив поля "Подтвердить пароль"
+.correctpass {
+    position: relative;
+    bottom: 92%;
+    left: 350%;
+
+    display: block;
+
+    width: rem(8);
+    height: rem(8);
+
+    color: #0f0;
+}
+
+.a-input-block {
+    // Уменьшаем размер блоков, выравниваем подписи по правому краю
+
+    &__label {
+        display: block;
+
+        margin-right: rem(32);
+
+        &--rightaligned {
+            text-align: right;
+
+            width: 30%;
+            margin-right: rem(32);
+
+
+            font-size: rem(22);
+        }
+
+        &:last-child {
+            line-height: rem(8);
+        }
+    }
+    // добавляем белый цвет текста, уменьшаем размер
+    &__input--size { 
+        max-width: 64%;
+        max-height: rem(24);
+        padding-left: rem(16);
+
+        color: $dark-bg;
+
+        font-family: $text-font;
+        font-size: rem(20);
+    }
+}
+
+.policylink {
+    font-size: rem(18);
+    display: center;
+    align-items: right;
+    justify-content: right;
+
+    @include links;
+}
+
+.policylink::before {
+    position: relative;
+    left: -40%;
+    font-size: rem(22);
+
+    content: " *";
+
+    color: $orange;
+}
+>>>>>>> registration
