@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .modal-window {
     position: absolute;
     top: 50%;
@@ -38,19 +37,16 @@
     font-size: rem(91);
     font-weight: 400;
 }
-=======
-.modal-window {
+
+======= .modal-window {
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 35%;
     min-width: rem(640);
     padding: rem(24) rem(80) rem(48);
-
     transform: translate(-50%, -50%);
     text-align: center;
-
     background-color: $dark-bg;
 
     &__close {
@@ -64,13 +60,9 @@
     }
 }
 
-
-
 .title {
     text-transform: uppercase;
-
     color: $cyan;
-
     font-family: $title-font;
     font-size: rem(60);
     font-weight: 400;
