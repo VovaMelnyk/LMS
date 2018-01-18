@@ -5,8 +5,8 @@
         margin: 0 auto;
     }
 }
-// звездочки
 
+// звездочки
 .star::after {
     position: absolute;
 
@@ -14,6 +14,7 @@
 
     color: $orange;
 }
+
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
@@ -30,7 +31,6 @@
 
 .a-input-block {
     // Уменьшаем размер блоков, выравниваем подписи по правому краю
-
     &__label {
         display: block;
 
@@ -49,10 +49,9 @@
         &:last-child {
             line-height: rem(8);
         }
-    }
-    // добавляем белый цвет текста, уменьшаем размер
-    &__input--size { 
-        max-width: 64%;
+    } // добавляем белый цвет текста, уменьшаем размер
+    &__input--size {
+        max-width: 100%;
         max-height: rem(24);
         padding-left: rem(16);
 
@@ -80,4 +79,26 @@
     content: " *";
 
     color: $orange;
+}
+
+.input-wrapper {
+    display: inline-block;    
+    position: relative;
+    width: 64%;
+    max-height: rem(24);
+    padding: 0;
+}
+
+.input-wrapper:hover::after {
+    display: block;
+    content: attr(data-description);
+    position: absolute;
+    bottom: 100%;
+    z-index: 1;
+    width: 100%;
+    word-wrap: break-word;
+    color: $orange;
+    font-size: rem(10);    
+    text-align: left;
+    padding: 5px 0;
 }
