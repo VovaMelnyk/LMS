@@ -22,21 +22,7 @@
     </div>
 
     <!-- start t-content__mistakes -->
-    <div class="t-mistakes">
-        <ul class="t-mistakes__list">
-            <li class="t-mistakes__description"><span class="t-mistakes__numbers"><1></span>Lorem ipsum dolor sit amet, consectetur.</li>
-
-            <li class="t-mistakes__description"><span class="t-mistakes__numbers t-mistakes__numbers-wrong"><2></span>Lorem ipsum dolor sit amet, consectetur.
-                 <p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</:span></p>
-            </li>
-
-          <!--   <p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</:span></p> -->
-
-            <li class="t-mistakes__description"><span class="t-mistakes__numbers"><3></span>Lorem ipsum dolor sit amet, consectetur.</li>
-
-            <li class="t-mistakes__description"><span class="t-mistakes__numbers"><4></span>Lorem ipsum dolor sit amet, consectetur.</li>
-        </ul>
-    </div> <!-- end t-content__mistakes -->
+    <div class="t-mistakes" id="t_mistakes"></div> <!-- end t-content__mistakes -->
 
     <!-- start t-btn -->
     
@@ -54,3 +40,20 @@
     	<img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
 	</div>
 </div> <!-- end t-footer -->
+
+
+<script type="text/template" id="test_result">
+    <ul class="t-mistakes__list">
+        <li class="t-mistakes__description"><span class="t-mistakes__numbers"><1></span><%- answer1 %></li>
+
+        <li class="t-mistakes__description"><span class="t-mistakes__numbers t-mistakes__numbers-wrong"><2></span><%- answer2 %>
+            <p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</:span></p>
+        </li>
+
+        <!--   <p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</:span></p> -->
+
+        <li class="t-mistakes__description"><span class="t-mistakes__numbers"><3></span><%- answer3 %></li>
+
+        <li class="t-mistakes__description"><span class="t-mistakes__numbers"><4></span><%- answer4 %></li>
+    </ul>
+</script>
