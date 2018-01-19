@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "mixins.scss";
 
 .a-entrance {
@@ -15,96 +14,26 @@
 }
 // галочка напротив поля "Подтвердить пароль"
 
-.correctpass {
-    position: relative;
-    bottom: 40%;
-    left: 304%;
-    display: block;
-    width: 10px;
-    height: 10px;
-    color: #00ff00;
-    font-size: rem(32);
-}
-
-.a-input-block {
-    // Уменьшаем размер блоков, выравниваем подписи по правому краю
-    &__label {
-        display: block;
-        width: 35%;
-        margin-right: 36px;
-        font-size: rem(28);
-
-        &--rightaligned {
-            text-align: right;
-        }
-    }
-    // добавляем белый цвет текста, уменьшаем размер
-    &__input--whitetext--size {
-        max-width: 60%;
-        max-height: rem(40);
-        color: $white;
-        font-family: $text-font;
-        font-size: rem(28);
-    }
-}
-
-.policylink {
-    font-size: rem(24);
-    @include links;
-}
-
-.policylink::before {
-    position: relative;
-    left: -30%;
-    content: " *";
-    color: $orange;
-}
-=======
-@import "mixins.scss";
-
-.a-entrance {
-    &--centered {
-        margin: 0 auto;
-    }
-}
-// звездочки
-
-.star::after {
-    position: absolute;
-
-    content: " *";
-
-    color: $orange;
-}
-// галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
     bottom: 92%;
     left: 350%;
-
     display: block;
-
     width: rem(8);
     height: rem(8);
-
     color: #0f0;
 }
 
 .a-input-block {
     // Уменьшаем размер блоков, выравниваем подписи по правому краю
-
     &__label {
         display: block;
-
         margin-right: rem(32);
 
         &--rightaligned {
             text-align: right;
-
             width: 30%;
             margin-right: rem(32);
-
-
             font-size: rem(22);
         }
 
@@ -113,13 +42,11 @@
         }
     }
     // добавляем белый цвет текста, уменьшаем размер
-    &__input--size { 
+    &__input--size {
         max-width: 64%;
         max-height: rem(24);
         padding-left: rem(16);
-
         color: $dark-bg;
-
         font-family: $text-font;
         font-size: rem(20);
     }
@@ -130,7 +57,6 @@
     display: center;
     align-items: right;
     justify-content: right;
-
     @include links;
 }
 
@@ -138,9 +64,6 @@
     position: relative;
     left: -40%;
     font-size: rem(22);
-
     content: " *";
-
     color: $orange;
 }
->>>>>>> registration
