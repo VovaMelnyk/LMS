@@ -82,11 +82,32 @@
 }
 
 .input-wrapper {
-    display: inline-block;    
+    display: inline-block;
     position: relative;
     width: 64%;
-    max-height: rem(24);
+    max-height: rem(26);
     padding: 0;
+    &--wrong-data {
+        border: 1px solid $red;
+        box-shadow: 0 0 rem(5) rem(1) $red;
+    }
+    &--wrong-data:after {
+        display: block;
+        content: attr(data-description);
+        position: absolute;
+        bottom: 100%;
+        z-index: 1;
+        width: 100%;
+        word-wrap: break-word;
+        color: $red;
+        font-size: rem(10);
+        text-align: left;
+        padding: rem(5) 0;
+    }
+    &--error-message {
+        color: $red;
+        font-size: rem(16);
+    }
 }
 
 .input-wrapper:hover::after {
@@ -98,7 +119,7 @@
     width: 100%;
     word-wrap: break-word;
     color: $orange;
-    font-size: rem(10);    
+    font-size: rem(10);
     text-align: left;
-    padding: 5px 0;
+    padding: rem(5) 0;
 }
