@@ -49,16 +49,21 @@ const resultTest = (templateData) => {
 
     let answers = document.querySelectorAll('.t-answers__item'); // набор всех вопросов (radio)
     let arrRadio = Array.from(answers); // массив из radio
-    //let mistake = document.querySelector('.t-mistakes__numbers');
 
     updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
+
     let mistake = document.querySelector('.t-mistakes__numbers'); //span
     let question = document.querySelector('.t-mistakes__description'); //li
+    let resultTest = document.querySelector('#result-test');
+    let rightAnswer = 0;
+    let result;
 
     arrRadio.map(answer=>{
        if(answer.checked) {
            if(answer.value === templateData[3].correctAnswer) {
                console.log('Ответ верный!');
+               rightAnswer++;
+
            }
            else {
                console.log('Ответ не верен');
@@ -66,8 +71,9 @@ const resultTest = (templateData) => {
                question.innerHTML+=`<p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>`;
            }
        }
-   });
+    });
 
-
+    result = Math.floor((rightAnswer/1)*10);
+    resultTest.innerHTML = `${result}/10 баллов`;
 }
 
