@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <script>
+        document.getElementById('link-calendar').onclick = function() {
+        var alertsCalendar = document.getElementById('alerts-calendar');
+        alertsCalendar.style.zIndex = '999';
+    }
+    </script>
     <!-- HEADER start -->
     <div class="wrapper">
         <div class="container">
@@ -35,7 +41,7 @@
                 <!-- LEFT-NAV end -->
                 <!-- MAIN start -->
                 <div class="main">
-                      
+
                     <div class="right-nav">
                         //= html/m-right-nav/m-right-nav.html
                     </div>

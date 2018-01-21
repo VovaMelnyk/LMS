@@ -45,3 +45,26 @@
 .c-header__tooltip:hover {
     transform: scale(1.1);
 }
+.c-header__notifications {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 200px;
+    padding: 10px;
+    background: $cyan;
+    border-radius: 16px;
+    border-top-left-radius: 0;
+    z-index: -1;
+
+    ul {
+        padding-left: 10px;
+        font-size: 10px;
+        line-height: 1.5;
+        color: $dark-text;
+        list-style: disc;
+
+        li {
+            font-weight: bold;
+        }
+    }
+}
