@@ -76,7 +76,7 @@ var serverConfig = {
       .pipe(babel({
           presets: ['env']
       }))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest(path.dist.js))
       .pipe(browserSync.reload({stream: true}));
   })

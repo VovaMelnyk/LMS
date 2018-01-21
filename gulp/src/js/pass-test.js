@@ -4,61 +4,70 @@
 // При клике студента на ЗАВЕРШИТЬ ТЕСТ система подсчитывает кол-во правильных ответов и выдает баллы.
 
 
-const loadTest = users => {
+///////////////////Globals/////////////////////////
+const url=`http://localhost:3000/tests`;
 
-    const test_content = document.querySelector('#test_content').textContent.trim();
-    const compiled = _.template(test_content);
+const testBtnStart = document.querySelector('#start_test'); // кнопка начать тест на первой стр
 
-    const result = compiled(users[0]);  //функция result
+const taskContainer = document.querySelector('#begin_test'); //куда вставить tests-task
 
-    //console.log(result); // котнтент шаблона
-    console.log(users); // data
+const taskScript = document.querySelector('#tests-task'); // script tests-task
+const resultScript = document.querySelector('#tests-result'); // script tests-result
+///////////////////////////////////////////////////
 
-    const container = document.querySelector('#t_content');
-    container.innerHTML = result;
-};
+const updateView = (tests, container, script) => {    // обновляем данные
 
-const loadResult = users => {
-
-    const test_result = document.querySelector('#test_result').textContent.trim();
-    const compiled = _.template(test_result);
-
-    const result = compiled(users[0]);  //функция result
-
-    //console.log(result); // котнтент шаблона
-    console.log(users); // data
-
-    const container = document.querySelector('#t_mistakes');
+    const compiled = _.template(script.textContent.trim());
+    const result = compiled(tests[3]);  // это вопрос 4 правильный ответ 2 !!!
     container.innerHTML = result;
 };
 
 
-//////////////////Получаем тест//////////////////////
-const getTestJson = () => {
-    fetch("http://localhost:3000/tests")
+function getTestJson() {    // Получаем данные с сервера и передаем их функции updateView
+    fetch(url)
         .then(response => {
             if (response.ok) return response.json();
             throw new Error("Error");
         })
         .then(data => {
-            //console.log(data[1]);
-             loadTest(data);
-             loadResult(data);
-
+            updateView(data, taskContainer, taskScript);
+            return data;
+        })
+        .then(data => {
+            const testBtnEnd = document.querySelector('#end_test');
+            testBtnEnd.addEventListener('click', ()=>resultTest(data));
         })
         .catch(error => {
             console.error("Error: ", error);
         });
 }
 
-const testBtnStart = document.querySelector('#t-btn__start');
-const testBtnEnd = document.querySelector('#end_test');
-
 testBtnStart.addEventListener('click', getTestJson);
-testBtnEnd.addEventListener('click', getTestJson);
+
+//////////////////////////////если нажата завершить тест////////////////////////
+const resultTest = (templateData) => {
+
+    let answers = document.querySelectorAll('.t-answers__item'); // набор всех вопросов (radio)
+    let arrRadio = Array.from(answers); // массив из radio
+    //let mistake = document.querySelector('.t-mistakes__numbers');
+
+    updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
+    let mistake = document.querySelector('.t-mistakes__numbers'); //span
+    let question = document.querySelector('.t-mistakes__description'); //li
+
+    arrRadio.map(answer=>{
+       if(answer.checked) {
+           if(answer.value === templateData[3].correctAnswer) {
+               console.log('Ответ верный!');
+           }
+           else {
+               console.log('Ответ не верен');
+               mistake.classList.add('t-mistakes__numbers-wrong');
+               question.innerHTML+=`<p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>`;
+           }
+       }
+   });
 
 
-
-
-
+}
 
