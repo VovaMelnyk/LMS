@@ -15,19 +15,21 @@
     width: 48px;
     height: 48px;
     text-decoration: none;
-    background-color: $orange;
     border-radius: 50%;
 
     &-calendar {
         background: url(../img/calendar-icon.svg) no-repeat center;
+        background-color: $orange;
     }
 
     &-messenger {
         background: url(../img/messenger-icon.svg) no-repeat center;
+        background-color: $orange;
     }
 
     &-adv {
         background: url(../img/adv-icon.svg) no-repeat center;
+        background-color: $orange;
     }
 }
 .c-header__tooltip {
