@@ -1,0 +1,31 @@
+.m-left-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50% - 248px/2);
+    left: 0;
+    min-height: 500px;
+    max-height: 500px;
+    background: white;
+
+
+    &__section{
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        justify-content: space-between;
+        margin: 2px;
+
+    }
+
+    &__number{
+        color: #ff6c00;
+        flex-grow: 1;
+    }
+
+    &__text{
+        background: #00ffff;
+        flex-grow: 2;
+    }
+
+}
