@@ -6,51 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.getElementById('link-calendar').onclick = function() {
+        document.getElementById('alerts-calendar').style.zIndex = 999;
+        }
+    </script>
     <title>LMS</title>
 </head>
 
 <body>
-    <script>
-        document.getElementById('link-calendar').onclick = function() {
-        var alertsCalendar = document.getElementById('alerts-calendar');
-        alertsCalendar.style.zIndex = '999';
-    }
-    </script>
-    <!-- HEADER start -->
-    <div class="wrapper">
-        <div class="container">
-            <div class="header">
 
-                //= html/logo.html
-                //= html/nav-bar.html
-                //= html/photo-profile.html
-
-            </div>
-        </div>
-    </div>
-    <!-- HEADER end -->
-
-    <!-- CONTENT start -->
-    <div class="wrapper wrapper--light-gray">
-        <div class="container">
-            <div class="content">
-                <!-- LEFT-NAV start -->
-                <div class="left-nav">
-                    //= html/accord.html
-                </div>
-                <!-- LEFT-NAV end -->
-                <!-- MAIN start -->
-                <div class="main">
-
-                    <div class="right-nav">
-                        //= html/m-right-nav/m-right-nav.html
-                    </div>
-                    <!-- RIGHT-NAV end -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CONTENT end -->
 </body>
 
 </html>
