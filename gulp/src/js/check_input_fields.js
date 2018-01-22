@@ -15,6 +15,7 @@ function checkRegistrationFields() {
     let nameString = "";
     let surnameString = "";
     let emailString = "";
+    let passwordString = "";
 
     let namePattern = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
@@ -49,7 +50,7 @@ function checkRegistrationFields() {
 
     if (!checkPassword){
         inputPassword.classList.add("input-wrapper--wrong-data");
-        passwordString = "пароль, ";
+        passwordString = "пароль.";
     } else {
         inputPassword.classList.remove("input-wrapper--wrong-data");
     }
