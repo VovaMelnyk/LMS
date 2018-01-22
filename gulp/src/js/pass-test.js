@@ -59,11 +59,10 @@ const resultTest = (templateData) => {
     let result;
 
     arrRadio.map(answer=>{
-       if(answer.checked) {
+        if(answer.checked) {
            if(answer.value === templateData[3].correctAnswer) {
                console.log('Ответ верный!');
                rightAnswer++;
-
            }
            else {
                console.log('Ответ не верен');
@@ -73,7 +72,7 @@ const resultTest = (templateData) => {
        }
     });
 
-    result = Math.floor((rightAnswer/1)*10);
+    result = Math.floor((rightAnswer/1)*10);  // если вопросов много, тогда вместо единицы подставляем кол-во вопросов т.е. длинну массива
     resultTest.innerHTML = `${result}/10 баллов`;
 }
 

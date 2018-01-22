@@ -61,19 +61,19 @@
 
         <ul class="t-answers"> <!-- ответы на вопросы -->
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i1" type="radio" value="<%- answer1 %>">
+                <input class="t-answers__item" name="quest" id="i1" type="checkbox" value="<%- answer1 %>">
                 <label class="t-answers__label" for="i1"><%- answer1 %></label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i2" type="radio" value="<%- answer2 %>">
+                <input class="t-answers__item" name="quest" id="i2" type="checkbox" value="<%- answer2 %>">
                 <label class="t-answers__label" for="i2"><%- answer2 %></label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i3" type="radio" value="<%- answer3 %>">
+                <input class="t-answers__item" name="quest" id="i3" type="checkbox" value="<%- answer3 %>">
                 <label class="t-answers__label" for="i3"><%- answer3 %></label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i4" type="radio" value="<%- answer4 %>">
+                <input class="t-answers__item" name="quest" id="i4" type="checkbox" value="<%- answer4 %>">
                 <label class="t-answers__label" for="i4"><%- answer4 %></label>
             </li>
         </ul> <!-- варианты ответов -->
@@ -145,7 +145,7 @@
         <div class="t-mistakes">
             <ul class="t-mistakes__list">
 
-                    <li class="t-mistakes__description"><span class="t-mistakes__numbers"><1></span><%- title %></li>
+                    <li class="t-mistakes__description"><span class="t-mistakes__numbers"><<%- id%>></span><%- title %></li>
 
             </ul>
         </div> <!-- end t-content__mistakes -->
