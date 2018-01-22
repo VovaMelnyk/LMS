@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
-    <script>
-        document.getElementById('link-calendar').onclick = function() {
-        document.getElementById('alerts-calendar').style.zIndex = 999;
-        }
-    </script>
     <title>LMS</title>
 </head>
 
 <body>
+    <script>
+        $(document).ready(function(){
+            $('#link-calendar').on('click', function() {
+            $('#alerts-calendar').css('z-index', '999');
+            })
+        });
+    </script>
     <!-- HEADER start -->
     <div class="wrapper">
         <div class="container">
