@@ -18,7 +18,8 @@
     position: relative;
     bottom: 92%;
     left: 350%;
-    display: none;
+    display: block;
+    visibility: hidden;
     width: rem(8);
     height: rem(8);
     color: #0f0;
