@@ -1,9 +1,9 @@
 .m-left-nav {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: calc(74% - 248px/2);
-    left: 19.2%;
+    position: absolute;
+    top: calc(22% - 248px/2);
+    left: 0;
     min-height: 240px;
     max-height: 240px;
     overflow: auto;
@@ -47,4 +47,7 @@
             }
     }
 
+}
+.invisible{
+    display: none;
 }

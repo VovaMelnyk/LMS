@@ -11,9 +11,9 @@
 }
 
 .m-btn-up {
-    position: absolute;
+    position: fixed;
     right: 24px;
-    bottom: 32px;
+    bottom: 40px;
     z-index: 1;
     display: block;
     width: 40px;
@@ -22,6 +22,7 @@
     border-radius: 50%;
     opacity: 0.5;
     transition: 0.5s;
+    
     &::after {
         display: block;
         content: '';
