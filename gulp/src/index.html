@@ -11,11 +11,9 @@
 
 <body>
     <script>
-        $(document).ready(function(){
-            $('#link-calendar').on('click', function() {
-            $('#alerts-calendar').css('z-index', '999');
-            })
-        });
+        document.getElementById('link-calendar').onclick =  function () {
+        document.getElementById('alerts-calendar').style.zIndex = 999;
+        };
     </script>
     <!-- HEADER start -->
     <div class="wrapper">
