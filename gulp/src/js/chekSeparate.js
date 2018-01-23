@@ -42,7 +42,7 @@ let checkRegistrFields = {
     },
     checkRegEmail: function () {
         let email = select("#new-email").value;
-        let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
+        let emailPattern = /^\w+([\.-]?\w+)*@[a-z]+([\.-]?\w+)*(\.\w{2,6})+$/;
         let checkEmail = emailPattern.test(email);
         if (!checkEmail) {
             select('.input-wrapper-email').classList.add("input-wrapper--wrong-data");
