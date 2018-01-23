@@ -7,6 +7,7 @@ let checkRegistrFields = {
     surnameString: "",
     emailString: "",
     passwordString: "",
+    confirmPasswordString: "",
     errorMessage: select("#error-message"),
     checkRegName: function () {
         let name = select("#name").value;
@@ -49,8 +50,10 @@ let checkRegistrFields = {
     },
     checkRegPass: function () {
         let password = select("#new_pass").value;
+        let confirmPassword = select('#confpass').value;
+        let success = select('.correctpass');
         let passwordPattern = /\s+/;
-        let checkPassword = !(passwordPattern.test(password) || password.length < 4 || password.length > 32);
+        let checkPassword = !(passwordPattern.test(password) || password.length < 5 || password.length > 32);
         if (!checkPassword) {
             select(".input-wrapper-pass").classList.add("input-wrapper--wrong-data");
             this.passwordString = "Пароль.";
@@ -58,6 +61,13 @@ let checkRegistrFields = {
             this.passwordString = "";
             select(".input-wrapper-pass").classList.remove("input-wrapper--wrong-data");
         }
+
+        if (password === confirmPassword && password.length >=5 && password.length === confirmPassword.length) {
+            success.style.visibility = "visible";
+        } else {
+            success.style.visibility = "hidden";
+        }
+
         return checkPassword;
     },
 

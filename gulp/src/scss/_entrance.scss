@@ -53,7 +53,6 @@
     flex-direction: row;
     justify-content: right;
     z-index: 10;
-
     width: 100%;
 
     &:first-of-type {
@@ -62,20 +61,18 @@
     }
 
     &__label {
-            display: block;
-
-            width: 38%;
-            margin-right: rem(8);
-
-            font-size: rem(20);
-            text-align: right;
+        display: block;
+        width: 38%;
+        margin-right: rem(8);
+        font-size: rem(20);
+        text-align: right;
     }
 
     &__input {
         width: 100%;
         padding-left: rem(16);
         color: $dark-bg;
-        border: none;
+        border: 1px solid transparent;
         max-height: rem(32);
         background-color: $grey-input;
         font-size: rem(20);
@@ -83,7 +80,7 @@
 }
 
 .a-checkbox-block {
-  z-index: 10;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -101,7 +98,6 @@
         margin-right: rem(16);
     }
 }
-
 
 .a-social {
     display: flex;
