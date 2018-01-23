@@ -12,14 +12,6 @@ function animTT(argument) {
 
 
 let modal =  argument[0].children[0];
-
-
-
-
-
-
-
-
 let item1 = ["[password]", "<h>", "<p/>", "<h/>", "<span>"];
 let count = 0;
 

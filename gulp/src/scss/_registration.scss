@@ -97,6 +97,7 @@
     }
 
     &--error-message {
+        margin-left: rem(36);
         color: $red;
         font-size: rem(16);
     }

@@ -15,11 +15,14 @@ let checkRegistrFields = {
         let checkName = namePattern.test(name);
         if (!checkName) {
             select(".input-wrapper-name").classList.add("input-wrapper--wrong-data");
-            this.nameString = "Имя,";
+            this.nameString = "Имя должно начинаться с заглавной буквы и не содержать цифр";
+            
         } else {
             this.nameString = "";
             select(".input-wrapper-name").classList.remove("input-wrapper--wrong-data");
         }
+        this.checkValid(checkName);
+
         return checkName;
     },
     checkRegSurname: function () {
@@ -28,11 +31,13 @@ let checkRegistrFields = {
         let checkSurname = surnamePattern.test(surname);
         if (!checkSurname) {
             select(".input-wrapper-surname").classList.add("input-wrapper--wrong-data");
-            this.surnameString = "Фамилия,";
+            this.surnameString = "Фамилия должна начинаться с заглавной буквы и не содержать цифр";
         } else {
             this.surnameString = "";
             select(".input-wrapper-surname").classList.remove("input-wrapper--wrong-data");
         }
+        this.checkValid(checkSurname);
+
         return checkSurname;
     },
     checkRegEmail: function () {
@@ -41,11 +46,13 @@ let checkRegistrFields = {
         let checkEmail = emailPattern.test(email);
         if (!checkEmail) {
             select('.input-wrapper-email').classList.add("input-wrapper--wrong-data");
-            this.emailString = "E-mail, ";
+            this.emailString = "Введите существующий E-mail!";
+
         } else {
             this.emailString = '';
             select('.input-wrapper-email').classList.remove("input-wrapper--wrong-data");
         }
+        this.checkValid(checkEmail);
         return checkEmail;
     },
     checkRegPass: function () {
@@ -54,28 +61,26 @@ let checkRegistrFields = {
         let success = select('.correctpass');
         let passwordPattern = /\s+/;
         let checkPassword = !(passwordPattern.test(password) || password.length < 5 || password.length > 32);
-        if (!checkPassword) {
+        if (!(checkPassword && password === confirmPassword)) {
             select(".input-wrapper-pass").classList.add("input-wrapper--wrong-data");
-            this.passwordString = "Пароль.";
+            this.passwordString = "Пароль должен быть не менее 5-ти символов и не содержать пробелов";
+            success.style.visibility = "hidden";
+
         } else {
             this.passwordString = "";
+            success.style.visibility = "visible";
             select(".input-wrapper-pass").classList.remove("input-wrapper--wrong-data");
         }
-
-        if (password === confirmPassword && c) {
-            success.style.visibility = "visible";
-        } else {
-            success.style.visibility = "hidden";
-        }
-
+        this.checkValid(checkPassword);
         return checkPassword;
     },
 
-    checkValid: function () {
-        if (!(this.checkRegName && this.checkRegSurname && this.checkRegEmail && this.checkRegPassword)) {
-            this.errorMessage.textContent = `Неверно введены: ${this.nameString} ${this.surnameString} ${this.emailString} ${this.passwordString}`;
+    checkValid: function (a) {
+        if (!(a)) {
+            this.errorMessage.textContent = `Внимание! ${this.nameString} ${this.surnameString} ${this.emailString} ${this.passwordString}`;
         } else {
             this.errorMessage.textContent = "";
         }
     }
 };
+

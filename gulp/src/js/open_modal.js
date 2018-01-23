@@ -25,7 +25,7 @@ open_signin.addEventListener("click", function () {
 
   modal_login1[0].style.display = "block";
   animTT(modal_login1);
-  checkPassword();
+  // checkPassword();
 
 });
 
