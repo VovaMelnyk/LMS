@@ -25,7 +25,10 @@ function checkRegistrationFields() {
     let checkEmail = emailPattern.test(email);
     let checkName = namePattern.test(name);
     let checkSurname = surnamePattern.test(surname);
+<<<<<<< HEAD
     let checkPassword = !(passwordPattern.test(password)||password.length<4||password.length>32);
+=======
+>>>>>>> dombrovskiy
 
     if (!checkName) {
         inputName.classList.add("input-wrapper--wrong-data");
@@ -60,4 +63,52 @@ function checkRegistrationFields() {
     } else {
         errorMessage.textContent = "";
     }
+}
+
+function checkPassword() {
+
+    let passwordInput = document.getElementById('new_pass');
+    let confirmPassInput = document.getElementById('confpass');
+    let succeess;
+
+    let confirm = () => {
+        let passwordInput = document.getElementById('new_pass');
+        let password = document.getElementById('new_pass').value;
+        let confirmPassInput = document.getElementById('confpass');
+        let confirmPassword = document.getElementById('confpass').value;
+        let arrow = document.querySelector('.correctpass');
+
+        if (password.length >= 5) {
+            passwordInput.addEventListener('input', confirm);
+        }
+
+        if (password === confirmPassword && password.length === confirmPassword.length && password.length >= 5 && confirmPassword.length >= 5) {
+            arrow.style.visibility = "visible";
+            succeess = true;
+            return confirm;
+        } else {
+            arrow.style.visibility = "hidden";
+            succeess = false;
+            return confirm;
+        }
+    }
+
+    let error = () => {
+        document.getElementById('new_pass').classList.remove('input-wrapper--wrong-data');
+    }
+
+    let length = () => {
+        let passwordInput = document.getElementById('new_pass');
+        let password = document.getElementById('new_pass').value;
+
+        if (password.length <= 4) {
+            passwordInput.classList.add('input-wrapper--wrong-data');
+        } else {
+            passwordInput.classList.remove('input-wrapper--wrong-data');
+        }
+    }
+
+    passwordInput.addEventListener('blur', length);
+    passwordInput.addEventListener('focus', error);
+    confirmPassInput.addEventListener('input', confirm);
 }

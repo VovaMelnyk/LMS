@@ -25,20 +25,20 @@ open_signin.addEventListener("click", function () {
 
   modal_login1[0].style.display = "block";
   animTT(modal_login1);
+  checkPassword();
 
 });
 
 close_login[1].addEventListener("click", function () {
-
     delTeg();
 
   modal_login1[0].style.display = "none";
 });
 
 but_signin[1].addEventListener("click", function () {
-  checkRegistrationFields();
+    event.preventDefault();
   delTeg();
-  event.preventDefault();
+  checkRegistrationFields();
 
   let mail_user = document.getElementById("new_email").value;
 
