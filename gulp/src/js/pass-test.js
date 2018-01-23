@@ -62,12 +62,12 @@ const resultTest = (templateData) => {
         if(answer.checked) {
            if(answer.value === templateData[3].correctAnswer) {
                console.log('Ответ верный!');
+               mistake.classList.remove('t-mistakes__numbers-wrong');
+               question.lastElementChild.remove();
                rightAnswer++;
            }
            else {
                console.log('Ответ не верен');
-               mistake.classList.add('t-mistakes__numbers-wrong');
-               question.innerHTML+=`<p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>`;
            }
        }
     });
