@@ -25,10 +25,7 @@ function checkRegistrationFields() {
     let checkEmail = emailPattern.test(email);
     let checkName = namePattern.test(name);
     let checkSurname = surnamePattern.test(surname);
-<<<<<<< HEAD
     let checkPassword = !(passwordPattern.test(password)||password.length<4||password.length>32);
-=======
->>>>>>> dombrovskiy
 
     if (!checkName) {
         inputName.classList.add("input-wrapper--wrong-data");
