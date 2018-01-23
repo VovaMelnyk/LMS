@@ -8,6 +8,9 @@
         align-items: center;
         width: 100%;
     }
+    &-form:first-child {
+        margin-bottom: 15px;
+    }
     &__choose {
         width: 70%;
         font-family: $text-font;
