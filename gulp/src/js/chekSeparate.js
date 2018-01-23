@@ -16,7 +16,7 @@ let checkRegistrFields = {
         if (!checkName) {
             select(".input-wrapper-name").classList.add("input-wrapper--wrong-data");
             this.nameString = "Имя должно начинаться с заглавной буквы и не содержать цифр";
-            
+
         } else {
             this.nameString = "";
             select(".input-wrapper-name").classList.remove("input-wrapper--wrong-data");
@@ -61,15 +61,19 @@ let checkRegistrFields = {
         let success = select('.correctpass');
         let passwordPattern = /\s+/;
         let checkPassword = !(passwordPattern.test(password) || password.length < 5 || password.length > 32);
-        if (!(checkPassword && password === confirmPassword)) {
+        if (!checkPassword) {
             select(".input-wrapper-pass").classList.add("input-wrapper--wrong-data");
-            this.passwordString = "Пароль должен быть не менее 5-ти символов и не содержать пробелов";
-            success.style.visibility = "hidden";
+            this.passwordString = "Пароль;";
 
         } else {
             this.passwordString = "";
-            success.style.visibility = "visible";
             select(".input-wrapper-pass").classList.remove("input-wrapper--wrong-data");
+        }
+
+        if (password === confirmPassword && checkPassword) {
+            success.style.visibility = "visible";
+        } else {
+            success.style.visibility = "hidden";
         }
         this.checkValid(checkPassword);
         return checkPassword;
@@ -83,4 +87,3 @@ let checkRegistrFields = {
         }
     }
 };
-
