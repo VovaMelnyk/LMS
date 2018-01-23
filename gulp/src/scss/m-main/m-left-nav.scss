@@ -9,9 +9,31 @@
     max-height: 240px;
     overflow: auto;
     align-content: center;
+    // &:hover {
+    //     width: 215px;
+     //}
 
     &__link{
         text-decoration: none;
+        &:hover {
+            background-size: 100% 100%;
+            transition: linear 0.3s;
+        }
+        &:hover::after {
+            position: fixed;
+            top: 200px;
+            left: 296px;
+            width: 160px;
+            text-align: left;
+            padding: 2px 4px 4px 2px;
+            font-size: 12px;
+            background: rgba(0, 255, 255, 0.8);
+            border-radius: 40px;
+            border-top-left-radius: 0;
+            content: attr(prompt);
+        //    transform: translate(-200%, 132px);
+        }
+
     }
 
     &__section{
@@ -45,9 +67,9 @@
             &:hover {
                 opacity: 1;
                 border-left: 2px solid #ff6c00;
+                transition: linear 0.3s;
                 }
             }
-
     }
 
 .invisible{
