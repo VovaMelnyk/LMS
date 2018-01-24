@@ -11,7 +11,7 @@ let checkRegistrFields = {
     errorMessage: select("#error-message"),
     checkRegName: function () {
         let name = select("#name").value;
-        let namePattern = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
+        let namePattern = /^(\s?[A-Z]{1}[a-z]+){1,3}$|^(\s?[А-ЯЁ]{1}[а-яё]+){1,3}$|^(\s?[А-ЩЮЯЄІЇҐ’'`]{1}[а-щьюяєіїґ’'`]+){1,3}$/;
         let checkName = namePattern.test(name);
         if (!checkName) {
             select(".input-wrapper-name").classList.add("input-wrapper--wrong-data");
@@ -27,7 +27,7 @@ let checkRegistrFields = {
     },
     checkRegSurname: function () {
         let surname = select("#surname").value;
-        let surnamePattern = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((-[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((-[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((-[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
+        let surnamePattern = /^(-?[A-Z]{1}[a-z]+){1,3}$|^(-?[А-ЯЁ]{1}[а-яё]+){1,3}$|^(-?[А-ЩЮЯЄІЇҐ’'`]{1}[а-щьюяєіїґ’'`]+){1,3}$/;
         let checkSurname = surnamePattern.test(surname);
         if (!checkSurname) {
             select(".input-wrapper-surname").classList.add("input-wrapper--wrong-data");
