@@ -15,13 +15,13 @@ let checkRegistrFields = {
         let checkName = namePattern.test(name);
         if (!checkName) {
             select(".input-wrapper-name").classList.add("input-wrapper--wrong-data");
-            this.nameString = "Имя должно начинаться с заглавной буквы и не содержать цифр";
+            this.nameString = "Имя должно начинаться с заглавной буквы и не содержать цифр;";
 
         } else {
             this.nameString = "";
             select(".input-wrapper-name").classList.remove("input-wrapper--wrong-data");
         }
-        this.checkValid(checkName);
+        this.checkValid();
 
         return checkName;
     },
@@ -31,12 +31,12 @@ let checkRegistrFields = {
         let checkSurname = surnamePattern.test(surname);
         if (!checkSurname) {
             select(".input-wrapper-surname").classList.add("input-wrapper--wrong-data");
-            this.surnameString = "Фамилия должна начинаться с заглавной буквы и не содержать цифр";
+            this.surnameString = "Фамилия должна начинаться с заглавной буквы и не содержать цифр;";
         } else {
             this.surnameString = "";
             select(".input-wrapper-surname").classList.remove("input-wrapper--wrong-data");
         }
-        this.checkValid(checkSurname);
+        this.checkValid();
 
         return checkSurname;
     },
@@ -46,44 +46,54 @@ let checkRegistrFields = {
         let checkEmail = emailPattern.test(email);
         if (!checkEmail) {
             select('.input-wrapper-email').classList.add("input-wrapper--wrong-data");
-            this.emailString = "Введите существующий E-mail!";
+            this.emailString = "Введите существующий E-mail;";
 
         } else {
             this.emailString = '';
             select('.input-wrapper-email').classList.remove("input-wrapper--wrong-data");
         }
-        this.checkValid(checkEmail);
+        this.checkValid();
         return checkEmail;
     },
+
     checkRegPass: function () {
         let password = select("#new_pass").value;
-        let confirmPassword = select('#confpass').value;
-        let success = select('.correctpass');
         let passwordPattern = /\s+/;
         let checkPassword = !(passwordPattern.test(password) || password.length < 5 || password.length > 32);
         if (!checkPassword) {
             select(".input-wrapper-pass").classList.add("input-wrapper--wrong-data");
-            this.passwordString = "Пароль;";
+            this.passwordString = "Пароль должен содержать минимум 5 символов;";
 
         } else {
             this.passwordString = "";
             select(".input-wrapper-pass").classList.remove("input-wrapper--wrong-data");
         }
 
-        if (password === confirmPassword && checkPassword) {
-            success.style.visibility = "visible";
-        } else {
-            success.style.visibility = "hidden";
-        }
-        this.checkValid(checkPassword);
+        this.checkValid();
         return checkPassword;
     },
 
-    checkValid: function (a) {
-        if (!(a)) {
-            this.errorMessage.textContent = `Внимание! ${this.nameString} ${this.surnameString} ${this.emailString} ${this.passwordString}`;
+    checkConfirm: function () {
+        let confirm;
+        if (select("#new_pass").value === select('#confpass').value /*&& checkPassword*/) {
+            select('.correctpass').style.visibility = "visible";
+            confirm = true;
+            this.confirmPasswordString = "";
+            select(".input-wrapper-confpass").classList.remove("input-wrapper--wrong-data");
         } else {
-            this.errorMessage.textContent = "";
+            confirm = false;
+            select('.correctpass').style.visibility = "hidden";
+            this.confirmPasswordString = "Введенные Вами пароли не совпадают";
+            select(".input-wrapper-confpass").classList.add("input-wrapper--wrong-data");
         }
-    }
+        this.checkValid();
+    },
+
+    checkValid: function () {
+        // if (!(a)) {
+        //     this.errorMessage.textContent = `Внимание! ${this.nameString} ${this.surnameString} ${this.emailString} ${this.passwordString} ${this.confirmPasswordString}`;
+        // } else {
+            this.errorMessage.innerHTML = `<p>${this.nameString}</p><p>${this.surnameString}</p><p>${this.emailString}</p> <p>${this.passwordString} </p><p>${this.confirmPasswordString}</p>`;
+        }
+    // }
 };
