@@ -1,4 +1,4 @@
-(function(document, window) {
+;(function(document, window) {
     function randomInteger(min, max) {
         var rand = min + Math.random() * (max + 1 - min);
         rand = Math.floor(rand);
@@ -26,4 +26,4 @@
     }
 
     document.addEventListener('DOMContentLoaded', init)
-})(document, window)
+})(document, window);

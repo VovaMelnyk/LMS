@@ -1,4 +1,4 @@
-(function (document){
+;(function (document){
     let time = document.getElementById('m-timer'),
         hour = 0,
         second = 0,
