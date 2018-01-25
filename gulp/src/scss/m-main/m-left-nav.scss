@@ -1,10 +1,9 @@
 .m-left-nav {
-    direction:rtl;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: calc(19% - 248px/2);
-    left: -16px;
+    left: 0px;
     min-height: 240px;
     max-height: 240px;
     overflow: hidden;
@@ -12,23 +11,14 @@
     &-fixed {
 		position: fixed;
 		top: calc(50% - 200px/2);
-		left: 18%;
-        width: 40px;
+		left: 19.1%;
 	}
 
     &__link{
         text-decoration: none;
-        &:hover {
-            background-size: 100% 100%;
-            transition: linear 0.3s;
-        }
+
         &-fixed:hover::after {
-            position: relative;
-            overflow-x: visible;
-            overflow-y: visible;
-            top: -56px;
-            left: 40px;
-            width: 260px;
+            position: absolute;
             text-align: left;
             padding: 2px 4px 4px 2px;
             font-size: 12px;
@@ -36,13 +26,12 @@
             border-radius: 40px;
             border-top-left-radius: 0;
             content: attr(prompt);
-        //    transform: translate(-200%, 132px);
+            transition: linear 0.3s;
+            transform: translate(22%, -105%);
         }
-
     }
 
     &__section{
-
         display: flex;
         flex-direction: row;
         width: 200px;
@@ -80,7 +69,4 @@
 
 .invisible{
     display: none;
-}
-.width {
-    width:40px;
 }
