@@ -1,5 +1,4 @@
 .main-board {
-    display: inline-block;
     margin-left: rem(16);
     margin-bottom: rem(64);
     position: relative;
@@ -7,72 +6,3 @@
     min-height: rem(150);
     background-color: $light-gray;
 }
-//
-// .cont2 {
-//     display: block;
-//     text-align: center;
-//     margin-top: rem(32);
-//     height: rem(144);
-// }
-//
-//
-// .title-news {
-//     padding: 0 rem(8);
-//     display: inline-block;
-//     background-color: $cyan;
-//     color: #212121;
-//     font-weight: rem(400);
-//     letter-spacing: 2.25px;
-//     text-transform: uppercase;
-//     border: none;
-//     font-size: rem(56);
-//     font-family: $title-font;
-// }
-//
-// .last-news {
-//     display: block;
-//     height: rem(40);
-//     font-family: $text-font;
-//     margin-left: rem(64);
-//     margin-top: rem(40);
-//     text-align: left;
-//     color: #212121;
-//     font-weight: rem(400);
-//     letter-spacing: 2.25px;
-//     text-transform: uppercase;
-//     border: none;
-//     font-size: rem(29);
-//     font-family: $title-font;
-// }
-//
-// .icon-add {
-//     display: block;
-//     margin-bottom: auto;
-//     display: inline-block;
-//     text-align: right;
-//     justify-content: space-between;
-//     width: rem(40);
-//     height: rem(40);
-//     border: none;
-//     background: no repeat;
-// }
-//
-//
-// .post-wrapper {
-//     display: block;
-//     text-align: center;
-//     background: #eaeaea;
-// }
-//
-//
-//
-// .post-title {
-//     margin-right: 40px;
-//     text-align: right;
-//     color: $orange;
-// }
-//
-// .date {
-//     display: inline-block;
-//     color: #212121;
-// }
