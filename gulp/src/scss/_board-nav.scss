@@ -1,10 +1,10 @@
-.d-nav {
+.board-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     // padding: 60px 40px 40px 40px;
-    margin-top: 60px;
+    margin-top: rem(56) rem(64) rem(24);
     &__left,
     &__right {
         text-decoration: none;
