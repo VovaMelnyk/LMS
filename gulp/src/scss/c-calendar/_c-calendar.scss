@@ -1,0 +1,81 @@
+.c-calendar {}
+
+.c-calendar__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 136px;
+    padding: 48px 40px;
+    background-color: $dark-bg;
+}
+
+.c-calendar__month {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    background-color: $cyan;
+    padding: 0 4px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid $grey-pholder;
+        left: -16px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid $grey-pholder;
+        right: -16px;
+    }
+}
+
+.c-calendar__month-name {
+    display: flex;
+    color: $dark-bg;
+    font-size: 24px;
+    font-family: $title-font;
+    padding-top: 4px;
+    letter-spacing: 2.25px;
+}
+
+.c-calendar__btn-add-event {
+    display: flex;
+    position: absolute;
+    right: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: $orange;
+}
+
+.c-btn-add-event__plus {
+    display: flex;
+    position: relative;
+    font-size: 16px;
+    font-family: $title-font;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+    color: $white;
+    padding: 8px 8px 4px 24px;
+
+    &::before {
+        content: '+';
+        position: absolute;
+        font-size: 24px;
+        left: 8px;
+        top: 5px;
+    }
+}
