@@ -4,69 +4,31 @@
     position: absolute;
     top: calc(19% - 248px/2);
     left: 0px;
-    min-height: 240px;
-    max-height: 240px;
-    overflow: hidden;
-    align-content: center;
-    &-fixed {
-		position: fixed;
-		top: calc(50% - 200px/2);
-		left: 19.1%;
-	}
 
     &__link{
         text-decoration: none;
-
-        &-fixed:hover::after {
-            position: absolute;
-            text-align: left;
-            padding: 2px 4px 4px 2px;
-            font-size: 12px;
-            background: rgba(0, 255, 255, 0.8);
-            border-radius: 40px;
-            border-top-left-radius: 0;
-            content: attr(prompt);
-            transition: linear 0.3s;
-            transform: translate(22%, -105%);
+        color: #ff6c00;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 2px 4px;
+        position: relative;
+        &:hover > .m-left-nav__prompt {
+            display: block !important;
         }
     }
-
-    &__section{
-        display: flex;
-        flex-direction: row;
-        width: 200px;
-        height: 40px;
-        vertical-align: middle;
-    }
-
-    &__number{
-        color: #ff6c00;
-        text-align: center;
-        width: 24px;
-        padding: 8px;
-        border-bottom: 2px solid #e9eaeb;
-        background: white;
-    }
-
-    &__text{
-        background: #00ffff;
-        width: 160px;
+    &__prompt {
+        position: absolute;
+        display: block;
+        padding: 6px 16px;
+        font-size: 16px;
+        color: #202b52;
+        width: max-content;
+        background: rgba(0, 255, 255, 0.8);
         border-radius: 40px;
-        margin-bottom: 1px;
-        border-top-left-radius: 0;
-        padding: 2px 4px 4px 2px;
-        text-align: left;
-        opacity: 0.9;
-        font-size: 12px;
-        color: black;
-            &:hover {
-                opacity: 1;
-                border-left: 2px solid #ff6c00;
-                transition: linear 0.3s;
-                }
-            }
+        border-bottom-left-radius: 0;
+        transition: linear 0.3s;
+        top: -80%;
+        left: 90%;
     }
-
-.invisible{
-    display: none;
 }
