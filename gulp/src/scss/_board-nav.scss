@@ -1,15 +1,16 @@
 .board-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    // padding: 60px 40px 40px 40px;
-    margin-top: rem(56) rem(64) rem(24);
+
+    display: block;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: flex-end;
+    height: rem(200);
+    margin: 0 rem(64) rem(36) rem(64);
     &__left,
     &__right {
         text-decoration: none;
         font-family: $text-font;
-        font-size: 23px;
+        font-size: 13px;
         color: $light-text;
     }
     &__left:before {
