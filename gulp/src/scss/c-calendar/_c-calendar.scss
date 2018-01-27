@@ -93,7 +93,7 @@
         position: absolute;
         font-size: 24px;
         left: 8px;
-        top: 5px;
+        top: 4.5px;
     }
 }
 //Main calendar feald
@@ -128,7 +128,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    color: $white;
     font-family: $text-font;
 }
 //Number of a day EACH-DAY
@@ -141,9 +140,11 @@
     border-top: 1px solid $dark-text;
     border-right: 1px solid $dark-text;
     cursor: pointer;
-    // Next month day
-    &_next-month {
-        color: $light-text;
+
+    &:hover {
+        background-color: $light-gray;
+        opacity: 0.5;
+        transition: all 0.25s;
     }
 }
 //Number of a day EACH-DAY INNER
@@ -156,8 +157,14 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    color: $white;
+    background-color: $dark-bg;
     //today
     &_today {
         background: $orange;
+    }
+    // Next month day
+    &_next-month {
+        color: $light-text;
     }
 }
