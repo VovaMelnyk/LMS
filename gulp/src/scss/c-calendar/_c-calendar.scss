@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: space-between;
     min-height: 112px;
-    // padding: 0 40px;
 }
 
 .c-calendar__transparent {
@@ -56,6 +55,7 @@
         cursor: pointer;
     }
 }
+//Month and year name
 
 .c-calendar__month-name,
 .c-calendar__year {
@@ -65,6 +65,7 @@
     padding-top: 5px;
     letter-spacing: 2.25px;
 }
+//Add event button
 
 .c-calendar__btn-add-event {
     display: flex;
@@ -76,6 +77,7 @@
     background-color: $orange;
     cursor: pointer;
 }
+//Add event button INNER
 
 .c-btn-add-event__plus {
     position: relative;
@@ -85,7 +87,7 @@
     text-transform: uppercase;
     color: $white;
     padding: 8px 16px 4px 24px;
-
+    // Plus before button text
     &::before {
         content: '+';
         position: absolute;
@@ -94,6 +96,7 @@
         top: 5px;
     }
 }
+//Main calendar feald
 
 .c-calendar__main {
     display: flex;
@@ -101,6 +104,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+//Name day of a week BLOCK-WEEK
 
 .c-calendar__week-day-name {
     display: flex;
@@ -110,12 +114,14 @@
     font-family: $text-font;
     padding: 0 0 24px;
 }
+//Name day of a week EACH-DAY
 
 .c-calendar__day-name {
     display: flex;
     flex-basis: 15%;
     padding-left: 8px;
 }
+//Number of a week BLOCK-WEEK
 
 .c-calendar__week-number {
     display: flex;
@@ -125,6 +131,7 @@
     color: $white;
     font-family: $text-font;
 }
+//Number of a day EACH-DAY
 
 .c-calendar__week-day-num {
     display: flex;
@@ -134,11 +141,12 @@
     border-top: 1px solid $dark-text;
     border-right: 1px solid $dark-text;
     cursor: pointer;
-
+    // Next month day
     &_next-month {
         color: $light-text;
     }
 }
+//Number of a day EACH-DAY INNER
 
 .c-week-day-num {
     display: flex;
@@ -148,7 +156,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-
+    //today
     &_today {
         background: $orange;
     }
