@@ -7,25 +7,25 @@
             <div class="a-input-block a-entrance__input-block">
                 <label class="a-input-block__label a-input-block__label--rightaligned star" for="name">Имя</label>
                 <div class="input-wrapper input-wrapper-name" data-description="Введите свое имя с заглавной буквы.">
-                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="name" id="name" placeholder="Александр" required oninput="checkRegistrFields.checkRegName()">
+                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="name" id="name" placeholder="Александр" required>
                 </div>
             </div>
             <div class="a-input-block a-entrance__input-block">
                 <label class="a-input-block__label a-input-block__label--rightaligned star" for="surname">Фамилия</label>
                 <div class="input-wrapper  input-wrapper-surname" data-description="Введите свою фамилию с заглавной буквы.">
-                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="surname" id="surname" placeholder="Разумовский" required oninput="checkRegistrFields.checkRegSurname()">
+                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="surname" id="surname" placeholder="Разумовский" required>
                 </div>
             </div>
             <div class="a-input-block a-entrance__input-block">
                 <label class="a-input-block__label a-input-block__label--rightaligned star" for="email">Email</label>
                 <div class="input-wrapper input-wrapper-email" data-description="Введите свой e-mail.">
-                    <input class="a-input-block__input  a-input-block__input--size" type="email" name="email" id="new-email" placeholder="Alex123@gmail.com" required oninput="checkRegistrFields.checkRegEmail()">
+                    <input class="a-input-block__input  a-input-block__input--size" type="email" name="email" id="new-email" placeholder="Alex123@gmail.com" required>
                 </div>
             </div>
             <div class="a-input-block a-entrance__input-block">
                 <label class="a-input-block__label a-input-block__label--rightaligned star" for="pass">Пароль</label>
                 <div class="input-wrapper input-wrapper-pass" data-description="Пароль должен быть не менее 5-ти символов без пробелов.">
-                    <input class="a-input-block__input a-input-block__input--size" type="password" name="pass" id="new_pass" required oninput="checkRegistrFields.checkRegPass()">
+                    <input class="a-input-block__input a-input-block__input--size" type="password" name="pass" id="new_pass" required>
                 </div>
             </div>
             <div class="a-input-block a-entrance__input-block">
@@ -33,7 +33,7 @@
                     <br>пароль<span class="correctpass">&#10003;</span></label>
                 <div class="input-wrapper input-wrapper-confpass" data-description="Повторите введенный выше пароль для подтверждения.">
 <input class="a-input-block__input a-input-block__input--size" type="password" name="confpass" id="confpass" class="confpass"
-    required oninput="checkRegistrFields.checkConfirm()">
+    required>
                 </div>
             </div>
             <div class="input-wrapper--error-message" id="error-message"></div>
