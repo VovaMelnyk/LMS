@@ -9,6 +9,7 @@
     top: 200px;
     left: 0px;
     height: 30px;
+    transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     &:hover {
         transition: 0.5s;  
     }
