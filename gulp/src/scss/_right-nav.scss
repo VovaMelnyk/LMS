@@ -1,12 +1,6 @@
 .right-nav {
 	position: absolute;
-	top: 328px;
+	top: 200px;
 	right: 0;
 	width: 48px;
-	// background-color: $white;
-	&-fixed {
-		position: fixed;
-		top: calc(50% - 200px/2);
-		right: 5.7%;
-	}
 }

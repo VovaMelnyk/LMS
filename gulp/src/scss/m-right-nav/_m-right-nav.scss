@@ -4,18 +4,6 @@
     flex-flow: wrap;
     justify-content: center;
 }
-.right-nav {
-	position: absolute;
-	top: calc(19% - 248px/2);
-	right: 0;
-	width: 48px;
-	// background-color: $white;
-	&-fixed {
-		position: fixed;
-		top: calc(50% - 200px/2);
-		right: 5.7%;
-	}
-}
 .m-right-nav__item {
     position: relative;
     display: block;
