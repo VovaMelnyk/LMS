@@ -3,8 +3,6 @@
     min-height: 0;
     display: block;
     overflow: hidden;
-    // margin: 0 auto;
-    // padding: 0;
 }
 
 .button {
@@ -17,7 +15,7 @@
     box-shadow: 4px 0 8px $grey-pholder;
 }
 
-.button-lable {
+.button-label {
     letter-spacing: 2.25px;
     text-transform: uppercase;
     border: none;
