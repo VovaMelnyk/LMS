@@ -24,18 +24,19 @@
     }
 }
 .c-photo-profile__notifications {
+    position: absolute;
+    z-index: 9999;
+    display: none;
     width: 200px;
     padding: 10px;
     background-color: $cyan;
     border-radius: 16px;
     border-top-right-radius: 0;
-    position: relative;
-    display: none;
-    z-index: 9999;
+    margin-top: 50px
     
     &-login, &-pass {
         padding-left: 5px;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.5;
         color: $dark-text;
     }
@@ -52,9 +53,15 @@
 
     &-submit {
         width: 184px;
+        padding: 8px 32px;
+        letter-spacing: 2.25px;
+        text-transform: uppercase;
+        color: $white;
         margin-top: 6px;
-        border-radius: 16px;
+        font-family: $title-font;
+        font-size: 14px;
+        background-color: $orange;
+        border-radius: 15px;
         border: none;
-        background-color: #fff;
     }
 }
