@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\\\Git\\bin\\bash.exe",
+    "editor.fontSize": 24,
+    "terminal.integrated.fontSize": 26,
+    "workbench.activityBar.visible": true
+ }
