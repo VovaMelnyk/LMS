@@ -1,14 +1,10 @@
-.hidden {
-    overflow: hidden;
-}
-
 .m-left-nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 200px;
     left: 0px;
-    height: 30px;
+    height: 240px;
     transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     &:hover {
         transition: 0.5s;  
@@ -16,22 +12,20 @@
     &__link{
         text-decoration: none;
         color: #ff6c00;
-        font-size: 22px;
-        font-weight: bold;
+        font-size: 20px;
         text-align: center;
-        padding: 2px 4px;
+        line-height: 24px;
+        padding: 8px;
         position: relative;
-        &:first-child {
-            opacity: 0.3;
-            transition: 0.5s;
-            &:hover {
-                opacity: 1;
-                transition: 0.5s;
-                cursor: pointer;
-            }
+        &:hover {
+            padding-left: 6px;
+            border-left: 2px solid #ff6c00;
+            transition: linear 0.3s;
         }
         &:hover > .m-left-nav__prompt {
-            display: block !important;
+            transition: 0.5s;
+            width: 240px !important;
+            opacity: 1 !important;
         }
     }
     &__prompt {
@@ -39,13 +33,16 @@
         display: block;
         padding: 6px 16px;
         font-size: 16px;
+        line-height: 16px;
+        height: 40px;
+        text-align: start;
         color: #202b52;
-        width: max-content;
+        width: 240px;
         background: rgba(0, 255, 255, 0.8);
         border-radius: 40px;
-        border-bottom-left-radius: 0;
-        top: -80%;
-        left: 90%;
+        transform: translate( 15px, -32px);
+        overflow: hidden;
+        transition: 1s;
         &:hover {
             box-shadow: inset 0 0 40px -3px rgba(9, 156, 156, 0.8);
         }
