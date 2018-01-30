@@ -1,58 +1,50 @@
+function select(name) {
+    return document.querySelector(name);
+}
 
-
-let open_login = document.getElementById('open_login');
-let open_signin = document.getElementById('open_signin');
+let modalLogin = select('#modal_entrance');
+let modalRegistration = select('#modal_registration');
 let modal_login = document.getElementsByClassName('wrapper__modal-window--entrance');
-let modal_login1 = document.getElementsByClassName('wrapper__modal-window--registration');
-let close_login = document.getElementsByClassName('modal-window__close');
-let end_signin = document.getElementsByClassName('wrapper__modal-window--end-registration');
-let but_signin  = document.getElementsByClassName('a-entrance__btn');
-let end_mail = document.getElementsByClassName('end-registration__text--mail');
-open_login.addEventListener("click", function () {
+let modal_registration = document.getElementsByClassName('wrapper__modal-window--registration');
+let endRegistration = select('#modal_end_registration');
+let closeEndRegistration = select('#closeEndRegistration');
+let submitRegistration = select('#submit_registration');
+// let but_signin  = document.getElementsByClassName('a-entrance__btn');
+let endRegistrationMail = document.getElementsByClassName('end-registration__text--mail');
 
-  modal_login[0].style.display = "block";
-  animTT(modal_login);
+let buttons = {
+    open_login: (event) => {
+        modalLogin.style.display = "block";
+        animTT(modal_login);
+    },
+    close_entrance: (event) => {
+        delTeg();
+        modalLogin.style.display = "none";
+    },
+    open_signin: (event) => {
+        modalRegistration.style.display = "block";
+        animTT(modal_registration);
+    },
+    close_registration: (event) => {
+        delTeg();
+        modalRegistration.style.display = "none";
+    },
+    submit_registration: (event) => {
+        event.preventDefault();
+        checkRegistrationFields();
+    },
+    closeEndRegistration: (event) => {
+        endRegistration.style.display = "none";
+    },
+}
 
-});
-close_login[0].addEventListener("click", function () {
+document.body.addEventListener("click", function(event) {
+    let target = event.target;
+    let targetID = target.id;
 
-    delTeg();
-
-  modal_login[0].style.display = "none";
-
-});
-open_signin.addEventListener("click", function () {
-
-  modal_login1[0].style.display = "block";
-  animTT(modal_login1);
-  // checkPassword();
-
-});
-
-close_login[1].addEventListener("click", function () {
-    delTeg();
-
-  modal_login1[0].style.display = "none";
-});
-
-// but_signin[1].addEventListener("click", function () {
-//     event.preventDefault();
-//   delTeg();
-//   checkRegistrationFields();
-//
-//   // let mail_user = document.getElementById("new_email").value;
-//   //
-//   // if (mail_user.length>0) {
-//   //   end_mail[0].innerHTML = mail_user;
-//   //
-//   // } else {
-//   //   end_mail[0].innerHTML = "[email _]";
-//   // }
-//   modal_login1[0].style.display = "none";
-//
-//   end_signin[0].style.display = "block";
-//
-// });
-close_login[2].addEventListener("click", function () {
-end_signin[0].style.display = "none";
+    for (let key in buttons) {
+        if (targetID == key) {
+            buttons[key](event);
+        };
+    };
 });

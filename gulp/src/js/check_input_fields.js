@@ -1,7 +1,6 @@
-function select(name) {
-    return document.querySelector(name);
-}
-function checkRegistrationFields(rgb) {
+let confirmPasswordString = "";
+
+function checkRegistrationFields() {
 
     let name = select("#name").value;
     let surname = select("#surname").value;
@@ -16,8 +15,8 @@ function checkRegistrationFields(rgb) {
     let surnameString = "";
     let emailString = "";
     let passwordString = "";
-    let confirmPasswordString = "";
     let confirm;
+    let validation;
 
     let namePattern = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
@@ -58,26 +57,30 @@ function checkRegistrationFields(rgb) {
     }
 
     if (select("#new_pass").value === select('#confpass').value /*&& checkPassword*/) {
-        select('.correctpass').style.visibility = "visible";
         confirm = true;
-        select(".input-wrapper-confpass").classList.remove("input-wrapper--wrong-data");
+        confirmPasswordString = "";
     } else {
         confirm = false;
+        confirmPasswordString = "Введенные Вами пароли не совпадают";
+    }
+
+    if (!(checkName && checkSurname && checkEmail && checkPassword && confirm)) {
+        errorMessage.textContent = `Неверно введены: ${nameString} ${surnameString} ${emailString} ${passwordString} ${confirmPasswordString}`;
+    } else {
+        errorMessage.textContent = "";
+        modalRegistration.style.display = "none";
+        endRegistrationMail[0].innerHTML = email;
+        endRegistration.style.display = "block";
+    }
+};
+
+function comparePasswords() {
+    if (select("#new_pass").value === select('#confpass').value /*&& checkPassword*/) {
+        select('.correctpass').style.visibility = "visible";
+        select(".input-wrapper-confpass").classList.remove("input-wrapper--wrong-data");
+    } else {
         select('.correctpass').style.visibility = "hidden";
         confirmPasswordString = "Введенные Вами пароли не совпадают";
         select(".input-wrapper-confpass").classList.add("input-wrapper--wrong-data");
     }
-
-    if (!(checkName && checkSurname && checkEmail && checkPassword && confirm)) {
-        // debugger;
-        // rgb.preventDefault();
-        errorMessage.textContent = `Неверно введены: ${nameString} ${surnameString} ${emailString} ${passwordString} ${confirmPasswordString}`;
-    } else {
-        errorMessage.textContent = "";
-        // debugger;
-        modal_login1[0].style.display = "none";
-        end_signin[0].style.display = "block";
-    }
 };
-let submitBtn = select("#submit");
-submitBtn.addEventListener("click", checkRegistrationFields, false);
