@@ -3,7 +3,7 @@
 	top: 328px;
 	right: 0;
 	width: 48px;
-	background-color: $white;
+	transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);	
 	&-fixed {
 		position: fixed;
 		top: calc(50% - 200px/2);

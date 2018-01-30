@@ -8,6 +8,7 @@
     max-height: 240px;
     overflow: hidden;
     align-content: center;
+    transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     &-fixed {
 		position: fixed;
 		top: calc(50% - 200px/2);
