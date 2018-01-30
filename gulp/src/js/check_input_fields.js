@@ -1,11 +1,11 @@
 function select(name) {
     return document.querySelector(name);
 }
-function checkRegistrationFields(event) {
+function checkRegistrationFields(rgb) {
 
     let name = select("#name").value;
     let surname = select("#surname").value;
-    let email = select("#new-email").value;
+    let email = select("#new_email").value;
     let password = select("#new_pass").value;
     let errorMessage = select("#error-message");
     let inputEmail = select('.input-wrapper-email');
@@ -69,10 +69,14 @@ function checkRegistrationFields(event) {
     }
 
     if (!(checkName && checkSurname && checkEmail && checkPassword && confirm)) {
-        event.preventDefault();
+        // debugger;
+        // rgb.preventDefault();
         errorMessage.textContent = `Неверно введены: ${nameString} ${surnameString} ${emailString} ${passwordString} ${confirmPasswordString}`;
     } else {
         errorMessage.textContent = "";
+        // debugger;
+        modal_login1[0].style.display = "none";
+        end_signin[0].style.display = "block";
     }
 };
 let submitBtn = select("#submit");

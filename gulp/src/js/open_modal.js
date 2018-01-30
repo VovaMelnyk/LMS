@@ -35,24 +35,24 @@ close_login[1].addEventListener("click", function () {
   modal_login1[0].style.display = "none";
 });
 
-but_signin[1].addEventListener("click", function () {
-    event.preventDefault();
-  delTeg();
-  checkRegistrationFields();
-
-  let mail_user = document.getElementById("new_email").value;
-
-  if (mail_user.length>0) {
-    end_mail[0].innerHTML = mail_user;
-
-  } else {
-    end_mail[0].innerHTML = "[email _]";
-  }
-  modal_login1[0].style.display = "none";
-
-  end_signin[0].style.display = "block";
-
-});
+// but_signin[1].addEventListener("click", function () {
+//     event.preventDefault();
+//   delTeg();
+//   checkRegistrationFields();
+//
+//   // let mail_user = document.getElementById("new_email").value;
+//   //
+//   // if (mail_user.length>0) {
+//   //   end_mail[0].innerHTML = mail_user;
+//   //
+//   // } else {
+//   //   end_mail[0].innerHTML = "[email _]";
+//   // }
+//   modal_login1[0].style.display = "none";
+//
+//   end_signin[0].style.display = "block";
+//
+// });
 close_login[2].addEventListener("click", function () {
 end_signin[0].style.display = "none";
 });
