@@ -2,200 +2,219 @@
     margin: auto;
     background: $light-gray;
 
-    &--light-grey {
-        background: $light-gray;
-    }
-
     &--middle-grey {
         background: $middle-grey;
     }
 }
+
 .post {
     display: flex;
     justify-content: space-between;
+    font-family: $text-font;
     font-size: rem(18);
-    padding-left: rem(16);
     color: $dark-text;
     min-width: 100%; //mainWidth=60%, (100-60)/2=20%
-    margin: rem(24) 0 0 0;
-
-    &__text {
-        margin: rem(24) 0;
-        font-family: $text-font;
-        font-size: rem(12);
+    padding: rem(24) 0 0 rem(16);
+    &__user {
+        margin: rem(16) 0;
     }
 
-    &__date {
-        display: inline-block;
-        font-size: rem(11);
-        color: $light-text;
-
-    }
-
-    &__time {
-        display: inline-block;
-        font-size: rem(11);
-        margin-left: rem(16);
-        color: $light-text;
+    &__contents {
+        margin: auto rem(56) rem(24) rem(20);
     }
 }
 
 .user {
+    width: 14%; //mainWidth=60%, (100-60)/2=20%
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: $text-font;
-    font-size: rem(25);
-    width: 10%; //mainWidth=60%, (100-60)/2=20%
-    margin: rem(16) rem(24) rem(24) 0;
+    font-size: rem(12);
+    text-align: center;
 
+    &__ava {
+        margin-left: rem(6);
+    }
 
     &__name {
-        // text-align: center;
         margin-top: rem(8);
-        font-family: $text-font;
-        font-size: rem(12);
         color: $orange;
     }
+
     &__role {
-        // text-align: center;
         margin-top: rem(4);
-        font-family: $text-font;
-        font-size: rem(12);
         color: $dark-text;
     }
+
     &__to-chat {
         margin-top: rem(16);
-        font-family: $text-font;
-        font-size: rem(12);
         color: $light-text;
-            }
+    }
 }
 
-    .ava {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: rem(72);
-        height: rem(72);
-        background-color: $white;
+.ava {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(72);
+    height: rem(72);
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 100, .4) 4px 4px 8px -2px;
+
+
+    &__circle {
+        width: 30%;
+        height: 30%;
+        margin-bottom: rem(2);
+        background-color: $grey-bg;
         border-radius: 50%;
-        box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
-
-
-        &-circle {
-            width: 30%;
-            height: 30%;
-            margin-bottom: rem(2);
-            background-color: $grey-bg;
-            border-radius: 50%;
-        }
-
-        &-semicircle {
-            width: 63%;
-            height: 30%;
-            background-color: $grey-bg;
-            border-radius: rem(48) rem(48) 0 0;
-        }
-        &-tooltip {
-            margin: rem(-8) 0 0 rem(56);
-            width: rem(16);
-            height: rem(16);
-            font-size: rem(10);
-            font-weight: bold;
-            line-height: rem(16);
-            text-align: center;
-            background: $light-green;
-            border: rem(2) solid $white;
-            border-radius: 50%;
-        }
     }
 
+    &__semicircle {
+        width: 63%;
+        height: 30%;
+        background-color: $grey-bg;
+        border-radius: rem(48) rem(48) 0 0;
+    }
+    &__tooltip {
+        margin: rem(-8) 0 0 rem(56);
+        width: rem(16);
+        height: rem(16);
+        font-size: rem(10);
+        font-weight: bold;
+        line-height: rem(16);
+        text-align: center;
+        background: $light-green;
+        border: rem(2) solid $white;
+        border-radius: 50%;
+    }
+}
+
+.title2 {
+    font-size: rem(20);
+    font-weight: 500;
+    text-align: left;
+    color: $orange;
+}
+
+.control {
+    padding: rem(0);
+    max-width: 10%;
+
+    &__delete {
+        display: inline-block;
+        color: $orange;
+    }
+
+    &__edit {
+        display: inline-block;
+        margin-right: rem(0);
+    }
+
+    &--comment {}
+}
+
+.date-stamp {
+    display: flex;
+    max-width: 20%;
+    padding: rem(5) 0;
+    color: $light-text;
+    font-size: rem(11);
+
+    &__date {
+        padding-left: rem(0);
+    }
+
+    &__time {
+        padding-left: rem(16);
+    }
+}
 
 .contents {
-        display: inline-block;
-        margin: auto rem(64) rem(24) rem(40);
-        width: 90%;
+    display: inline-block;
+    max-width: 86%;
 
-        .title2 {
-            font-family: $text-font;
-            font-weight: 500;
-            display: flex;
-            justify-content: space-between;
-            text-align: left;
-            color: $orange;
-            font-size: rem(20);
-            margin-top: rem(16);
+    &__header {
+        display: flex;
+        padding-top: rem(16);
+    }
+
+    &__title2 {
+        margin-left: rem(0);
         &--comment {
             display: none;
         }
     }
 
-        &__text {
-            margin: rem(24) 0;
-            font-family: $text-font;
-            font-size: rem(12);
-        }
+    &__control {
+        margin-left: auto;
     }
 
-    .icon {
-        display: inline-block;
-
-
-        &--like {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // border-radius: rem(34);
-            background-color: transparent;
-            box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
-        }
-        &--comment {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: rem(16);
-            // border-radius: rem(34);
-            background-color: transparent;
-            box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
-        }
-        &--upload {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            background-image: url(/img/facebook.png);
-        }
-
-    }
-    .control {
-            display: block;
-            margin-left: auto;
-
-            &__delete {
-                display: inline-block;
-                color: $orange;
-            }
-
-            &__edit {
-                display: inline-block;
-                margin-right: rem(0);
-            }
-
-            &--comment {
-
-            }
+    &__date-stamp {
+        margin-left: rem(0);
     }
 
+    &__text {
+        padding: rem(24) 0;
+        font-size: rem(12);
+    }
+
+    &__counter {
+        margin-left: rem(0);
+    }
+
+    &__comment {
+        margin: rem(20) rem(0) rem(24);
+    }
+}
 
 .counter {
+    display: flex;
+    font-size: rem(15);
+
+    &__icon {
         margin-left: rem(0);
-        font-family: $text-font;
-        font-size: rem(15);
-        display: flex;
-        vertical-align: middle;
-        justify-content: flex-start;
+    }
 }
+
+.icon {
+    background-color: transparent;
+    box-shadow: rgba(100, 100, 100, .4) 4px 4px 8px -2px;
+
+
+    &--like {}
+    &--comment {
+        margin-left: rem(20); // border-radius: rem(34);        
+    }
+    &--upload {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url(/img/facebook.png);
+    }
+}
+
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    font-family: $text-font;
+    font-size: rem(18);
+    color: $dark-text;
+    width: 100%; //mainWidth=60%, (100-60)/2=20%
+    padding: rem(24) 0 0 0;
+
+    &__user {
+        margin: rem(16) 0;
+    }
+
+    &__contents {
+        margin: auto rem(0) rem(24) rem(20);
+    }
+}
+
+
 
 
 
@@ -243,7 +262,6 @@
 //         border-radius: 50%;
 //     }
 // }
-
-    comment {
-        display: block;
-    }
+comment {
+    display: block;
+}
