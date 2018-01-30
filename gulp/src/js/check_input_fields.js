@@ -11,12 +11,13 @@ function checkRegistrationFields() {
     let inputName = select(".input-wrapper-name");
     let inputSurname = select(".input-wrapper-surname");
     let inputPassword = select(".input-wrapper-pass");
+    let policy = select('#policy');
     let nameString = "";
     let surnameString = "";
     let emailString = "";
     let passwordString = "";
     let confirm;
-    let validation;
+    let policyString
 
     let namePattern = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
@@ -64,8 +65,15 @@ function checkRegistrationFields() {
         confirmPasswordString = "Введенные Вами пароли не совпадают";
     }
 
-    if (!(checkName && checkSurname && checkEmail && checkPassword && confirm)) {
-        errorMessage.textContent = `Неверно введены: ${nameString} ${surnameString} ${emailString} ${passwordString} ${confirmPasswordString}`;
+    if (!policy.checked) {
+        policy.classList.add("input-wrapper--wrong-data");
+        policyString = "Ознакомьтесь с политикой конфиденциальности";
+    } else {
+        policy.classList.remove("input-wrapper--wrong-data");
+    }
+
+    if (!(checkName && checkSurname && checkEmail && checkPassword && confirm && policy.checked)) {
+        errorMessage.textContent = `Неверно введены: ${nameString} ${surnameString} ${emailString} ${passwordString} ${confirmPasswordString} ${policyString}`;
     } else {
         errorMessage.textContent = "";
         modalRegistration.style.display = "none";
