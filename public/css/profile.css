@@ -235,6 +235,7 @@ button, input[type=button] {
           transform: scale(1.1); }
 
 .c-header__photo-profile {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,6 +253,9 @@ button, input[type=button] {
   height: 48px;
   background-color: #fff;
   border-radius: 50%; }
+  #header_photo-profile {
+    width: 100px;
+  }
   .c-header__photo-profile-circle {
     width: 16px;
     height: 16px;
@@ -300,6 +304,8 @@ button, input[type=button] {
   background-color: #fff; }
 
 .profile__photo-profile {
+  border-radius: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

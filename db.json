@@ -15,5 +15,31 @@
     ],
     "profile": {
         "name": "typicode"
-    }
+    },
+    "users": [
+        {
+            "name": "John Bush",
+            "email": "johnbush@mail.com",
+            "img": "johnbush.jpg",
+            "hash": "5f4dcc3b5aa765d61d8327deb882cf99"
+        },
+        {
+            "name": "george Bush",
+            "email": "georgebush@mail.com",
+            "img": "georgebush.jpg",
+            "hash": "5f4dcc3b5aa765d61d8327deb882cf99"
+        },
+        {
+            "name": "piter Bush",
+            "email": "piterbush@mail.com",
+            "img": "piterbush.jpg",
+            "hash": "5f4dcc3b5aa765d61d8327deb882cf99"
+        },
+        {
+            "name": "ben Bush",
+            "email": "benbush@mail.com",
+            "img": "benbush.jpg",
+            "hash": "5f4dcc3b5aa765d61d8327deb882cf99"
+        }
+    ]
 }
