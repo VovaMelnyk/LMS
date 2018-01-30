@@ -12,11 +12,12 @@
     &__link{
         text-decoration: none;
         color: #ff6c00;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
         line-height: 24px;
         padding: 8px;
         position: relative;
+        border-bottom: 2px solid #e9eaeb;
         &:hover {
             padding-left: 6px;
             border-left: 2px solid #ff6c00;
