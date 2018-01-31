@@ -6,11 +6,9 @@
     flex-direction: row;
 
     &__area {
-        display: block;
-        // flex-direction: column;
-
-        width: 88%;
-        height: rem(32);
+        display: flex;
+        flex-direction: column;
+        width: 98%;
     }
 
     &__title {
@@ -23,6 +21,7 @@
         border-radius: rem(10);
         padding: rem(4) rem(16);
         margin: 0 auto;
+        height: rem(32);
     }
 
     &__title:focus {
@@ -44,4 +43,28 @@
         background: $orange;
         border-radius: rem(10);
     }
+
+    &__upload {
+        display: flex;
+        align-self: flex-end;
+        width: rem(12);
+        height: rem(18);
+        background: url(/img/upload.png);
+        position: absolute;
+        margin-left: rem(-48);
+        margin-top: rem(6);
+    }
+
+    &__smile {
+        display: flex;
+        align-self: flex-end;
+        width: rem(16);
+        height: rem(16);
+        background: url(/img/smile.png) no-repeat;
+        position: absolute;
+        margin-left: rem(-16);
+        margin-top: rem(8);
+    }
+
+
 }
