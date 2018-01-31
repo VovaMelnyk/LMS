@@ -20,7 +20,7 @@
     margin: rem(24) 0 0;
 
     &__title {
-        margin-left: 200px;
+        margin-left: rem(200);
         font-family: $text-font;
         font-weight: 500;
         text-align: left;
@@ -88,7 +88,6 @@
     }
 
     &__role {
-        // text-align: center;
         margin-top: rem(4);
         font-family: $text-font;
         font-size: rem(12);
@@ -112,7 +111,7 @@
     height: rem(72);
     background-color: $white;
     border-radius: 50%;
-    box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+    box-shadow: rgba(100,100,100,.4) rem(4) rem(4) rem(8) rem(-2);
 
     &-circle {
         width: 30%;
@@ -154,7 +153,7 @@
         align-items: center;
         // border-radius: rem(34);
         background-color: transparent;
-        box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+        box-shadow: rgba(100,100,100,.4) rem(4) rem(4) rem(8) rem(-2);
     }
 
     &--comment {
@@ -164,7 +163,7 @@
         margin-left: rem(16);
         // border-radius: rem(34);
         background-color: transparent;
-        box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+        box-shadow: rgba(100,100,100,.4) rem(4) rem(4) rem(8) rem(-2);
     }
 
     &--upload {
@@ -189,11 +188,6 @@
     //     margin-left: 20px;
     // }
 }
-// .control {
-//     display: block;
-//     margin-left: auto;
-//
-
 
 .counter {
 

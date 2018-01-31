@@ -9,34 +9,34 @@
 
 .button {
     width: 100%;
-    min-width: 136px;
-    height: 56px;
+    min-width: rem(136);
+    height: rem(56);
     background-color: $dark-bg;
-    border-radius: 8px;
-    padding: 0 24px 0 6px;
-    box-shadow: 4px 0 8px $grey-pholder;
+    border-radius: rem(8);
+    padding: 0 rem(24) 0 rem(6);
+    box-shadow: rem(4) 0 rem(8) $grey-pholder;
 }
 
 .button-lable {
-    letter-spacing: 2.25px;
+    letter-spacing: rem(2.25);
     text-transform: uppercase;
     border: none;
     color: $cyan;
     font-family: $title-font;
-    font-size: 24px;
+    font-size: rem(24);
     text-align: center;
-    padding: 2px;
-    line-height: 26px;
+    padding: rem(2);
+    line-height: rem(26);
     box-sizing: border-box;
 }
 
 .english {
-    line-height: 54px;
+    line-height: rem(54);
 }
 
 .small-btn {
     overflow: hidden;
-    max-height: 400px;
+    max-height: rem(400);
     opacity: 1;
     transform: translate(0, 0);
     background-color: $light-gray;
@@ -45,13 +45,13 @@
 .small-btn__list-item {
     text-transform: uppercase;
     font-family: $title-font;
-    font-size: 24px;
+    font-size: rem(24);
     display: block;
-    padding: 24px 40px 0;
+    padding: rem(24) rem(40) 0;
 }
 
 .small-btn__list-item:last-child {
-    padding-bottom: 24px;
+    padding-bottom: rem(24);
 }
 
 .accord__item {
@@ -79,26 +79,26 @@
 }
 
 .accord__item .accord__list-item .accord__checkbox[type=checkbox]:checked ~ .button {
-    margin-bottom: 8px;
+    margin-bottom: rem(8);
 }
 
 .accord__item .accord__list-item i {
     position: absolute;
-    transform: translate(-6px, 0);
-    margin-top: 19px;
-    right: 25px;
+    transform: translate(rem(-6), 0);
+    margin-top: rem(19);
+    right: rem(25);
 }
 
 .accord__item .accord__list-item .small-btn i {
-    margin-top: 32px;
-    left: 24px;
+    margin-top: rem(32);
+    left: rem(24);
 }
 
 .accord__item .accord__list-item b {
     position: absolute;
-    transform: translate(-6px, 0);
-    margin-top: 10px;
-    right: 25px;
+    transform: translate(rem(-6), 0);
+    margin-top: rem(10);
+    right: rem(25);
 }
 
 .accord__item .accord__list-item b:before,
@@ -107,46 +107,46 @@
     content: "";
     position: absolute;
     background-color: $cyan;
-    width: 2px;
-    height: 18px;
+    width: rem(2);
+    height: rem(18);
 }
 
 .accord__item .accord__list-item .small-btn i:after,
 .accord__item .accord__list-item .small-btn i:before {
-    width: 3px;
-    height: 12px;
+    width: rem(3);
+    height: rem(12);
 }
 
 .accord__item .accord__list-item b:before {
-    height: 24px;
+    height: rem(24);
     transform: translate(0, 0) rotate(90deg);
 }
 
 .accord__item .accord__list-item i:before {
-    transform: translate(-6px, 0) rotate(-45deg);
+    transform: translate(rem(-6), 0) rotate(-45deg);
 }
 
 .accord__item .accord__list-item i:after {
-    transform: translate(6px, 0) rotate(45deg);
+    transform: translate(rem(6), 0) rotate(45deg);
 }
 
 .accord__item .accord__list-item .small-btn i:before {
-    transform: translate(3px, 4px) rotate(140deg);
+    transform: translate(rem(3), rem(4)) rotate(140deg);
 }
 
 .accord__item .accord__list-item .small-btn i:after {
-    transform: translate(3px, -4px) rotate(-140deg);
+    transform: translate(rem(3), rem(-4)) rotate(-140deg);
 }
 
 .accord__item .accord__list-item .accord__checkbox[type=checkbox]:checked ~ i:before {
-    transform: translate(6px, 6px) rotate(225deg);
+    transform: translate(rem(6), rem(6)) rotate(225deg);
 }
 
 .accord__item .accord__list-item .accord__checkbox[type=checkbox]:checked ~ i:after {
-    transform: translate(6px, -6px) rotate(-225deg);
+    transform: translate(rem(6), rem(-6)) rotate(-225deg);
 }
 
 .accord__item .accord__list-item .accord__checkbox[type=checkbox]:checked ~ b:before {
     transform: translate(0, 0) rotate(180deg);
-    margin-top: 6px;
+    margin-top: rem(6);
 }

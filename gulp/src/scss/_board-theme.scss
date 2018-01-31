@@ -4,8 +4,11 @@
     background: $light-gray;
 
     &--middle-grey {
-        margin: auto;
         background: $middle-grey;
+    }
+
+    &--light-grey {
+        background: $light-gray;
     }
 }
 
@@ -16,7 +19,7 @@
     font-family: $text-font;
     font-size: rem(18);
     color: $dark-text;
-    min-width: 100%; //mainWidth=60%, (100-60)/2=20%
+    min-width: 10%; //mainWidth=60%, (100-60)/2=20%
     padding: rem(24) 0 0 rem(16);
 
     &__user {
@@ -24,12 +27,12 @@
     }
 
     &__contents {
-        margin: auto rem(56) rem(24) rem(20);
+        margin: auto rem(64) rem(24) rem(20);
     }
 }
 
 .user {
-    width: 35%; //mainWidth=60%, (100-60)/2=20%
+    min-width: rem(104); //mainWidth=60%, (100-60)/2=20%
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +65,7 @@
     height: rem(72);
     background-color: $white;
     border-radius: 50%;
-    box-shadow: rgba(100, 100, 100, .4) 4px 4px 8px -2px;
+    box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
 
     &__circle {
         width: 30%;
@@ -71,7 +74,6 @@
         background-color: $grey-bg;
         border-radius: 50%;
     }
-
 
     &__semicircle {
         width: 63%;
@@ -187,25 +189,14 @@
 
 .icon {
     background-color: transparent;
-    box-shadow: rgba(100, 100, 100, .4) 4px 4px 8px -2px;
+    box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
 
     &--like {}
 
     &--comment {
         display: block;
-        // justify-content: flex-end;
-        // align-items: center;
         margin-left: rem(20); // border-radius: rem(34);
     }
-    //
-    // &--upload {
-    //     // justify-content: flex-end;
-    //     // align-items: flex-end;
-    //     width: rem(17);
-    //     height: rem(17);
-    //     background-image: url(/img/upload.png) ;
-    //     position: absolute;
-    // }
 }
 
 .comment {
@@ -225,16 +216,13 @@
         margin: auto rem(0) rem(24) rem(20);
     }
 }
-// // comment {
-//     display: block;
-// }
 
 .pointer {
     @include arrow;
     align-self: center;
     // margin: 0 auto;
     position: absolute;
-    left: 50%;
+    left: 55%;
 
     &--down {
         margin-top: rem(10);

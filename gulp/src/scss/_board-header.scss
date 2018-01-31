@@ -31,13 +31,13 @@
     margin-left: rem(64);
     color: $dark-text;
     font-weight: rem(800);
-    letter-spacing: 2.25px;
+    letter-spacing: rem(2.25);
     font-family: $text-font;
     font-size: rem(28);
 }
 
 .icon-add {
-    margin-right: 64px;
+    margin-right: rem(64);
     display: inline-block;
     margin-bottom: auto;
     justify-content: space-between;
@@ -46,5 +46,5 @@
     border: none;
     border-radius: rem(34);
     background: url('../img/add.png') no-repeat;
-    box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+    box-shadow: rgba(100,100,100,.4) rem(4) rem(4) rem(8) rem(-2);
     }
