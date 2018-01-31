@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    max-height: 240px;
+    // overflow-y: hidden;
+    // overflow-x:hidden;
+    // width: max-content;
     top: 200px;
     left: 0px;
-    height: 240px;
     transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     &:hover {
-        transition: 0.5s;  
+        transition: 0.5s;
     }
     &__link{
         text-decoration: none;
@@ -41,6 +44,7 @@
         width: 240px;
         background: rgba(0, 255, 255, 0.8);
         border-radius: 40px;
+        border-top-left-radius: 0;
         transform: translate( 15px, -32px);
         overflow: hidden;
         transition: 1s;

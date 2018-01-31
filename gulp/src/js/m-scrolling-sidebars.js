@@ -27,7 +27,7 @@
         if (pagePosition > 0) {
             setTimeout( () => {
                 hidePrompts(nodeArr)
-            }, 3000 )
+            }, 5000 )
         } else {
             hidePrompts(nodeArr)
         }
@@ -39,7 +39,7 @@
             leftNav = document.getElementById('m-left-nav'),
             rightNav = document.getElementById('right-nav'),
             navParentNode = document.getElementById('main');
-                
+
         chekPagePosition(navParentNode, rightNavPrompts, leftNav)
 
         document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav) )
