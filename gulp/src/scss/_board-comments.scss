@@ -1,21 +1,17 @@
 .new-comment {
     width: 100%;
-    margin: 0 auto 0;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row-reverse;
-    background-image: url(/img/pen.png) no-repeat;
+    justify-content: space-between;
+    flex-direction: row;
 
     &__area {
         display: block;
+        // flex-direction: column;
 
-        // justify-content: flex-end;
-        // align-items: stretch;
-        width: 100%;
-        margin-right: rem(24);
-        size: rem(32);
-
+        width: 88%;
+        height: rem(32);
     }
-
 
     &__title {
         width: 100%;
@@ -36,7 +32,7 @@
     &__btn-post {
         display: block;
         margin-top: rem(16);
-        margin-right: 0;
+        margin-left: auto;
         border: none;
         font-family: $title-font;
         font-size: rem(13);
@@ -49,12 +45,3 @@
         border-radius: rem(10);
     }
 }
-
-
-
-    // &--upload {
-    //     display: flex;
-    //     justify-content: flex-end;
-    //     align-items: flex-end;
-    //     background-image: url(img/facebook.svg);
-    // }

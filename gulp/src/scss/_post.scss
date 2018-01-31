@@ -1,0 +1,206 @@
+.post-wrapper {
+    margin: auto;
+    background: $light-gray;
+
+    &--light-grey {
+        background: $light-gray;
+    }
+
+    &--middle-grey {
+        background: $middle-grey;
+    }
+}
+
+.post {
+    display: inline-block;
+    font-size: rem(18);
+    padding: rem(64);
+    color: $dark-text;
+    min-width: 100%; //mainWidth=60%, (100-60)/2=20%
+    margin: rem(24) 0 0;
+
+    &__title {
+        margin-left: 200px;
+        font-family: $text-font;
+        font-weight: 500;
+        text-align: left;
+        color: $orange;
+        font-size: rem(20);
+        margin-top: rem(16);
+    }
+
+    &__edit {
+        // display: inline-block;
+        margin-left: rem(500);
+        width: rem(20);
+        height: rem(20);
+        background-image: url(img/pen.png);
+    }
+
+    &__delete {
+        // display: inline-block;
+        color: $orange;
+        width: rem(20);
+        height: rem(20);
+        background-image: url(img/close.png);
+    }
+
+
+
+    &__text {
+        margin: rem(24) 0;
+        font-family: $text-font;
+        font-size: rem(12);
+    }
+
+    &__date {
+        display: flex;
+        font-size: rem(11);
+        color: $light-text;
+    }
+
+    &__time {
+        display: inline-block;
+        font-size: rem(11);
+        margin-left: rem(16);
+        color: $light-text;
+    }
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $text-font;
+    font-size: rem(25);
+    width: rem(200); //mainWidth=60%, (100-60)/2=20%
+    margin: rem(16) rem(24) rem(24) 0;
+
+    &__name {
+        // text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: rem(8);
+        font-family: $text-font;
+        font-size: rem(12);
+        color: $orange;
+    }
+
+    &__role {
+        // text-align: center;
+        margin-top: rem(4);
+        font-family: $text-font;
+        font-size: rem(12);
+        color: $dark-text;
+    }
+
+    &__to-chat {
+        margin-top: rem(16);
+        font-family: $text-font;
+        font-size: rem(12);
+        color: $light-text;
+    }
+}
+
+.ava {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(72);
+    height: rem(72);
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+
+    &-circle {
+        width: 30%;
+        height: 30%;
+        margin-bottom: rem(2);
+        background-color: $grey-bg;
+        border-radius: 50%;
+    }
+
+    &-semicircle {
+        width: 63%;
+        height: 30%;
+        background-color: $grey-bg;
+        border-radius: rem(48) rem(48) 0 0;
+    }
+
+    &-tooltip {
+        margin: rem(-8) 0 0 rem(56);
+        width: rem(16);
+        height: rem(16);
+        font-size: rem(10);
+        font-weight: bold;
+        line-height: rem(16);
+        text-align: center;
+        background: $light-green;
+        border: rem(2) solid $white;
+        border-radius: 50%;
+    }
+}
+
+
+.icon {
+    display: flex;
+    align-items: center;
+
+    &--like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border-radius: rem(34);
+        background-color: transparent;
+        box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+    }
+
+    &--comment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: rem(16);
+        // border-radius: rem(34);
+        background-color: transparent;
+        box-shadow: rgba(100,100,100,.4) 4px 4px 8px -2px;
+    }
+
+    &--upload {
+        display: flex;
+
+        width: rem(12);
+        height: rem(19);
+        background-image: url("/img/upload.png");
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+    }
+    //
+    // &--emoji {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: rem(16);
+    //     height: rem(16);
+    //     background-image: url("/img/smile.png");
+    //     position: absolute;
+    //     margin-left: 20px;
+    // }
+}
+// .control {
+//     display: block;
+//     margin-left: auto;
+//
+
+
+.counter {
+
+    margin-left: rem(0);
+    font-family: $text-font;
+    font-size: rem(15);
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-start;
+}
