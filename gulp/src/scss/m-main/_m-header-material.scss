@@ -1,8 +1,9 @@
 .m-header {
 	display: flex;
-
+	overflow: hidden;
 	justify-content: space-between;
 	align-items: flex-end;
+	z-index: 10;
 	&__caption {
 		font-family: $title-font;
 		font-size: 48px;
@@ -36,7 +37,7 @@
 
 .m-timer {
 	display: inline-flex;
-
+	margin-top: 24px;
 	font-family: $text-font;
 
 	align-items: center;
