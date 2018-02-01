@@ -17,23 +17,51 @@ const resultScript = document.querySelector('#tests-result'); // script tests-re
 
 const updateView = (tests, container, script) => {    // обновляем данные
 
+
+
     const compiled = _.template(script.textContent.trim());
-    const result = compiled(tests[3]);  // это вопрос 4 правильный ответ 2 !!!
+    const result = compiled(tests);
+     // это вопрос 4 правильный ответ 2 !!!
     container.innerHTML = result;
+
 };
 
 
-function getTestJson() {    // Получаем данные с сервера и передаем их функции updateView
-    fetch(url)
+let someId = 1;
+let url2 = url + "/" + someId;
+
+function getTestJson(c) {    // Получаем данные с сервера и передаем их функции updateView
+    fetch(c)
         .then(response => {
             if (response.ok) return response.json();
             throw new Error("Error");
         })
         .then(data => {
             updateView(data, taskContainer, taskScript);
+
             return data;
+
         })
         .then(data => {
+          const btnNext = document.getElementsByClassName("t-navigation__next");
+          const btnPrev = document.getElementsByClassName("t-navigation__prev");
+
+          btnNext[0].addEventListener('click', function () {
+            let newId = data.id + 1;
+            if (newId<=7) {
+              let urlNext = url + "/" + newId;
+          getTestJson(urlNext);
+            }
+
+          });
+          btnPrev[0].addEventListener('click', function () {
+            let newId = data.id - 1;
+            if (newId>0) {
+              let urlNext = url + "/" + newId;
+          getTestJson(urlNext);
+            }
+
+          });
             const testBtnEnd = document.querySelector('#end_test');
             testBtnEnd.addEventListener('click', ()=>resultTest(data));
         })
@@ -42,7 +70,9 @@ function getTestJson() {    // Получаем данные с сервера �
         });
 }
 
-testBtnStart.addEventListener('click', getTestJson);
+testBtnStart.addEventListener('click', function functionName() {
+  getTestJson(url2);
+});
 
 //////////////////////////////если нажата завершить тест////////////////////////
 const resultTest = (templateData) => {
@@ -75,4 +105,3 @@ const resultTest = (templateData) => {
     result = Math.floor((rightAnswer/1)*10);  // если вопросов много, тогда вместо единицы подставляем кол-во вопросов т.е. длинну массива
     resultTest.innerHTML = `${result}/10 баллов`;
 }
-
