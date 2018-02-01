@@ -1,33 +1,28 @@
 .new-comment {
-    width: 100%;
-    margin: 0 auto;
+    // width: 100%;
+    // margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-
+    &__btn {
+        max-width: rem(213);
+    }
     &__area {
         display: flex;
         flex-direction: column;
-        width: 98%;
     }
-
-    &__title {
-        width: 100%;
-        font-family: $text-font;
+    &__text {
+        width: rem(640);
+        outline: none;
         font-size: rem(13);
         text-transform: none;
         color: $light-text;
         border: none;
+        position: relative;
         border-radius: rem(10);
-        padding: rem(4) rem(16);
+        padding: rem(8) rem(64) rem(4) rem(4);
         margin: 0 auto;
         height: rem(32);
     }
-
-    &__title:focus {
-        outline: none;
-    }
-
     &__btn-post {
         display: block;
         margin-top: rem(16);
@@ -43,28 +38,26 @@
         background: $orange;
         border-radius: rem(10);
     }
-
     &__upload {
-        display: flex;
-        align-self: flex-end;
+        // display: flex;
+        // align-self: flex-end;
         width: rem(12);
         height: rem(18);
         background: url(/img/upload.png);
         position: absolute;
-        margin-left: rem(-48);
-        margin-top: rem(6);
+        right: rem(56);
+        top: rem(7); // margin-left: rem(-48);
+        // margin-top: rem(6);
     }
-
     &__emoji {
-        display: flex;
-        align-self: flex-end;
+        // display: flex;
+        // align-self: flex-end;
         width: rem(16);
         height: rem(16);
         background: url(/img/smile.png) no-repeat;
         position: absolute;
-        margin-left: rem(-16);
-        margin-top: rem(8);
+        top: rem(8);
+        right: rem(32); // margin-left: rem(-16);
+        // margin-top: rem(8);
     }
-
-
 }

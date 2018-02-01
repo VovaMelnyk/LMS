@@ -28,9 +28,9 @@
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
                 ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
                 delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </p>
-            <div class="counter contents__counter">
-                <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>5 likes</span>
-                <img class="icon counter__icon icon--comment" src="/img/comments-full.png" alt="comment icon"><span class="counter"><span>&#160;</span>2 comments</span>
+            <div class="counter">
+                <div class="counter__likes"><img class="icon icon--like" src="/img/like.png" alt="like icon"><span>5 likes</span></div>
+               <div class="counter__comments"><img class="icon icon--comment" src="/img/comments-full.png" alt="comment icon"><span>2 comments</span></div>
             </div>
             <!-- Комментарии к посту -->
             <div class="comment contents__comment">
@@ -58,8 +58,8 @@
                     </div>
                     <p class="contents__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sunt corporis eveniet laborum, quae consequatur esse numquam tempora dolorem modi culpa illo dicta voluptates ut eligendi accusamus molestias eos, dolorum ipsam nam repellat
                         et? Molestiae aut eligendi odio placeat tempora.</p>
-                    <div class="counter contents__counter">
-                        <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>2 likes</span>
+                    <div class="counter">
+                        <div class="counter__likes"><img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span>2 likes</span></div>
                     </div>
                 </div>
             </div>
@@ -90,22 +90,23 @@
                     <p class="contents__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sunt corporis eveniet laborum, quae consequatur esse numquam tempora dolorem modi culpa illo dicta voluptates ut eligendi accusamus molestias eos, dolorum ipsam nam repellat
                         et? Molestiae aut eligendi odio placeat tempora.</p>
                     <div class="counter contents__counter">
-                        <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>6 likes</span>
+                        <div class="counter__likes">
+                            <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon">
+                            <span>2 likes</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Новые комментарии -->
             <div class="new-comment contents__new-comment">
                 <div class="new-comment">
-
-
                     <form class="area new-comment__area" action="#" method="post">
                         <!-- <label class="new-comment__name"> -->
                         <div class="new-comment__emoji" aria-hidden="true"></div>
                         <div class="new-comment__upload" aria-hidden="true"></div>
-                        <input class="new-comment__title" type="text" name="new-comment" value="" placeholder="Написать комментарий">
+                        <textarea class="new-comment__text" type="text" name="new-comment" value="Написать комментарий"></textarea>
 
-                        <button class="btn-post new-comment__btn-post" type="submit" name="sub" value="sent">Отправить</button>
+                        <button class="button-small new-comment__btn" type="submit" name="sub" value="">Отправить</button>
 
                         <!-- <button class="btn-post new-comment__btn-post" type="submit" name="sub" value="sent">Отправить</button>
                         <div class="pointer pointer--up"></div> -->
@@ -151,9 +152,13 @@
                     ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
                     luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </p>
                 <div class="counter">
-                    <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>3 likes</span>
-                    <img class="icon icon--comment" src="/img/comments-empty.png" alt="">
-                    <div class="pointer pointer--down"></div>
+                    <div class="counter__likes">
+                        <img class="icon icon--like" src="/img/like.png" alt="like icon">
+                        <span>3 likes</span>
+                    </div>
+                    <div class="counter__comments">
+                        <img class="icon icon--comment" src="/img/comments-full.png" alt="comment icon">
+                    </div>
                 </div>
             </div>
         </div>
@@ -187,11 +192,15 @@
                     <p class="contents__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
                         nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
                         blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </p>
-                    <div class="counter">
-                        <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>5 likes</span>
-                        <img class="icon counter__icon icon--comment" src="/img/comments-empty.png" alt="comment icon"><span class="counter"><span>&#160;</span></span>
-                        <div class="pointer pointer--down"></div>
+                <div class="counter">
+                    <div class="counter__likes">
+                        <img class="icon icon--like" src="/img/like.png" alt="like icon">
+                        <span>5 likes</span>
                     </div>
+                    <div class="counter__comments">
+                        <img class="icon icon--comment" src="/img/comments-full.png" alt="comment icon">
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="post-wrapper post-wrapper--light-grey">
@@ -224,12 +233,16 @@
                             nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
                             qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </p>
                         <div class="counter">
-                            <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter"><span>&#160;</span>5 likes</span>
-                            <img class="icon counter__icon icon--comment" src="/img/comments-full.png" alt="comment icon"><span class="counter"><span>&#160;</span>1 comment</span>
-                            <div class="pointer pointer--down"></div>
+                            <div class="counter__likes">
+                                <img class="icon icon--like" src="/img/like.png" alt="like icon">
+                                <span>5 likes</span>
+                            </div>
+                            <div class="counter__comments">
+                                <img class="icon icon--comment" src="/img/comments-full.png" alt="comment icon">
+                                <span>1 comments</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="delete control__delete">&#10005;</div>
                 </div>
 
                 <div class="a-nav">
