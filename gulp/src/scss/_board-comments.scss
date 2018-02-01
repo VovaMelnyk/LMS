@@ -1,0 +1,63 @@
+.new-comment {
+    // width: 100%;
+    // margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    &__btn {
+        max-width: rem(213);
+    }
+    &__area {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        width: rem(640);
+        outline: none;
+        font-size: rem(13);
+        text-transform: none;
+        color: $light-text;
+        border: none;
+        position: relative;
+        border-radius: rem(10);
+        padding: rem(8) rem(64) rem(4) rem(4);
+        margin: 0 auto;
+        height: rem(32);
+    }
+    &__btn-post {
+        display: block;
+        margin-top: rem(16);
+        margin-left: auto;
+        border: none;
+        font-family: $title-font;
+        font-size: rem(13);
+        color: $white;
+        line-height: rem(24);
+        text-transform: uppercase;
+        width: rem(112);
+        height: rem(24);
+        background: $orange;
+        border-radius: rem(10);
+    }
+    &__upload {
+        // display: flex;
+        // align-self: flex-end;
+        width: rem(12);
+        height: rem(18);
+        background: url(/img/upload.png);
+        position: absolute;
+        right: rem(56);
+        top: rem(7); // margin-left: rem(-48);
+        // margin-top: rem(6);
+    }
+    &__emoji {
+        // display: flex;
+        // align-self: flex-end;
+        width: rem(16);
+        height: rem(16);
+        background: url(/img/smile.png) no-repeat;
+        position: absolute;
+        top: rem(8);
+        right: rem(32); // margin-left: rem(-16);
+        // margin-top: rem(8);
+    }
+}
