@@ -15,7 +15,7 @@
 .post {
     display: flex;
     justify-content: space-between;
-    margin: rem(16) rem(0);
+    margin: auto;
     font-family: $text-font;
     font-size: rem(18);
     color: $dark-text;
@@ -27,7 +27,7 @@
     }
 
     &__contents {
-        margin: auto rem(64) rem(24) rem(20);
+        margin: auto rem(56) rem(24) rem(20);
     }
 }
 
@@ -168,6 +168,12 @@
 
     &__counter {
         margin-left: rem(0);
+    }
+
+    &--upload {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url("/img/facebook.png");
     }
 
     &__comment {
