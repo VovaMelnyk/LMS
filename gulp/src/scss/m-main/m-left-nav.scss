@@ -1,18 +1,23 @@
 .m-left-nav {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     position: absolute;
-    max-height: 240px;
+    // max-height: 240px;
+    width: 240px;
+    height:254px;
+    overflow: hidden;
     // overflow-y: hidden;
     // overflow-x:hidden;
     // width: max-content;
-    top: 200px;
+    // top: 200px;
     left: 0px;
-    transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    &:hover {
-        transition: 0.5s;
-    }
+    // transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    // &:hover {
+    //     transition: 0.5s;
+    // }
     &__link{
+        left: 0px;
         text-decoration: none;
         color: #ff6c00;
         font-size: 18px;

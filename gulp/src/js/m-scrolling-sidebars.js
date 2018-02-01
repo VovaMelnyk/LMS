@@ -11,7 +11,7 @@
         node.setAttribute('style', `top: ${top}px;`)
     }
 
-    function materialBarsPositionCheker (parentNode, navRightNode, navLeftNode) {
+    function materialBarsPositionCheker (parentNode, navRightNode, navLeftNode, leftNavBtn, leftNavBtnDown) {
         let barsParentPos = parentNode.getBoundingClientRect().top;
 
         if (barsParentPos <= 0) {
@@ -20,7 +20,7 @@
         }
     }
 
-    function chekPagePosition (pageNode, nodeArr, leftNavBlock) {
+    function chekPagePosition (pageNode, nodeArr, leftNavBlock, leftNavBtn, leftNavBtnDown) {
         const pagePosition = pageNode.getBoundingClientRect().top,
             navBlock = document;
 
@@ -38,11 +38,14 @@
         const rightNavPrompts = document.getElementsByClassName('m-left-nav__prompt'),
             leftNav = document.getElementById('m-left-nav'),
             rightNav = document.getElementById('right-nav'),
+            leftNavBtn = document.getElementById('left-nav-btn'),
+            leftNavBtnDown = document.getElementsByClassName('m-left-nav-btn__btnDown'),
             navParentNode = document.getElementById('main');
+console.log(leftNavBtn);
+console.log(leftNavBtnDown);
+        chekPagePosition(navParentNode, rightNavPrompts, leftNav, leftNavBtn, leftNavBtnDown)
 
-        chekPagePosition(navParentNode, rightNavPrompts, leftNav)
-
-        document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav) )
+        document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav, leftNavBtn, leftNavBtnDown) )
     }
 
     document.addEventListener('DOMContentLoaded', init)
