@@ -175,6 +175,11 @@
         align-items: flex-end;
         background-image: url("/img/facebook.png");
     }
+    &--upload {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url(/img/facebook.png);
+    }
 
     &__comment {
         margin: rem(20) rem(0) rem(24);
