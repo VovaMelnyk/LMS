@@ -1,5 +1,4 @@
 .material-admin{
-
     &__title{
     font-size: 24px;
     color: #222c4f;
@@ -24,32 +23,65 @@
     &__material{
         background-color: #e8e8e8;
         padding: 2px 16px 0 16px;
-        //margin-left: -5.5%;
     }
+}
+.m-btn-admin{
+    box-shadow: 0 0 2px gray;
+    opacity: 0.9;
+    &:hover {
+        box-shadow: 0 0 2px black;
+        opacity: 1;
+    }
+}
+.material-admin__closer-window{
+    background-color: rgb(215, 217, 219);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    opacity: 0.9;
+
+}
+.hidden-closer-window{
+    margin-top: 22%;
+    padding: 24px 8px 24px 8px;
+    height: 88px;
+    width: max-content;
+    border: 2px solid #333;
+}
+.hidden-block{
+	visibility: hidden;
 }
 .material-admin__cross {
     position: absolute;
-    right: 32px;
-    top: 32px;
+    right: 24px;
+    top: 24px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
-
-    &:hover {
-    opacity: 1;
-    }
-    &:before, &:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 2px;
-    background-color: #333;
-    }
-    &:before {
-    transform: rotate(45deg);
-    }
-    &:after {
-    transform: rotate(-45deg);
-    }
+    opacity: 0.7;
+    box-shadow: 0 0 2px gray;
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 0 2px black;
+        }
+        &:before, &:after {
+            position: absolute;
+            left: 15px;
+            top: 4px;
+            content: ' ';
+            height: 24px;
+            width: 2px;
+            background-color: white;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
 }
