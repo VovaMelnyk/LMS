@@ -1,0 +1,49 @@
+ .ChP_grup {
+  margin: 100px 3% 0 3%;
+} 
+
+ .ChP_grup-name {
+  margin-top: 8px;
+  color: #202b52;
+  font-weight: bolder;
+  font-size: 25px; ;
+} 
+
+.ChP_grup-strip{
+height: 30%;
+width: 100%;
+margin-top: 10px;
+margin-bottom: 50px;
+background: blue;
+overflow: hidden;
+box-sizing: content-box;
+}
+
+.ChP_grup-strip-member{
+width: 20%;
+height: 100%;
+background: red;
+float: left;
+text-align: center;
+}
+
+.ChP_grup-strip-member-imgDiv{
+  height: 80%;
+}
+
+.ChP_grup-strip-member-img{
+  width: 55%;
+  border-radius: 100px;
+}
+
+.ChP_grup-strip-member-name{
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ChP_grup-strip-member-bal{
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 1;
+}
