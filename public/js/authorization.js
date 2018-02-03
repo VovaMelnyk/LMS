@@ -15,11 +15,8 @@ document.querySelector('#gotoprofile').addEventListener('click', function () {
     axios('http://localhost:3000/users?email=' + email + '&pass' + pass)
         .then(function (data) {
 
-            if (!data.data[0]) {
-                window.location = 'http://localhost:3000/index.html';
-                return;
-            }
-            else {
+            if (data.data[0].email === email &&
+                data.data[0].pass === pass) {
                 localStorage.setItem('lms_name', data.data[0].name);
                 localStorage.setItem('lms_email', data.data[0].email);
                 localStorage.setItem('lms_img', data.data[0].img);
@@ -30,6 +27,10 @@ document.querySelector('#gotoprofile').addEventListener('click', function () {
                 localStorage.setItem('lms_linkedin', data.data[0].linkedin);
 
                 window.location = 'http://localhost:3000/profile.html';
+            }
+            else {
+                document.querySelector('.a-entrance__error').style.visibility = 'visible';
+                return;
             }
         });
 });
