@@ -13,8 +13,6 @@ var facebook = localStorage.getItem('lms_facebook');
 var google = localStorage.getItem('lms_google');
 var linkedin = localStorage.getItem('lms_linkedin');
 
-console.log('img/' + img);
-
 document.querySelector('#profile_photo').setAttribute('src', 'img/users/' + img);
 document.querySelector('#header_photo-profile').setAttribute('src', 'img/users/' + img);
 document.querySelector('#user-name').value = name.split(' ')[0];
