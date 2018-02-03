@@ -47,7 +47,7 @@ function json(response) {
 
 // --------------------------------------------------------------
 
-const getTests = () => 
+const getTests = () =>
 	fetch(basicUrl)
 	.then(status)
 	.then(json)
