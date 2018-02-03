@@ -1,0 +1,72 @@
+		
+<div><button id="btnGetTest">Показать ВСЕ тесты</button></div>
+<table id="testTable"></table>
+<hr>
+
+<!--  _____________Single test____________________  -->
+<div><button id="btnSingleTest">Показать ОДИН тест</button></div>
+<form id="singleTest">
+	<p><input type="text" id="showSingletest" placeholder="show test id"></p>
+</form>
+<hr>			
+<!--   __________________________________________  -->
+
+<script type="text/template" id="testSimple">
+    <tr>
+	    <th rowspan="2">id. <%- id%></th>
+	    <th colspan="4"><%- title%></th>
+    </tr>
+	<tr>
+		<% if ( answer1 == correctAnswer ) { %>
+		<td class="green"><%- answer1%></td>
+		<% } 
+		else { %>
+		<td><%- answer1%></td>
+		<% } %>
+		<% if ( answer2 == correctAnswer ) { %>
+		<td class="green"><%- answer2%></td>
+		<% } 
+		else { %>
+		<td><%- answer2%></td>
+		<% } %>
+		<% if ( answer3 == correctAnswer ) { %>
+		<td class="green"><%- answer3%></td>
+		<% } 
+		else { %>
+		<td><%- answer3%></td>
+		<% } %>
+		<% if ( answer4 == correctAnswer ) { %>
+		<td class="green"><%- answer4%></td>
+		<% } 
+		else { %>
+		<td><%- answer4%></td>
+		<% } %>
+
+	</tr>
+</script>
+
+<div><button id="btnAddTest">Создать тест</button></div>
+<form id="addTest">
+	<p><input type="text" id="testName" placeholder="new test name"></p>
+	<p><input type="text" class="question" id="question1" placeholder="question 1"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
+	<p><input type="text" class="question" id="question2" placeholder="question 2"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
+	<p><input type="text" class="question" id="question3" placeholder="question 3"><input class="questionRadio" name="radioAddTest" type="radio" value="" checked></p>
+	<p><input type="text" class="question" id="question4" placeholder="question 4"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
+</form>
+<hr>
+
+<div><button id="btnUpdateTest">Обновить тест</button></div>
+<form id="updateTest">
+	<p><input type="text" id="changeTestId" placeholder="update id"></p>
+	<p><input type="text" id="changeTestName" placeholder="update test name"></p>
+	<p><input type="text" class="changedQuestion" id="changeQuestion1" placeholder="update question 1"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
+	<p><input type="text" class="changedQuestion" id="changeQuestion2" placeholder="update question 2"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
+	<p><input type="text" class="changedQuestion" id="changeQuestion3" placeholder="update question 3"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value="" checked></p>
+	<p><input type="text" class="changedQuestion" id="changeQuestion4" placeholder="update question 4"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
+</form>
+
+<div><button id="btnRemoveTest">Удалить тест</button></div>
+<form id="removeTest">
+	<p><input type="text" id="removeTestId" placeholder="delete test id"></p>
+</form>
+<hr>

@@ -1,0 +1,34 @@
+form p {
+	margin: 10px 15%;
+	padding: 0 5%;
+	text-align: left;
+}
+
+input[type=text] {
+	width: 90%
+}
+
+input[type=radio] {
+	width: 5%;
+}
+
+button {
+	margin: 20px 20px 0;
+}
+
+#testTable  {
+  margin: 20px auto;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+#testTable td, #testTable th {
+  border: 1px solid grey;
+  padding: 4px 8px;
+  background: white;
+}
+
+.green {
+	color: green;
+	font-weight: bold;
+}

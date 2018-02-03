@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "id": 1,
+      "title": "Где в документе может располагаться тэг script по стандарту HTML ?",
+      "answer1": "Только в HEAD",
+      "answer2": "Только в BODY",
+      "answer3": "В HEAD или в BODY",
+      "answer4": "Где угодно, главное чтоб был",
+      "correctAnswer": "В HEAD или в BODY"
+    },
+    {
+      "id": 2,
+      "title": "Как дела ?",
+      "answer1": "Нормас",
+      "answer2": "Говнисто",
+      "answer3": "Такакатотак",
+      "answer4": "Че на?",
+      "correctAnswer": "Нормас"
+    },
+    {
+      "title": "Укажите ваш пол",
+      "answer1": "Мужик",
+      "answer2": "Баба",
+      "answer3": "Оно",
+      "answer4": "Просто объект",
+      "correctAnswer": "",
+      "id": 3
+    },
+    {
+      "title": "Сикоко тебе годиков?",
+      "answer1": "Еще пистон",
+      "answer2": "Юнец-молодец",
+      "answer3": "Зрелый перец",
+      "answer4": "Старый пердун",
+      "correctAnswer": "",
+      "id": 4
+    }
+  ]
+}
