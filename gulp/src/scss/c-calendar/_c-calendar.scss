@@ -3,8 +3,8 @@
     background-color: $dark-bg;
     padding: 0 40px 40px;
 }
-// Calendar HEADER
 
+// Calendar HEADER
 .c-calendar__header {
     display: flex;
     flex-direction: row;
@@ -30,9 +30,9 @@
     padding: 0 8px;
     position: relative;
     cursor: pointer;
-
+    pointer-events: none;
     &::before {
-        content: '';
+        content: 'l';
         position: absolute;
         height: 0;
         width: 0;
@@ -41,10 +41,11 @@
         border-right: 8px solid $grey-pholder;
         left: -16px;
         cursor: pointer;
+        pointer-events: all; //тестим псевдоэлемент
     }
-
     &::after {
-        content: '';
+        content: 'r';
+        color: $dark-bg;
         position: absolute;
         height: 0;
         width: 0;
@@ -53,10 +54,11 @@
         border-left: 8px solid $grey-pholder;
         right: -16px;
         cursor: pointer;
+        pointer-events: all; //тестим псевдоэлемент
     }
 }
-//Month and year name
 
+//Month and year name
 .c-calendar__month-name,
 .c-calendar__year {
     display: flex;
@@ -65,8 +67,8 @@
     padding-top: 5px;
     letter-spacing: 2.25px;
 }
-//Add event button
 
+//Add event button
 .c-calendar__btn-add-event {
     display: flex;
     flex-direction: row;
@@ -77,8 +79,8 @@
     background-color: $orange;
     cursor: pointer;
 }
-//Add event button INNER
 
+//Add event button INNER
 .c-btn-add-event__plus {
     position: relative;
     font-size: 16px;
@@ -86,8 +88,7 @@
     letter-spacing: 2.25px;
     text-transform: uppercase;
     color: $white;
-    padding: 8px 16px 4px 24px;
-    // Plus before button text
+    padding: 8px 16px 4px 24px; // Plus before button text
     &::before {
         content: '+';
         position: absolute;
@@ -96,16 +97,16 @@
         top: 4.5px;
     }
 }
-//Main calendar feald
 
+//Main calendar feald
 .c-calendar__main {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
 }
-//Name day of a week BLOCK-WEEK
 
+//Name day of a week BLOCK-WEEK
 .c-calendar__week-day-name {
     display: flex;
     justify-content: space-between;
@@ -114,15 +115,15 @@
     font-family: $text-font;
     padding: 0 0 24px;
 }
-//Name day of a week EACH-DAY
 
+//Name day of a week EACH-DAY
 .c-calendar__day-name {
     display: flex;
     flex-basis: 15%;
     padding-left: 8px;
 }
-//Number of a week BLOCK-WEEK
 
+//Number of a week BLOCK-WEEK
 .c-calendar__week-number {
     display: flex;
     flex-direction: row;
@@ -130,9 +131,9 @@
     width: 100%;
     font-family: $text-font;
 }
-//Number of a day EACH-DAY
 
-.c-calendar__week-day-num {
+//Number of a day EACH-DAY
+.c-calendar__day-num {
     display: flex;
     flex-basis: 15%;
     height: 88px;
@@ -140,16 +141,15 @@
     border-top: 1px solid $dark-text;
     border-right: 1px solid $dark-text;
     cursor: pointer;
-
     &:hover {
         background-color: $light-gray;
         opacity: 0.5;
         transition: all 0.25s;
     }
 }
-//Number of a day EACH-DAY INNER
 
-.c-week-day-num {
+//Number of a day EACH-DAY INNER
+.c-day-num {
     display: flex;
     justify-content: center;
     padding: 4px;
@@ -158,13 +158,11 @@
     height: 24px;
     border-radius: 50%;
     color: $white;
-    background-color: $dark-bg;
-    //today
+    background-color: $dark-bg; //today
     &_today {
         background: $orange;
-    }
-    // Next month day
-    &_next-month {
+    } // Next month day
+    &_other-month {
         color: $light-text;
     }
 }
