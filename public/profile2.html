@@ -36,8 +36,7 @@
                     </a>
                 </div>
                 <a href="#" class="c-header__photo-profile">
-                    <div class="c-header__photo-profile-circle"></div>
-                    <div class="c-header__photo-profile-semicircle"></div>
+                    <img src="" alt="" id="header_photo-profile">
                 </a>
 
             </div>
@@ -118,8 +117,7 @@
                                 <div class="photo-block">
                                     <div class="photo-block--icon">
                                         <div class="profile2__photo-profile">
-                                            <div class="profile2__photo-profile-circle"></div>
-                                            <div class="profile2__photo-profile-semicircle"></div>
+                                            <img src="" id="profile_photo">
                                         </div>
                                         <!-- <img src="img/photo.png" alt="" style="width:108%"> -->
                                     </div>
@@ -132,9 +130,9 @@
                                 <div class="info-block">
                                     <div class="info-block--main-info">
                                         <p class="block-heading-text">Основная информация&nbsp;&nbsp;&nbsp;</p>
-                                        <input type="text" class="info-block--input shad input-st" placeholder="Имя">
-                                        <input type="text" class="info-block--input shad input-st" placeholder="Фамилия">
-                                        <input type="text" class="info-block--input shad input-st" placeholder="email">
+                                        <input type="text" class="info-block--input shad input-st" id="user-name" placeholder="Имя">
+                                        <input type="text" class="info-block--input shad input-st" id="user-secondname" placeholder="Фамилия">
+                                        <input type="text" class="info-block--input shad input-st" id="user-email" placeholder="email">
                                     </div>
                                     <div class="info-block--pass-info">
                                         <p class="block-heading-text">Изменить пароль</p>
@@ -153,7 +151,7 @@
                                                 </svg>
                                                 </a>
                                             </div>
-                                            <input type="text" class="social-block--inputs-block--input input-st shad">
+                                            <input type="text" id="user-facebook" class="social-block--inputs-block--input input-st shad">
                                         </div>
                                         <div class="social-block--inputs-block">
                                             <div class="social-block--inputs-block--icon icon">
@@ -161,7 +159,7 @@
                                                 <svg class="social-block--inputs-block--icon--svg" viewBox="0 0 56.6934 56.6934"><g><path d="M19.6671,25.7867c-0.0075,1.7935,0,3.5869,0.0076,5.3803c3.0067,0.098,6.0208,0.0527,9.0275,0.098   c-1.3262,6.6689-10.3989,8.8315-15.199,4.4761C8.5674,31.9206,8.801,23.5412,13.9327,19.992   c3.5869-2.8635,8.6884-2.1552,12.2752,0.324c1.4092-1.3036,2.7278-2.6977,4.0013-4.1445   c-2.984-2.3812-6.6462-4.0767-10.5421-3.8958c-8.1307-0.2713-15.6059,6.8497-15.7415,14.9805   c-0.52,6.6462,3.8506,13.1644,10.0222,15.5155c6.1489,2.3661,14.031,0.7535,17.957-4.77c2.5922-3.4889,3.1498-7.98,2.8484-12.1999   C29.7194,25.7641,24.6933,25.7716,19.6671,25.7867z"/><path d="M49.0704,25.7641c-0.0151-1.4996-0.0226-3.0067-0.0301-4.5062c-1.4996,0-2.9916,0-4.4836,0   c-0.0151,1.4996-0.0301,2.9991-0.0377,4.5062c-1.5071,0.0075-3.0067,0.0151-4.5062,0.0302c0,1.4995,0,2.9915,0,4.4836   c1.4995,0.0151,3.0066,0.0302,4.5062,0.0452c0.0151,1.4996,0.0151,2.9991,0.0302,4.4987c1.4996,0,2.9916,0,4.4911,0   c0.0075-1.4996,0.015-2.9991,0.0301-4.5062c1.5071-0.0151,3.0067-0.0226,4.5062-0.0377c0-1.4921,0-2.9916,0-4.4836   C52.0771,25.7792,50.57,25.7792,49.0704,25.7641z"/></g></svg>
                                             </a>
                                             </div>
-                                            <input type="text" class="social-block--inputs-block--input input-st shad">
+                                            <input type="text" id="user-google" class="social-block--inputs-block--input input-st shad">
                                         </div>
                                         <div class="social-block--inputs-block">
                                             <div class="social-block--inputs-block--icon icon">
@@ -170,7 +168,7 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <input type="text" class="social-block--inputs-block--input input-st shad">
+                                            <input type="text" id="user-linkedin" class="social-block--inputs-block--input input-st shad">
                                         </div>
                                     </div>
                                 </div>
@@ -211,6 +209,8 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript" src="js/profile2.js"></script>
     </body>
 
 </html>
