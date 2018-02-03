@@ -1,4 +1,4 @@
-//Устанавливаем имя текущего месяца
+// ======== CALENDAR-HEADER START
 function getMonthString(num) {
     var month; //Создаем локальную переменную для получения имени месяца(String)
     switch (num) {
@@ -48,65 +48,85 @@ function getMonthString(num) {
 let theDate = new Date();
 
 //Получаем текущий месяц
-let calMonth = getMonthString(theDate.getMonth());
+let theMonth = getMonthString(theDate.getMonth());
+
 //Записываем имя месяца в DOM
-document.querySelector('.c-calendar__month-name').innerHTML = `[${calMonth}`;
+document.querySelector('.c-calendar__month-name').innerHTML = `[${theMonth}`;
 
 //Получаем текущий год
-let calYear = theDate.getFullYear();
+let theYear = theDate.getFullYear();
+
 //Записываем год в DOM
-document.querySelector('.c-calendar__year').innerHTML = `${calYear}_]`;
+document.querySelector('.c-calendar__year').innerHTML = `${theYear}_]`;
+// ======== CALENDAR-HEADER END
+
+
+// ======== CALENDAR-MAIN-FIELD START
+function createCalendar(className, year, month) {
+     
+    let elem = document.querySelector(className); //Получаем DOM-MAIN календаря
+
+    let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+    let d = new Date(year, mon);
+    // console.log(d);
+
+    // получить номер дня недели, от 0(пн) до 6(вс)
+    function getDay(date) {
+        let day = date.getDay();
+        if (day == 0) day = 7;
+        return day - 1;
+    }
+
+    // Шаблон для недели
+    let weekRow = `
+        <ul class="c-calendar__week-number"></ul>
+    `;
+
+    // Шаблон для дня недели без номера
+    let emptyDayCell = `        
+                <li class="c-calendar__day-num">
+                    <span class="c-day-num">${calDate}</span>
+                </li>
+    `;
+
+    // Шаблон для дня недели с номером
+    let numDayCell = `        
+                <li class="c-calendar__day-num">
+                    <span class="c-day-num">${calDate}</span>
+                </li>
+    `;
+
+    // ячейки календаря с датами
+    while (d.getMonth() == mon) {
+        table += '<td>' + d.getDate() + '</td>';
+
+        if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
+            table += '</tr><tr>';
+        }
+
+        d.setDate(d.getDate() + 1);
+    }
+
+    // заполнить первый ряд от понедельника
+    // и до дня, с которого начинается месяц
+    // * * * | 1  2  3  4
+    for (let i = 0; i < getDay(d); i++) {
+        weekRow += emptyDayCell;
+    }
+}
+
+createCalendar(".c-calendar__main", theYear, theMonth);
+
+// ======== CALENDAR-MAIN-FIELD END
 
 //Получаем текущий день
 let calDate = theDate.getDate();
-console.log(calDate);
-console.log(typeof(calDate));
 
-//Получаем элементы дат календаря
+//Получаем DOM-элементы дней календаря
 let calDateBg = document.querySelectorAll('.c-day-num');
 
-for (let i = 0; i <= 31; i++) {
-    console.log(calDateBg[i].textContent);
-    console.log(typeof(calDateBg[i].textContent));
-    if (calDateBg[i].textContent == calDate) {
-        console.log('Hello');
-        // calDateBg[i].classList.toggle('c-day-num_today');
-        // calDateBg[i].classList.remove('c-day-num_today');
-        calDateBg[i].classList.add('c-day-num_today');
-    }
-    
-}
-
-// for (let i = 0; i < calDateBg.length; i++) {
-//     if (calDateBg[i].textContent==calDate) {
-//         // calDateBg[i].classList.add('c-day-num_today');
-//         console.log(calDateBg[i]);
-//     }    
+// for (let i = 0; i <= 31; i++) {
+//     if (calDateBg[i].textContent == calDate) {
+//         calDateBg[i].classList.add('c-day-num_today');
+//     }
 // }
-
-// console.log(calDate);
-
-// if (condition) {
-    
-// }
-
-//Проклацивание месяца стрелками << и >>
-
-// let arrowLeft = getComputedStyle(document.querySelector(('.c-calendar__month'),'::before'));
-// let arrowLeft = getComputedStyle(document.querySelector(('.c-calendar__month'),'::before'));
-// console.log(arrowLeft);
-// console.log(arrowLeft.className);
-// getComputedStyle(someelement, "::after").content
-// let arrowRight = document.querySelector('.c-calendar__month::after');
-
-// console.log(arrowLeft);
-
-// document.onclick = function (event) {
-//     console.log(event.target);
-// };
-
-// arrowLeft.addEventListener("click", console.log('Hello'));
-// arrowRight.addEventListener("click", console.log(this));
-
-// arrowLeft.addEventListener("click", this.smaller.bind(this);
-// arrowRight.addEventListener("click", this.smaller.bind(this);
