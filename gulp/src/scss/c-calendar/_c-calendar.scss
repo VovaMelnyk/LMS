@@ -33,6 +33,7 @@
     pointer-events: none;
     &::before {
         content: 'l';
+        color: $dark-bg;
         position: absolute;
         height: 0;
         width: 0;
@@ -119,8 +120,9 @@
 //Name day of a week EACH-DAY
 .c-calendar__day-name {
     display: flex;
-    flex-basis: 15%;
+    flex-basis: 14%;
     padding-left: 8px;
+    flex-shrink: 1;
 }
 
 //Number of a week BLOCK-WEEK
