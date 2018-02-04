@@ -90,7 +90,7 @@ let checkRegistrFields = {
     },
 
     checkValid: function() {
-       
+
      return this.errorMessage.innerHTML = `<p>${this.nameString}</p><p>${this.surnameString}</p><p>${this.emailString}</p> <p>${this.passwordString} </p><p>${this.confirmPasswordString}</p>`;
     }
 };
