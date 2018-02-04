@@ -1,47 +1,54 @@
 ;(function (document){
-    let time = document.getElementById('m-timer'),
-        hour = 0,
-        second = 0,
-        minute = 26,
-        timerInterval;
+
+    const time = document.getElementById('m-timer');
+
+    let hour = 0;
+    let second = 0;
+    let minute = 26;
+    let timerInterval;
+
 
     function timer(){
+
         let end = false;
-        if( second > 0 ) second--;
-        else{
+
+        if ( second > 0 ) second--;
+        else {
             second = 60;
 
-            if( minute > 0 ) {
+            if ( minute > 0 ) {
                 minute--;
                 time.innerHTML = `${minute} мин`;
-            } else{
+            } else {
                 second = 60;
 
-                if( hour > 0 ) hour--;
+                if ( hour > 0 ) hour--;
                 else end = true;
             }
         }
-        if(end){
+        if (end) {
             clearInterval(timerInterval)
             alert("Время вышло!");
         }
     }
 
     function timerStart() {
-        timerInterval = setInterval(timer, 1000)
+        timerInterval = setInterval(timer, 1000);
     }
+
     function timerStop() {
-        clearInterval(timerInterval)
+        clearInterval(timerInterval);
     }
 
     function init(){
+
         (!document.hidden) ? timerStart()
-        : timerStop()
+            : timerStop()
+            
     }
-    document.addEventListener("DOMContentLoaded", ()=>{
-        if (time) {
-            init()
-            document.addEventListener("visibilitychange", init);
-        }
-    });
+
+    if (time) document.addEventListener("DOMContentLoaded", ()=>{
+                init()
+                document.addEventListener("visibilitychange", init);
+            });
 })(document);
