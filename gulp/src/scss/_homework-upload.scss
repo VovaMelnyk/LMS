@@ -27,16 +27,7 @@
     }
 
     &__done {
-        border: none;
-        font-family: $title-font;
-        font-size: 13px;
-        color: $white;
-        line-height: 24px;
-        text-transform: uppercase;
         width: 112px;
-        height: 24px;
-        background: $orange;
-        border-radius: 10px;
     }
 
     &__line {

@@ -20,6 +20,8 @@
         margin: 0 auto;
     }
     &__desc {
+        min-height: 300px;
+        padding-top: 15px;
         font-family: $text-font;
         font-size: 16px;
         color: $dark-text;
