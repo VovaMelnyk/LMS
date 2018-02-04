@@ -51,7 +51,7 @@ var serverConfig = {
       gulp.src(path.src.html)
       .pipe(rigger())
       .pipe(gulp.dest(path.dist.html))
-      .pipe(browserSync.reload({stream: true}))
+      .pipe(browserSync.reload({stream: true}));
   });
 
   // sass to css
@@ -79,7 +79,7 @@ var serverConfig = {
       .pipe(uglify())
       .pipe(gulp.dest(path.dist.js))
       .pipe(browserSync.reload({stream: true}));
-  })
+  });
 
   // img
   gulp.task('bundleImg', function() {
@@ -92,13 +92,13 @@ var serverConfig = {
       }))
       .pipe(gulp.dest(path.dist.img))
       .pipe(browserSync.reload({stream: true}));
-  })
+  });
 
   // fonts
   gulp.task('bundleFont', function () {
       return gulp.src(path.src.fonts)
-      .pipe(gulp.dest(path.dist.fonts))
-  })
+      .pipe(gulp.dest(path.dist.fonts));
+  });
 
   // watch
   gulp.task('watch', function() {

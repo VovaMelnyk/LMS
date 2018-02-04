@@ -5,8 +5,8 @@
         margin: 0 auto;
     }
 }
-
 // звездочки
+
 .star::after {
     position: absolute;
 
@@ -14,7 +14,6 @@
 
     color: $orange;
 }
-
 // галочка напротив поля "Подтвердить пароль"
 .correctpass {
     position: relative;
@@ -31,6 +30,7 @@
 
 .a-input-block {
     // Уменьшаем размер блоков, выравниваем подписи по правому краю
+
     &__label {
         display: block;
 
@@ -47,11 +47,12 @@
         }
 
         &:last-child {
-            line-height: rem(8);
+            line-height: rem(8); // ИСПРАВИТЬ НА РЕМ!
         }
-    } // добавляем белый цвет текста, уменьшаем размер
-    &__input--size {
-        max-width: 100%;
+    }
+    // добавляем белый цвет текста, уменьшаем размер
+    &__input--size { // УБРАТЬ ОДИН МОДИФИКАТОР!
+        max-width: 64%;
         max-height: rem(24);
         padding-left: rem(16);
 
@@ -79,47 +80,4 @@
     content: " *";
 
     color: $orange;
-}
-
-.input-wrapper {
-    display: inline-block;
-    position: relative;
-    width: 64%;
-    max-height: rem(26);
-    padding: 0;
-    &--wrong-data {
-        border: 1px solid $red;
-        box-shadow: 0 0 rem(5) rem(1) $red;
-    }
-    &--wrong-data:after {
-        display: block;
-        content: attr(data-description);
-        position: absolute;
-        bottom: 100%;
-        z-index: 1;
-        width: 100%;
-        word-wrap: break-word;
-        color: $red;
-        font-size: rem(10);
-        text-align: left;
-        padding: rem(5) 0;
-    }
-    &--error-message {
-        color: $red;
-        font-size: rem(16);
-    }
-}
-
-.input-wrapper:hover::after {
-    display: block;
-    content: attr(data-description);
-    position: absolute;
-    bottom: 100%;
-    z-index: 1;
-    width: 100%;
-    word-wrap: break-word;
-    color: $orange;
-    font-size: rem(10);
-    text-align: left;
-    padding: rem(5) 0;
 }

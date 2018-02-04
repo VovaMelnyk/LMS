@@ -1,0 +1,48 @@
+.board {
+    display: inline-block;
+    margin-top: rem(16);
+    width: 100%;
+    text-align: center;
+
+    &__title {
+        display: inline-block;
+        font-family: $title-font;
+        text-transform: uppercase;
+        text-align: center;
+        color: $dark-text;
+        background: $cyan;
+        padding: 0 rem(8);
+        font-size: rem(56);
+        letter-spacing:rem(4);
+        margin: rem(16) 0;
+    }
+}
+
+.board-last {
+    margin-top: rem(16);
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-news {
+    display: inline-block;
+    margin-left: rem(64);
+    color: $dark-text;
+    font-weight: rem(800);
+    letter-spacing: rem(2.25);
+    font-family: $text-font;
+    font-size: rem(28);
+}
+
+.icon-add {
+    margin-right: rem(64);
+    display: inline-block;
+    margin-bottom: rem(16);
+    justify-content: space-between;
+    width: rem(34);
+    height: rem(34);
+    border: none;
+    border-radius: rem(34);
+    background: url("../img/add.png") no-repeat;
+    box-shadow: rgba(100,100,100,.4) rem(4) rem(4) rem(8) rem(-2);
+}

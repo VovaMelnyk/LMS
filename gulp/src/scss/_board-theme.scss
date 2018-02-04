@@ -1,0 +1,253 @@
+.post-wrapper {
+    margin: auto;
+    background: $light-gray;
+
+    &--middle-grey {
+        background: $middle-grey;
+    }
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    font-family: $text-font;
+    font-size: rem(18);
+    color: $dark-text;
+    min-width: 10%; //mainWidth=60%, (100-60)/2=20%
+    padding: rem(24) 0 0 rem(16);
+    &__user {
+        margin: 0 rem(24);
+    }
+
+    &__contents {
+        margin: auto rem(56) rem(24) rem(20);
+    }
+
+    &__pointer {
+        margin: 0 auto;
+    }
+}
+
+.user {
+    min-width: rem(104); //mainWidth=60%, (100-60)/2=20%
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: rem(12);
+    text-align: center; // &__ava {
+    //     margin-left: rem(6);
+    // }
+    &__name {
+        margin-top: rem(8);
+        color: $orange;
+    }
+
+    &__role {
+        margin-top: rem(4);
+        color: $dark-text;
+    }
+
+    &__to-chat {
+        margin-top: rem(16);
+        color: $light-text;
+    }
+}
+
+.ava {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(72);
+    height: rem(72);
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
+
+
+    &__circle {
+        width: 30%;
+        height: 30%;
+        margin-bottom: rem(2);
+        background-color: $grey-bg;
+        border-radius: 50%;
+    }
+
+    &__semicircle {
+        width: 63%;
+        height: 30%;
+        background-color: $grey-bg;
+        border-radius: rem(48) rem(48) 0 0;
+    }
+    &__tooltip {
+        margin: rem(-8) 0 0 rem(56);
+        width: rem(16);
+        height: rem(16);
+        font-size: rem(10);
+        font-weight: bold;
+        line-height: rem(16);
+        text-align: center;
+        background: $light-green;
+        border: rem(2) solid $white;
+        border-radius: 50%;
+    }
+}
+
+.post-title {
+    font-size: rem(20);
+    font-weight: 500;
+    text-align: left;
+    color: $orange;
+}
+
+.control {
+    padding: rem(0);
+    max-width: 10%;
+
+    &__delete {
+        display: inline-block;
+        color: $orange;
+    }
+
+    &__edit {
+        display: inline-block;
+        margin-right: rem(0);
+    }
+
+    &--comment {}
+}
+
+.date-stamp {
+    display: flex; // max-width: 100%;
+    padding: rem(5) 0;
+    color: $light-text;
+    font-size: rem(11);
+
+    &__date {
+        padding-left: rem(0);
+    }
+
+    &__time {
+        padding-left: rem(16);
+    }
+}
+
+.contents {
+    display: inline-block;
+    min-width: 84%; // max-width: 86%;
+    &__header {
+        display: flex;
+        padding-top: rem(0);
+    }
+
+    &___post-title {
+        margin-left: rem(0);
+        &--comment {
+            display: none;
+        }
+    }
+
+    &__control {
+        margin-left: auto;
+    }
+
+    &__date-stamp {
+        margin-left: rem(0);
+    }
+
+    &__text {
+        padding: rem(24) 0;
+        font-size: rem(12);
+    }
+
+    &__counter {
+        margin-left: rem(0);
+    }
+
+    &__comment {
+        margin: rem(20) rem(0) rem(24);
+    }
+
+    &--upload {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-image: url(/img/facebook.png);
+    }
+}
+
+.counter,
+.postcomments {
+    display: flex; // justify-content: flex-start;
+    // align-content: center;
+    // align-self: center;
+    font-size: rem(15);
+
+    &__icon {
+        margin-left: rem(0);
+    }
+}
+
+.icon {
+    background-color: transparent;
+    box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
+
+
+    &--like {}
+    &--comment {
+        display: block;
+        margin-left: rem(20); // border-radius: rem(34);        
+    }
+}
+
+.comments {
+    display: none;
+}
+
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    font-family: $text-font;
+    font-size: rem(18);
+    color: $dark-text;
+    width: 100%; //mainWidth=60%, (100-60)/2=20%
+    padding: rem(24) 0 0 0;
+
+    &__user {
+        margin: rem(16) 0;
+    }
+
+    &__contents {
+        margin: auto rem(0) rem(24) rem(20);
+    }
+}
+
+.pointer {
+    width: rem(200);
+    min-height: rem(20);
+    border: solid rem(1) transparent;
+    position: absolute;
+    left: 50%;
+
+    &__arrow {
+        @include arrow;
+        align-self: center; // margin: 0 auto;
+        position: absolute;               
+    }
+
+    &--down {
+        margin-top: rem(10);
+        border-top: rem(10) solid $grey-pholder;
+        bottom: -25%;
+        left: 45%;  
+    }
+
+    &--up {
+        display: inline-block;
+        margin-top: rem(18);
+        margin-bottom: rem(10);
+        border-bottom: rem(10) solid $grey-pholder;
+        bottom: -10%;
+        left: 45%; 
+    }
+}

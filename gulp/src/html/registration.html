@@ -1,51 +1,39 @@
 <div class="wrapper__modal-window wrapper__modal-window--registration">
-    <div class="modal-window">
-        <div class="close modal-window__close">&#10005;</div>
-        <!-- использованы стили из Entrance, чтобы не дублировать -->
-        <form method="#" class="a-entrance a-entrance--centered">
-            <h2 class="title a-entrance__title">[ регистрация _]</h2>
-            <div class="a-input-block a-entrance__input-block">
-                <label class="a-input-block__label a-input-block__label--rightaligned star" for="name">Имя</label>
-                <div class="input-wrapper input-wrapper-name" data-description="Введите свое настоящее имя, использую только буквы">
-                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="name" id="name" placeholder="Александр">
-                </div>
-            </div>
-            <div class="a-input-block a-entrance__input-block">
-                <label class="a-input-block__label a-input-block__label--rightaligned star" for="surname">Фамилия</label>
-                <div class="input-wrapper  input-wrapper-surname" data-description="Введите свою настоящую фамилию, используя только буквы">
-                    <input class="a-input-block__input  a-input-block__input--size" type="text" name="surname" id="surname" placeholder="Разумовский">
-                </div>
-            </div>
-            <div class="a-input-block a-entrance__input-block">
-                <label class="a-input-block__label a-input-block__label--rightaligned star" for="email">Email</label>
-                <div class="input-wrapper input-wrapper-email" data-description="Введите свой e-mail.">
-                    <input class="a-input-block__input  a-input-block__input--size" type="email" name="email" id="new_email" placeholder="Alex123@gmail.com">
-                </div>
-            </div>
-            <div class="a-input-block a-entrance__input-block">
-                <label class="a-input-block__label a-input-block__label--rightaligned star" for="pass">Пароль</label>
-                <div class="input-wrapper input-wrapper-pass" data-description="Введите пароль - длина от 5 до 32-х символов, без пробелов, должна быть хотя бы одна буква английского алфавита">
-                    <input class="a-input-block__input a-input-block__input--size" type="password" name="pass" id="new_pass">
-                </div>
-            </div>
-            <div class="a-input-block a-entrance__input-block">
-                <label class="a-input-block__label a-input-block__label--rightaligned" for="confpass">Подтвердить<span class="star"></span>
-                    <br>пароль<span class="correctpass">&#10003;</span></label>
-                <div class="input-wrapper input-wrapper-confpass" data-description="Повторите введенный выше пароль для подтверждения.">
-                    <input class="a-input-block__input a-input-block__input--size" type="password" name="confpass" id="confpass" class="confpass">
-                </div>
-            </div>
-            <div class="input-wrapper--error-message" id="error-message"></div>
-            <div class="a-checkbox-block">
-                <input class="a-checkbox-block__checkbox" id="policy" type="checkbox" name="policy" placeholder="" checked>
-                <label class="a-checkbox-block__label "> <a href="#" class="policylink ">Private Policy</a></label>
-            </div>
-            <div class="a-social a-entrance__social">
-                <a class="a-social__link" href="#"><i class="icon icon--facebook"></i></a>
-                <a class="a-social__link" href="#"><i class="icon icon--google"></i></a>
-                <a class="a-social__link" href="#"><i class="icon icon--linkedin"></i></a>
-            </div>
-            <button class="button-big a-entrance__btn" type="submit" name="button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-        </form>
-    </div>
+  <div class="modal-window">
+    <div class="close modal-window__close">&#10005;</div>
+    <!-- использованы стили из Entrance, чтобы не дублировать -->
+    <form method="#" class="a-entrance a-entrance--centered">
+      <h2 class="title a-entrance__title">[ регистрация _]</h2>
+      <div class="a-input-block a-entrance__input-block">
+        <label class="a-input-block__label a-input-block__label--rightaligned star" for="name">Имя</label>
+        <input class="a-input-block__input  a-input-block__input--size" type="text" name="name" id="name" value="Александр">
+      </div>
+      <div class="a-input-block a-entrance__input-block">
+        <label class="a-input-block__label a-input-block__label--rightaligned star" for="surname">Фамилия</label>
+        <input class="a-input-block__input  a-input-block__input--size" type="text" name="surname" id="surname" value="Разумовский">
+      </div>
+      <div class="a-input-block a-entrance__input-block">
+        <label class="a-input-block__label a-input-block__label--rightaligned star" for="email">Email</label>
+        <input class="a-input-block__input  a-input-block__input--size" type="email" name="email" id="email" value="Alex123@gmail.com">
+      </div>
+      <div class="a-input-block a-entrance__input-block">
+        <label class="a-input-block__label a-input-block__label--rightaligned star" for="pass">Пароль</label>
+        <input class="a-input-block__input a-input-block__input--size" type="password" name="pass" id="pass">
+      </div>
+      <div class="a-input-block a-entrance__input-block">
+        <label class="a-input-block__label a-input-block__label--rightaligned" for="confpass">Подтвердить<span class="star"></span><br>пароль<span class="correctpass">&#10003;</span></label>
+        <input class="a-input-block__input a-input-block__input--size" type="password" name="confpass" id="confpass" class="confpass">
+      </div>
+      <div class="a-checkbox-block">
+        <input class="a-checkbox-block__checkbox" id="policy" type="checkbox" name="policy" value="" checked>
+        <label class="a-checkbox-block__label "> <a href="#" class="policylink ">Private Policy</a></label>
+      </div>
+      <div class="a-social a-entrance__social">
+        <a class="a-social__link" href="#"><i class="icon icon--facebook"></i></a>
+        <a class="a-social__link" href="#"><i class="icon icon--google"></i></a>
+        <a class="a-social__link" href="#"><i class="icon icon--linkedin"></i></a>
+      </div>
+      <button class="button-big a-entrance__btn" type="submit" name="button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+    </form>
+  </div>
 </div>

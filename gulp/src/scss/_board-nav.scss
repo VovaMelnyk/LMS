@@ -1,0 +1,32 @@
+.a-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: rem(24);
+
+    &__left,
+    &__right {
+        text-decoration: none;
+        font-family: $text-font;
+        font-size: rem(12);
+        font-weight: rem(300);
+        color: $light-text;
+        margin-bottom: rem(40);
+        margin-right: rem(64);
+
+        &--point {
+            font-size: rem(22);
+        }
+    }
+    // &__left:before {
+    //     @include arrow;
+    //     margin-right: 10px;
+    //     border-right: 10px solid $grey-pholder;
+    // }
+    // &__right:after {
+    //     // @include arrow;
+    //     margin-left: 10px;
+    //     border-left: 10px solid $grey-pholder;
+    // }
+}
