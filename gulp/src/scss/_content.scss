@@ -1,0 +1,10 @@
+.content {
+    // Флекс для доски объявлений
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    // end Флекс для доски объявлений
+    position: relative;
+    min-height: rem(960);
+    padding: rem(64) 0 rem(112);
+}

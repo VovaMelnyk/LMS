@@ -1,0 +1,39 @@
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    min-width: rem(800);
+    padding: rem(72) rem(100) rem(80);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: $dark-bg;
+
+    &__close {
+        top: rem(10);
+        right: rem(10);
+    }
+
+    &__enterance {
+        display: none;
+        margin: 0 auto;
+    }
+
+    &__registration {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__end-registration {
+        min-width: rem(698);
+        padding: rem(152) rem(192);
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    color: $cyan;
+    font-family: $title-font;
+    font-size: rem(91);
+    font-weight: 400;
+}
