@@ -1,3 +1,98 @@
+.main-test-cosruct {
+	margin: 16px;
+	padding-bottom: 8px;
+	color: $grey-input;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 32px;
+}
+
+.main-test-cosruct__arrow {
+	padding-left: 8px;
+}
+
+.create-test-caption {
+	margin-bottom: 48px;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 32px;
+}
+
+.create-test-module {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+	margin: 8px;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 20px;
+}
+
+#create-test-module__theme {
+	width: 384px;
+	margin: 0 24px;
+}
+
+.create-test-module__set-answer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+
+.create-test-module__set-answer--text {
+	width: 120px;
+	margin-left: 420px;
+}
+
+#create-test-module__quantity-question, #create-test-module__quantity-answer, #create-test-module__set-time {
+	width: 48px;
+	margin: 0 24px;
+}
+
+.create-test-bot {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.create-test-module__btn {
+	margin: 8px;
+}
+
+.create-test-module__btn--big {
+	font-size: 28px;
+}
+
+.create-test-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: baseline;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 20px;
+}
+
+.create-test-form__question {
+	width: 412px;
+	margin: 8px 0;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 20px;
+}
+
+.create-test-form__answer {
+	width: 384px;
+	margin: 8px;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 20px;
+}
+
+/*
+
 form p {
 	margin: 10px 15%;
 	padding: 0 5%;
@@ -31,4 +126,4 @@ button {
 .green {
 	color: green;
 	font-weight: bold;
-}
+}*/

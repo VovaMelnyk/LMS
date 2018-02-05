@@ -1,9 +1,31 @@
-const btnGetTest = document.querySelector("#btnGetTest"),
+const btnGoToCreateTest = document.querySelector("#main-create-test"),
+	  btnGoToShowTests = document.querySelector("#main-show-tests"),
+	  btnGetTest = document.querySelector("#btnGetTest"),
+	  btnSingleTest = document.querySelector("#btnSingleTest"),
 	  btnAddTest = document.querySelector("#btnAddTest"),
 	  btnRemoveTest = document.querySelector("#btnRemoveTest"),
 	  btnUpdateTest = document.querySelector("#btnUpdateTest");
 
 const testTable = document.querySelector("#testTable");
+
+// --------------------------------------------------------------
+
+// const testSimple = document.querySelector("#testSimple").textContent.trim();
+// const compiled = _.template(testSimple);
+
+// const basicUrl = 'http://localhost:3000/tests/';
+
+// const updateView = tests => {
+//   let htmlString = "";
+
+//   tests.forEach(test => {
+//     htmlString += compiled(test);
+//   });
+
+//   testTable.innerHTML = htmlString;
+// };
+
+// btnGoToCreateTest.addEventListener("click", getTests);
 
 // --------------------------------------------------------------
 
@@ -23,6 +45,7 @@ const updateView = tests => {
 };
 
 // --------------------------------------------------------------
+
 const singleUpdateView = test => {
   let htmlString = "";
 
@@ -63,8 +86,6 @@ const getTests = () =>
 btnGetTest.addEventListener("click", getTests);
 
 // --------------------------------------------------------------
-
-const btnSingleTest = document.querySelector("#btnSingleTest");
 
 const getSingleTest = () => {
 	let singleTestUrl = `${basicUrl}${document.querySelector("#showSingletest").value}`;
