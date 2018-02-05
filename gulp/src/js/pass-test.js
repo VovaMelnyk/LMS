@@ -23,6 +23,25 @@ const updateView = (tests, container, script) => {    // обновляем да
     const result = compiled(tests);
      // это вопрос 4 правильный ответ 2 !!!
     container.innerHTML = result;
+    let nowId = tests.id
+    if (localStorage.getItem(nowId)) {
+      let rezTest = localStorage.getItem(nowId);
+
+      let lab = document.getElementsByClassName("t-answers__label");
+      for (var i = 0; i < lab.length; i++) {
+        if (rezTest==lab[i].innerHTML) {
+          console.log(lab[i].previousSibling);
+          let check = document.getElementsByClassName('t-answers__item');
+          check[i].checked = "true";
+        } else {
+          console.log("нет совпадения " );
+        }
+
+      }
+
+
+
+    }
 
 };
 
@@ -49,14 +68,16 @@ function getTestJson(c) {    // Получаем данные с сервера 
           btnNext[0].addEventListener('click', function () {
             let newId = data.id + 1;
             if (newId<=7) {
+              checkratio(data);
+
               let urlNext = url + "/" + newId;
           getTestJson(urlNext);
             }
-
           });
           btnPrev[0].addEventListener('click', function () {
             let newId = data.id - 1;
             if (newId>0) {
+              checkratio(data);
               let urlNext = url + "/" + newId;
           getTestJson(urlNext);
             }
@@ -73,12 +94,14 @@ function getTestJson(c) {    // Получаем данные с сервера 
 testBtnStart.addEventListener('click', function functionName() {
   getTestJson(url2);
 });
+////////////////////////////// попытка сделать сохранение позиции чекбокса/////////////////////
 
 //////////////////////////////если нажата завершить тест////////////////////////
 const resultTest = (templateData) => {
 
     let answers = document.querySelectorAll('.t-answers__item'); // набор всех вопросов (radio)
     let arrRadio = Array.from(answers); // массив из radio
+  localStorage.clear();
 
     updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
 
@@ -90,6 +113,7 @@ const resultTest = (templateData) => {
 
     arrRadio.map(answer=>{
         if(answer.checked) {
+
            if(answer.value === templateData[3].correctAnswer) {
                console.log('Ответ верный!');
                mistake.classList.remove('t-mistakes__numbers-wrong');
@@ -104,4 +128,24 @@ const resultTest = (templateData) => {
 
     result = Math.floor((rightAnswer/1)*10);  // если вопросов много, тогда вместо единицы подставляем кол-во вопросов т.е. длинну массива
     resultTest.innerHTML = `${result}/10 баллов`;
+}
+
+function checkratio(data) {
+  let check = document.getElementsByClassName('t-answers__item');
+  for (var i = 0; i < check.length; i++) {
+    if (check[i].checked) {
+      let next = check[i].nextSibling;
+      next = next.previousSibling.defaultValue;
+      localStorage.setItem(data.id, next);
+      console.log(next);
+    }
+
+  }
+};
+
+let numberQues = document.getElementsByClassName("t-navigation__number");
+for (var i = 0; i < numberQues.length; i++) {
+  numberQues[i].addEventListener("click", function () {
+    console.log(numberQues[i].value);
+  })
 }
