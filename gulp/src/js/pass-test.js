@@ -22,7 +22,6 @@ const updateView = (tests, container, script) => {    // обновляем да
     container.innerHTML = result;
 };
 
-
 function getTestJson() {    // Получаем данные с сервера и передаем их функции updateView
     fetch(url)
         .then(response => {
