@@ -91,6 +91,25 @@
 	font-size: 20px;
 }
 
+.create-test-form__radio {
+	display:none;
+}
+
+.create-test-form__radio + label span {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../img/checkbox-unchecked.png) left top no-repeat;
+    cursor:pointer;
+}
+
+.create-test-form__radio:checked + label span {
+    background:url(../img/checkbox-checked.png) -6px -5px no-repeat;
+}
+
+
 /*
 
 form p {

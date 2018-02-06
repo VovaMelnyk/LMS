@@ -181,8 +181,8 @@ btnRemoveTest.addEventListener("click", removeTest);
 // --------------------------------------------------------------
 
 const setCorrectAnswer = () => {
-	let allQuestions = document.querySelectorAll(".question");
-	let allQuestionsRadio = document.querySelectorAll(".questionRadio");
+	let allQuestions = document.querySelectorAll(".create-test-form__answer");
+	let allQuestionsRadio = document.querySelectorAll(".create-test-form__radio");
 	let chosenAnswer;
 	for (let i=0; i<4; i++) {
 		allQuestionsRadio[i].value = allQuestions[i].value;
