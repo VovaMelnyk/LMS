@@ -492,3 +492,27 @@ let addIcon = select(".icon-add");
 addIcon.addEventListener("click", createPost);
 
 window.onload = pageRender();
+
+/**
+* ID : 'post_add_editor'
+* ClassName : 'sun-editor'
+*/
+
+var suneditor = SUNEDITOR.create('post_add_editor', {
+    // insert options
+    height: '100%',
+    width: '100%',
+    editorIframeFont : 'Arial',
+    showFont: false,
+    showFormats: false,
+    showFontSize: false,
+    showFontColor: false,
+    showHiliteColor: false,
+    showInOutDent: false,
+    showLine: false,
+    showTable: false,
+    showImage: false,
+    showVideo: false,
+    showFullScreen: false,
+    showCodeView: false
+});

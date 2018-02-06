@@ -3,5 +3,26 @@
     <div class="board__last-news">
         <h3 class="board__text">[ Последние новости: ]</h3>
         <div class="icon-add"></div>
+    </div>
 
-</div>
+    <div class="add-post board__add-post">
+        <h4 class="board__text add-post__title">[ Создать объявление _]</h4>
+        <textarea class="add-post__textarea" id="post_add_editor">Hello World!</textarea>
+        <div class="add-post__options option">
+            <div class="option__whom">
+                <label for="whom" class="option__label">Сообщение для
+                    <select name="whom" id="whom_select" class="option__select">
+                        <option value="" class="option__options">FE 3</option>
+                        <option value="" class="option__options">FE Core</option>
+                        <option value="" class="option__options">PHP</option>
+                    </select>
+                </label>
+            </div>
+            <div class="option__date">
+                <label for="" class="option__label">Прикрепить сверху до
+                    <input id="date" type="date" class="option__input">
+                </label>
+            </div>
+            <button class="btn-post add-post__btn-post" type="submit" name="sub" value="sent">Отправить</button>
+        </div>
+    </div>

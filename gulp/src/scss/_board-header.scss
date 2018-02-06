@@ -15,6 +15,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    &__add-post {
+        margin-bottom: rem(32);
+    }
 }
 
 .board__text {
@@ -32,4 +36,117 @@
     border-radius: 50%;
     background: url("../img/add.png") no-repeat;
     box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
+}
+
+.add-post {
+    padding: 0 rem(64);
+    position: relative;
+
+    &__title {
+        margin-bottom: rem(24);
+        text-align: left;
+    }
+
+    &__btn-post {
+        position: absolute;
+        right: rem(64);
+    }
+
+}
+
+.option {
+        font-family: $text-font;
+        color: $light-text;
+        text-align: left;
+
+        &__whom,
+        &__date {
+            display: inline-block;
+        }
+
+        &__select,
+        &__input {
+            border: 0;
+            margin: 0 rem(32) 0 rem(16);
+            font-family: $text-font;
+            font-size: rem(16);
+            color: $light-text;
+
+            &:focus {
+                border: 0;
+                outline: none;
+            }
+        }
+    }
+
+.sun-editor {
+    margin-bottom: rem(24);
+    border-radius: rem(16);
+    border-top-left-radius: rem(8);
+    border-top-right-radius: rem(8);
+    background-color: $grey-bg;
+    border: 0;
+    font-family: $text-font !important;
+    font-size: rem(16);
+
+    .sun-editor-id-editorArea {
+        border-radius: rem(8);
+        border: 0;
+    }
+
+    .sun-editor-id-resizeBar {
+        height: rem(4);
+        border-bottom: 1px solid $grey-bg;
+        margin: 0 auto;
+        width: 98%;
+    }
+
+    .sun-editor-id-toolbar {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        background-color: $grey-bg;
+        border-radius: rem(8);
+        border: 0;
+
+        .btn_editor.on {
+            background-color: $light-gray;
+            border: 0;
+            border-radius: rem(4);
+            box-shadow: inset 0 3px 5px $light-gray;
+        }
+
+        .btn_editor {
+            background-color: transparent;
+            border: 0;
+            color: $light-text !important;
+
+            &:hover,
+            &:focus {
+                background-color: $light-gray;
+                border: 0;
+                border-radius: rem(4);
+                box-shadow: inset 0 3px 5px $light-gray;
+            }
+        }
+    }
+
+    .layer_editor {
+        border: 1px solid $grey-bg;
+        border-radius: rem(8);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    }
+
+    .layer_editor button:hover,
+    .editor_tool .layer_editor button:focus {
+            background-color: $middle-grey;
+        }
+    }
+
+    .modal-dialog .modal-content {
+        background-color: $light-gray;
+        font-family: $text-font;
+        font-size: rem(16);
+        text-align: left;
+    }
 }
