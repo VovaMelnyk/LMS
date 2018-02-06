@@ -1,5 +1,6 @@
 if (
     localStorage.getItem('lms_name') &&
+    localStorage.getItem('lms_lastName') &&
     localStorage.getItem('lms_email') &&
     localStorage.getItem('lms_img') &&
     localStorage.getItem('lms_pass') &&
@@ -23,6 +24,7 @@ document.querySelector('#gotoprofile').addEventListener('click', function () {
                 if (data.data[0].email === email &&
                     data.data[0].pass === pass) {
                     localStorage.setItem('lms_name', data.data[0].name);
+                    localStorage.setItem('lms_lastName', data.data[0].lastName);
                     localStorage.setItem('lms_email', data.data[0].email);
                     localStorage.setItem('lms_img', data.data[0].img);
                     localStorage.setItem('lms_pass', data.data[0].pass);
