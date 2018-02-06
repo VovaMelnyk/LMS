@@ -1,58 +1,14 @@
 const btnGoToCreateTest = document.querySelector("#main-create-test"),
-	  btnGoToShowTests = document.querySelector("#main-show-tests"),
-	  btnGetTest = document.querySelector("#btnGetTest"),
-	  btnSingleTest = document.querySelector("#btnSingleTest"),
-	  btnAddTest = document.querySelector("#btnAddTest"),
-	  btnRemoveTest = document.querySelector("#btnRemoveTest"),
-	  btnUpdateTest = document.querySelector("#btnUpdateTest");
+	  btnGoToShowTests = document.querySelector("#main-show-tests");
+	  // btnSingleTest = document.querySelector("#btnSingleTest"),
+	  // btnRemoveTest = document.querySelector("#btnRemoveTest"),
+	  // btnUpdateTest = document.querySelector("#btnUpdateTest");
 
-const testTable = document.querySelector("#testTable");
-
-// --------------------------------------------------------------
-
-// const testSimple = document.querySelector("#testSimple").textContent.trim();
-// const compiled = _.template(testSimple);
-
-// const basicUrl = 'http://localhost:3000/tests/';
-
-// const updateView = tests => {
-//   let htmlString = "";
-
-//   tests.forEach(test => {
-//     htmlString += compiled(test);
-//   });
-
-//   testTable.innerHTML = htmlString;
-// };
-
-// btnGoToCreateTest.addEventListener("click", getTests);
-
-// --------------------------------------------------------------
-
-const testSimple = document.querySelector("#testSimple").textContent.trim();
-const compiled = _.template(testSimple);
+const testWrapper = document.querySelector("#constructor-test-wrapper");
+// const testForm = document.querySelector("#change-form-module__form");
+// const testTable = document.querySelector("#testTable");
 
 const basicUrl = 'http://localhost:3000/tests/';
-
-const updateView = tests => {
-  let htmlString = "";
-
-  tests.forEach(test => {
-    htmlString += compiled(test);
-  });
-
-  testTable.innerHTML = htmlString;
-};
-
-// --------------------------------------------------------------
-
-const singleUpdateView = test => {
-  let htmlString = "";
-
-  htmlString = compiled(test);
-
-  testTable.innerHTML = htmlString;
-};
 
 // --------------------------------------------------------------
 
@@ -70,40 +26,55 @@ function json(response) {
 
 // --------------------------------------------------------------
 
-const getTests = () =>
-	fetch(basicUrl)
-	.then(status)
-	.then(json)
-	.then(data => {
-		updateView(data);
-	})
-	.catch(error => {
-		console.log('Fetch Error :-S', error);
-	});
+const compiledCreateTestPage = _.template(document.querySelector("#constructor-test-create-test-page").textContent.trim());
 
+const goToCreateTestPage = test => {
+  let htmlString = "";
 
+  htmlString = compiledCreateTestPage(test);
 
-btnGetTest.addEventListener("click", getTests);
+  testWrapper.innerHTML = htmlString;
+
+	// btnAddTest = document.querySelector("#btnAddTest");
+
+	// btnAddTest.addEventListener("click", AddTest);
+};
 
 // --------------------------------------------------------------
 
-const getSingleTest = () => {
-	let singleTestUrl = `${basicUrl}${document.querySelector("#showSingletest").value}`;
-	fetch(singleTestUrl)
-	.then(status)
-	.then(json)
-	.then(data => {
-		singleUpdateView(data);
-	})
-	.catch(error => {
-		console.log('Fetch Error :-S', error);
-		testTable.innerHTML = `Fetch Error : ${error}`;
-	});
-	document.querySelector("#singleTest").reset();
+const goToAddTest = () => {
+
+	goToCreateTestPage();
 
 };
 
-btnSingleTest.addEventListener("click", getSingleTest);
+btnGoToCreateTest.addEventListener("click", goToAddTest);
+
+// --------------------------------------------------------------
+
+const compiledChangeTestPage = _.template(document.querySelector("#constructor-test-change-test-page").textContent.trim());
+
+const goToChangeTestPage = test => {
+  let htmlString = "";
+
+  htmlString = compiledChangeTestPage(test);
+
+  testWrapper.innerHTML = htmlString;
+
+  // const testForm = document.querySelector("#change-form-module__form");
+
+  // getTests();
+};
+
+// --------------------------------------------------------------
+
+const goToUpdateTest = () => {
+
+	goToChangeTestPage();
+
+};
+
+btnGoToShowTests.addEventListener("click", goToUpdateTest);
 
 // --------------------------------------------------------------
 
@@ -131,82 +102,177 @@ const AddTest = () => {
 
 };
 
-btnAddTest.addEventListener("click", AddTest);
-// btnAddTest.addEventListener("click", getTests);
+// btnAddTest.addEventListener("click", AddTest);
 
 // --------------------------------------------------------------
 
-const updateTest = () => {
+const compiledChangeTestForm = _.template(document.querySelector("#constructor-test-change-test-input").textContent.trim());
 
-	let updateUrl = `${basicUrl}${document.querySelector("#changeTestId").value}`;
-	fetch(updateUrl, {
-	    method: 'PUT',
-	    body: JSON.stringify({
-			title: `${document.querySelector("#changeTestName").value}`,
-			answer1: `${document.querySelector("#changeQuestion1").value}`,
-			answer2: `${document.querySelector("#changeQuestion2").value}`,
-			answer3: `${document.querySelector("#changeQuestion3").value}`,
-			answer4: `${document.querySelector("#changeQuestion4").value}`,
-			correctAnswer: `${changeCorrectAnswer()}`
-	    }),
-	    headers: {
-	      "Content-type": "application/json; charset=UTF-8"
-	    }
-	 })
+const sampleGetTests = tests => {
+
+  let htmlString = "";
+
+  tests.forEach(test => {
+    htmlString += compiledChangeTestForm(test);
+  });
+
+  testForm.innerHTML = htmlString;
+
+};
+
+// --------------------------------------------------------------
+
+const getTests = () =>
+	fetch(basicUrl)
+	.then(status)
+	.then(json)
+	.then(data => {
+		sampleGetTests(data);
+	})
 	.catch(error => {
 		console.log('Fetch Error :-S', error);
 	});
-	document.querySelector("#updateTest").reset();	
 
-};
-
-btnUpdateTest.addEventListener("click", updateTest);
-// btnUpdateTest.addEventListener("click", getTests);
 
 // --------------------------------------------------------------
 
-const removeTest = () => {
 
-	let removeUrl = `${basicUrl}${document.querySelector("#removeTestId").value}`;
-	fetch(removeUrl, {
-	  method: 'DELETE'
-	});
-	document.querySelector("#removeTest").reset();	
+// const testSimple = document.querySelector("#testSimple").textContent.trim();
+// const compiled = _.template(testSimple);
 
-};
+// const updateView = tests => {
+//   let htmlString = "";
 
-btnRemoveTest.addEventListener("click", removeTest);
-// btnRemoveTest.addEventListener("click", getTests);
+//   tests.forEach(test => {
+//     htmlString += compiled(test);
+//   });
 
-// --------------------------------------------------------------
+//   testTable.innerHTML = htmlString;
+// };
 
-const setCorrectAnswer = () => {
-	let allQuestions = document.querySelectorAll(".create-test-form__answer");
-	let allQuestionsRadio = document.querySelectorAll(".create-test-form__radio");
-	let chosenAnswer;
-	for (let i=0; i<4; i++) {
-		allQuestionsRadio[i].value = allQuestions[i].value;
-		if (allQuestionsRadio[i].checked) {
-			chosenAnswer = allQuestionsRadio[i].value;
-		}
-	}
-	return chosenAnswer;
-};
+// // --------------------------------------------------------------
 
-// --------------------------------------------------------------
+// const getTests = () =>
+// 	fetch(basicUrl)
+// 	.then(status)
+// 	.then(json)
+// 	.then(data => {
+// 		updateView(data);
+// 	})
+// 	.catch(error => {
+// 		console.log('Fetch Error :-S', error);
+// 	});
 
-const changeCorrectAnswer = () => {
-	let changedQuestion = document.querySelectorAll(".changedQuestion");
-	let changeQuestionRadio = document.querySelectorAll(".changeQuestionRadio");
-	let chosenAnswer;
-	for (let i=0; i<4; i++) {
-		changeQuestionRadio[i].value = changedQuestion[i].value;
-		if (changeQuestionRadio[i].checked) {
-			chosenAnswer = changeQuestionRadio[i].value;
-		}
-	}
-	return chosenAnswer;
-};
+
+
+// btnGoToShowTests.addEventListener("click", getTests);
+
+// // --------------------------------------------------------------
+
+// const singleUpdateView = test => {
+//   let htmlString = "";
+
+//   htmlString = compiled(test);
+
+//   testTable.innerHTML = htmlString;
+// };
+
+// // --------------------------------------------------------------
+
+// const getSingleTest = () => {
+// 	let singleTestUrl = `${basicUrl}${document.querySelector("#showSingletest").value}`;
+// 	fetch(singleTestUrl)
+// 	.then(status)
+// 	.then(json)
+// 	.then(data => {
+// 		singleUpdateView(data);
+// 	})
+// 	.catch(error => {
+// 		console.log('Fetch Error :-S', error);
+// 		testTable.innerHTML = `Fetch Error : ${error}`;
+// 	});
+// 	document.querySelector("#singleTest").reset();
+
+// };
+
+// btnSingleTest.addEventListener("click", getSingleTest);
+
+// // --------------------------------------------------------------
+
+// const updateTest = () => {
+
+// 	let updateUrl = `${basicUrl}${document.querySelector("#changeTestId").value}`;
+// 	fetch(updateUrl, {
+// 	    method: 'PUT',
+// 	    body: JSON.stringify({
+// 			title: `${document.querySelector("#changeTestName").value}`,
+// 			answer1: `${document.querySelector("#changeQuestion1").value}`,
+// 			answer2: `${document.querySelector("#changeQuestion2").value}`,
+// 			answer3: `${document.querySelector("#changeQuestion3").value}`,
+// 			answer4: `${document.querySelector("#changeQuestion4").value}`,
+// 			correctAnswer: `${changeCorrectAnswer()}`
+// 	    }),
+// 	    headers: {
+// 	      "Content-type": "application/json; charset=UTF-8"
+// 	    }
+// 	 })
+// 	.catch(error => {
+// 		console.log('Fetch Error :-S', error);
+// 	});
+// 	document.querySelector("#updateTest").reset();	
+
+// };
+
+// btnUpdateTest.addEventListener("click", updateTest);
+// // btnUpdateTest.addEventListener("click", getTests);
+
+// // --------------------------------------------------------------
+
+// const removeTest = () => {
+
+// 	let removeUrl = `${basicUrl}${document.querySelector("#removeTestId").value}`;
+// 	fetch(removeUrl, {
+// 	  method: 'DELETE'
+// 	});
+// 	document.querySelector("#removeTest").reset();	
+
+// };
+
+// btnRemoveTest.addEventListener("click", removeTest);
+// // btnRemoveTest.addEventListener("click", getTests);
+
+// // --------------------------------------------------------------
+
+// const setCorrectAnswer = () => {
+// 	let allQuestions = document.querySelectorAll(".create-test-form__answer");
+// 	let allQuestionsRadio = document.querySelectorAll(".create-test-form__radio");
+// 	let chosenAnswer;
+// 	for (let i=0; i<4; i++) {
+// 		allQuestionsRadio[i].value = allQuestions[i].value;
+// 		if (allQuestionsRadio[i].checked) {
+// 			chosenAnswer = allQuestionsRadio[i].value;
+// 		}
+// 	}
+// 	return chosenAnswer;
+// };
+
+// // --------------------------------------------------------------
+
+// const changeCorrectAnswer = () => {
+// 	let changedQuestion = document.querySelectorAll(".changedQuestion");
+// 	let changeQuestionRadio = document.querySelectorAll(".changeQuestionRadio");
+// 	let chosenAnswer;
+// 	for (let i=0; i<4; i++) {
+// 		changeQuestionRadio[i].value = changedQuestion[i].value;
+// 		if (changeQuestionRadio[i].checked) {
+// 			chosenAnswer = changeQuestionRadio[i].value;
+// 		}
+// 	}
+// 	return chosenAnswer;
+// };
+
+
+
 
 
 // ПОДСКАЗКИ

@@ -1,32 +1,90 @@
-<!-- <div id="main-create-test" class="main-test-cosruct">Создать тест <img class="main-test-cosruct__arrow"src="img/right_arrow.gif" alt="right_arrow"></div>
-<div id="main-show-tests" class="main-test-cosruct">Посмотреть все тесты <img class="main-test-cosruct__arrow" src="img/right_arrow.gif" alt="right_arrow"></div> -->
 
+<!-- Main page -->
 
-<div class="create-test-caption">[ Создание теста ]</div>
+<div id="constructor-test-wrapper">
 
-<div class="create-test-module">Название модуля <input type="text" name="" id="create-test-module__theme"><button class="create-test-module__btn button-small">save</button></div>
+	<div id="main-create-test" class="main-test-cosruct">Создать тест <img class="main-test-cosruct__arrow"src="img/right_arrow.gif" alt="right_arrow"></div>
 
-<div class="create-test-module">Количество вопросов <input type="text" name="" id="create-test-module__quantity-question"><button class="create-test-module__btn button-small">save</button></div>
+	<div id="main-show-tests" class="main-test-cosruct">Посмотреть все тесты <img class="main-test-cosruct__arrow" src="img/right_arrow.gif" alt="right_arrow"></div>
 
-<div class="create-test-module">Количество праильных ответов <input type="text" name="" id="create-test-module__quantity-answer"><button class="create-test-module__btn button-small">save</button></div>
-
-<div class="create-test-module create-test-module__set-answer"><p class="create-test-module__set-answer--text">Установить правильный ответ</p></div>
-
-
-<form id="addTest" class="create-test-form">
-	<p><input class="create-test-form__question" type="text" id="testName" placeholder="условие теста"></p>
-	<p>а) <input class="create-test-form__answer" type="text" id="question1" placeholder="вопрос 1"><input class="create-test-form__radio" id="radioCreate1" name="radioAddTest" type="radio" value=""><label for="radioCreate1"><span></span></label></p>
-	<p>б) <input class="create-test-form__answer" type="text" id="question2" placeholder="вопрос 2"><input class="create-test-form__radio" id="radioCreate2" name="radioAddTest" type="radio" value=""><label for="radioCreate2"><span></span></label></p>
-	<p>в) <input class="create-test-form__answer" type="text" id="question3" placeholder="вопрос 3"><input class="create-test-form__radio" id="radioCreate3" name="radioAddTest" type="radio" value="" checked><label for="radioCreate3"><span></span></label></p>
-	<p>г) <input class="create-test-form__answer" type="text" id="question4" placeholder="вопрос 4"><input class="create-test-form__radio" id="radioCreate4" name="radioAddTest" type="radio" value=""><label for="radioCreate4"><span></span></label></p>
-</form>
-
-
-<div class="create-test-module">Время на тест <input type="text" name="" id="create-test-module__set-time"><button class="create-test-module__btn button-small">save</button></div>
-
-<div class="create-test-bot">
-	<div class="create-test-other"><button class="create-test-module__btn button-small">ТЕОРИЯ</button><button class="create-test-module__btn button-small">СОЗДАТЬ ДЗ</button></div><button class="create-test-module__btn create-test-module__btn--big button-small">СОХРАНИТЬ</button>
 </div>
+
+<!-- Create test page -->
+
+<script type="text/template" id="constructor-test-create-test-page">
+	
+	<div class="create-test-caption">[ Создание теста ]</div>
+
+	<div class="create-test-module">Название модуля <input type="text" name="" id="create-test-module__theme"><button class="create-test-module__btn button-small">save</button></div>
+
+	<div class="create-test-module">Количество вопросов <input type="text" name="" id="create-test-module__quantity-question"><button class="create-test-module__btn button-small">save</button></div>
+
+	<div class="create-test-module">Количество правильных ответов <input type="text" name="" id="create-test-module__quantity-answer"><button class="create-test-module__btn button-small">save</button></div>
+
+	<div class="create-test-module create-test-module__set-answer"><p class="create-test-module__set-answer--text">Установить правильный ответ</p></div>
+
+
+	<form id="addTest" class="create-test-form">
+		<p><input class="create-test-form__question" type="text" id="testName" placeholder="условие теста"></p>
+		<p>а) <input class="create-test-form__answer" type="text" id="question1" placeholder="вопрос 1"><input class="create-test-form__radio" id="radioCreate1" name="radioAddTest" type="radio" value=""><label for="radioCreate1"><span></span></label></p>
+		<p>б) <input class="create-test-form__answer" type="text" id="question2" placeholder="вопрос 2"><input class="create-test-form__radio" id="radioCreate2" name="radioAddTest" type="radio" value=""><label for="radioCreate2"><span></span></label></p>
+		<p>в) <input class="create-test-form__answer" type="text" id="question3" placeholder="вопрос 3"><input class="create-test-form__radio" id="radioCreate3" name="radioAddTest" type="radio" value="" checked><label for="radioCreate3"><span></span></label></p>
+		<p>г) <input class="create-test-form__answer" type="text" id="question4" placeholder="вопрос 4"><input class="create-test-form__radio" id="radioCreate4" name="radioAddTest" type="radio" value=""><label for="radioCreate4"><span></span></label></p>
+	</form>
+
+
+	<div class="create-test-module">Время на тест <input type="text" name="" id="create-test-module__set-time"><button class="create-test-module__btn button-small">save</button></div>
+
+	<div class="create-test-bot">
+		<div class="create-test-other">
+			<button class="create-test-module__btn button-small">ТЕОРИЯ</button><button class="create-test-module__btn button-small">СОЗДАТЬ ДЗ</button>
+		</div>
+		<button id="btnAddTest" class="create-test-module__btn create-test-module__btn--big button-small">СОХРАНИТЬ</button>
+	</div>
+
+</script>
+
+<!-- Change test page -->
+
+<script type="text/template" id="constructor-test-change-test-page">
+	
+	<div class="create-test-caption">[ Все тесты ]</div>
+
+	<div class="change-form-module">
+
+		<div class="change-form-module__theme">
+			<div class="change-form-module__module">Модуль 1</div>
+			<div class="change-form-module__module">Модуль 2</div>
+			<div class="change-form-module__module">Модуль 3</div>
+			<div class="change-form-module__module">Модуль 4</div>
+		</div>
+
+		<div class="change-form-module__form">
+			<script type="text/template" id="constructor-test-change-test-input">
+				<form id="changeTest" class="create-test-form">
+					<p><%- id%><input class="create-test-form__question" type="text" id="testName" placeholder="<%- title%>"></p>
+					<p>а) <input class="create-test-form__answer" type="text" id="question1" placeholder="<%- answer1%>"><input class="create-test-form__radio" id="radioCreate1" name="radioAddTest" type="radio" value=""><label for="radioCreate1"><span></span></label></p>
+					<p>б) <input class="create-test-form__answer" type="text" id="question2" placeholder="<%- answer2%>"><input class="create-test-form__radio" id="radioCreate2" name="radioAddTest" type="radio" value=""><label for="radioCreate2"><span></span></label></p>
+					<p>в) <input class="create-test-form__answer" type="text" id="question3" placeholder="<%- answer3%>"><input class="create-test-form__radio" id="radioCreate3" name="radioAddTest" type="radio" value="" checked><label for="radioCreate3"><span></span></label></p>
+					<p>г) <input class="create-test-form__answer" type="text" id="question4" placeholder="<%- answer4%>"><input class="create-test-form__radio" id="radioCreate4" name="radioAddTest" type="radio" value=""><label for="radioCreate4"><span></span></label></p>
+				</form>
+				<button id="btnUpdateTest" class="create-test-module__btn button-small">РЕДАКТИРОВАТЬ</button>
+				<button id="btnRemoveTest" class="create-test-module__btn button-small">УДАЛИТЬ</button>
+			</script>
+		</div>
+
+
+	</div>
+
+</script>
+
+
+
+
+
+
+
+
 
 
 

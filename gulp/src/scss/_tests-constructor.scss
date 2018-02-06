@@ -111,6 +111,22 @@
     background:url(../img/checkbox-checked.png) -6px -5px no-repeat;
 }
 
+.change-form-module {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	color: $dark-text;
+	font-family: 'Museo Sans Cyrl W03 300';
+	font-size: 20px;
+}
+
+.change-form-module__form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
 
 /*
 
