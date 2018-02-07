@@ -102,6 +102,7 @@
 //Main calendar feald
 .c-calendar__main {
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -132,16 +133,19 @@
     justify-content: space-between;
     width: 100%;
     font-family: $text-font;
+    height: 100px;
 }
 
 //Number of a day EACH-DAY
 .c-calendar__day-num {
     display: flex;
-    flex-basis: 15%;
+    flex-basis: 14.285714286%;
+    // flex-wrap: wrap;
     height: 88px;
     padding: 8px;
     border-top: 1px solid $dark-text;
     border-right: 1px solid $dark-text;
+    box-sizing: border-box;
     cursor: pointer;
     &:hover {
         background-color: $light-gray;
@@ -164,7 +168,8 @@
     &_today {
         background: $orange;
     } // Next month day
-    &_other-month {
+    &_prev-month,
+    &_next-month {
         color: $light-text;
     }
 }
