@@ -1,0 +1,12 @@
+@import 'm-main/m-header-material';
+@import 'm-main/m-content';
+.main {
+	position: relative;
+
+	min-height: 150px;
+	padding: 40px;
+
+	background-color: $light-gray;
+
+	flex-basis: 85%;
+}

@@ -1,0 +1,51 @@
+@import "var";
+
+.m-highlight {
+    display :none;
+    width: 96px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: $orange;
+
+    &__visible {
+        position: relative;
+        display: none;
+        justify-content: space-around;
+        width: 92px;
+        height: 44px;
+        margin: 0 auto;
+
+        &:before {
+            position: absolute;
+            top: 48px;
+            left: auto;
+            width: 0;
+            height: 0;
+            content: ' ';
+            border: 9px solid;
+            border-color: $orange transparent transparent transparent;
+        }
+
+        &-notepad {
+            width: 32px;
+            height: 32px;
+            margin: auto 0;
+            cursor: pointer;
+            border: none;
+            background: url("/img/notepad1.svg") no-repeat center / contain;
+        }
+
+        &-cut {
+            width: 32px;
+            height: 32px;
+            margin: auto 0;
+            cursor: pointer;
+            border: none;
+            background: url("/img/price.svg") no-repeat center / contain;
+        }
+    }
+}
+
+.invisible {
+    visibility: hidden;
+}
