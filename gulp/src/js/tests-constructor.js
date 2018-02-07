@@ -148,10 +148,13 @@ const getTests = () => {
 	.then(json)
 	.then(data => {
 		sampleGetTests(data);
+		updateFunction();
 	})
 	.catch(error => {
 		console.log('Fetch Error :-S', error);
 	});
+
+	// updateFunction();
 };
 
 // --------------------------------------------------------------
@@ -171,6 +174,51 @@ const setCorrectAnswer = () => {
 
 // --------------------------------------------------------------
 
+// const btnUpdateTest = document.querySelectorAll(".btnUpdateTest");
+// const btnRemoveTest = document.querySelectorAll(".btnRemoveTest");
+
+// --------------------------------------------------------------
+
+const updateTest = function ()  {
+
+
+	let btnId = this.id;
+
+	let endId = btnId.split('_')[1];
+
+	let updateUrl = `${basicUrl}${endId}`;
+
+	fetch(updateUrl, {
+	    method: 'PUT',
+	    body: JSON.stringify({
+			title: `${document.querySelector(`#changeTestName_${endId}`).value}`,
+			answer1: `${document.querySelector(`#changeQuestion1_${endId}`).value}`,
+			answer2: `${document.querySelector(`#changeQuestion2_${endId}`).value}`,
+			answer3: `${document.querySelector(`#changeQuestion3_${endId}`).value}`,
+			answer4: `${document.querySelector(`#changeQuestion4_${endId}`).value}`
+			// correctAnswer: `${changeCorrectAnswer()}`
+	    }),
+	    headers: {
+	      "Content-type": "application/json; charset=UTF-8"
+	    }
+	 })
+	.catch(error => {
+		console.log('Fetch Error :-S', error);
+	});
+	document.querySelector("#updateTest").reset();	
+
+};
+
+
+
+const updateFunction = () => {
+	const btnUpdateTest = document.querySelectorAll(".btnUpdateTest");
+	for (let i=0; i<btnUpdateTest.length; i++) {
+		btnUpdateTest[i].addEventListener("click", updateTest);
+	}
+};
+
+// --------------------------------------------------------------
 
 // const testSimple = document.querySelector("#testSimple").textContent.trim();
 // const compiled = _.template(testSimple);
