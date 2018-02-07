@@ -1,0 +1,12 @@
+.material-admin__inputs {
+    width: 100%;
+    display: flex;
+
+    &__theme {
+        width: 30%;
+    }
+    &__paragraphs {
+        display: flex;
+        flex-direction: column;
+    }
+}
