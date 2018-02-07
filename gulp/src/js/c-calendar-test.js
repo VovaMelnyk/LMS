@@ -70,11 +70,11 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     // ячейки календаря с датами
     while (firstCurrentMonthDay.getMonth() == currentMonth) {
         mainCal.innerHTML += `
-            <div class='c-calendar__day-num'>
-                <span class='c-day-num'>${firstCurrentMonthDay.getDate()}</span>
-            </div>`;
+        <div class='c-calendar__day-num'>
+        <span class='c-day-num'>${firstCurrentMonthDay.getDate()}</span>
+        </div>`;
         firstCurrentMonthDay.setDate(firstCurrentMonthDay.getDate() + 1);
-    }
+    }     
 
     // добить таблицу пустыми ячейками, если нужно
     if (getDay(firstCurrentMonthDay) != 0) {
@@ -119,12 +119,17 @@ function getDay(date) {
     return day - 1;
 }
 
-document.querySelector('.prev-month-btn').onclick = function (params) {
-    currentMonth--;
-    console.log('hello');
-};
+// document.querySelector('.prev-month-btn').onclick = function () {
+//     currentMonth--;
+//     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
+//     console.log('hello');
+// };
 
-document.querySelector('.next-month-btn').onclick = function (params) {
-    currentMonth++;
-    console.log('world');
-};
+// document.querySelector('.next-month-btn').onclick = function () {
+//     currentMonth++;
+//     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
+//     console.log('world');
+// };
+
+
+
