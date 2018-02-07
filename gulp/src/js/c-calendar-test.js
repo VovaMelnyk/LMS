@@ -6,7 +6,7 @@ let currentYear = today.getFullYear(); // Год - 2018
 console.log('Год - ', today.getFullYear());
 
 let currentMonth = today.getMonth(); // Месяц - 1
-console.log('Месяц - ', today.getMonth());
+console.log('Месяц - ', currentMonth);
 
 let currentDay = today.getDate(); // Число месяца - 4
 console.log('Число месяца - ', today.getDate());
@@ -32,17 +32,21 @@ console.log('Предыдущий месяц - ', prevMonth);
 let prevMonthLD = prevMonth.getDate();
 console.log('Число предыдущего месяца - ', prevMonthLD);
 
-
-let nextMonth = new Date(currentYear, currentMonth, 1); // Следующий месяц - Thu Mar 01 2018 00: 00: 00 GMT + 0200(EET)
+let nextMonth = new Date(currentYear, currentMonth + 1); // Следующий месяц - Thu Mar 01 2018 00: 00: 00 GMT + 0200(EET)
 console.log('Следующий месяц - ', nextMonth);
-console.log('Число следующего месяца - ', nextMonth.getDate());
+let nextMonthFD = nextMonth.getDate();
+console.log('Число следующего месяца - ', nextMonthFD);
 
 var monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
     "July", "August", "September", "October", "November", "December"
 ];
-// console.log('Название месяца - ', monthNames[today.getMonth()]);
 
-function createCalendar(firstCurrentMonthDay, currentMonth,prevMonthLD) {
+function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
+    // console.log('!!!!!!!!!!!!!!',currentMonth);
+
+    // let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+
+    // let d = new Date(year, mon);
 
     // CALC HEADER
     // Записываем имя месяца в DOM
@@ -60,7 +64,7 @@ function createCalendar(firstCurrentMonthDay, currentMonth,prevMonthLD) {
         mainCal.innerHTML += `
             <div class='c-calendar__day-num'>
                 <span class='c-day-num_prev-month'></span>
-            </div>`;            
+            </div>`;
     }
 
     // ячейки календаря с датами
@@ -71,7 +75,7 @@ function createCalendar(firstCurrentMonthDay, currentMonth,prevMonthLD) {
             </div>`;
         firstCurrentMonthDay.setDate(firstCurrentMonthDay.getDate() + 1);
     }
-    
+
     // добить таблицу пустыми ячейками, если нужно
     if (getDay(firstCurrentMonthDay) != 0) {
         for (let i = getDay(firstCurrentMonthDay); i < 7; i++) {
@@ -81,31 +85,32 @@ function createCalendar(firstCurrentMonthDay, currentMonth,prevMonthLD) {
             </div>`;
         }
     }
- 
+
     // Нумеруем дни предыдущего месяца
     let prevMonth = document.querySelectorAll('.c-day-num_prev-month');
     let prevOut = prevMonthLD;
-    for (let i = prevMonth.length-1; i >= 0; i--) {
+    for (let i = prevMonth.length - 1; i >= 0; i--) {
         prevMonth[i].innerHTML += prevOut--;
     }
 
     // Нумеруем дни следующего месяца
     let nextMonth = document.querySelectorAll('.c-day-num_next-month');
-    let nextOut=0;
+    let nextOut = 0;
     for (let i = 0; i < nextMonth.length; i++) {
         nextMonth[i].innerHTML += ++nextOut;
     }
 
-    //Получаем элементы дат календаря и подкрышиваем текущую дату
+    //Получаем элементы дат календаря и подкрашиваем текущую дату
     let calDateBg = document.querySelectorAll('.c-day-num');
     for (let i = 0; i <= calDateBg.length; i++) {
         if (calDateBg[i].textContent == currentDay) {
             calDateBg[i].classList.add('c-day-num_today');
         }
     }
-  }
 
-createCalendar(firstCurrentMonthDay, currentMonth, prevMonthLD);
+}
+
+createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
 
 // получить номер дня недели, от 0(пн) до 6(вс)
 function getDay(date) {
@@ -113,3 +118,13 @@ function getDay(date) {
     if (day == 0) day = 7;
     return day - 1;
 }
+
+document.querySelector('.prev-month-btn').onclick = function (params) {
+    currentMonth--;
+    console.log('hello');
+};
+
+document.querySelector('.next-month-btn').onclick = function (params) {
+    currentMonth++;
+    console.log('world');
+};

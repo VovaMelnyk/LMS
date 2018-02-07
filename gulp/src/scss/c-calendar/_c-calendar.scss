@@ -29,34 +29,29 @@
     background-color: $cyan;
     padding: 0 8px;
     position: relative;
+    // cursor: pointer;
+}
+
+.prev-month-btn {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid $grey-pholder;
+    left: -16px;
     cursor: pointer;
-    pointer-events: none;
-    &::before {
-        content: 'l';
-        color: $dark-bg;
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-right: 8px solid $grey-pholder;
-        left: -16px;
-        cursor: pointer;
-        pointer-events: all; //тестим псевдоэлемент
-    }
-    &::after {
-        content: 'r';
-        color: $dark-bg;
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-left: 8px solid $grey-pholder;
-        right: -16px;
-        cursor: pointer;
-        pointer-events: all; //тестим псевдоэлемент
-    }
+}
+
+.next-month-btn {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid $grey-pholder;
+    right: -16px;
+    cursor: pointer;
 }
 
 //Month and year name
@@ -140,7 +135,6 @@
 .c-calendar__day-num {
     display: flex;
     flex-basis: 14.285714286%;
-    // flex-wrap: wrap;
     height: 88px;
     padding: 8px;
     border-top: 1px solid $dark-text;
@@ -167,7 +161,8 @@
     background-color: $dark-bg; //today
     &_today {
         background: $orange;
-    } // Next month day
+    }
+    // Next month day
     &_prev-month,
     &_next-month {
         color: $light-text;
