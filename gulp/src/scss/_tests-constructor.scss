@@ -111,6 +111,11 @@
     background:url(../img/checkbox-checked.png) -6px -5px no-repeat;
 }
 
+.create-test-form__line {
+	width: 100%;
+	color: $dark-text;
+}
+
 .change-form-module {
 	display: flex;
 	flex-direction: row;

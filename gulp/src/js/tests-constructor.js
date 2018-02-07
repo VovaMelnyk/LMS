@@ -29,22 +29,30 @@ function json(response) {
 const compiledCreateTestPage = _.template(document.querySelector("#constructor-test-create-test-page").textContent.trim());
 
 const goToCreateTestPage = test => {
-  let htmlString = "";
+	let htmlString = "";
 
-  htmlString = compiledCreateTestPage(test);
+	htmlString = compiledCreateTestPage(test);
 
-  testWrapper.innerHTML = htmlString;
+	testWrapper.innerHTML = htmlString;
 
-	// btnAddTest = document.querySelector("#btnAddTest");
-
-	// btnAddTest.addEventListener("click", AddTest);
+	btnAddTest = document.querySelector("#btnAddTest");
+	btnAddTest.addEventListener("click", AddTest);
 };
 
 // --------------------------------------------------------------
 
 const goToAddTest = () => {
 
-	goToCreateTestPage();
+	fetch(basicUrl)
+	.then(status)
+	.then(json)
+	.then(data => {
+		goToCreateTestPage(data);
+	})
+	.catch(error => {
+		console.log('Fetch Error :-S', error);
+	});
+
 
 };
 
@@ -54,27 +62,38 @@ btnGoToCreateTest.addEventListener("click", goToAddTest);
 
 const compiledChangeTestPage = _.template(document.querySelector("#constructor-test-change-test-page").textContent.trim());
 
-const goToChangeTestPage = test => {
-  let htmlString = "";
+const goToChangeTestPage = tests => {
+	let htmlString = "";
 
-  htmlString = compiledChangeTestPage(test);
+	htmlString = compiledChangeTestPage(tests);
+	// tests.forEach(test => {
+	// 	htmlString += compiledChangeTestPage(test);
+	// });
 
-  testWrapper.innerHTML = htmlString;
+	testWrapper.innerHTML = htmlString;
 
-  // const testForm = document.querySelector("#change-form-module__form");
-
-  // getTests();
 };
 
 // --------------------------------------------------------------
 
 const goToUpdateTest = () => {
 
-	goToChangeTestPage();
+	fetch(basicUrl)
+	.then(status)
+	.then(json)
+	.then(data => {
+		goToChangeTestPage(data);
+	})
+	.catch(error => {
+		console.log('Fetch Error :-S', error);
+	});
+
+	getTests();
 
 };
 
 btnGoToShowTests.addEventListener("click", goToUpdateTest);
+// btnGoToShowTests.addEventListener("click", getTests);
 
 // --------------------------------------------------------------
 
@@ -102,27 +121,28 @@ const AddTest = () => {
 
 };
 
-// btnAddTest.addEventListener("click", AddTest);
 
 // --------------------------------------------------------------
 
-const compiledChangeTestForm = _.template(document.querySelector("#constructor-test-change-test-input").textContent.trim());
-
 const sampleGetTests = tests => {
+	const compiledChangeTestForm = _.template(document.querySelector("#constructor-test-change-test-input").textContent.trim());
 
-  let htmlString = "";
 
-  tests.forEach(test => {
-    htmlString += compiledChangeTestForm(test);
-  });
+	let htmlString = "";
 
-  testForm.innerHTML = htmlString;
+	tests.forEach(test => {
+	htmlString += compiledChangeTestForm(test);
+	});
+
+	const testForm = document.querySelector("#change-form-module__former");
+
+	testForm.innerHTML = htmlString;
 
 };
 
 // --------------------------------------------------------------
 
-const getTests = () =>
+const getTests = () => {
 	fetch(basicUrl)
 	.then(status)
 	.then(json)
@@ -132,7 +152,22 @@ const getTests = () =>
 	.catch(error => {
 		console.log('Fetch Error :-S', error);
 	});
+};
 
+// --------------------------------------------------------------
+
+const setCorrectAnswer = () => {
+	let allQuestions = document.querySelectorAll(".create-test-form__answer");
+	let allQuestionsRadio = document.querySelectorAll(".create-test-form__radio");
+	let chosenAnswer;
+	for (let i=0; i<4; i++) {
+		allQuestionsRadio[i].value = allQuestions[i].value;
+		if (allQuestionsRadio[i].checked) {
+			chosenAnswer = allQuestionsRadio[i].value;
+		}
+	}
+	return chosenAnswer;
+};
 
 // --------------------------------------------------------------
 
