@@ -41,12 +41,19 @@ var monthNames = ["January", "February", "March", "April", "May", "June", // Н�
     "July", "August", "September", "October", "November", "December"
 ];
 
+
+
 function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
-    // console.log('!!!!!!!!!!!!!!',currentMonth);
 
-    // let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
-
-    // let d = new Date(year, mon);
+    let d = new Date(currentYear, currentMonth);
+    console.log('DDDDDD', d);
+    /////////////////////////  
+    let tempDay = new Date(currentYear, currentMonth + 1, 0); // Последний день месяца - Wed Feb 28 2018 00:00:00 GMT+0200 (EET)
+    console.log('Последний день месяца - ', tempDay);
+    /////////////////////////  
+    let lastDate = tempDay.getDate(); // Последнее число месяца / Кол-во дней в месяце - 28
+    console.log('Последнее число месяца / Кол-во дней в месяце - ', lastDate);
+    /////////////////////////  
 
     // CALC HEADER
     // Записываем имя месяца в DOM
@@ -60,7 +67,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     // заполнить первый ряд от понедельника
     // и до дня, с которого начинается месяц
     // * * * | 1  2  3  4
-    for (let i = 0; i < getDay(firstCurrentMonthDay); i++) {
+    for (let i = 0; i < getDay(d); i++) {
         mainCal.innerHTML += `
             <div class='c-calendar__day-num'>
                 <span class='c-day-num_prev-month'></span>
@@ -68,17 +75,17 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     }
 
     // ячейки календаря с датами
-    while (firstCurrentMonthDay.getMonth() == currentMonth) {
+    while (d.getMonth() == currentMonth) {
         mainCal.innerHTML += `
         <div class='c-calendar__day-num'>
-        <span class='c-day-num'>${firstCurrentMonthDay.getDate()}</span>
+        <span class='c-day-num'>${d.getDate()}</span>
         </div>`;
-        firstCurrentMonthDay.setDate(firstCurrentMonthDay.getDate() + 1);
-    }     
+        d.setDate(d.getDate() + 1);
+    }
 
     // добить таблицу пустыми ячейками, если нужно
-    if (getDay(firstCurrentMonthDay) != 0) {
-        for (let i = getDay(firstCurrentMonthDay); i < 7; i++) {
+    if (getDay(d) != 0) {
+        for (let i = getDay(d); i < 7; i++) {
             mainCal.innerHTML += `
             <div class='c-calendar__day-num'>
                 <span class='c-day-num_next-month'></span>
@@ -102,8 +109,8 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
 
     //Получаем элементы дат календаря и подкрашиваем текущую дату
     let calDateBg = document.querySelectorAll('.c-day-num');
-    for (let i = 0; i <= calDateBg.length; i++) {
-        if (calDateBg[i].textContent == currentDay) {
+    for (let i = 0; i <= lastDate; i++) {
+        if (i == new Date().getDate() - 1) { // && d.getFullYear() == new Date().getFullYear() && d.getMonth() == new Date().getMonth()
             calDateBg[i].classList.add('c-day-num_today');
         }
     }
