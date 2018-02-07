@@ -1,10 +1,13 @@
-.m-bottomBtn {
-	margin-left:56px;
-}
 .m-bottomBtnBox {
 	display: flex;
 	justify-content: space-around;
     position: absolute;
 	left:232px;
 	bottom:-168px;
+}
+.m-bottomBtn {
+	margin-left:32px;
+}
+.m-bottomBtn:first-child {
+	margin-right: 88px;
 }
