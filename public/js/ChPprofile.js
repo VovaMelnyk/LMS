@@ -21,7 +21,26 @@ axios('http://localhost:3000/users')
         		}
 
         		document.getElementsByClassName('ChP_grup-strip')[0].style.width=stripLength+'px';
-                console.log(stripLength)
-
 			}
+            document.getElementsByClassName('arrowLeft')[0].onclick = turnLeft;
+            document.getElementsByClassName('arrowRight')[0].onclick = turnRight;
+
+            var some = 0; 
+
+            function turnLeft(){
+                some += 253;
+                if(some<=0){
+                document.getElementsByClassName('ChP_grup-strip')[0].style.left=some+'px';}
+                else{
+                    some=0
+                }
+            }
+            function turnRight(){
+                some += -253 
+                if(some>=-(members.length*253-1265)){
+                document.getElementsByClassName('ChP_grup-strip')[0].style.left=some+'px';}
+                else{
+                    some=-(members.length*253-1265);
+                }
+            }
         });
