@@ -16,9 +16,9 @@ let TheoryRender = (themNum) => {
             throw new Error("error while fetching, " + response.statusText);
         })
         .then(data => {
-console.log(data);
+
                 let navCard = "";
-            data[themNum].theory.content.forEach((elem, idx) => {
+            data[1].theory.content.forEach((elem, idx) => {
                 navCard += `<a href="#cnt${idx}" class="m-left-nav__link">
         ${idx + 1}
         <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
@@ -27,11 +27,10 @@ console.log(data);
             });
 
             let contentCard = "";
-            data[themNum].theory.content.forEach((elem, idx) => {
+            data[1].theory.content.forEach((elem, idx) => {
                 contentCard += `
-      <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] NEW</h4>
+      <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
       <p class="m-content__text">${elem.contentText}</p>
-      <a href="#m-title" class="m-btn-up invisible"> </a>
       `;
             });
 
@@ -39,10 +38,10 @@ console.log(data);
         <div id="m-title" class="m-header">
             <div class="m-header__caption caption">
                 <h2 class="caption__title">Теория</h2>
-                <h3 class="caption__theme">ТЕМА ${data[themNum].theory.number}</h3>
+                <h3 class="caption__theme">ТЕМА ${data[1].theory.number}</h3>
             </div>
             <h2 class="m-header__title" id="theory-name">
-                [ ${data[themNum].theory.title} _]
+                [ ${data[1].theory.title} _]
             </h2>
             <div id="m-timers">
                 <div class="m-timer">
@@ -53,12 +52,13 @@ console.log(data);
                     <div class="m-timer__img icon" id="m-timer__img"></div>
                 </div>
                 <div>
-                    <a class="m-btn-test button-small" href="#">к тестам!</a>
+                    <a class="m-btn-test button-small">к тестам!</a>
                 </div>
             </div>
         </div>
         <dl class="m-content">
         ${contentParent.innerHTML = contentCard}
+
         </dl>
         <a href="#m-title" class="m-btn-up invisible"> </a>
 
@@ -101,12 +101,11 @@ console.log(data);
         <!-- LEFT CONTENT STARTS -->
         <div class="m-left-nav" id="m-left-nav">
             ${leftNavParent.innerHTML = navCard}
-        </div>
-`
+        </div>`
         })
 
         .catch(err => console.log(err));
 
 }
-
-btnRender.addEventListener('click', TheoryRender(1));
+btnRender.addEventListener('click', TheoryRender);
+//TheoryRender(0);
