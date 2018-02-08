@@ -21,7 +21,6 @@ fetch("http://localhost:3000/course")
       contentCard += `
       <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _]</h4>
       <p class="m-content__text">${elem.contentText}</p>
-      <a href="#m-title" class="m-btn-up invisible"> </a>
       `;
     });
     contentParent.innerHTML = contentCard;
