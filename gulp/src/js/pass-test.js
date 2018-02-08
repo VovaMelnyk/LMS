@@ -1,8 +1,5 @@
-// Создать тест из 4 ответов, пройти его  и получить оценку по правильным и не правильным ответам.
 
-// Прописать алгоритм: СТУДЕНТ открывает тест, сервер отдает ему данные, и студент видит тест.
-// При клике студента на ЗАВЕРШИТЬ ТЕСТ система подсчитывает кол-во правильных ответов и выдает баллы.
-
+// json-server --watch db.json сервер 
 
 ///////////////////Globals/////////////////////////
 const url=`http://localhost:3000/tests`;
@@ -20,6 +17,7 @@ const updateView = (tests, container, script) => {    // обновляем да
     const compiled = _.template(script.textContent.trim());
     const result = compiled(tests[3]);  // это вопрос 4 правильный ответ 2 !!!
     container.innerHTML = result;
+    
 };
 
 
@@ -31,15 +29,52 @@ function getTestJson() {    // Получаем данные с сервера �
         })
         .then(data => {
             updateView(data, taskContainer, taskScript);
-            return data;
+
+            var repeatTimer;
+            repeatTimer = setInterval (timer, 1000);
+            function timer () {
+              var minutes = document.getElementsByClassName('t-timer__minutes')[0].innerHTML;
+              var seconds = document.getElementsByClassName('t-timer__seconds')[0].innerHTML;
+              var end = false;
+  
+              if (seconds>0) seconds--;
+              else {
+                seconds = 59;
+                if(minutes>0) minutes--;
+                else {
+                  end=true;
+                }
+              }
+
+              if (seconds<10) {
+                seconds='0' + seconds;
+              }
+              
+              if(end) {
+                clearInterval (repeatTimer);
+                console.log ('время и стекло');
+                updateView(data, taskContainer, resultScript);
+                document.getElementsByClassName('t-results__summ-time')[0].innerHTML = 'К сожалению время вышло';
+
+              /* переход на страницу с результатами */
+              }
+              else {
+              document.getElementsByClassName('t-timer__minutes')[0].innerHTML=minutes;
+              document.getElementsByClassName('t-timer__seconds')[0].innerHTML=seconds;
+              }
+
+         
+            }
+
+            return data; 
         })
         .then(data => {
             const testBtnEnd = document.querySelector('#end_test');
             testBtnEnd.addEventListener('click', ()=>resultTest(data));
-        })
-        .catch(error => {
-            console.error("Error: ", error);
         });
+        // .catch(error => {
+        //     console.error("Error: ", error);
+        // });
 }
 
 testBtnStart.addEventListener('click', getTestJson);
@@ -51,8 +86,9 @@ const resultTest = (templateData) => {
     let arrRadio = Array.from(answers); // массив из radio
 
     updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
-
+    document.getElementsByClassName('t-results__summ-time')[0].innerHTML = 'Пройдено за N минут';
     let mistake = document.querySelector('.t-mistakes__numbers'); //span
+    let passingTime = timer();
     let question = document.querySelector('.t-mistakes__description'); //li
     let resultTest = document.querySelector('#result-test');
     let rightAnswer = 0;
@@ -74,5 +110,6 @@ const resultTest = (templateData) => {
 
     result = Math.floor((rightAnswer/1)*10);  // если вопросов много, тогда вместо единицы подставляем кол-во вопросов т.е. длинну массива
     resultTest.innerHTML = `${result}/10 баллов`;
+     
 }
 
