@@ -9,9 +9,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0;
 }
 
 .m-content__content-title {
     position: sticky;
     top: 52px;
+}
+.m-slall-text{
+    font-size: 48px;
 }

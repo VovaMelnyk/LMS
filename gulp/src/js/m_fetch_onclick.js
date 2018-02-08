@@ -1,8 +1,8 @@
 const btnRender = document.querySelector(".m-btn-test");
 
 function theoryRender(){
-const theoryName = document.querySelector("#theory-name");
-const theoryNumber = document.querySelector(".caption__theme");
+//const theoryName = document.querySelector("#theory-name");
+//const theoryNumber = document.querySelector(".caption__theme");
 const contentParent = document.querySelector(".m-content");
 const leftNavParent = document.querySelector(".m-left-nav");
 
@@ -17,8 +17,8 @@ fetch("http://localhost:3000/course")
   .then(data => {
     console.log(data);
 
-    theoryName.innerHTML = `[ ${data[0].theory.title} _]`;
-    theoryNumber.innerHTML = `ТЕМА ${data[0].theory.number}`;
+    //theoryName.innerHTML = `[ ${data[0].theory.title} _]`;
+    //theoryNumber.innerHTML = `ТЕМА ${data[0].theory.number}`;
 
     let navCard = "";
     data[0].theory.content.forEach((elem, idx) => {
@@ -27,7 +27,7 @@ fetch("http://localhost:3000/course")
         <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
     </a>
         `;
-      leftNavParent.innerHTML = navCard;
+     // leftNavParent.innerHTML = navCard;
     });
 
     let contentCard = "";
@@ -38,7 +38,7 @@ fetch("http://localhost:3000/course")
       <a href="#m-title" class="m-btn-up invisible"> </a>
       `;
     });
-    contentParent.innerHTML = contentCard;
+    // contentParent.innerHTML = contentCard;
 
   })
 
@@ -71,7 +71,7 @@ fetch("http://localhost:3000/course")
               </div>
           </div>
 
-          ${contentParent}
+          ${contentParent.innerHTML = contentCard}
           <a href="#m-title" class="m-btn-up invisible"> </a>
 
           <div class="m-highlight">
@@ -113,7 +113,7 @@ fetch("http://localhost:3000/course")
           <!-- LEFT CONTENT STARTS -->
           <div class="m-left-nav" id="m-left-nav">
               <div id="m_left-nav">
-                  ${leftNavParent}
+                  ${leftNavParent.innerHTML = navCard}
               </div>
           </div>
       </div>
