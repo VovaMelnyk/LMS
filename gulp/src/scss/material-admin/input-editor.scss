@@ -1,7 +1,8 @@
 .input-editor {
     position: relative;
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 16px;
+    max-width: 100%;
     &:first-child {
         margin-top: 0;
     }
@@ -11,14 +12,13 @@
     &__item {
         border: none;
         box-sizing: border-box;
-        height: 100%;
         background: inherit;
-        width: max-content;
+        max-width: 100%;
     }
     &__instruments {
         position: absolute;
         display: none;
-        right: -40px;
+        right: -75px;
         height: 100%;
         top: 0;
 
@@ -26,7 +26,8 @@
     &__edit {
         display: inline-block;
         height: 100%;
-        width: 14px;
+        width: 15px;
+        margin-left: 10px;
         &:hover {
             cursor: pointer;
         }
@@ -34,8 +35,17 @@
     &__delete {
         display: inline-block;
         height: 100%;
-        margin-left: 8px;
-        width: 14px;
+        margin-left: 10px;
+        width: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__save {
+        display: inline-block;
+        height: 100%;
+        margin-left: 10px;
+        width: 15px;
         &:hover {
             cursor: pointer;
         }

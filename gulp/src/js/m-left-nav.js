@@ -34,5 +34,7 @@
             };
         })
     }
-    document.addEventListener('DOMContentLoaded', init)
+    if (false) {
+        document.addEventListener('DOMContentLoaded', init)
+    }
 })();

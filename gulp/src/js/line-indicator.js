@@ -24,6 +24,7 @@
             showScrollWidth(scrollLine)
         })
     }
-
-    document.addEventListener('DOMContentLoaded', init)
+    if (document.getElementById('scroll-indicator')) {
+        document.addEventListener('DOMContentLoaded', init)
+    }
 })(document, window);
