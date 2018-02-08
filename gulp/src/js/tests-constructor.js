@@ -163,6 +163,20 @@ const updateTest = function ()  {
 
 	let updateUrl = `${basicUrl}${endId}`;
 
+	let changedQuestion = document.querySelectorAll(`.change-test-form__answer_${endId}`);
+	let changedQuestionRadio = document.querySelectorAll(`.change-test-form__radio_${endId}`);
+	let chosenAnswer;
+	for (let i=0; i<4; i++) {
+		changedQuestionRadio[i].value = changedQuestion[i].value;
+		if (changedQuestionRadio[i].checked) {
+			chosenAnswer = changedQuestionRadio[i].value;
+		}
+	}
+
+	// let newCorrectAnswer = changeCorrectAnswer();
+
+	console.log(chosenAnswer);
+
 	fetch(updateUrl, {
 	    method: 'PUT',
 	    body: JSON.stringify({
@@ -170,8 +184,8 @@ const updateTest = function ()  {
 			answer1: `${document.querySelector(`#changeQuestion1_${endId}`).value}`,
 			answer2: `${document.querySelector(`#changeQuestion2_${endId}`).value}`,
 			answer3: `${document.querySelector(`#changeQuestion3_${endId}`).value}`,
-			answer4: `${document.querySelector(`#changeQuestion4_${endId}`).value}`
-			// correctAnswer: `${changeCorrectAnswer()}`
+			answer4: `${document.querySelector(`#changeQuestion4_${endId}`).value}`,
+			correctAnswer: `${chosenAnswer}`
 	    }),
 	    headers: {
 	      "Content-type": "application/json; charset=UTF-8"
@@ -202,6 +216,7 @@ const removeTest = function () {
 	let endId = btnId.split('_')[1];
 
 	let removeUrl = `${basicUrl}${endId}`;
+
 	fetch(removeUrl, {
 	  method: 'DELETE'
 	});
@@ -219,7 +234,7 @@ const removeFunction = () => {
 
 // --------------------------------------------------------------
 
-const setCorrectAnswer = () => {
+const setCorrectAnswer = function () {
 	let allQuestions = document.querySelectorAll(".create-test-form__answer");
 	let allQuestionsRadio = document.querySelectorAll(".create-test-form__radio");
 	let chosenAnswer;
@@ -234,10 +249,18 @@ const setCorrectAnswer = () => {
 
 // --------------------------------------------------------------
 
-// const btnUpdateTest = document.querySelectorAll(".btnUpdateTest");
-// const btnRemoveTest = document.querySelectorAll(".btnRemoveTest");
-
-
+const changeCorrectAnswer = function () {
+	let changedQuestion = document.querySelectorAll(`.change-test-form__answer_${endId}`);
+	let changedQuestionRadio = document.querySelectorAll(`.change-test-form__radio_${endId}`);
+	let chosenAnswer;
+	for (let i=0; i<4; i++) {
+		changedQuestionRadio[i].value = changedQuestion[i].value;
+		if (changedQuestionRadio[i].checked) {
+			chosenAnswer = changedQuestionRadio[i].value;
+		}
+	}
+	return chosenAnswer;
+};
 
 // --------------------------------------------------------------
 
