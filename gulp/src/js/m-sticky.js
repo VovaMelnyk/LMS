@@ -1,4 +1,4 @@
-window.onscroll = () => {myFunction()};
+
 
 let folder = document.querySelector('#m-title');
 let clock = document.querySelector('#m-timers');
@@ -15,7 +15,7 @@ function myFunction() {
     headerText.classList.add("m-slall-text");
     headerTextSm.classList.add("m-slall-text");
   } if (window.pageYOffset >= stickys) {
-        clock.classList.add("m-flex")
+    clock.classList.add("m-flex")
   } else {
     folder.classList.remove("m-sticky");
     clock.classList.remove("m-flex");
@@ -24,3 +24,4 @@ function myFunction() {
     headerTextSm.classList.remove("m-slall-text");
   }
 }
+window.onscroll = () => { myFunction() };
