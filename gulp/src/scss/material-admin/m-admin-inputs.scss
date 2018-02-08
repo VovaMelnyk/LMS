@@ -5,6 +5,8 @@
 
     &__theme {
         width: 40%;
+        display: flex;
+        flex-direction: column;
     }
     &__paragraphs {
         display: flex;
