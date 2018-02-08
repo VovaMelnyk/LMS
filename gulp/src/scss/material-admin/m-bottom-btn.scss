@@ -1,13 +1,12 @@
 .m-bottomBtnBox {
-	width:100%;
-	height: 5%;
+	padding-top:20px;
+	display: flex;
+	justify-content: space-around;
 }
 .m-bottomBtn {
-	margin-top:20px;
-	padding: 8px 16px;
-	margin-left:3%;
+	border: 3px solid $white;
 }
 .m-bottomBtn:first-child {
-	margin-right: 88px;
+	margin-right: 6%;
 	margin-left:0;
 }
