@@ -9,6 +9,7 @@
 
 </div>
 
+
 <!-- Create test page -->
 
 <script type="text/template" id="constructor-test-create-test-page">
@@ -68,98 +69,84 @@
 
 <script type="text/template" id="constructor-test-change-test-input">
 
+	<% if ( (correctAnswer == answer1) && (correctAnswer != '') ) { %>
+
 	<div class="change-form-module__form">
 		<form id="changeTest_<%- id%>" class="create-test-form">
 			<p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
-			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate1_<%- id%>"><span></span></label></p>
+			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value="" checked><label for="radioCreate1_<%- id%>"><span></span></label></p>
 			<p>б) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion2_<%- id%>" placeholder="<%- answer2%>" value="<%- answer2%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate2_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate2_<%- id%>"><span></span></label></p>
 			<p>в) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion3_<%- id%>" placeholder="<%- answer3%>" value="<%- answer3%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate3_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate3_<%- id%>"><span></span></label></p>
 			<p>г) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion4_<%- id%>" placeholder="<%- answer4%>" value="<%- answer4%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate4_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate4_<%- id%>"><span></span></label></p>
 			<hr class="create-test-form__line">
 		</form>
 		<button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
+
 	</div>
 
+	<% } %>
+
+
+	<% if ( ( correctAnswer == answer2 ) && (correctAnswer != '') ) { %>
+
+	<div class="change-form-module__form">
+		<form id="changeTest_<%- id%>" class="create-test-form">
+			<p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
+			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate1_<%- id%>"><span></span></label></p>
+			<p>б) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion2_<%- id%>" placeholder="<%- answer2%>" value="<%- answer2%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate2_<%- id%>" name="radioAddTest" type="radio" value="" checked><label for="radioCreate2_<%- id%>"><span></span></label></p>
+			<p>в) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion3_<%- id%>" placeholder="<%- answer3%>" value="<%- answer3%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate3_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate3_<%- id%>"><span></span></label></p>
+			<p>г) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion4_<%- id%>" placeholder="<%- answer4%>" value="<%- answer4%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate4_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate4_<%- id%>"><span></span></label></p>
+			<hr class="create-test-form__line">
+		</form>
+		<button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
+		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
+
+	</div>
+
+	<% } %>
+
+
+	<% if ( ( correctAnswer == answer3 ) && (correctAnswer != '') ) { %>
+
+	<div class="change-form-module__form">
+		<form id="changeTest_<%- id%>" class="create-test-form">
+			<p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
+			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate1_<%- id%>"><span></span></label></p>
+			<p>б) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion2_<%- id%>" placeholder="<%- answer2%>" value="<%- answer2%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate2_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate2_<%- id%>"><span></span></label></p>
+			<p>в) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion3_<%- id%>" placeholder="<%- answer3%>" value="<%- answer3%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate3_<%- id%>" name="radioAddTest" type="radio" value="" checked><label for="radioCreate3_<%- id%>"><span></span></label></p>
+			<p>г) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion4_<%- id%>" placeholder="<%- answer4%>" value="<%- answer4%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate4_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate4_<%- id%>"><span></span></label></p>
+			<hr class="create-test-form__line">
+		</form>
+		<button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
+		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
+
+	</div>
+
+	<% } %>
+
+
+	<% if ( ( correctAnswer == answer4 ) && (correctAnswer != '') ) { %>
+
+	<div class="change-form-module__form">
+		<form id="changeTest_<%- id%>" class="create-test-form">
+			<p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
+			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate1_<%- id%>"><span></span></label></p>
+			<p>б) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion2_<%- id%>" placeholder="<%- answer2%>" value="<%- answer2%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate2_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate2_<%- id%>"><span></span></label></p>
+			<p>в) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion3_<%- id%>" placeholder="<%- answer3%>" value="<%- answer3%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate3_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate3_<%- id%>"><span></span></label></p>
+			<p>г) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion4_<%- id%>" placeholder="<%- answer4%>" value="<%- answer4%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate4_<%- id%>" name="radioAddTest" type="radio" value="" checked><label for="radioCreate4_<%- id%>"><span></span></label></p>
+			<hr class="create-test-form__line">
+		</form>
+		<button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
+		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
+
+	</div>
+
+	<% } %>
+
+
 </script>
 
 
 
 
-
-
-
-
-
-<!-- <div><button id="btnGetTest">Показать ВСЕ тесты</button></div>
-<table id="testTable"></table>
-<hr>
-
-
-<div><button id="btnSingleTest">Показать ОДИН тест</button></div>
-<form id="singleTest">
-	<p><input type="text" id="showSingletest" placeholder="show test id"></p>
-</form>
-<hr>			
-
-
-<script type="text/template" id="testSimple">
-    <tr>
-	    <th rowspan="2">id. <%- id%></th>
-	    <th colspan="4"><%- title%></th>
-    </tr>
-	<tr>
-		<% if ( answer1 == correctAnswer ) { %>
-		<td class="green"><%- answer1%></td>
-		<% } 
-		else { %>
-		<td><%- answer1%></td>
-		<% } %>
-		<% if ( answer2 == correctAnswer ) { %>
-		<td class="green"><%- answer2%></td>
-		<% } 
-		else { %>
-		<td><%- answer2%></td>
-		<% } %>
-		<% if ( answer3 == correctAnswer ) { %>
-		<td class="green"><%- answer3%></td>
-		<% } 
-		else { %>
-		<td><%- answer3%></td>
-		<% } %>
-		<% if ( answer4 == correctAnswer ) { %>
-		<td class="green"><%- answer4%></td>
-		<% } 
-		else { %>
-		<td><%- answer4%></td>
-		<% } %>
-
-	</tr>
-</script>
-
-<div><button id="btnAddTest">Создать тест</button></div>
-<form id="addTest">
-	<p><input type="text" id="testName" placeholder="new test name"></p>
-	<p><input type="text" class="question" id="question1" placeholder="question 1"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
-	<p><input type="text" class="question" id="question2" placeholder="question 2"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
-	<p><input type="text" class="question" id="question3" placeholder="question 3"><input class="questionRadio" name="radioAddTest" type="radio" value="" checked></p>
-	<p><input type="text" class="question" id="question4" placeholder="question 4"><input class="questionRadio" name="radioAddTest" type="radio" value=""></p>
-</form>
-<hr>
-
-<div><button id="btnUpdateTest">Обновить тест</button></div>
-<form id="updateTest">
-	<p><input type="text" id="changeTestId" placeholder="update id"></p>
-	<p><input type="text" id="changeTestName" placeholder="update test name"></p>
-	<p><input type="text" class="changedQuestion" id="changeQuestion1" placeholder="update question 1"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
-	<p><input type="text" class="changedQuestion" id="changeQuestion2" placeholder="update question 2"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
-	<p><input type="text" class="changedQuestion" id="changeQuestion3" placeholder="update question 3"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value="" checked></p>
-	<p><input type="text" class="changedQuestion" id="changeQuestion4" placeholder="update question 4"><input class="changeQuestionRadio" name="radioChangeTest" type="radio" value=""></p>
-</form>
-
-<div><button id="btnRemoveTest">Удалить тест</button></div>
-<form id="removeTest">
-	<p><input type="text" id="removeTestId" placeholder="delete test id"></p>
-</form>
-<hr>
- -->

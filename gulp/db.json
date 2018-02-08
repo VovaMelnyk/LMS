@@ -24,7 +24,7 @@
       "answer2": "Баба",
       "answer3": "Оно",
       "answer4": "Просто объект",
-      "correctAnswer": "",
+      "correctAnswer": "Оно",
       "id": 3
     },
     {
@@ -33,7 +33,7 @@
       "answer2": "Юнец-молодец",
       "answer3": "Зрелый перец",
       "answer4": "Старый пердун",
-      "correctAnswer": "",
+      "correctAnswer": "Зрелый перец",
       "id": 4
     },
     {
@@ -51,8 +51,35 @@
       "answer2": "Ответ 2",
       "answer3": "Ответ 3",
       "answer4": "Ответ 4",
-      "correctAnswer": "Ответ 4",
+      "correctAnswer": "Ответ 1",
       "id": 6
+    },
+    {
+      "title": "1",
+      "answer1": "2",
+      "answer2": "3",
+      "answer3": "4",
+      "answer4": "5",
+      "correctAnswer": "4",
+      "id": 8
+    },
+    {
+      "title": "3",
+      "answer1": "4",
+      "answer2": "5",
+      "answer3": "6",
+      "answer4": "7",
+      "correctAnswer": "6",
+      "id": 9
+    },
+    {
+      "title": "",
+      "answer1": "",
+      "answer2": "",
+      "answer3": "",
+      "answer4": "",
+      "correctAnswer": "",
+      "id": 10
     }
   ]
 }
