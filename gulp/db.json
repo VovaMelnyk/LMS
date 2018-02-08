@@ -46,11 +46,12 @@
       "id": 5
     },
     {
-      "title": "цу",
-      "answer1": "ыв",
-      "answer2": "",
-      "answer3": "",
-      "answer4": "",
+      "title": "Вопрос 1",
+      "answer1": "Ответ 1",
+      "answer2": "Ответ 2",
+      "answer3": "Ответ 3",
+      "answer4": "Ответ 4",
+      "correctAnswer": "Ответ 3",
       "id": 6
     }
   ]
