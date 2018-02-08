@@ -32,14 +32,33 @@
 
     }
 
-    function closeInputs (event, inputsEditors) {
-        event.stopPropagation();
+    function isClassNamePresent (element, className) {
+        return (element.getAttribute('class') == className)
+    }
 
+    function findElementByClassName (parent, className) {
         const each = [].forEach;
-
-        each.call(inputsEditors, item => {
-            item.setAttribute('disabled', 'disabled')
+        
+        if ( !isClassNamePresent(parent, className) ) return each.call(parent.children, item => {
+            findElementByClassName(item, className)
         })
+        console.log(parent)
+        return parent
+
+    }
+
+    function addEvents (node) {
+        let edit = findElementByClassName(node, 'input-editor__edit');
+        const delet = findElementByClassName(node, 'input-editor__delete');
+        const save = findElementByClassName(node, 'input-editor__save');
+        setTimeout(()=>console.log(edit, delet, save), 1000)
+    }
+
+    function addNewArticle (node, parentNode) {
+        const article = parentNode.children[0].cloneNode(true);
+        article.children[0].innerHTML = 'New Article';
+        addEvents(article)
+        parentNode.insertBefore(article, node)
 
     }
 
@@ -48,6 +67,7 @@
         const inputDeleter = document.getElementsByClassName('input-editor__delete');
         const inputSaver = document.getElementsByClassName('input-editor__save');
         const paragraphInputItems = document.getElementsByClassName('input-editor__item');
+        const addNew = document.getElementById('m-add-new');
         const mAdminInputs = document.getElementById('m-admin__inputs');
         const each = [].forEach;
 
@@ -60,8 +80,7 @@
         each.call(inputSaver, item => {
             item.addEventListener( 'click', e => saveTitle(e, item) )
         })
-
-        mAdminInputs.addEventListener('click', e => closeInputs(e, paragraphInputItems))
+        addNew.addEventListener('click', e => addNewArticle(addNew, mAdminInputs) )
 
     }
     document.addEventListener('DOMContentLoaded', init)
