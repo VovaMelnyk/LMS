@@ -1,7 +1,7 @@
 const btnRender = document.querySelector(".m-btn-test");
 const mainTheory = document.querySelector(".main");
 
-let TheoryRender = () => {
+let TheoryRender = (themNum) => {
     const theoryName = document.querySelector("#theory-name");
     const theoryNumber = document.querySelector(".caption__theme");
     const contentParent = document.querySelector(".m-content");
@@ -16,12 +16,9 @@ let TheoryRender = () => {
             throw new Error("error while fetching, " + response.statusText);
         })
         .then(data => {
-
-            // //theoryName.innerHTML = `[ ${data[0].theory.title} _]`;
-            // //theoryNumber.innerHTML = `ТЕМА ${data[0].theory.number}`;
-
-            let navCard = "";
-            data[0].theory.content.forEach((elem, idx) => {
+console.log(data);
+                let navCard = "";
+            data[themNum].theory.content.forEach((elem, idx) => {
                 navCard += `<a href="#cnt${idx}" class="m-left-nav__link">
         ${idx + 1}
         <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
@@ -30,7 +27,7 @@ let TheoryRender = () => {
             });
 
             let contentCard = "";
-            data[0].theory.content.forEach((elem, idx) => {
+            data[themNum].theory.content.forEach((elem, idx) => {
                 contentCard += `
       <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] NEW</h4>
       <p class="m-content__text">${elem.contentText}</p>
@@ -38,16 +35,14 @@ let TheoryRender = () => {
       `;
             });
 
-
-
-            mainTheory.innerHTML = `
+        mainTheory.innerHTML = `
         <div id="m-title" class="m-header">
             <div class="m-header__caption caption">
                 <h2 class="caption__title">Теория</h2>
-                <h3 class="caption__theme">ТЕМА ${data[0].theory.number}</h3>
+                <h3 class="caption__theme">ТЕМА ${data[themNum].theory.number}</h3>
             </div>
             <h2 class="m-header__title" id="theory-name">
-                [ ${data[0].theory.title} _]
+                [ ${data[themNum].theory.title} _]
             </h2>
             <div id="m-timers">
                 <div class="m-timer">
@@ -105,12 +100,13 @@ let TheoryRender = () => {
         <!-- RIGHT-NAV end -->
         <!-- LEFT CONTENT STARTS -->
         <div class="m-left-nav" id="m-left-nav">
-                        ${leftNavParent.innerHTML = navCard}
+            ${leftNavParent.innerHTML = navCard}
         </div>
 `
         })
 
         .catch(err => console.log(err));
-    window.onscroll = () => { myFunction() };
+
 }
-btnRender.addEventListener('click', TheoryRender);
+
+btnRender.addEventListener('click', TheoryRender(1));
