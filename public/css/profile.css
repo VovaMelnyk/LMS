@@ -947,3 +947,8 @@ p {
       -ms-transform: translate(0, 0) rotate(180deg);
           transform: translate(0, 0) rotate(180deg);
   margin-top: 6px; }
+
+  .alert {
+    color: red;
+  font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
+  }

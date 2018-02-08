@@ -22,3 +22,49 @@ document.querySelector('#user-email').value = email;
 document.querySelector('#user-facebook').value = facebook; 
 document.querySelector('#user-google').value = google; 
 document.querySelector('#user-linkedin').value = linkedin; 
+
+document.querySelector('#old-pass').addEventListener('change', (e) => {
+	let pass = e.target.value;
+	let pass2 = localStorage.getItem('lms_pass');
+
+	if (pass != pass2) {
+		document.querySelector('.alert').innerHTML = 'Incorrect old password';
+	}
+	else {
+		document.querySelector('.alert').innerHTML = '';
+	}
+}) 
+
+document.querySelector('#new-pass').addEventListener('change', (e) => {
+
+	let pass = document.querySelector('#new-pass').value;
+
+	if (pass.search(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g)) {
+		document.querySelector('.alert').innerHTML = 'Pssword too short or unaccesseble sybols';
+	}
+	else {
+		document.querySelector('.alert').innerHTML = '';
+	}
+});
+
+document.querySelector('#repeat-new-pass').addEventListener('change', (e) => {
+
+	let pass = document.querySelector('#new-pass').value;
+	let pass2 = document.querySelector('#repeat-new-pass').value;
+
+	if (pass.search(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g)) {
+		document.querySelector('.alert').innerHTML = 'Pssword too short or unaccesseble sybols';
+	}
+	else {
+		document.querySelector('.alert').innerHTML = '';
+	}
+
+	if (pass != pass2) {
+		document.querySelector('.alert').innerHTML = 'Passwords are not the same';
+	}
+	else {
+		document.querySelector('.alert').innerHTML = '';
+	}
+}) 
+
+
