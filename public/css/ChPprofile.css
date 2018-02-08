@@ -1,39 +1,49 @@
  .ChP_grup {
-  margin: 100px 3% 0 3%;
+  height: 270px;
+  width: 1350px;
+  margin: 100px 0 0 30px;
+  box-sizing: border-box;
 } 
 
  .ChP_grup-name {
   margin-top: 8px;
+  margin-left: 50px;
   color: #202b52;
   font-weight: bolder;
   font-size: 25px; ;
 } 
 
+.ChP_grup-stripView{
+  overflow: hidden;
+  height: 70%;
+  width: 93%;
+  margin: 30px 0px 10px 48px;
+  padding: 0px 0px 0px 0px;
+}
 .ChP_grup-strip{
-height: 30%;
-width: 100%;
-margin-top: 10px;
-margin-bottom: 50px;
-background: blue;
-overflow: hidden;
-box-sizing: content-box;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  transition: all 1s ease;
 }
 
 .ChP_grup-strip-member{
-width: 20%;
-height: 100%;
-background: red;
-float: left;
-text-align: center;
+  width: 253px;
+  height: 100%;
+  float: left;
+  text-align: center;
 }
 
 .ChP_grup-strip-member-imgDiv{
-  height: 80%;
-}
-
-.ChP_grup-strip-member-img{
+  margin: 0 auto;
   width: 55%;
+  height: 75%;
   border-radius: 100px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 .ChP_grup-strip-member-name{
@@ -46,4 +56,27 @@ text-align: center;
   font-weight: bolder;
   font-size: 15px;
   line-height: 1;
+}
+.arrow{
+  position: absolute;
+  top: 640px;
+  width: 20px;
+  height: 20px;
+}
+.arrow:hover{
+  top: 638px;
+  width: 28px;
+  height: 28px;
+}
+.arrowLeft{
+  left: 50px;
+}
+.arrowLeft:hover{
+  left: 46px;
+}
+.arrowRight{
+  left: 1340px;
+}
+.arrowRight:hover{
+  left: 1336px;
 }
