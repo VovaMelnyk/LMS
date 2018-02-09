@@ -25,7 +25,7 @@
             /* arrow icon */
             position: absolute;
             top: 18px;
-            right: 4px;
+            right: 8px;
             width: 20px;
             height: 20px;
             background: url(../img/menu-arrow-right.svg) no-repeat;
@@ -37,7 +37,7 @@
         }
         &_last::after {
         /* arrow icon */
-            right: 18px;
+            right: 24px;
         }
     }
 
@@ -85,6 +85,10 @@
                 height: 14px;
                 background: url(../img/link-arrow-right.svg) no-repeat;
                 content: '';
+
+                &:hover {
+                    text-decoration: underline solid $grey-pholder;
+                }
             }
             &:hover {
                 text-decoration: underline solid $grey-pholder;
@@ -116,7 +120,7 @@
     input[type=checkbox]:checked + .c-accordion-menu__submenu-button::before {
         transform: translateX(-15%) translateY(-15%) rotate(-90deg);
     }
-    // .rotated {
-    //     transform: translateX(-15%) translateY(-15%) rotate(-90deg);
-    // }
 }
+// .c-accordion-menu__submenu-item::before {
+//     transform: translateX(25%) translateY(25%) rotate(90deg);
+// }
