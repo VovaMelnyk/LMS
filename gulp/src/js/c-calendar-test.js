@@ -26,24 +26,24 @@ let nextMonthFD = nextMonth.getDate();  // Первое число следую�
 
 
 function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
-    
+
     let monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
         "July", "August", "September", "October", "November", "December"
     ];
-    
+
     let d = new Date(currentYear, currentMonth);
 
     // d.getMonth();
     // console.log(d.getMonth());
-    
+
     // console.log(currentMonth);
 
     // CALC HEADER
     // Записываем имя месяца в DOM
-    document.querySelector('.c-calendar__month-name').innerHTML = `${monthNames[d.getMonth()]} `;
+    document.querySelector('.c-calendar__month-name').innerHTML = `${monthNames[d.getMonth()]}&nbsp`;
     // Записываем год в DOM
     document.querySelector('.c-calendar__year').innerHTML = `${d.getFullYear()}_`;
-    
+
 
 
 
@@ -66,7 +66,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
         <div class='c-calendar__day-num'>
             <span class='c-day-num'>${d.getDate()}</span>
         </div>`;
-        d.setDate(d.getDate() + 1);       
+        d.setDate(d.getDate() + 1);
     }
 
     // добить таблицу пустыми ячейками, если нужно
@@ -112,18 +112,18 @@ function getDay(date) {
 }
 
 // function getFullYearR(currentYear, currentMonth) {
-    // let d = new Date(currentYear, currentMonth);
-    // let tempY = document.querySelector('.c-calendar__year').innerText;
-    // tempY.slice(0,4);
-    // console.log(tempY.slice(0,4));
-    // parseFloat(tempY);
-    // console.log(parseFloat(tempY));
-    // console.log(tempY);    
-    // if (d.getFullYear() < currentYear) {
-    //     currentYear--;
-    // } else {
-    //     currentYear++;
-    // }
+// let d = new Date(currentYear, currentMonth);
+// let tempY = document.querySelector('.c-calendar__year').innerText;
+// tempY.slice(0,4);
+// console.log(tempY.slice(0,4));
+// parseFloat(tempY);
+// console.log(parseFloat(tempY));
+// console.log(tempY);    
+// if (d.getFullYear() < currentYear) {
+//     currentYear--;
+// } else {
+//     currentYear++;
+// }
 //     if (currentMonth < 0) {
 //         currentMonth = 11;
 //         currentYear--;
@@ -136,11 +136,11 @@ function getDay(date) {
 document.querySelector('.prev-month-btn').onclick = function () {
     document.querySelector('.c-calendar__main-inner').innerHTML = '';
     currentMonth--;
-    if (currentMonth<0) {
+    if (currentMonth < 0) {
         currentMonth = 11;
         currentYear--;
     }
-    console.log('currentMonth',currentMonth);
+    console.log('currentMonth', currentMonth);
     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
 };
 
@@ -151,7 +151,7 @@ document.querySelector('.next-month-btn').onclick = function () {
         currentMonth = 0;
         currentYear++;
     }
-   createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
+    createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
 };
 
 //////////////////////
@@ -159,3 +159,17 @@ document.querySelector('.next-month-btn').onclick = function () {
 //////////////////////
 
 // document.createDocumentFragment - почитать !
+
+let dayTask = document.querySelectorAll('.c-calendar__day-num');
+
+let task = document.createElement('span');
+task.classList.add('c-calendar__task','c-calendar__task_mt');
+task.innerHTML = 'Пройти тест';
+
+dayTask[11].appendChild(task);
+
+
+
+
+
+
