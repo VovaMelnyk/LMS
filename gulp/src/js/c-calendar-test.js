@@ -37,11 +37,9 @@ console.log('Следующий месяц - ', nextMonth);
 let nextMonthFD = nextMonth.getDate();
 console.log('Число следующего месяца - ', nextMonthFD);
 
-var monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
+let monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
     "July", "August", "September", "October", "November", "December"
 ];
-
-
 
 function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
 
@@ -62,7 +60,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     document.querySelector('.c-calendar__year').innerHTML = `${currentYear}_]`;
 
     // CALC MAIN-FIALD
-    let mainCal = document.querySelector('.c-calendar__main');
+    let mainCal = document.querySelector('.c-calendar__main-inner');
 
     // заполнить первый ряд от понедельника
     // и до дня, с которого начинается месяц
@@ -114,7 +112,6 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
             calDateBg[i].classList.add('c-day-num_today');
         }
     }
-
 }
 
 createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
@@ -126,17 +123,22 @@ function getDay(date) {
     return day - 1;
 }
 
-// document.querySelector('.prev-month-btn').onclick = function () {
-//     currentMonth--;
-//     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
-//     console.log('hello');
-// };
+document.querySelector('.prev-month-btn').onclick = function () {
+    document.querySelector('.c-calendar__main-inner').innerHTML = '';
+    currentMonth--;
+    createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
+    console.log('hello');
+    console.log(currentMonth);
 
-// document.querySelector('.next-month-btn').onclick = function () {
-//     currentMonth++;
-//     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
-//     console.log('world');
-// };
+};
+
+document.querySelector('.next-month-btn').onclick = function () {
+    document.querySelector('.c-calendar__main-inner').innerHTML = '';
+    currentMonth++;
+    createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
+    console.log('world');
+    console.log(currentMonth);
+};
 
 
-
+// document.createDocumentFragment - почитать !

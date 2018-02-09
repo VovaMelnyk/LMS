@@ -95,7 +95,8 @@
 }
 
 //Main calendar feald
-.c-calendar__main {
+.c-calendar__main,
+.c-calendar__main-inner {
     display: flex;
     width: 100%;
     flex-direction: row;
