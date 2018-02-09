@@ -53,6 +53,24 @@
       "answer4": "Ответ 4",
       "correctAnswer": "Ответ 1",
       "id": 6
+    },
+    {
+      "title": "",
+      "answer1": "",
+      "answer2": "",
+      "answer3": "",
+      "answer4": "",
+      "correctAnswer": "",
+      "id": 8
+    },
+    {
+      "title": "",
+      "answer1": "",
+      "answer2": "",
+      "answer3": "",
+      "answer4": "",
+      "correctAnswer": "",
+      "id": 9
     }
   ]
 }

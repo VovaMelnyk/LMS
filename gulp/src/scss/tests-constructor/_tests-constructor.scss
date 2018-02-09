@@ -119,11 +119,15 @@
 .change-form-module {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: baseline;
 	color: $dark-text;
 	font-family: 'Museo Sans Cyrl W03 300';
 	font-size: 20px;
+}
+
+.change-form-module__module {
+	/*margin: 16px;*/
 }
 
 .change-form-module__form {

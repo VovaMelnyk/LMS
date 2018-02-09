@@ -33,9 +33,8 @@ const goToCreateTestPage = test => {
 
 	testWrapper.innerHTML = htmlString;
 
-	btnAddTest = document.querySelector("#btnAddTest");
+	let btnAddTest = document.querySelector("#btnAddTest");
 	btnAddTest.addEventListener("click", AddTest);
-	// backToCreateTestMenu();
 };
 
 
