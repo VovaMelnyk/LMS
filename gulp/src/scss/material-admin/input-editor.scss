@@ -16,6 +16,10 @@
         background: inherit;
         width: max-content;
         max-width: 100%;
+        & textarea {
+            min-width: 300px;
+            min-height: 40px;
+        }
     }
     &__instruments {
         position: absolute;

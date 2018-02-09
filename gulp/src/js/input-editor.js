@@ -47,17 +47,24 @@
 
     }
 
-    function addEvents (node) {
-        let edit = findElementByClassName(node, 'input-editor__edit');
-        const delet = findElementByClassName(node, 'input-editor__delete');
-        const save = findElementByClassName(node, 'input-editor__save');
-        setTimeout(()=>console.log(edit, delet, save), 1000)
+    function addInputEditorEvents (inputsEditors, inputDeleter, inputSaver) {
+        const each = [].forEach;
+
+        each.call(inputsEditors, item => {
+            item.onclick =  e => edit(e, item)
+        })
+        each.call(inputDeleter, item => {
+            item.onclick =  e => deleteElement(e, item)
+        })
+        each.call(inputSaver, item => {
+            item.onclick = e => saveTitle(e, item) 
+        })
+
     }
 
     function addNewArticle (node, parentNode) {
         const article = parentNode.children[0].cloneNode(true);
         article.children[0].innerHTML = 'New Article';
-        addEvents(article)
         parentNode.insertBefore(article, node)
 
     }
@@ -71,16 +78,12 @@
         const mAdminInputs = document.getElementById('m-admin__inputs');
         const each = [].forEach;
 
-        each.call(inputsEditors, item => {
-            item.addEventListener( 'click', e => edit(e, item) )
+        addInputEditorEvents(inputsEditors, inputDeleter, inputSaver)
+
+        addNew.addEventListener('click', e => {
+            addNewArticle(addNew, mAdminInputs)
+            addInputEditorEvents(inputsEditors, inputDeleter, inputSaver)
         })
-        each.call(inputDeleter, item => {
-            item.addEventListener( 'click', e => deleteElement(e, item) )
-        })
-        each.call(inputSaver, item => {
-            item.addEventListener( 'click', e => saveTitle(e, item) )
-        })
-        addNew.addEventListener('click', e => addNewArticle(addNew, mAdminInputs) )
 
     }
     document.addEventListener('DOMContentLoaded', init)
