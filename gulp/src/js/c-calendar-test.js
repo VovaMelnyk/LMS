@@ -1,41 +1,28 @@
 
 let today = new Date(); // Текущий день - Sun Feb 04 2018 15:35:42 GMT+0200 (EET)
-console.log('Текущий день - ', today);
 
 let currentYear = today.getFullYear(); // Год - 2018
-console.log('Год - ', today.getFullYear());
 
 let currentMonth = today.getMonth(); // Месяц - 1
-console.log('Месяц - ', currentMonth);
 
 let currentDay = today.getDate(); // Число месяца - 4
-console.log('Число месяца - ', today.getDate());
 
 let currentWeekDay = today.getDay(); // День недели - 0
-console.log('День недели - ', today.getDay());
 
 let firstCurrentMonthDay = new Date(currentYear, currentMonth, 1); // Первый день текущего месяца - Thu Feb 01 2018 00:00:00 GMT+0200 (EET)
-console.log('Первый день текущего месяца - ', firstCurrentMonthDay);
 
 let firstDayNum = firstCurrentMonthDay.getDate(); // Число первого дня месяца - 1
-console.log('Число первого дня месяца - ', firstDayNum);
 
 let tempDay = new Date(currentYear, currentMonth + 1, 0); // Последний день месяца - Wed Feb 28 2018 00:00:00 GMT+0200 (EET)
-console.log('Последний день месяца - ', tempDay);
 
 let lastDate = tempDay.getDate(); // Последнее число месяца / Кол-во дней в месяце - 28
-console.log('Последнее число месяца / Кол-во дней в месяце - ', lastDate);
 
 
 let prevMonth = new Date(currentYear, currentMonth, 0); // Предыдущий месяц -  Wed Jan 31 2018 00:00:00 GMT+0200 (EET)
-console.log('Предыдущий месяц - ', prevMonth);
-let prevMonthLD = prevMonth.getDate();
-console.log('Число предыдущего месяца - ', prevMonthLD);
+let prevMonthLD = prevMonth.getDate(); // Последнее число предыдущего месяца
 
 let nextMonth = new Date(currentYear, currentMonth + 1); // Следующий месяц - Thu Mar 01 2018 00: 00: 00 GMT + 0200(EET)
-console.log('Следующий месяц - ', nextMonth);
-let nextMonthFD = nextMonth.getDate();
-console.log('Число следующего месяца - ', nextMonthFD);
+let nextMonthFD = nextMonth.getDate();  // Первое число следующего месяца
 
 
 function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
@@ -45,20 +32,20 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     ];
     
     let d = new Date(currentYear, currentMonth);
-    console.log('DDDDDD', d);
-    /////////////////////////  
-    let tempDay = new Date(currentYear, currentMonth + 1, 0); // Последний день месяца - Wed Feb 28 2018 00:00:00 GMT+0200 (EET)
-    console.log('Последний день месяца - ', tempDay);
-    /////////////////////////  
-    let lastDate = tempDay.getDate(); // Последнее число месяца / Кол-во дней в месяце - 28
-    console.log('Последнее число месяца / Кол-во дней в месяце - ', lastDate);
-    /////////////////////////  
+
+    // d.getMonth();
+    // console.log(d.getMonth());
+    
+    // console.log(currentMonth);
 
     // CALC HEADER
     // Записываем имя месяца в DOM
-    document.querySelector('.c-calendar__month-name').innerHTML = `[${monthNames[d.getMonth()]} `;
+    document.querySelector('.c-calendar__month-name').innerHTML = `${monthNames[d.getMonth()]} `;
     // Записываем год в DOM
-    document.querySelector('.c-calendar__year').innerHTML = `${d.getFullYear()}_]`;
+    document.querySelector('.c-calendar__year').innerHTML = `${d.getFullYear()}_`;
+    
+
+
 
     // CALC MAIN-FIALD
     let mainCal = document.querySelector('.c-calendar__main-inner');
@@ -77,9 +64,9 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     while (d.getMonth() == currentMonth) {
         mainCal.innerHTML += `
         <div class='c-calendar__day-num'>
-        <span class='c-day-num'>${d.getDate()}</span>
+            <span class='c-day-num'>${d.getDate()}</span>
         </div>`;
-        d.setDate(d.getDate() + 1);
+        d.setDate(d.getDate() + 1);       
     }
 
     // добить таблицу пустыми ячейками, если нужно
@@ -124,22 +111,51 @@ function getDay(date) {
     return day - 1;
 }
 
+// function getFullYearR(currentYear, currentMonth) {
+    // let d = new Date(currentYear, currentMonth);
+    // let tempY = document.querySelector('.c-calendar__year').innerText;
+    // tempY.slice(0,4);
+    // console.log(tempY.slice(0,4));
+    // parseFloat(tempY);
+    // console.log(parseFloat(tempY));
+    // console.log(tempY);    
+    // if (d.getFullYear() < currentYear) {
+    //     currentYear--;
+    // } else {
+    //     currentYear++;
+    // }
+//     if (currentMonth < 0) {
+//         currentMonth = 11;
+//         currentYear--;
+//     } else {
+//         currentYear++;
+//     }
+//     return currentYear;
+// }
+
 document.querySelector('.prev-month-btn').onclick = function () {
     document.querySelector('.c-calendar__main-inner').innerHTML = '';
     currentMonth--;
+    if (currentMonth<0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    console.log('currentMonth',currentMonth);
     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
-    console.log('hello');
-    console.log(currentMonth);
-
 };
 
 document.querySelector('.next-month-btn').onclick = function () {
     document.querySelector('.c-calendar__main-inner').innerHTML = '';
     currentMonth++;
-    createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
-    console.log('world');
-    console.log(currentMonth);
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+   createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
 };
 
+//////////////////////
+// getFullYearR();
+//////////////////////
 
 // document.createDocumentFragment - почитать !

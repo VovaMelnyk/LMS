@@ -22,14 +22,27 @@
 .c-calendar__month {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     min-height: 40px;
-    width: 240px;
+    width: 256px;
     background-color: $cyan;
     padding: 0 8px;
     position: relative;
+    font-size: 32px;
     // cursor: pointer;
+    &::before {
+        content: '[';
+        position: absolute;
+        left: 8px;
+        padding-top: 5px;
+    }
+    &::after {
+        content: ']';
+        position: absolute;
+        right: 8px;
+        padding-top: 5px;
+    }
 }
 
 .prev-month-btn {
