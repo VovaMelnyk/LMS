@@ -58,7 +58,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     // Записываем имя месяца в DOM
     document.querySelector('.c-calendar__month-name').innerHTML = `[${monthNames[d.getMonth()]} `;
     // Записываем год в DOM
-    document.querySelector('.c-calendar__year').innerHTML = `${currentYear}_]`;
+    document.querySelector('.c-calendar__year').innerHTML = `${d.getFullYear()}_]`;
 
     // CALC MAIN-FIALD
     let mainCal = document.querySelector('.c-calendar__main-inner');
