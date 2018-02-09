@@ -6,6 +6,7 @@ let testWrapper = document.querySelector("#constructor-test-wrapper");
 
 
 const basicUrl = 'http://localhost:3000/tests/';
+// const basicUrl = 'http://localhost:3000/course/';
 
 // --------------------------------------------------------------
 
