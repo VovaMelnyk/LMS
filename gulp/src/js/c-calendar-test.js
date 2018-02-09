@@ -37,12 +37,13 @@ console.log('Следующий месяц - ', nextMonth);
 let nextMonthFD = nextMonth.getDate();
 console.log('Число следующего месяца - ', nextMonthFD);
 
-let monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
-    "July", "August", "September", "October", "November", "December"
-];
 
 function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD) {
-
+    
+    let monthNames = ["January", "February", "March", "April", "May", "June", // Название месяца - February
+        "July", "August", "September", "October", "November", "December"
+    ];
+    
     let d = new Date(currentYear, currentMonth);
     console.log('DDDDDD', d);
     /////////////////////////  
@@ -55,7 +56,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
 
     // CALC HEADER
     // Записываем имя месяца в DOM
-    document.querySelector('.c-calendar__month-name').innerHTML = `[${monthNames[today.getMonth()]} `;
+    document.querySelector('.c-calendar__month-name').innerHTML = `[${monthNames[d.getMonth()]} `;
     // Записываем год в DOM
     document.querySelector('.c-calendar__year').innerHTML = `${currentYear}_]`;
 
