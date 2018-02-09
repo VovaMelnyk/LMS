@@ -33,19 +33,11 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
 
     let d = new Date(currentYear, currentMonth);
 
-    // d.getMonth();
-    // console.log(d.getMonth());
-
-    // console.log(currentMonth);
-
     // CALC HEADER
     // Записываем имя месяца в DOM
     document.querySelector('.c-calendar__month-name').innerHTML = `${monthNames[d.getMonth()]}&nbsp`;
     // Записываем год в DOM
     document.querySelector('.c-calendar__year').innerHTML = `${d.getFullYear()}_`;
-
-
-
 
     // CALC MAIN-FIALD
     let mainCal = document.querySelector('.c-calendar__main-inner');
