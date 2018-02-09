@@ -160,7 +160,8 @@ function dayTask() {
     task.classList.add('c-calendar__task','c-calendar__task_mt');
     task.innerHTML = 'Пройти тест';
     
-    dayTask[11].appendChild(task);
+    
+    dayTask[Math.floor(Math.random() * dayTask.length)].appendChild(task);
     
     return dayTask;
 }
