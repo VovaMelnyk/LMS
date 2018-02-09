@@ -15,8 +15,8 @@ for (let i = 0; i < navBarIcon.length; i++) {
         let notification = this.nextElementSibling;
         let notifications = document.getElementsByClassName('c-notifications');
         let tooltips = document.getElementsByClassName('c-header__tooltip');
-        //console.log(this);
-        //console.log(notification);
+        console.log(this);
+        console.log(notification);
         //console.log(notifications);
 
         if (notification.style.display === 'block') {
