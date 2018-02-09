@@ -22,7 +22,6 @@
 		padding: 15px;
 	}
 }
-
 .t-answers {
 	display: flex;
     flex-direction:column;
@@ -32,13 +31,63 @@
 	&__choice {
 		font-size: 24px;
 		padding: 12px 8px;
+	/*	display: flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:flex-start;*/
 	}
 
-	&__item {
+/*	&__item {
 		background: green;
-	}
+	}*/
 }
-
+/*стиль синих чекбоксов*/
+.t-answers__label {
+	display: flex;
+/*	display: inline-flex;*/
+    flex-direction:row;
+/*    justify-content:flex-start;*/
+    justify-content:space-between;
+    align-items:flex-start;
+    width: 730px;
+    /*width: 50%;*/
+/*   https://vovamelnyk.github.io/LMS/demo/testTasks.html*/
+ /*   width: 100%;*/
+/*    flex-basis: 760px;*/
+}
+.t-label {
+/*    flex-basis: 100%;*/
+	flex-basis: 700px;
+	/*flex-basis: auto;*/
+}
+.t-answers__item {
+	display: none;
+}
+.t-checkbox-custom {
+	position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+	/*width: 24px;*/             /* Обязательно задаем ширину */
+	flex-basis: 24px;             /* Обязательно задаем ширину */
+	height: 24px;            /* Обязательно задаем высоту */
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	/*box-sizing: border-box;*/
+}
+.t-checkbox-custom, .t-label {
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+}
+.t-answers__item:checked + .t-checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	/*display: block;	*/		 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: #00BFFF;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 50px;
+}
 .t-navigation {
 	text-align: center;
 	font-size: 24px;

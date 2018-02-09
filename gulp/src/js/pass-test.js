@@ -198,7 +198,7 @@ function getLenghtTests(c) {
             let nowTest = document.querySelector('.t-question__task').innerHTML;
 
             let newId = nowTest[nowTest.length-1];   // номер текущего теста
-            numberPages[newId].classList.add('ramka'); // класс с рамкой
+            //numberPages[newId].classList.add('ramka'); // класс с рамкой
               console.log(numberPages[newId]);
             let check = document.getElementsByClassName('t-answers__item');
             for (var y = 0; y < check.length; y++) {
