@@ -69,8 +69,46 @@ function getTestJson(c) { // Получаем данные с сервера и 
       updateView(data, taskContainer, taskScript);
       getLenghtTests(url);
 
+        /////////Настя Timer///////////////////
+        var repeatTimer;
+        repeatTimer = setInterval (timer, 1000);
+        function timer () {
+            var minutes = document.getElementsByClassName('t-timer__minutes')[0].innerHTML;
+            var seconds = document.getElementsByClassName('t-timer__seconds')[0].innerHTML;
+            var end = false;
 
-      return data;
+            if (seconds>0) seconds--;
+            else {
+                seconds = 59;
+                if(minutes>0) minutes--;
+                else {
+                    end=true;
+                }
+            }
+
+            if (seconds<10) {
+                seconds='0' + seconds;
+            }
+
+            if(end) {
+                clearInterval (repeatTimer);
+                console.log ('время и стекло');
+                updateView(data, taskContainer, resultScript);
+                document.getElementsByClassName('t-results__summ-time')[0].innerHTML = 'К сожалению время вышло';
+
+                /* переход на страницу с результатами */
+            }
+            else {
+                document.getElementsByClassName('t-timer__minutes')[0].innerHTML=minutes;
+                document.getElementsByClassName('t-timer__seconds')[0].innerHTML=seconds;
+            }
+
+
+        }
+
+        return data;
+
+      /////////////////////
 
     })
     .then(data => {
@@ -122,6 +160,10 @@ const resultTest = (templateData) => {
   localStorage.clear();
 
   updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
+
+  /////////Настя///////////////////
+    document.getElementsByClassName('t-results__summ-time')[0].innerHTML = 'Пройдено за N минут';
+  /////////////////////////////////
 
   let mistake = document.querySelector('.t-mistakes__numbers'); //span
   let question = document.querySelector('.t-mistakes__description'); //li
