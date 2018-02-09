@@ -92,6 +92,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
             calDateBg[i].classList.add('c-day-num_today');
         }
     }
+    dayTask()
 }
 
 createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
@@ -132,7 +133,6 @@ document.querySelector('.prev-month-btn').onclick = function () {
         currentMonth = 11;
         currentYear--;
     }
-    console.log('currentMonth', currentMonth);
     createCalendar(currentYear, currentMonth, firstCurrentMonthDay, currentDay, prevMonthLD);
 };
 
@@ -152,13 +152,18 @@ document.querySelector('.next-month-btn').onclick = function () {
 
 // document.createDocumentFragment - почитать !
 
-let dayTask = document.querySelectorAll('.c-calendar__day-num');
-
-let task = document.createElement('span');
-task.classList.add('c-calendar__task','c-calendar__task_mt');
-task.innerHTML = 'Пройти тест';
-
-dayTask[11].appendChild(task);
+function dayTask() {
+    
+    let dayTask = document.querySelectorAll('.c-calendar__day-num');
+    
+    let task = document.createElement('span');
+    task.classList.add('c-calendar__task','c-calendar__task_mt');
+    task.innerHTML = 'Пройти тест';
+    
+    dayTask[11].appendChild(task);
+    
+    return dayTask;
+}
 
 
 
