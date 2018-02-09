@@ -28,7 +28,7 @@ document.querySelector('#old-pass').addEventListener('change', (e) => {
 	let pass2 = localStorage.getItem('lms_pass');
 
 	if (pass != pass2) {
-		document.querySelector('.alert').innerHTML = 'Incorrect old password';
+		document.querySelector('.alert').innerHTML = 'Неверный старый пароль';
 	}
 	else {
 		document.querySelector('.alert').innerHTML = '';
@@ -40,7 +40,7 @@ document.querySelector('#new-pass').addEventListener('change', (e) => {
 	let pass = document.querySelector('#new-pass').value;
 
 	if (pass.search(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g)) {
-		document.querySelector('.alert').innerHTML = 'Pssword too short or unaccesseble sybols';
+		document.querySelector('.alert').innerHTML = 'Пароль слишком короткий или недоступный символ';
 	}
 	else {
 		document.querySelector('.alert').innerHTML = '';
@@ -53,14 +53,14 @@ document.querySelector('#repeat-new-pass').addEventListener('change', (e) => {
 	let pass2 = document.querySelector('#repeat-new-pass').value;
 
 	if (pass.search(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g)) {
-		document.querySelector('.alert').innerHTML = 'Pssword too short or unaccesseble sybols';
+		document.querySelector('.alert').innerHTML = 'Пароль слишком короткий или недоступный символ';
 	}
 	else {
 		document.querySelector('.alert').innerHTML = '';
 	}
 
 	if (pass != pass2) {
-		document.querySelector('.alert').innerHTML = 'Passwords are not the same';
+		document.querySelector('.alert').innerHTML = 'Пароли не совпадают';
 	}
 	else {
 		document.querySelector('.alert').innerHTML = '';
