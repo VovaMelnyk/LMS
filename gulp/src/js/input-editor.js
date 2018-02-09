@@ -32,21 +32,6 @@
 
     }
 
-    function isClassNamePresent (element, className) {
-        return (element.getAttribute('class') == className)
-    }
-
-    function findElementByClassName (parent, className) {
-        const each = [].forEach;
-        
-        if ( !isClassNamePresent(parent, className) ) return each.call(parent.children, item => {
-            findElementByClassName(item, className)
-        })
-        console.log(parent)
-        return parent
-
-    }
-
     function addInputEditorEvents (inputsEditors, inputDeleter, inputSaver) {
         const each = [].forEach;
 
@@ -62,10 +47,10 @@
 
     }
 
-    function addNewArticle (node, parentNode) {
-        const article = parentNode.children[0].cloneNode(true);
-        article.children[0].innerHTML = 'New Article';
-        parentNode.insertBefore(article, node)
+    function addNewArticle (node, parentNode, article) {
+        const articleNode = article.cloneNode(true);
+        articleNode.children[0].innerHTML = 'New Article';
+        parentNode.insertBefore(articleNode, node)
 
     }
 
@@ -76,15 +61,19 @@
         const paragraphInputItems = document.getElementsByClassName('input-editor__item');
         const addNew = document.getElementById('m-add-new');
         const mAdminInputs = document.getElementById('m-admin__inputs');
+
+        const article = mAdminInputs.children[0].cloneNode(true);
         const each = [].forEach;
 
         addInputEditorEvents(inputsEditors, inputDeleter, inputSaver)
 
         addNew.addEventListener('click', e => {
-            addNewArticle(addNew, mAdminInputs)
+            addNewArticle(addNew, mAdminInputs, article)
             addInputEditorEvents(inputsEditors, inputDeleter, inputSaver)
         })
 
     }
-    document.addEventListener('DOMContentLoaded', init)
+    if ( document.getElementById('m-admin__inputs') ) {
+        document.addEventListener('DOMContentLoaded', init)
+    }
 })()
