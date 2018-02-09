@@ -5,8 +5,10 @@
 }
 .m-bottomBtn {
 	border: 3px solid white;
-}
-.m-bottomBtn:first-child {
-	margin-right: 6%;
-	margin-left:0;
+	padding: 8px;
+
+	&:first-child {
+		margin-right: 6%;
+		margin-left:0;
+	}
 }
