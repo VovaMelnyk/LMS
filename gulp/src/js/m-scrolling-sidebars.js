@@ -48,4 +48,7 @@
     if (document.getElementById('main')) {
         document.addEventListener('DOMContentLoaded', init);
     }
+    document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
+        setTimeout(init, 1000)
+    })
 })();
