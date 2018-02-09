@@ -115,6 +115,9 @@ const resultTest = (templateData) => {
 
   let answers = document.querySelectorAll('.t-answers__item'); // набор всех вопросов (radio)
   let arrRadio = Array.from(answers); // массив из radio
+
+    //написать функцию для сбора данных в массив из LocalStorage
+
   localStorage.clear();
 
   updateView(templateData, taskContainer, resultScript); // загрузка правильных и неправильных ответов
@@ -175,8 +178,6 @@ function getLenghtTests(c) {
 
 
     }).then(data => {
-
-
         let pages = document.querySelector('.t-navigation__pagination');
         for (var z = 0; z < data.length; z++) {
           let li = document.createElement('li');
@@ -189,12 +190,16 @@ function getLenghtTests(c) {
         }
         let numberPages = document.getElementsByClassName('t-navigation__number');
 
+        // тут добавляем класс с рамочкой текущего теста newId
+
         for (let x = 0; x < numberPages.length; x++) {
           numberPages[x].addEventListener("click", function() {
 
             let nowTest = document.querySelector('.t-question__task').innerHTML;
 
-            let newId = nowTest[nowTest.length-1];
+            let newId = nowTest[nowTest.length-1];   // номер текущего теста
+            numberPages[newId].classList.add('ramka'); // класс с рамкой
+              console.log(numberPages[newId]);
             let check = document.getElementsByClassName('t-answers__item');
             for (var y = 0; y < check.length; y++) {
               if (check[y].checked) {
