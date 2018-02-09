@@ -948,7 +948,90 @@ p {
           transform: translate(0, 0) rotate(180deg);
   margin-top: 6px; }
 
+
+/*===========================================*/
   .alert {
     color: red;
   font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
   }
+
+  .profile-public {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+.profile-public-icon {
+  border-radius: inherit;
+ height: 40px;
+}
+.profile-public-message {
+  margin-left: 10px;
+      color: red;
+  font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+
+.profile-slider {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 40px 0;
+  padding: 0 50px;
+  overflow: hidden;
+}
+
+ .slider-title {
+  color: #202b52;
+  font-size: 25px; ;
+}
+
+
+.slider-item {
+  position: relative;
+  width: 19%;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.item-img  {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.item-img>img {
+  height: 100px;
+}
+
+.item-name, .item-score {
+  font-size: 15px;
+  text-align: center;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+.arrowLeft:active {
+  left: 48px;
+}
+
+.arrowRight {
+  position: absolute; 
+  top: 80px;
+  right: 50px;
+}
+
+.arrowRight:active {
+  right: 48px;
+}

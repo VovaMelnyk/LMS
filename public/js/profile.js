@@ -1,7 +1,7 @@
 if (!localStorage.getItem('lms_img') &&
     !localStorage.getItem('lms_name') &&
     !localStorage.getItem('lms_email')
-) {
+    ) {
     window.location = 'http://localhost:3000/index.html';
 }
 
@@ -22,50 +22,40 @@ document.querySelector('#user-facebook').setAttribute('href', facebook);
 document.querySelector('#user-google').setAttribute('href', google); 
 document.querySelector('#user-linkedin').setAttribute('href', linkedin); 
 
+function slider() {
 
-axios('http://localhost:3000/users')
-        .then(function (data) {
-        	console.log(data.data)
-        	var members = data.data;
-        	var strip = '';
-        	var stripLength = 0;
-        	var memberLength = parseInt(getComputedStyle(document.getElementsByClassName('ChP_grup-strip-member')[0]).width);
-        	
-        	for(var i=0; i<members.length; i++){
-        		if(members[i].group == "FrontEnd_1"){
-        			strip+=`<div class="ChP_grup-strip-member">
-                    <div class="ChP_grup-strip-member-imgDiv" style="background-image: url(img/users/${members[i].img})"></div>
-                    <p class="ChP_grup-strip-member-name">${members[i].name} ${members[i].latName}</p>
-                    <p class="ChP_grup-strip-member-bal">${members[i].grade}</p>
-                </div>`
+    var slides = [];
+    
+    axios('http://localhost:3000/users')
+    .then(function (data) {
 
-                document.getElementsByClassName('ChP_grup-strip')[0].innerHTML = strip;
-                
-                stripLength+=memberLength
+       for(var i=0; i<data.data.length; i++){
+          if(data.data[i].group == "FrontEnd_1"){
+             slides.push(`
+                 <div class="slider-item">
+                 <p class="item-img"><img src="img/users/${data.data[i].img}" alt=""></p>
+                 <p class="item-name">${data.data[i].name} ${data.data[i].lastName}</p>
+                 <p class="item-score">${data.data[i].grade}</p>
+                 </div>`);
+         }
+     }
+     document.querySelector('.slider-stripe').innerHTML = slides.join('');
+     document.querySelector('.arrowLeft').addEventListener('click', left);
+     document.querySelector('.arrowRight').addEventListener('click', right);
 
-        		}
+     function left() {
+        var items = document.querySelectorAll('.slider-item');
+        slides.push(slides.shift());
+        document.querySelector('.slider-stripe').innerHTML = slides.join('');
+    }
 
-        		document.getElementsByClassName('ChP_grup-strip')[0].style.width=stripLength+'px';
-			}
-            document.getElementsByClassName('arrowLeft')[0].onclick = turnLeft;
-            document.getElementsByClassName('arrowRight')[0].onclick = turnRight;
+    function right() {
+        var items = document.querySelectorAll('.slider-item');
+        slides.unshift(slides.pop());
+        document.querySelector('.slider-stripe').innerHTML = slides.join('');
+    }
+});
+}
 
-            var some = 0; 
+slider();
 
-            function turnLeft(){
-                some += 253;
-                if(some<=0){
-                document.getElementsByClassName('ChP_grup-strip')[0].style.left=some+'px';}
-                else{
-                    some=0
-                }
-            }
-            function turnRight(){
-                some += -253 
-                if(some>=-(members.length*253-1265)){
-                document.getElementsByClassName('ChP_grup-strip')[0].style.left=some+'px';}
-                else{
-                    some=-(members.length*253-1265);
-                }
-            }
-        });

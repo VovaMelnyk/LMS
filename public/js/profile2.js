@@ -47,7 +47,7 @@ document.querySelector('#new-pass').addEventListener('change', (e) => {
 	}
 });
 
-document.querySelector('#repeat-new-pass').addEventListener('change', (e) => {
+document.querySelector('#repeat-new-pass').addEventListener('change', function(e) {
 
 	let pass = document.querySelector('#new-pass').value;
 	let pass2 = document.querySelector('#repeat-new-pass').value;
@@ -67,4 +67,14 @@ document.querySelector('#repeat-new-pass').addEventListener('change', (e) => {
 	}
 }) 
 
+function publicFunction() {
+	var open = true;
+	return function() {
+		document.querySelector('.profile-public-icon').setAttribute('src', open ? 'img/open.svg' : 'img/close.svg')
+		document.querySelector('.profile-public-message').innerHTML = open ? 'I want my profile to be privat' : 'I want my profile to be public';
+		document.querySelector('.profile-public-message').style.color = open ? '#00ff00' : '#ff0000';
+		open = !open;
+	}
+}
 
+document.querySelector('.profile-public-icon').addEventListener('click', publicFunction());
