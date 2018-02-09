@@ -343,25 +343,29 @@ function increaseLikes(targetId) {
         });
 }
 
-function createPost() {
+function createPost(event) {
 
     console.log(`Fetching URL: ${postUrl}`);
-
+    let postTitle = document.getElementById("postTheme");
     let added = {};
-
+if ( postTitle.value == '') {
+    postTitle.placeholder = 'Введите тему объявления';
+    postTitle.style.border = '1px solid #ff0000';
+    event.preventDefault();
+    } else {
     added.headers = {
         'Content-Type': 'application/json'
     };
     added.method = "POST";
     added.body = JSON.stringify({
         "isNew": true,
-        "title": "Next post",
+        "title": postTitle.value,
         "date": setMessageDate(),
         "time": setMessageTime(),
         "userID": currentUserId,
         "userName": currentUser,
         "userRole": currentRole,
-        "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        "message": suneditor.getContent(),
         "likes": 0,
         "changeDate": "",
         "changeTime": "",
@@ -381,7 +385,9 @@ function createPost() {
         .catch(err => {
             console.error("Error: ", err);
         });
-}
+
+    }
+};
 
 function createComment(targetId) {
 
@@ -485,11 +491,33 @@ function updateMessage(targetId) {
         }
     } else {
         alert("Изменить сообщение может только автор или администратор!");
-    }
-}
+    };
+};
 
+
+function showEditor(event) {
+        console.log('sdlfkjs');
+        event.target.classList.toggle('add');
+        event.target.classList.toggle('cancel');
+        editor.classList.toggle('show');
+        let subTitle = document.querySelector("#sub_title");
+        console.log(subTitle);
+        if ( subTitle.innerHTML == lastNewsTitle) {
+            subTitle.innerHTML = '[ Создать объявление _]';
+        } else {
+            subTitle.innerHTML = lastNewsTitle;
+        };
+};
+
+let sendPost = document.querySelector('#send-post');
+sendPost.addEventListener("click", createPost);
+
+let editor = select(".add-post");
 let addIcon = select(".icon-add");
-addIcon.addEventListener("click", createPost);
+
+
+let lastNewsTitle = '[ Последние новости: ]';
+addIcon.addEventListener("click", showEditor);
 
 window.onload = pageRender();
 

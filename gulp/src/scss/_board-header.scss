@@ -34,11 +34,18 @@
     min-height: rem(33);
     border: none;
     border-radius: 50%;
-    background: url("../img/add.png") no-repeat;
     box-shadow: rgba(100, 100, 100, .4) rem(4) rem(4) rem(8) rem(-2);
 }
 
+    .add {
+        background: url("../img/add.png") no-repeat;
+    }
+    .cancel {
+        background: url("../img/canceladd.png") no-repeat;
+    }
+
 .add-post {
+    display: none;
     padding: 0 rem(64);
     position: relative;
 
@@ -52,6 +59,34 @@
         right: rem(64);
     }
 
+    &__theme {
+        margin: rem(16) 0;
+        font-family: $text-font;
+        font-size: rem(16);
+        color: $light-text;
+        text-align: left;
+    }
+
+    &__input {
+        background-color: $white;
+        border: 1px solid $grey-pholder;
+        border-radius: rem(8);
+        margin-left: rem(16);
+        font-family: $text-font;
+        color: $light-text;
+        padding: rem(8);
+        width: 80%;
+
+        &:focus,
+        &:active {
+            border: 0;
+            outline: none;
+        }
+    }
+}
+
+.show {
+    display: block;
 }
 
 .option {
@@ -141,7 +176,7 @@
     .editor_tool .layer_editor button:focus {
             background-color: $middle-grey;
         }
-    
+
 
     .modal-dialog .modal-content {
         background-color: $light-gray;
