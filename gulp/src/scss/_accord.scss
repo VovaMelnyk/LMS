@@ -40,7 +40,7 @@
             right: 24px;
         }
         //admin service button: add themes to the left menu
-        &_add-theme {
+        &_add-material {
             position: relative;
             display: flex;
             width: 32px;
@@ -147,6 +147,11 @@
     }
     input[type=checkbox]:checked + .c-accordion-menu__submenu-button {
         color: $orange;
+
+        & > .admin-editor__instruments {
+            display: flex;
+            justify-content: space-around;
+        }
     }
     input[type=checkbox]:checked + .c-accordion-menu__submenu-button::before {
         transform: translateX(-15%) translateY(-15%) rotate(-90deg);
