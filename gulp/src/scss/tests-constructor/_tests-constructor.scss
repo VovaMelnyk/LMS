@@ -127,7 +127,11 @@
 }
 
 .change-form-module__module {
-	/*margin: 16px;*/
+	margin: 16px;
+}
+
+.change-form-module__module__former {
+	margin: 16px;
 }
 
 .change-form-module__form {
@@ -142,6 +146,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: baseline;
+	margin: 16px;
 }
 
 /*
