@@ -25,7 +25,7 @@ document.querySelector('#user-facebook').value = facebook;
 document.querySelector('#user-google').value = google; 
 document.querySelector('#user-linkedin').value = linkedin;
 document.querySelector('.profile-public-icon').setAttribute('src', open ? 'img/open.svg' : 'img/close.svg')
-document.querySelector('.profile-public-message').innerHTML = open ? 'I want my profile to be privat' : 'I want my profile to be public';
+document.querySelector('.profile-public-message').innerHTML = open ? 'Мой профиль открыт для всех' : 'Данные моего профиля закрыты';
 document.querySelector('.profile-public-message').style.color = open ? '#00ff00' : '#ff0000';
 
 document.querySelector('#old-pass').addEventListener('change', (e) => {
