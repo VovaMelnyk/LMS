@@ -4,15 +4,7 @@
     color: #222c4f;
     margin-bottom: 32px;
     }
-    &__add-options{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 95%;
-        border-bottom: 2px solid #ef742e;
-        margin-bottom: 24px;
-        font-size: 20px;
-    }
+
     &__material{
         background-color: #e8e8e8;
         padding: 2px 16px 0 16px;
@@ -84,20 +76,55 @@
         }
 }
 .tabs{
-    border-bottom: 2px solid #ef742e;
-    width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
     text-align: left;
-    
-    & label {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    border-bottom: 2px solid #ef742e;
+    margin-bottom: 24px;
+    font-size: 20px;
+    & .tab-content {
+      z-index: 2;
+      display: none;
+      overflow: hidden;
+      width: 100%;
+      padding: 16px;
+      // position: absolute;
+      // top: 53px;
+      // left: 0;
+    }
+    & .label {
       display: block;
       padding: 14px 21px;
       border-radius: 2px 2px 0 0;
+      border-bottom: 2px solid #ef742e;
       font-size: 20px;
       font-weight: normal;
       text-transform: uppercase;
       cursor: pointer;
       position: relative;
       top: 4px;
+      &:hover {
+          background: #222c4f;
         }
+    }
+    & input[type="radio"] {
+      position: absolute;
+      top: 0;
+      left: -9999px;
+    }
+}
+.tabs [id^="tab"]:checked + .label {
+  top: 0;
+  padding-top: 17px;
+  background: #222c4f;
+}
+.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+  display: block;
 }
