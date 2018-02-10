@@ -1,56 +1,41 @@
 <div class="material-admin">
     <div id="cross" class="material-admin__cross icon"></div>
     <h2 class="material-admin__title">[ Добавление темы: теория, тесты, ДЗ ]</h2>
-    <ul class="tabs material-admin__add-options" role="tablist">
-        <li>
-            <input type="radio" name="tabs" id="tab1" checked />
-            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
-                   class="material-admin__material label">Теория
-            </label>
-            <div id="tab-content1" class="tab-content material-admin__main"
-                 role="tabpanel" aria-labelledby="description" aria-hidden="false">
-                         //= material-admin-main.html
-            </div>
-        </li>
 
-        <li>
-            <input type="radio" name="tabs" id="tab1" checked />
-            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
-                   class="material-admin__material label">Теты
-            </label>
-            <div id="tab-content1"
-                 class="tab-content"
-                 role="tabpanel"
-                 aria-labelledby="description"
-                 aria-hidden="false" class="tab-content material-admin__main">
+    <div class="material-admin__add-options">
 
+        <ul class="tabs" role="tablist ">
+            <li>
+                <input type="radio" name="tabs" id="tab1" checked />
+                <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">Теория</label>
+                <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
+                    <div class="tabsContentArea">
+                        //= material-admin-main.html
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <input type="radio" name="tabs" id="tab2" />
+                <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">Тести</label>
+                <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+                    <div class="tabsContentArea">
                         //= tests-constructor.html
+                    </div>
+                </div>
+            </li>
 
-            </div>
-        </li>
-
-        <li>
-            <input type="radio" name="tabs" id="tab1" checked />
-            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
-                   class="material-admin__material label tab-content">ДЗ
-            </label>
-            <div id="tab-content1"
-                 class="tab-content"
-                 role="tabpanel"
-                 aria-labelledby="description"
-                 aria-hidden="false">
-                  //= homework-admin.html
-            </div>
-        </li>
-
-
-        <!-- <a href="#" class="material-admin__link">
-            <p class="material-admin__video">Видео материаты</p>
-        </a>
-        <a href="#" class="material-admin__link">
-            <p class="material-admin__additional">Доп. Материалы</p>
-        </a> -->
-    </ul>
+            <li>
+                <input type="radio" name="tabs" id="tab3" />
+                <label for="tab3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="0">Домашка</label>
+                <div id="tab-content3" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+                    <div class="tabsContentArea">
+                        //= homework-admin.html
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
     <div class="material-admin__closer-window hidden-block">
