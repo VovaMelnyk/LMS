@@ -139,33 +139,5 @@ function showThemDetails(data) {
 function showNextTheme() {
     themeNum++;
     if (themeNum > modulLength) { themeNum = 1 };
-    fetch2(url); // зі спецефектом
-    //showThemDetails(modul[themeNum])  // без спецефекту
+    fetch2(url);
 };
-
-// ------------------------------------------------------------------
-// ---------V-----srecEFECT for TOGLE theme details-----V------------
-
-// var shirma = document.createElement("DIV");
-// shirma.className += "shirma";
-// shirma.style.cssText = "position:absolute;top:0;left:120vw;background-color:rgba(243,243,243,1);width:100vw;height:100%;transition:1s ease;box-shadow:rgba(0,0,0,0.5) 10vw 0 20vw;"
-// mainDiv.appendChild(shirma);
-// mainDiv.style.overflow = "hidden";
-
-
-// function specefect() {
-//     var dh = document.querySelector('.d-homework')
-//     dh.style.transition = ".4s";
-//     setTimeout(function() {
-//         dh.style.transform = "scaleY(0)";
-//     }, 10);
-
-//     setTimeout(function() {
-//         fetch2(url);
-//     }, 400);
-
-// setTimeout(function() {
-//     shirma.style.transition = "unset";
-//     shirma.style.left = "120vw";
-// }, 1000);
-//}
