@@ -83,3 +83,9 @@ function publicFunction() {
 }
 
 document.querySelector('.profile-public-icon').addEventListener('click', publicFunction());
+
+
+document.querySelector('#header_photo-profile').addEventListener('click', e => {
+    localStorage.clear();
+    window.location = 'http://localhost:3000/index.html';
+})
