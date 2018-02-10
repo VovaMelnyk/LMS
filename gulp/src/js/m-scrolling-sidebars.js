@@ -13,10 +13,14 @@
         node.setAttribute('style', `top: ${top}px;`);
     }
 
-    function materialBarsPositionCheker (parentNode, navRightNode, navLeftNode) {
+    function materialBarsPositionCheker (parentNode, navRightNode, navLeftNode, bool) {
         const barsParentPos = parentNode.getBoundingClientRect().top;
 
         if (barsParentPos <= 0) {
+            positionCorrecting(navRightNode, barsParentPos);
+            positionCorrecting(navLeftNode, barsParentPos);
+        }
+        if (bool) {
             positionCorrecting(navRightNode, barsParentPos);
             positionCorrecting(navLeftNode, barsParentPos);
         }
@@ -28,9 +32,12 @@
         if (pagePosition > 0) {
             setTimeout( () => {
                 hidePrompts(nodeArr);
-            }, 5000 )
-        } else {
-            hidePrompts(nodeArr);
+            }, 3000 )
+        } 
+        if (pagePosition <= 0) {
+            setTimeout( () => {
+                hidePrompts(nodeArr);
+            }, 1000 )
         }
     }
 
@@ -40,10 +47,16 @@
         const leftNav = document.getElementById('m-left-nav');
         const rightNav = document.getElementById('right-nav');
         const navParentNode = document.getElementById('main');
+        const upBtn = document.getElementById('invBtnUp');
 
-        chekPagePosition(navParentNode, rightNavPrompts, leftNav);
+        chekPagePosition(navParentNode, rightNavPrompts);
 
-        document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav) );
+        upBtn.addEventListener('click', () => {
+            leftNav.removeAttribute('style');
+            rightNav.removeAttribute('style');
+        } )
+
+        document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav, false) );
     }
 
     if (document.getElementById('main')) {
