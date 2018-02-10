@@ -295,7 +295,7 @@ const functionBackToCreateTestMenu = function () {
  // http://localhost:3000/tests/1 
 
  // $ json-server --watch full.json 
- // $ json-server --watch db.json 
+ // $ json-server --watch adminconstr.json 
 
  // Common Code for all fetch calls
 
