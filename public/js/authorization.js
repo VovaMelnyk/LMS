@@ -32,6 +32,7 @@ document.querySelector('#gotoprofile').addEventListener('click', function () {
                     localStorage.setItem('lms_facebook', data.data[0].facebook);
                     localStorage.setItem('lms_google', data.data[0].google);
                     localStorage.setItem('lms_linkedin', data.data[0].linkedin);
+                    localStorage.setItem('lms_profile', data.data[0].public);
 
                     window.location = 'http://localhost:3000/profile.html';
                 }

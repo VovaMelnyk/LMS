@@ -11,7 +11,8 @@
             "grade": 13,
             "facebook": "https://facebook.com/johnbush",
             "google": "https://google.com/johnbush",
-            "linkedin": "https://linkedin.com/johnbush"
+            "linkedin": "https://linkedin.com/johnbush",
+            "public": 1
         },
         {
             "id": 2,
@@ -24,7 +25,8 @@
             "grade": 23,
             "facebook": "https://facebook.com/georgebush",
             "google": "https://google.com/georgebush",
-            "linkedin": "https://linkedin.com/georgebush"
+            "linkedin": "https://linkedin.com/georgebush",
+            "public": 1
         },
         {
             "id": 3,
@@ -37,7 +39,8 @@
             "grade": 21,
             "facebook": "https://facebook.com/piterbush",
             "google": "https://google.com/piterbush",
-            "linkedin": "https://linkedin.com/piterbush"
+            "linkedin": "https://linkedin.com/piterbush",
+            "public": 1
         },
         {
             "id": 4,
@@ -50,7 +53,8 @@
             "grade": 12,
             "facebook": "https://facebook.com/elizabetbush",
             "google": "https://google.com/elizabetbush",
-            "linkedin": "https://linkedin.com/elizabetbush"
+            "linkedin": "https://linkedin.com/elizabetbush",
+            "public": 1
         },
         {
             "id": 5,
@@ -63,7 +67,8 @@
             "grade": 33,
             "facebook": "https://facebook.com/robertbush",
             "google": "https://google.com/robertbush",
-            "linkedin": "https://linkedin.com/robertbush"
+            "linkedin": "https://linkedin.com/robertbush",
+            "public": 1
         },
         {
             "id": 6,
@@ -76,7 +81,8 @@
             "grade": 55,
             "facebook": "https://facebook.com/franklinbush",
             "google": "https://google.com/franklinbush",
-            "linkedin": "https://linkedin.com/franklinbush"
+            "linkedin": "https://linkedin.com/franklinbush",
+            "public": 1
         },
         {
             "id": 7,
@@ -89,7 +95,8 @@
             "grade": 5,
             "facebook": "https://facebook.com/samantabush",
             "google": "https://google.com/samantabush",
-            "linkedin": "https://linkedin.com/samantabush"
+            "linkedin": "https://linkedin.com/samantabush",
+            "public": 1
         },
         {
             "id": 8,
@@ -102,7 +109,8 @@
             "grade": 31,
             "facebook": "https://facebook.com/ivanbush",
             "google": "https://google.com/ivanbush",
-            "linkedin": "https://linkedin.com/ivanbush"
+            "linkedin": "https://linkedin.com/ivanbush",
+            "public": 1
         }
     ]
 }
