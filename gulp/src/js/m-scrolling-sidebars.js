@@ -45,10 +45,14 @@
 
         document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav) );
     }
+
     if (document.getElementById('main')) {
         document.addEventListener('DOMContentLoaded', init);
     }
+    
+    // add events when you change your page content
     document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
         setTimeout(init, 1000)
     })
+
 })();
