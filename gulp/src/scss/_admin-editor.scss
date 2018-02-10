@@ -1,0 +1,16 @@
+.admin-editor__instruments {
+    position: absolute;
+    top: 4px;
+    left: 96px;
+    display: none;
+    width: 56px;
+}
+
+.admin-editor__edit, .admin-editor__delete {
+    width: 24px;
+    padding: 4px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
