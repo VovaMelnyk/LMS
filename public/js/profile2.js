@@ -75,7 +75,7 @@ document.querySelector('#repeat-new-pass').addEventListener('change', function(e
 function publicFunction() {
 	return function() {
 		document.querySelector('.profile-public-icon').setAttribute('src', !open ? 'img/open.svg' : 'img/close.svg')
-		document.querySelector('.profile-public-message').innerHTML = !open ? 'I want my profile to be privat' : 'I want my profile to be public';
+		document.querySelector('.profile-public-message').innerHTML = !open ? 'Мой профиль открыт для всех' : 'Данные моего профиля закрыты';
 		document.querySelector('.profile-public-message').style.color = !open ? '#00ff00' : '#ff0000';
 		localStorage.setItem('lms_profile', open ? '' : 1);
 		open = !open;
