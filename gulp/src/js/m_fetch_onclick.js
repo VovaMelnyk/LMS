@@ -1,4 +1,4 @@
-const btnRender = document.querySelector(".m-btn-test");
+const btnRender = document.querySelectorAll("[data='theory']");
 const mainTheory = document.querySelector(".main");
 
 let TheoryRender = (themNum) => {
@@ -18,7 +18,7 @@ let TheoryRender = (themNum) => {
         .then(data => {
 
                 let navCard = "";
-            data[1].theory.content.forEach((elem, idx) => {
+            data[themNum].theory.content.forEach((elem, idx) => {
                 navCard += `<a href="#cnt${idx}" class="m-left-nav__link">
         ${idx + 1}
         <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
@@ -27,7 +27,7 @@ let TheoryRender = (themNum) => {
             });
 
             let contentCard = "";
-            data[1].theory.content.forEach((elem, idx) => {
+            data[themNum].theory.content.forEach((elem, idx) => {
                 contentCard += `
       <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
       <p class="m-content__text">${elem.contentText}</p>
@@ -38,10 +38,10 @@ let TheoryRender = (themNum) => {
         <div id="m-title" class="m-header">
             <div class="m-header__caption caption">
                 <h2 class="caption__title">Теория</h2>
-                <h3 class="caption__theme">ТЕМА ${data[1].theory.number}</h3>
+                <h3 class="caption__theme">ТЕМА ${data[themNum].theory.number}</h3>
             </div>
             <h2 class="m-header__title" id="theory-name">
-                [ ${data[1].theory.title} _]
+                [ ${data[themNum].theory.title} _]
             </h2>
             <div id="m-timers">
                 <div class="m-timer">
@@ -106,6 +106,8 @@ let TheoryRender = (themNum) => {
 
         .catch(err => console.log(err));
 
-}
-btnRender.addEventListener('click', TheoryRender);
-//TheoryRender(0);
+};
+
+btnRender.forEach((element, idx) => {
+    element.addEventListener('click', () => TheoryRender(idx));
+});
