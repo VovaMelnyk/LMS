@@ -23,3 +23,10 @@ $dark-button: #061f36;
 //fonts
 $title-font: "BebasNeueRegular","Arial",sans-serif;
 $text-font: "Museo Sans Cyrl W03 300","Arial",sans-serif;
+@mixin arrow {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+}

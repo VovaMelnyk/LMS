@@ -16,10 +16,3 @@
   background: $orange;
   border-radius: 10px;
 }
-@mixin arrow {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    border: 10px solid transparent;
-}

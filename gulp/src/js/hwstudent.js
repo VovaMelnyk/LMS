@@ -130,8 +130,8 @@ function showThemDetails(data) {
                         prompt="[ Выделить текст _]">
                     </a>
                 </div>
-            </div>           
-        </div>   
+            </div>
+        </div>
             `);
 
 }
@@ -139,5 +139,5 @@ function showThemDetails(data) {
 function showNextTheme() {
     themeNum++;
     if (themeNum > modulLength) { themeNum = 1 };
-    fetch2(url);
+    TheoryRender(themeNum-1);
 };
