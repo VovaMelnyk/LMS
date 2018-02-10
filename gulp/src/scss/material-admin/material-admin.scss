@@ -6,7 +6,7 @@
     }
 
     &__material{
-        background-color: #e8e8e8;
+        //background-color: #e8e8e8;
         padding: 2px 16px 0 16px;
         color: #ef742e;
     }
@@ -86,6 +86,7 @@
     flex-direction: row;
     justify-content: space-around;
     width: 95%;
+    background-color: #e8e8e8;
     border-bottom: 2px solid #ef742e;
     margin-bottom: 24px;
     font-size: 20px;
@@ -93,17 +94,17 @@
       z-index: 2;
       display: none;
       overflow: hidden;
-      width: 100%;
-      padding: 16px;
-      // position: absolute;
-      // top: 53px;
-      // left: 0;
+      width: 97%;
+      padding: 24px;
+      position: absolute;
+      top: 160px;
+      left: 16px;
     }
     & .label {
       display: block;
       padding: 14px 21px;
       border-radius: 2px 2px 0 0;
-      border-bottom: 2px solid #ef742e;
+     // border-bottom: 2px solid #ef742e;
       font-size: 20px;
       font-weight: normal;
       text-transform: uppercase;
