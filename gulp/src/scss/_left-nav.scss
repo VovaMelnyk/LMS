@@ -1,3 +1,14 @@
 .left-nav {
+<<<<<<< HEAD
     min-width: 168px;
+=======
+	display: flex;
+	min-height: 150px;
+
+	// background: $dark-button;
+
+	flex-basis: 12%;
+    background: $grey-bg;
+    flex-basis: 12%;
+>>>>>>> Material-Admin
 }

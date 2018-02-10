@@ -71,14 +71,16 @@ var serverConfig = {
   //js
 
   gulp.task('bundleJs', function() {
-      return gulp.src(path.src.js)
+    return gulp.src(path.src.js)
+    .pipe(sourcemaps.init())
       .pipe(concat('scripts.min.js'))
       .pipe(babel({
-          presets: ['env']
+            presets: ['env']
       }))
       .pipe(uglify())
-      .pipe(gulp.dest(path.dist.js))
-      .pipe(browserSync.reload({stream: true}));
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.dist.js))
+    .pipe(browserSync.reload({stream: true}));
   })
 
   // img
