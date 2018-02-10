@@ -5,24 +5,18 @@
     margin-bottom: 32px;
     }
     &__add-options{
-    display: flex;
-    flex-direction: row;
-    }
-    &__link{
-        text-decoration: none;
-        color: #ef742e;
-    }
-    &__add-options{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         width: 95%;
-        border-bottom: 2px solid #e8e8e8;
+        border-bottom: 2px solid #ef742e;
         margin-bottom: 24px;
         font-size: 20px;
     }
     &__material{
         background-color: #e8e8e8;
         padding: 2px 16px 0 16px;
+        color: #ef742e;
     }
     &__content{
         padding-top: 24px;
@@ -87,5 +81,23 @@
         }
         &:after {
             transform: rotate(-45deg);
+        }
+}
+.tabs{
+    border-bottom: 2px solid #ef742e;
+    width: 650px;
+    list-style: none;
+    text-align: left;
+    
+    & label {
+      display: block;
+      padding: 14px 21px;
+      border-radius: 2px 2px 0 0;
+      font-size: 20px;
+      font-weight: normal;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      top: 4px;
         }
 }
