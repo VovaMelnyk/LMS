@@ -39,6 +39,37 @@
         /* arrow icon */
             right: 24px;
         }
+        //admin service button: add themes to the left menu
+        &_add-theme {
+            position: relative;
+            display: flex;
+            width: 32px;
+            height: 32px;
+            //margin: 8px 0;
+            align-self: center;
+            background-color: $orange;
+            border-radius: 50%;
+            cursor: pointer;
+
+                &::after, &::before {
+                    position: absolute;
+                    left: 14px;
+                    top: 8px;
+                    width: 4px;
+                    height: 16px;
+                    background-color: $white;
+                    content: '';
+                }
+                &::after {
+                    transform: rotate(90deg);
+                }
+                &::before {
+                    transform: rotate(180deg);
+                }
+                &:hover {
+                    box-shadow: 0 0 8px $cyan;
+                }
+        }
     }
 
     &__submenu {
@@ -120,6 +151,7 @@
     input[type=checkbox]:checked + .c-accordion-menu__submenu-button::before {
         transform: translateX(-15%) translateY(-15%) rotate(-90deg);
     }
+
 }
 // .c-accordion-menu__submenu-item::before {
 //     transform: translateX(25%) translateY(25%) rotate(90deg);
