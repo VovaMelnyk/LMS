@@ -1,0 +1,39 @@
+.d-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-page-title {
+    color: #808080;
+    font-family: $text-font;
+    font-size: 28px;
+}
+
+.d-timeCounter {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        color: #202b52;
+        font-family: $text-font;
+        font-size: 12px;
+        font-weight: 600;
+        text-indent: 46px;
+        margin-right: 2px;
+
+        &--time {
+            text-align: right;
+        }
+
+        &--deadline {
+            color: #ff6c00;
+        }
+    }
+
+    &__img {
+        width: 42px;
+        height: 42px;
+        background: url('../img/clock.png');
+        background-size: contain;
+    }
+}
