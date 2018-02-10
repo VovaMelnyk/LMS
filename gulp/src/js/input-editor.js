@@ -20,9 +20,12 @@
     function saveTitle (event, element) {
         event.stopPropagation();
         const node = element.parentElement.parentElement.children[0].children[0];
-        const title = node.value;
         
-        node.parentElement.innerHTML = title;
+        if (node) {
+            const title = node.value;
+            
+            node.parentElement.innerHTML = title;
+        }
     }
 
     function deleteElement (event, element) {

@@ -60,3 +60,12 @@
 #m-cont-name{
     padding-right: 40px;
 }
+
+.input-editor--theme {
+    .input-editor__item {
+        & textarea {
+            max-width: 230px;
+            min-width: 230px;
+        }
+    }
+}
