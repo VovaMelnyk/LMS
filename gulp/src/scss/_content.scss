@@ -1,10 +1,6 @@
 .content {
-    // Флекс для доски объявлений
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    // end Флекс для доски объявлений
-    position: relative;
-    min-height: 960px;
     padding: 64px 0 112px;
+    min-height: 720px;
 }

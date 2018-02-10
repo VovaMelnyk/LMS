@@ -1,0 +1,44 @@
+.c-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    color: $dark-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: $dark-bg;
+
+    &__elem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 48px;
+        font-family: Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 4px;
+
+        &-white {
+            position: relative;
+            justify-content: flex-start;
+            padding-left: 12px;
+            background: $white;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 70px;
+                width: 0;
+                height: 0;
+                border-top: 24px solid transparent;
+                border-bottom: 24px solid transparent;
+                border-left: 18px solid $white;
+                content: "";
+            }
+        }
+
+        &-orange {
+            background: $orange;
+        }
+    }
+}
