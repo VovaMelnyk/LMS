@@ -51,10 +51,12 @@
 
         chekPagePosition(navParentNode, rightNavPrompts);
 
-        upBtn.addEventListener('click', () => {
-            leftNav.removeAttribute('style');
-            rightNav.removeAttribute('style');
-        } )
+        if (upBtn) {
+            upBtn.addEventListener('click', () => {
+                leftNav.removeAttribute('style');
+                rightNav.removeAttribute('style');
+            } )
+        }
 
         document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav, false) );
     }
@@ -64,8 +66,11 @@
     }
     
     // add events when you change your page content
-    document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
-        setTimeout(init, 1000)
-    })
+
+    if (document.getElementsByClassName('m-btn-test') ) {
+        document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
+            setTimeout(init, 1000)
+        })
+    }
 
 })();

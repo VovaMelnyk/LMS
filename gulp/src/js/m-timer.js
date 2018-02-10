@@ -8,7 +8,7 @@
     let timerInterval;
 
 
-    function timer(){
+    function timer(time){
 
         let end = false;
 
@@ -33,7 +33,8 @@
     }
 
     function timerStart() {
-        timerInterval = setInterval(timer, 1000);
+        const time = document.getElementById('m-timer');
+        timerInterval = setInterval( () => timer(time), 1000);
     }
 
     function timerStop() {
@@ -48,7 +49,18 @@
     }
 
     if (time) document.addEventListener("DOMContentLoaded", ()=>{
+        init()
+        document.addEventListener("visibilitychange", init);
+    });
+    
+    if (document.getElementsByClassName('m-btn-test') ) {
+        document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
+            setTimeout(() => {
+                clearInterval(timerInterval);
+                minute = 26
                 init()
-                document.addEventListener("visibilitychange", init);
-            });
+            }, 1000)
+        })
+    }
+
 })(document);
