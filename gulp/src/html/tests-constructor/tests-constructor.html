@@ -145,6 +145,26 @@
 	<% } %>
 
 
+
+	<% if ( (correctAnswer == '') ) { %>
+
+	<div class="change-form-module__form">
+		<form id="changeTest_<%- id%>" class="create-test-form">
+			<p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
+			<p>а) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion1_<%- id%>" placeholder="<%- answer1%>" value="<%- answer1%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate1_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate1_<%- id%>"><span></span></label></p>
+			<p>б) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion2_<%- id%>" placeholder="<%- answer2%>" value="<%- answer2%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate2_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate2_<%- id%>"><span></span></label></p>
+			<p>в) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion3_<%- id%>" placeholder="<%- answer3%>" value="<%- answer3%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate3_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate3_<%- id%>"><span></span></label></p>
+			<p>г) <input class="create-test-form__answer change-test-form__answer_<%- id%>" type="text" id="changeQuestion4_<%- id%>" placeholder="<%- answer4%>" value="<%- answer4%>"><input class="create-test-form__radio change-test-form__radio_<%- id%>" id="radioCreate4_<%- id%>" name="radioAddTest" type="radio" value=""><label for="radioCreate4_<%- id%>"><span></span></label></p>
+			<hr class="create-test-form__line">
+		</form>
+		<button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
+		<button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
+
+	</div>
+
+	<% } %>
+
+
 </script>
 
 

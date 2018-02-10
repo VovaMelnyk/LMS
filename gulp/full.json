@@ -15,7 +15,7 @@
         },
         "tests": [{
                 "id": 1,
-                "question": "Где в документе может располагаться тэг script по стандарту HTML ?",
+                "title": "Где в документе может располагаться тэг script по стандарту HTML ?",
                 "answer1": "Только в HEAD",
                 "answer2": "Только в BODY",
                 "answer3": "В HEAD или в BODY",
@@ -24,7 +24,7 @@
             },
             {
                 "id": 2,
-                "question": "Как дела ?",
+                "title": "Как дела ?",
                 "answer1": "Нормас",
                 "answer2": "Говнисто",
                 "answer3": "Такакатотак",
@@ -32,21 +32,21 @@
                 "correctAnswer": "Нормас"
             },
             {
-                "question": "Укажите ваш пол",
+                "title": "Укажите ваш пол",
                 "answer1": "Мужик",
                 "answer2": "Баба",
                 "answer3": "Оно",
                 "answer4": "Просто объект",
-                "correctAnswer": "",
+                "correctAnswer": "Баба",
                 "id": 3
             },
             {
-                "question": "Сикоко тебе годиков?",
+                "title": "Сикоко тебе годиков?",
                 "answer1": "Еще пистон",
                 "answer2": "Юнец-молодец",
                 "answer3": "Зрелый перец",
                 "answer4": "Старый пердун",
-                "correctAnswer": "",
+                "correctAnswer": "Зрелый перец",
                 "id": 4
             }
         ],

@@ -119,11 +119,10 @@ btnGoToShowTests.addEventListener("click", goToUpdateTest);
 const sampleGetTests = tests => {
 	const compiledChangeTestForm = _.template(document.querySelector("#constructor-test-change-test-input").textContent.trim());
 
-
 	let htmlString = "";
 
 	tests.forEach(test => {
-	htmlString += compiledChangeTestForm(test);
+		htmlString += compiledChangeTestForm(test);
 	});
 
 	const testForm = document.querySelector("#change-form-module__former");
@@ -138,6 +137,9 @@ const getTests = () => {
 	.then(status)
 	.then(json)
 	.then(data => {
+		// let newData = data[0].tests;
+		// console.log(newData[1].title);
+		// sampleGetTests(newData);
 		sampleGetTests(data);
 		updateFunction();
 		removeFunction();
@@ -190,7 +192,6 @@ const updateTest = function ()  {
 	document.querySelector("#updateTest").reset();	
 
 };
-
 
 
 const updateFunction = () => {
