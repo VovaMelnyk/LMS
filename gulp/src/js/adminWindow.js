@@ -1,7 +1,9 @@
+
+var mainDiv = document.querySelector('div.main');
+document.querySelector('#add-material').addEventListener('click', showAdmWindow);
 function showAdmWindow() {
     mainDiv.innerHTML =
-        `<div class="main material-admin__window">
-            <div class="material-admin">
+        `    <div class="material-admin">
                 <div id="cross" class="material-admin__cross icon"></div>
                 <h2 class="material-admin__title">[ Добавление темы: теория, тесты, ДЗ ]</h2>
                 <div class="material-admin__add-options">
@@ -14,7 +16,7 @@ function showAdmWindow() {
                                     <div class="material-admin__inputs">
                                         <section class="material-admin__inputs__theme">
                                             <label for="theme">
-                                                Название темы: 
+                                                Название темы:
                                                 <select name="theme" id="m-theme">
                                                     <option value="">Тема 1</option>
                                                     <option value="">Тема 2</option>
@@ -25,7 +27,7 @@ function showAdmWindow() {
                                                 </select>
                                             </label>
                                             <div class="input-editor">
-                                                    <p class="input-editor__item" id="m-theme-name">Edit Theme Name ...</p> 
+                                                    <p class="input-editor__item" id="m-theme-name">Edit Theme Name ...</p>
                                                     <div class="input-editor__instruments">
                                                         <i class="input-editor__edit">
                                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -46,7 +48,7 @@ function showAdmWindow() {
                                                 </div>
                                         </section>
                                         <section class="material-admin__inputs__paragraphs" id="m-admin__inputs">
-                                            
+
                                             <div class="input-editor">
                                                 <p class="input-editor__item" id="m-cont-name">Article title number ...</p>
                                                 <div class="input-editor__instruments">
@@ -154,7 +156,7 @@ function showAdmWindow() {
                                         <p>Материалы</p>
                                         <div id="editor"></div>
                                         <div id="content"></div>
-                                    
+
                                         <div class="m-bottomBtnBox">
                                             <button type="button" class="m-bottomBtn button-small">Предпросмотр</button>
                                             <button type="button" class="m-bottomBtn button-small">Сохранить</button>
@@ -165,39 +167,39 @@ function showAdmWindow() {
                                 </div>
                             </div>
                         </li>
-            
+
                         <li>
                             <input type="radio" name="tabs" id="tab2" />
                             <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">Тести</label>
                             <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
                                 <div class="tabsContentArea">
-                                    
+
                                     <!-- Main page -->
-                                    
+
                                     <div id="constructor-test-wrapper">
-                                    
+
                                         <div id="main-create-test" class="main-test-cosruct">Создать тест <img class="main-test-cosruct__arrow"src="img/right_arrow.gif" alt="right_arrow"></div>
-                                    
+
                                         <div id="main-show-tests" class="main-test-cosruct">Посмотреть все тесты <img class="main-test-cosruct__arrow" src="img/right_arrow.gif" alt="right_arrow"></div>
-                                    
+
                                     </div>
-                                    
-                                    
+
+
                                     <!-- Create test page -->
-                                    
+
                                     <script type="text/template" id="constructor-test-create-test-page">
-                                        
+
                                         <div class="create-test-caption">[ Создание теста ]</div>
-                                    
+
                                         <div class="create-test-module">Название модуля <input type="text" name="" id="create-test-module__theme"><button class="create-test-module__btn button-small">save</button></div>
-                                    
+
                                         <div class="create-test-module">Количество вопросов <input type="text" name="" id="create-test-module__quantity-question"><button class="create-test-module__btn button-small">save</button></div>
-                                    
+
                                         <div class="create-test-module">Количество правильных ответов <input type="text" name="" id="create-test-module__quantity-answer"><button class="create-test-module__btn button-small">save</button></div>
-                                    
+
                                         <div class="create-test-module create-test-module__set-answer"><p class="create-test-module__set-answer--text">Установить правильный ответ</p></div>
-                                    
-                                    
+
+
                                         <form id="addTest" class="create-test-form">
                                             <p><input class="create-test-form__question" type="text" id="testName" placeholder="условие теста"></p>
                                             <p>а) <input class="create-test-form__answer" type="text" id="question1" placeholder="вопрос 1"><input class="create-test-form__radio" id="radioCreate1" name="radioAddTest" type="radio" value=""><label for="radioCreate1"><span></span></label></p>
@@ -205,45 +207,45 @@ function showAdmWindow() {
                                             <p>в) <input class="create-test-form__answer" type="text" id="question3" placeholder="вопрос 3"><input class="create-test-form__radio" id="radioCreate3" name="radioAddTest" type="radio" value="" checked><label for="radioCreate3"><span></span></label></p>
                                             <p>г) <input class="create-test-form__answer" type="text" id="question4" placeholder="вопрос 4"><input class="create-test-form__radio" id="radioCreate4" name="radioAddTest" type="radio" value=""><label for="radioCreate4"><span></span></label></p>
                                         </form>
-                                    
-                                    
+
+
                                         <div class="create-test-module">Время на тест <input type="text" name="" id="create-test-module__set-time"><button class="create-test-module__btn button-small">save</button></div>
-                                    
+
                                         <div class="create-test-bot">
                                             <div class="create-test-other">
                                                 <button class="create-test-module__btn button-small">ТЕОРИЯ</button><button class="create-test-module__btn button-small">СОЗДАТЬ ДЗ</button>
                                             </div>
                                             <button id="btnAddTest" class="create-test-module__btn create-test-module__btn--big button-small">СОХРАНИТЬ</button>
                                         </div>
-                                    
+
                                     </script>
-                                    
+
                                     <!-- Change test page -->
-                                    
+
                                     <script type="text/template" id="constructor-test-change-test-page">
-                                        
+
                                         <div class="create-test-caption">[ Все тесты ]</div>
-                                    
+
                                         <div class="change-form-module">
-                                    
+
                                             <div class="change-form-module__theme">
                                                 <div class="change-form-module__module">Модуль 1</div>
                                                 <div class="change-form-module__module">Модуль 2</div>
                                                 <div class="change-form-module__module">Модуль 3</div>
                                                 <div class="change-form-module__module">Модуль 4</div>
                                             </div>
-                                    
+
                                             <div id="change-form-module__former"></div>
-                                    
+
                                         </div>
-                                    
+
                                     </script>
-                                    
-                                    
+
+
                                     <script type="text/template" id="constructor-test-change-test-input">
-                                    
+
                                         <% if ( (correctAnswer == answer1) && (correctAnswer != '') ) { %>
-                                    
+
                                         <div class="change-form-module__form">
                                             <form id="changeTest_<%- id%>" class="create-test-form">
                                                 <p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
@@ -254,15 +256,15 @@ function showAdmWindow() {
                                                 <hr class="create-test-form__line">
                                             </form>
                                             <button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
-                                    
+                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+
                                         </div>
-                                    
+
                                         <% } %>
-                                    
-                                    
+
+
                                         <% if ( ( correctAnswer == answer2 ) && (correctAnswer != '') ) { %>
-                                    
+
                                         <div class="change-form-module__form">
                                             <form id="changeTest_<%- id%>" class="create-test-form">
                                                 <p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
@@ -273,15 +275,15 @@ function showAdmWindow() {
                                                 <hr class="create-test-form__line">
                                             </form>
                                             <button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
-                                    
+                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+
                                         </div>
-                                    
+
                                         <% } %>
-                                    
-                                    
+
+
                                         <% if ( ( correctAnswer == answer3 ) && (correctAnswer != '') ) { %>
-                                    
+
                                         <div class="change-form-module__form">
                                             <form id="changeTest_<%- id%>" class="create-test-form">
                                                 <p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
@@ -292,15 +294,15 @@ function showAdmWindow() {
                                                 <hr class="create-test-form__line">
                                             </form>
                                             <button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
-                                    
+                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+
                                         </div>
-                                    
+
                                         <% } %>
-                                    
-                                    
+
+
                                         <% if ( ( correctAnswer == answer4 ) && (correctAnswer != '') ) { %>
-                                    
+
                                         <div class="change-form-module__form">
                                             <form id="changeTest_<%- id%>" class="create-test-form">
                                                 <p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
@@ -311,16 +313,16 @@ function showAdmWindow() {
                                                 <hr class="create-test-form__line">
                                             </form>
                                             <button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
-                                    
+                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+
                                         </div>
-                                    
+
                                         <% } %>
-                                    
-                                    
-                                    
+
+
+
                                         <% if ( (correctAnswer == '') ) { %>
-                                    
+
                                         <div class="change-form-module__form">
                                             <form id="changeTest_<%- id%>" class="create-test-form">
                                                 <p id="identificator_<%- id%>"><%- id%>. <input class="create-test-form__question" type="text" id="changeTestName_<%- id%>" placeholder="<%- title%>" value="<%- title%>"></p>
@@ -331,25 +333,25 @@ function showAdmWindow() {
                                                 <hr class="create-test-form__line">
                                             </form>
                                             <button id="updBtn_<%- id%>" class="btnUpdateTest create-test-module__btn button-small updBtn_<%- id%>">РЕДАКТИРОВАТЬ</button>
-                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>	
-                                    
+                                            <button id="remBtn_<%- id%>" class="btnRemoveTest create-test-module__btn button-small remBtn_<%- id%>">УДАЛИТЬ</button>
+
                                         </div>
-                                    
+
                                         <% } %>
-                                    
-                                    
+
+
                                     </script>
                                 </div>
                             </div>
                         </li>
-            
+
                         <li>
                             <input type="radio" name="tabs" id="tab3" />
                             <label for="tab3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="0">Домашка</label>
                             <div id="tab-content3" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
                                 <div class="tabsContentArea">
                                     <div class="d-holderAdmin">
-                                    
+
                                         <div class="d-admSection d-admSection--left">
                                             <div class="d-group">
                                                 <p class="d-label">Група:</p>
@@ -360,7 +362,7 @@ function showAdmWindow() {
                                         </select>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="d-admSection  d-admSection--right">
                                             <div class="d-deadLine">
                                                 <p class="d-label">Дедлайн:</p>
@@ -371,7 +373,7 @@ function showAdmWindow() {
                                                 <input class="d-timeAvarage__input" type="number" min="1" step="1"></input>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="d-admSection d-admSection--center">
                                             <div class="d-hwThemeNum">
                                                 <p class="d-label">Номер теми ДЗ:</p>
@@ -382,27 +384,27 @@ function showAdmWindow() {
                                                 <input class="d-themeTitle__input" type="text"></input>
                                             </div>
                                         </div>
-                                    
+
                                         <div class="d-themeDesc">
                                             <p class="d-label">Умова ДЗ:</p>
                                             <textarea class="d-themeDesc__textArea" rows="10"></textarea>
                                         </div>
-                                    
+
                                         <div class="d-admBtnArea">
                                             <button type="submit" class="d-btn d-admBtnArea__prewiew">Предосмотр</button>
                                             <button type="submit" class="d-btn d-admBtnArea__save">Сохранить</button>
                                             <button type="submit" class="d-btn d-admBtnArea__saveGoTest">Сохранить и перейти к тестам</button>
                                             <button type="submit" class="d-btn d-admBtnArea__endEdit">Закончить редактирование</button>
                                         </div>
-                                    
+
                                     </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-            
-            
+
+
                 <div class="material-admin__closer-window hidden-block">
                     <div class="hidden-closer-window">
                         <button class="button-small m-btn-admin m-btn-admin__save">Сохранить и выйти</button>
@@ -410,11 +412,9 @@ function showAdmWindow() {
                         <button class="button-small m-btn-admin m-btn-admin__cansel">Отмена</button>
                     </div>
             </div>
-            
-            
+
+
                 </div>
             </div>
-            
-        </div>
         `
 }
