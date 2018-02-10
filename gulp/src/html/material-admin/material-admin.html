@@ -1,34 +1,58 @@
 <div class="material-admin">
     <div id="cross" class="material-admin__cross icon"></div>
     <h2 class="material-admin__title">[ Добавление темы: теория, тесты, ДЗ ]</h2>
-    <div class="material-admin__add-options">
-            <p class="material-admin__material material-admin__link">Теория</p>
-        <a href="#" class="material-admin__link">
-            <p class="material-admin__tests">Теты</p>
-        </a>
-        <a href="#" class="material-admin__link">
-            <p class="material-admin__hw">ДЗ</p>
-        </a>
-        <a href="#" class="material-admin__link">
+    <ul class="tabs material-admin__add-options" role="tablist">
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
+                   class="material-admin__material material-admin__link">Теория
+            </label>
+            <div id="tab-content1" class="tab-content material-admin__main"
+                 role="tabpanel" aria-labelledby="description" aria-hidden="false">
+                         //= material-admin-main.html
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
+                   class="material-admin__material material-admin__link">Теты
+            </label>
+            <div id="tab-content1"
+                 class="tab-content"
+                 role="tabpanel"
+                 aria-labelledby="description"
+                 aria-hidden="false">
+
+                         <!-- IMPORT TESTS -->
+
+
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0"
+                   class="material-admin__material material-admin__link">ДЗ
+            </label>
+            <div id="tab-content1"
+                 class="tab-content"
+                 role="tabpanel"
+                 aria-labelledby="description"
+                 aria-hidden="false">
+                  <!-- IMPORT HW -->
+            </div>
+        </li>
+
+
+        <!-- <a href="#" class="material-admin__link">
             <p class="material-admin__video">Видео материаты</p>
         </a>
         <a href="#" class="material-admin__link">
             <p class="material-admin__additional">Доп. Материалы</p>
-        </a>
-    </div>
-    <div class="material-admin__inputs">
-        //= m-admin-inputs.html
-    </div>
-    <div class="material-admin__content">
-        <p>Материалы</p>
-        <div id="editor"></div>
-        <div id="content"></div>
-        
-        <div class="m-bottomBtnBox">
-            //= m-bottom-btn.html
-        </div>
+        </a> -->
+    </ul>
 
-    </div>
 
     <div class="material-admin__closer-window hidden-block">
         <div class="hidden-closer-window">
