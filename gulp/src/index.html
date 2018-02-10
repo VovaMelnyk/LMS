@@ -14,12 +14,11 @@
     <!-- HEADER start -->
     <div class="wrapper">
         <div class="container">
-            <div class="header">
 
+            <div class="header">
                 //= html/logo.html
                 //= html/nav-bar.html
                 //= html/photo-profile.html
-
             </div>
         </div>
     </div>
@@ -27,17 +26,34 @@
 
     <!-- CONTENT start -->
     <div class="wrapper wrapper--light-gray">
+        <a href="#" id="m-link"></a>
         <div class="container">
             <div class="content">
+
                 <!-- LEFT-NAV start -->
                 <div class="left-nav">
                     //= html/accord.html
                 </div>
                 <!-- LEFT-NAV end -->
                 <!-- MAIN start -->
-                <div class="main material-admin__window">
-                    //= html/material-admin/material-admin.html
-                    
+                <!-- <div class="main material-admin__window">
+                    = html/material-admin/material-admin.html
+                     -->
+                <div class="main" id="main">
+
+                    //= html/m-main/m-header.html
+                    //= html/m-main/m-content.html
+                    //= html/visible/visible-block.html
+
+                    <div class="right-nav" id="right-nav">
+                        //= html/m-main/m-right-nav.html
+                    </div>
+                    <a href="#m-link" class="m-btn-up invisible" id="invBtnUp"> </a>
+                    <!-- RIGHT-NAV end -->
+                    <!-- LEFT CONTENT STARTS -->
+                    <div class="m-left-nav" id="m-left-nav">
+                        //= html/m-main/m-left-nav.html
+                    </div>
                 </div>
             </div>
         </div>
