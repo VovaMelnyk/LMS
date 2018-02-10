@@ -10,7 +10,7 @@
     width: 24px;
     padding: 4px;
 
-    // &:hover {
-    //     cursor: pointer;
-    // }
+    &:hover {
+        transform: scale(1.1);
+    }
 }
