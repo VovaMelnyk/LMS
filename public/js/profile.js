@@ -24,37 +24,52 @@ document.querySelector('#user-linkedin').setAttribute('href', linkedin);
 
 function slider() {
 
+    var counter = 0,
+    left = 0,
+    right = 0,
+    margin = 0;
+
     var slides = [];
     
-    axios('http://localhost:3000/users')
-    .then(function (data) {
+    axios('http://localhost:3000/users').then(
+        function (data) {
 
-       for(var i=0; i<data.data.length; i++){
-          if(data.data[i].group == "FrontEnd_1"){
-             slides.push(`
-                 <div class="slider-item">
-                 <p class="item-img"><img src="img/users/${data.data[i].img}" alt=""></p>
-                 <p class="item-name">${data.data[i].name} ${data.data[i].lastName}</p>
-                 <p class="item-score">${data.data[i].grade}</p>
-                 </div>`);
+           for(var i=0; i<data.data.length; i++){
+              if(data.data[i].group == "FrontEnd_1"){
+                 slides.push(`
+                     <div class="slider-item">
+                     <p class="item-img"><img src="img/users/${data.data[i].img}" alt=""></p>
+                     <p class="item-name">${data.data[i].name} ${data.data[i].lastName}</p>
+                     <p class="item-score">${data.data[i].grade}</p>
+                     </div>`);
+                 counter++;
+             }
          }
-     }
-     document.querySelector('.slider-stripe').innerHTML = slides.join('');
-     document.querySelector('.arrowLeft').addEventListener('click', left);
-     document.querySelector('.arrowRight').addEventListener('click', right);
 
-     function left() {
-        var items = document.querySelectorAll('.slider-item');
-        slides.push(slides.shift());
-        document.querySelector('.slider-stripe').innerHTML = slides.join('');
-    }
+         document.querySelector('.slider-stripe').innerHTML = slides.join('');
+         document.querySelector('.arrowLeft').addEventListener('click', left);
+         document.querySelector('.arrowRight').addEventListener('click', right);
 
-    function right() {
-        var items = document.querySelectorAll('.slider-item');
-        slides.unshift(slides.pop());
-        document.querySelector('.slider-stripe').innerHTML = slides.join('');
-    }
-});
+         function left() {
+
+            margin -= 150;
+
+            if (margin < -150 * (counter -5 )) {
+                margin = 0
+            }
+            document.querySelector('.slider-stripe').style.marginLeft = margin + 'px';
+        }
+
+        function right() {
+
+            margin += 150;
+            if (margin > 0) {
+                margin = -150 * (counter -5 );
+            }
+
+            document.querySelector('.slider-stripe').style.marginLeft = margin + 'px';
+        }
+    });
 }
 
 slider();

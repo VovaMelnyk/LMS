@@ -975,13 +975,16 @@ p {
   font-weight: bold;
 }
 
+.slider-wrap {
+  position: relative;
+  height: 180px;
+  margin: 40px 0;
+  padding: 0 80px;  
+}
 
 .profile-slider {
   position: relative;
-  width: 100%;
-  height: 180px;
-  margin: 40px 0;
-  padding: 0 50px;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -990,10 +993,14 @@ p {
   font-size: 25px; ;
 }
 
+.slider-stripe {
+  width: 1000%;
+  transition: all ease 1s;
+}
 
 .slider-item {
   position: relative;
-  width: 19%;
+  width: 150px;
   margin: 10px 0;
   display: inline-block;
 }
