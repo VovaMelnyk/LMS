@@ -137,6 +137,13 @@
 	align-items: baseline;
 }
 
+.change-form-module__btn-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
 /*
 
 form p {
