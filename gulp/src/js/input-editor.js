@@ -1,4 +1,5 @@
 (function () {
+//const addThemeBtn = document.querySelector('#add-material');
 
     function createTextarea (text) {
         const textarea = document.createElement('textarea');
@@ -11,7 +12,7 @@
         event.stopPropagation();
         const node = element.parentElement.parentElement.children[0];
         const title = node.innerHTML;
-        
+
         node.innerHTML = '';
         node.appendChild( createTextarea(title) );
         node.children[0].focus()
@@ -21,7 +22,7 @@
         event.stopPropagation();
         const node = element.parentElement.parentElement.children[0].children[0];
         const title = node.value;
-        
+
         node.parentElement.innerHTML = title;
     }
 
@@ -42,7 +43,7 @@
             item.onclick =  e => deleteElement(e, item)
         })
         each.call(inputSaver, item => {
-            item.onclick = e => saveTitle(e, item) 
+            item.onclick = e => saveTitle(e, item)
         })
 
     }
@@ -73,7 +74,8 @@
         })
 
     }
+
     if ( document.getElementById('m-admin__inputs') ) {
-        document.addEventListener('DOMContentLoaded', init)
+        document.querySelector('#add-material').addEventListener('click', init)
     }
 })()

@@ -19,5 +19,8 @@
             btnNonSave.addEventListener("click", closeAdminWindowHider);
             btnCansel.addEventListener("click", closeAdminWindowHider);
     }
-    document.addEventListener('DOMContentLoaded', init);
+    const addThemeBtn = document.querySelector('#add-material');
+    addThemeBtn.addEventListener('click', () => {
+    setTimeout(init, 1000)});
+    //document.addEventListener('DOMContentLoaded', init);
 })();
