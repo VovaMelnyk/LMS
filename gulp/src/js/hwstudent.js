@@ -134,7 +134,7 @@ function showThemDetails(data, effect) {
             </div>
         </div>
             `);
-setTimeout (effect, 10);                                  // only for specEfects
+setTimeout (effect, 50);                                  // only for specEfects
 }
 
 function opac() {                                         // only for specEfects

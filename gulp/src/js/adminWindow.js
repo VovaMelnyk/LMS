@@ -416,4 +416,11 @@ function showAdmWindow() {
                 </div>
             </div>
         `
-}
+        setTimeout (opac, 50);                                  // only for specEfects
+        }
+
+        function opac() {                                         // only for specEfects
+          mainDiv.style.overflow="hidden";
+          mainDiv.firstElementChild.style.opacity="1";
+          mainDiv.firstElementChild.style.transform="scaleX(1)";
+        }
