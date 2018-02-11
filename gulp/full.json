@@ -317,6 +317,22 @@
       "changeAutor": "",
       "changed": false,
       "id": 6
+    },
+    {
+      "isNew": true,
+      "title": "sr6j",
+      "date": "12/02/2018",
+      "time": "00:30",
+      "userID": 6,
+      "userName": "Test user",
+      "userRole": "Student",
+      "message": "<p>Hello World!</p>",
+      "likes": 0,
+      "changeDate": "",
+      "changeTime": "",
+      "changeAutor": "",
+      "changed": false,
+      "id": 7
     }
   ],
   "comments": [

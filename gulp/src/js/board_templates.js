@@ -12,7 +12,7 @@ localStorage.setItem("currentRole", "Student"); // Administrator Student
 let currentUserId = +localStorage.getItem("currentUserId");
 let currentUser = localStorage.getItem("currentUser");
 let currentRole = localStorage.getItem("currentRole");
-const posts = document.querySelector('.posts');
+const posts = select('.posts');
 
 let clickHandler = (event) => {
     let targetId = event.currentTarget.id;
@@ -206,7 +206,7 @@ function checkLikesCount(targetId) {
 }
 
 function pageRender() {
-    posts.innerHTML = "";
+    select(".posts").innerHTML = "";
     console.log(`Fetching URL: ${postUrl}`);
 
     backgroundCounter = 0;
@@ -349,46 +349,46 @@ function createPost(event) {
     console.log(`Fetching URL: ${postUrl}`);
     let postTitle = document.getElementById("postTheme");
     let added = {};
-if ( postTitle.value == '') {
-    postTitle.placeholder = 'Введите тему объявления';
-    postTitle.style.border = '1px solid #ff0000';
-    event.preventDefault();
+    if (postTitle.value == '') {
+        postTitle.placeholder = 'Введите тему объявления';
+        postTitle.style.border = '1px solid #ff0000';
+        event.preventDefault();
     } else {
-    added.headers = {
-        'Content-Type': 'application/json'
-    };
-    added.method = "POST";
-    added.body = JSON.stringify({
-        "isNew": true,
-        "title": postTitle.value,
-        "date": setMessageDate(),
-        "time": setMessageTime(),
-        "userID": currentUserId,
-        "userName": currentUser,
-        "userRole": currentRole,
-        "message": suneditor.getContent(),
-        "likes": 0,
-        "changeDate": "",
-        "changeTime": "",
-        "changeAutor": "",
-        "changed": false
-    });
-
-    fetch(postUrl, added)
-        .then(response => {
-            if (response.ok) {
-                response.json();
-            } else {
-                throw new Error("Error fetching data. Response status: " + response.status + " : " + response.statusText);
-            }
-        })
-        .then(pageRender)
-        .catch(err => {
-            console.error("Error: ", err);
+        added.headers = {
+            'Content-Type': 'application/json'
+        };
+        added.method = "POST";
+        added.body = JSON.stringify({
+            "isNew": true,
+            "title": postTitle.value,
+            "date": setMessageDate(),
+            "time": setMessageTime(),
+            "userID": currentUserId,
+            "userName": currentUser,
+            "userRole": currentRole,
+            "message": suneditor.getContent(),
+            "likes": 0,
+            "changeDate": "",
+            "changeTime": "",
+            "changeAutor": "",
+            "changed": false
         });
 
+        fetch(postUrl, added)
+            .then(response => {
+                if (response.ok) {
+                    response.json();
+                } else {
+                    throw new Error("Error fetching data. Response status: " + response.status + " : " + response.statusText);
+                }
+            })
+            .then(pageRender)
+            .catch(err => {
+                console.error("Error: ", err);
+            });
+
     }
-};
+}
 
 function createComment(targetId) {
 
@@ -493,22 +493,22 @@ function updateMessage(targetId) {
     } else {
         alert("Изменить сообщение может только автор или администратор!");
     };
-};
+}
 
 
 function showEditor(event) {
-        console.log('sdlfkjs');
-        event.target.classList.toggle('add');
-        event.target.classList.toggle('cancel');
-        editor.classList.toggle('show');
-        let subTitle = document.querySelector("#sub_title");
-        console.log(subTitle);
-        if ( subTitle.innerHTML == lastNewsTitle) {
-            subTitle.innerHTML = '[ Создать объявление _]';
-        } else {
-            subTitle.innerHTML = lastNewsTitle;
-        };
-};
+    console.log('sdlfkjs');
+    event.target.classList.toggle('add');
+    event.target.classList.toggle('cancel');
+    editor.classList.toggle('show');
+    let subTitle = document.querySelector("#sub_title");
+    console.log(subTitle);
+    if (subTitle.innerHTML == lastNewsTitle) {
+        subTitle.innerHTML = '[ Создать объявление _]';
+    } else {
+        subTitle.innerHTML = lastNewsTitle;
+    }
+}
 
 let sendPost = document.querySelector('#send-post');
 sendPost.addEventListener("click", createPost);
@@ -522,7 +522,7 @@ addIcon.addEventListener("click", showEditor);
 
 window.onload = pageRender();
 let boardBtn = document.querySelector('#boardBtn');
-boardBtn.addEventListener('click', ()=> {
+boardBtn.addEventListener('click', () => {
     // let main = document.querySelector('.main');
     // main.innerHTML = `<div class="posts"></div>`;
     pageRender();
@@ -531,15 +531,15 @@ boardBtn.addEventListener('click', ()=> {
 });
 
 /**
-* ID : 'post_add_editor'
-* ClassName : 'sun-editor'
-*/
+ * ID : 'post_add_editor'
+ * ClassName : 'sun-editor'
+ */
 
 var suneditor = SUNEDITOR.create('post_add_editor', {
     // insert options
     height: '100%',
     width: '100%',
-    editorIframeFont : 'Arial',
+    editorIframeFont: 'Arial',
     showFont: false,
     showFormats: false,
     showFontSize: false,
