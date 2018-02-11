@@ -1,5 +1,4 @@
 
-var mainDiv = document.querySelector('div.main');
 document.querySelector('#add-material').addEventListener('click', showAdmWindow);
 function showAdmWindow() {
     mainDiv.innerHTML =
