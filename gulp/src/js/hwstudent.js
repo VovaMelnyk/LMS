@@ -4,16 +4,20 @@ var modul = {};
 var modulLength;
 var themeNum = 1;
 var mainDiv = document.querySelector('div.main');
+var hwThemesLinks = document.querySelectorAll("[data='homework']");
+    hwThemesLinks.forEach((element, idx) => {
+    element.addEventListener('click', () => fetch2(idx, url));
+});
 
 // -------------------------V--FETCH--V-----------------------------
 
-var newTheme = {
-    id: 16,
-    title: "THIS IS NEW THEME!!!",
-    hours: 24,
-    deadline: "2019-01-21",
-    text: "HOW ABOUT NEW THEME ?"
-}
+// var newTheme = {
+//     id: 16,
+//     title: "THIS IS NEW THEME!!!",
+//     hours: 24,
+//     deadline: "2019-01-21",
+//     text: "HOW ABOUT NEW THEME ?"
+// }
 
 function init(metod, obj) {
     let fetchParam = {
@@ -36,25 +40,24 @@ var status = function(response) {
 var json = function(response) {
     return response.json()
 }
-window.addEventListener('DOMContentLoaded', fetch2(url));
+//window.addEventListener('DOMContentLoaded', fetch2(url));
 //window.addEventListener('DOMContentLoaded', fetch2(url, init("POST", newTheme)))
 
-function fetch2(url, init) {
+function fetch2(num, url, init) {
     fetch(url, init)
         .then(status)
         .then(json)
         .then(function(data) {
             modulLength = data.length;
-            console.log('data.length:', data);
-            modul = data[themeNum - 1];
-            console.log('DATA:', modul.homeWork);
+            modul = data[num];
+            themeNum = num+1;
             showThemDetails(modul.homeWork)
         })
         .catch(function(error) {
             console.log('error', error)
         })
 }
-// ---------------------------------------------------------------
+
 
 // ---------V-----SHOW & TOGLE theme details-----V-------------------
 

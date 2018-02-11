@@ -1,11 +1,7 @@
-const btnRender = document.querySelectorAll("[data='theory']");
+const btnRender = document.querySelectorAll("li[data='theory']");
 const mainTheory = document.querySelector(".main");
 
 let TheoryRender = (themNum) => {
-    const theoryName = document.querySelector("#theory-name");
-    const theoryNumber = document.querySelector(".caption__theme");
-    const contentParent = document.querySelector(".m-content");
-    const leftNavParent = document.querySelector(".m-left-nav");
 
     fetch("http://localhost:3000/course")
         .then(response => {
@@ -17,21 +13,19 @@ let TheoryRender = (themNum) => {
         })
         .then(data => {
 
-                let navCard = "";
+        let navCard = "";
             data[themNum].theory.content.forEach((elem, idx) => {
                 navCard += `<a href="#cnt${idx}" class="m-left-nav__link">
-        ${idx + 1}
-        <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
-    </a>
-        `;
+                ${idx + 1}
+                <span class="m-left-nav__prompt">[ ${elem.contentTitle} _]</span>
+                </a>`;
             });
 
-            let contentCard = "";
+        let contentCard = "";
             data[themNum].theory.content.forEach((elem, idx) => {
                 contentCard += `
-      <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
-      <p class="m-content__text">${elem.contentText}</p>
-      `;
+                <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
+                  <p class="m-content__text">${elem.contentText}</p>`;
             });
 
         mainTheory.innerHTML = `
@@ -57,7 +51,7 @@ let TheoryRender = (themNum) => {
             </div>
         </div>
         <dl class="m-content">
-        ${contentParent.innerHTML = contentCard}
+        <div class="m-content">${contentCard}</div>
 
         </dl>
         <a href="#m-title" class="m-btn-up invisible"> </a>
@@ -99,9 +93,8 @@ let TheoryRender = (themNum) => {
         </div>
         <!-- RIGHT-NAV end -->
         <!-- LEFT CONTENT STARTS -->
-        <div class="m-left-nav" id="m-left-nav">
-            ${leftNavParent.innerHTML = navCard}
-        </div>`
+        <div class="m-left-nav" id="m-left-nav">${navCard}</div>
+        `
         })
 
         .catch(err => console.log(err));
