@@ -1,0 +1,416 @@
+{
+    "course": [{
+        "theory": {
+            "number": "1",
+            "title": "Document Object Model",
+            "content": [{
+                    "contentTitle": "DOM (Document Object Model)",
+                    "contentText": "DOM (Document Object Model) - это межплатформенный и независимый от языка интерфейс прикладного программирования, и может использоваться с любым языком программирования. DOM обрабатывает HTML, XHTML или XML-документ как древовидную структуру, в которой каждый узел является объектом, который имеет свойства и методы, представляющим часть документа. Объекты могут управляться программно, и любые видимые изменения, происходящие в результате, могут затем отражаться в отображении документа. По существу DOM соединяет веб-страницу с языками программирования. Сам по себе язык JavaScript не предусматривает работы с браузером. Он вообще не знает про HTML. Каждый элемент в документе - весь документ в целом, заголовок, таблицы внутри документа, заголовки таблицы, текст внутри ячеек таблицы - это части DOM для этого документа, поэтому все они доступны и могут изменяться с помощью DOM и JavaScript. создании сценария с использованием элемента script, либо включая в веб страницу инструкцию для загрузки скрипта вы можете немедленно приступить к использованию программного интерфейса (API), используя элементы document или window для взаимодействия с самим документом, либо для получения потомков этого документа, т.е. различных элементов на странице."
+                },
+                {
+                    "contentTitle": "HTML документ и DOM",
+                    "contentText": "Согласно DOM-модели, документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент. Проще говоря, HTML-документ представляет собой иерархическое дерево. Это означает, что у каждого элемента (кроме корневого) есть только один родитель, т.е. элемент, внутри которого он располагается. У корневого раздела родитель отсутствует. Это дерево образуется за счет вложенной структуры тегов и текстовых элементов, каждый из которых образует отдельный узел."
+                },
+                {
+                    "contentTitle": "CSSOM",
+                    "contentText": "Стили CSS, преобразуются в CSSOM - объектную модель CSS. Это похоже на DOM, но для CSS. В отличие от DOM, он не может быть построен постепенно. Поскольку правила CSS могут переопределять друг друга, движок браузера должен выполнять сложные вычисления, чтобы выяснить, как код CSS применяется к DOM."
+                },
+                {
+                    "contentTitle": "Процесс построения веб-страницы",
+                    "contentText": "Почему построение DOM приостановилось? Скрипты могут изменять как HTML, так и его продукт - DOM, добавляя узлы. Скрипты могут также запрашивать что-то о DOM, и если это происходит, когда DOM все еще строится, он может вернуть неожиданные результаты. JavaScript блокирует построение DOM, поскольку он может модифицировать документ. CSS не может изменить документ, поэтому кажется, что нет причин для его блокировки, правильно? Из-за этого CSS может блокировать разбор HTML в зависимости от порядка внешних таблиц стилей и сценариев в документе. Если перед скриптами в документе есть внешние таблицы стилей, конструкция объектов DOM и CSSOM может мешать друг другу. Когда синтаксический анализатор попадает в тег сценария, конструкция DOM не может продолжаться до тех пор, пока JavaScript не завершит выполнение, и JavaScript не будет выполнен до тех пор, пока CSS не будет загружен, проанализирован и не будет доступен CSSOM. Еще одна вещь, о которой следует помнить, заключается в том, что даже если CSS не блокирует конструкцию DOM, он блокирует рендеринг. Браузер ничего не отобразит, пока не будет DOM и CSSOM. Это связано с тем, что страницы без CSS часто непригодны для использования. Если браузер показал вам беспорядочную страницу без CSS, а через несколько мгновений показал стилизованную страницу, внезапные смещения содержимого и визуальные изменения плохо влияют на user experience."
+                },
+                {
+                    "contentTitle": "Атрибуты defer и async",
+                    "contentText": "Синхронные скрипты блокирующие парсер, это проблема. И не все сценарии одинаково важны для пользователей, например, для отслеживания и аналитики. Решение? Асинхронная загрузка этих менее важных сценариев. Атрибуты defer и async были введены, чтобы дать разработчикам возможность указать браузеру, какие скрипты обрабатывать асинхронно. Оба этих атрибута сообщают браузеру, что он может продолжить парсинг HTML при загрузке сценария «в фоновом режиме», а затем выполнить скрипт после его загрузки. Таким образом, загрузка скриптов не блокирует построение DOM и рендеринг страниц. В результате пользователь может видеть страницу до того, как все сценарии завершили загрузку. Разница между ними - это тот момент, когда загруженые скрипты начинают выполняться. Выполнение defer скриптов начинается после завершения парсинга, но перед событием DOMContentLoaded. Это гарантирует, что скрипты будут выполняться в том порядке, в котором они отображаются в HTML, и не будут блокировать синтаксический анализатор."
+                },
+                {
+                    "contentTitle": "Атрибут preload",
+                    "contentText": "async и defer отлично подходят, если вы хотите отложить обработку некоторых скриптов, но как быть с контентом который важен для пользователя? Общая цель состоит в том, чтобы сначала предоставить CSS, поскольку он блокирует рендеринг. Синхронные скрипты всегда будут иметь более высокий приоритет, чем асинхронный. Изображения, видимые в первоначальной области окна просмотра, должны быть загружены до тех, что находятся ниже видимого контента. А есть также шрифты, видеоролики, SVG ... В общем - это сложно.Вы как разработчик, знаете какие ресурсы являются наиболее важными для рендеринга страницы. Некоторые из них часто находятся в CSS или скриптах, и это может занять у браузера некоторое время, прежде чем он их даже обнаружит. Для этих важных ресурсов вы можете использовать <link rel=preload> для того чтобы сообщить браузеру о том, что вы хотите загрузить эти ресурсы как можно быстрее."
+                },
+                {
+                    "contentTitle": "Атрибут xxx",
+                    "contentText": "async и defer отлично подходят, если вы хотите отложить обработку некоторых скриптов, но как быть с контентом который важен для пользователя? Общая цель состоит в том, чтобы сначала предоставить CSS, поскольку он блокирует рендеринг. Синхронные скрипты всегда будут иметь более высокий приоритет, чем асинхронный. Изображения, видимые в первоначальной области окна просмотра, должны быть загружены до тех, что находятся ниже видимого контента. А есть также шрифты, видеоролики, SVG ... В общем - это сложно.Вы как разработчик, знаете какие ресурсы являются наиболее важными для рендеринга страницы. Некоторые из них часто находятся в CSS или скриптах, и это может занять у браузера некоторое время, прежде чем он их даже обнаружит. Для этих важных ресурсов вы можете использовать <link rel=preload> для того чтобы сообщить браузеру о том, что вы хотите загрузить эти ресурсы как можно быстрее."
+                }
+            ]
+        },
+        "tests": [{
+                "id": 1,
+                "question": "Где в документе может располагаться тэг script по стандарту HTML ?",
+                "answer1": "Только в HEAD",
+                "answer2": "Только в BODY",
+                "answer3": "В HEAD или в BODY",
+                "answer4": "Где угодно, главное чтоб был",
+                "correctAnswer": "В HEAD или в BODY"
+            },
+            {
+                "id": 2,
+                "question": "Как дела ?",
+                "answer1": "Нормас",
+                "answer2": "Говнисто",
+                "answer3": "Такакатотак",
+                "answer4": "Че на?",
+                "correctAnswer": "Нормас"
+            },
+            {
+                "question": "Укажите ваш пол",
+                "answer1": "Мужик",
+                "answer2": "Баба",
+                "answer3": "Оно",
+                "answer4": "Просто объект",
+                "correctAnswer": "",
+                "id": 3
+            },
+            {
+                "question": "Сикоко тебе годиков?",
+                "answer1": "Еще пистон",
+                "answer2": "Юнец-молодец",
+                "answer3": "Зрелый перец",
+                "answer4": "Старый пердун",
+                "correctAnswer": "",
+                "id": 4
+            }
+        ],
+        "homeWork": {
+            "title": "ДЗ по хтмл",
+            "hours": "11",
+            "deadline": "2019-01-21",
+            "text": "HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+        }
+    }, {
+        "theory": {
+            "number": "2",
+            "title": "HTML Lorem ipsum",
+            "content": [{
+                    "contentTitle": "HTML Lorem ipsum dolor",
+                    "contentText": "HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+                },
+                {
+                    "contentTitle": "Lorem ipsum dolor",
+                    "contentText": "HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel."
+                },
+                {
+                    "contentTitle": "Lorem dolor",
+                    "contentText": "HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel."
+                },
+                {
+                    "contentTitle": "Lorem dolor dolor",
+                    "contentText": "Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. HTML Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel."
+                }
+            ]
+        },
+        "tests": [{
+                "id": 1,
+                "question": "Где в документе может располагаться тэг script по стандарту HTML ?",
+                "answer1": "Только в HEAD",
+                "answer2": "Только в BODY",
+                "answer3": "В HEAD или в BODY",
+                "answer4": "Где угодно, главное чтоб был",
+                "correctAnswer": "В HEAD или в BODY"
+            },
+            {
+                "id": 2,
+                "question": "Как дела ?",
+                "answer1": "Нормас",
+                "answer2": "Говнисто",
+                "answer3": "Такакатотак",
+                "answer4": "Че на?",
+                "correctAnswer": "Нормас"
+            },
+            {
+                "question": "Укажите ваш пол",
+                "answer1": "Мужик",
+                "answer2": "Баба",
+                "answer3": "Оно",
+                "answer4": "Просто объект",
+                "correctAnswer": "",
+                "id": 3
+            },
+            {
+                "question": "Сикоко тебе годиков?",
+                "answer1": "Еще пистон",
+                "answer2": "Юнец-молодец",
+                "answer3": "Зрелый перец",
+                "answer4": "Старый пердун",
+                "correctAnswer": "",
+                "id": 4
+            }
+        ],
+        "homeWork": {
+            "title": "ДЗ по CSS",
+            "hours": "12",
+            "deadline": "2019-02-22",
+            "text": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa. sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+        }
+    }, {
+        "theory": {
+            "number": "3",
+            "title": "CSS Lorem ipsum",
+            "content": [{
+                    "contentTitle": "CSS Lorem ipsum dolor",
+                    "contentText": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa. sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+                },
+                {
+                    "contentTitle": "Lorem ipsum",
+                    "contentText": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa. sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+                },
+                {
+                    "contentTitle": " CSS Lorem ipsum",
+                    "contentText": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit."
+                },
+                {
+                    "contentTitle": " CSS Lorem ipsum",
+                    "contentText": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit. CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit."
+                },
+                {
+                    "contentTitle": " Lorem Lorem",
+                    "contentText": "CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae. Vitae amet delectus nulla, repellendus optio pariatur id eveniet ipsum iure!<br> sit amet, consectetur adipisicing elit. CSS Lorem ipsum dolor<br>  sit amet, consectetur adipisicing elit. Blanditiis modi totam id aut incidunt nulla cumque corrupti praesentium recusandae."
+                }
+            ]
+        },
+        "tests": [{
+                "id": 1,
+                "question": "Где в документе может располагаться тэг script по стандарту HTML ?",
+                "answer1": "Только в HEAD",
+                "answer2": "Только в BODY",
+                "answer3": "В HEAD или в BODY",
+                "answer4": "Где угодно, главное чтоб был",
+                "correctAnswer": "В HEAD или в BODY"
+            },
+            {
+                "id": 2,
+                "question": "Как дела ?",
+                "answer1": "Нормас",
+                "answer2": "Говнисто",
+                "answer3": "Такакатотак",
+                "answer4": "Че на?",
+                "correctAnswer": "Нормас"
+            },
+            {
+                "question": "Укажите ваш пол",
+                "answer1": "Мужик",
+                "answer2": "Баба",
+                "answer3": "Оно",
+                "answer4": "Просто объект",
+                "correctAnswer": "",
+                "id": 3
+            },
+            {
+                "question": "Сикоко тебе годиков?",
+                "answer1": "Еще пистон",
+                "answer2": "Юнец-молодец",
+                "answer3": "Зрелый перец",
+                "answer4": "Старый пердун",
+                "correctAnswer": "",
+                "id": 4
+            }
+        ],
+        "homeWork": {
+            "title": "ДЗ по CSS3",
+            "hours": "13",
+            "deadline": "2019-03-23",
+            "text": "CSS3 Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quod amet, ea nostrum aliquam repudiandae excepturi voluptatem fugit aperiam. Quaerat minima reiciendis nesciunt ut enim necessitatibus nam in voluptate debitis excepturi.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
+        }
+    }],
+    "adv": [{
+            "id": 1,
+            "isNew": true,
+            "title": "First post",
+            "date": "26/01/2018",
+            "time": "19:30",
+            "userID": 1,
+            "userName": "Sasha Ivanov",
+            "userRole": "Student",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut",
+            "likes": 9,
+            "changeDate": "05/02/2018",
+            "changeTime": "12:51",
+            "changeAutor": "Test user",
+            "changed": true,
+            "comments": [{
+                    "id": 1,
+                    "isNew": true,
+                    "date": "26/01/2018",
+                    "time": "21:30",
+                    "userID": 2,
+                    "userName": "Misha Ivanov",
+                    "userRole": "Student",
+                    "message": "Well? hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+                    "likes": 4,
+                    "changeDate": "",
+                    "changeTime": "",
+                    "changeAutor": "",
+                    "changed": false
+                },
+                {
+                    "id": 2,
+                    "isNew": true,
+                    "date": "26/01/2018",
+                    "time": "22:30",
+                    "userID": 2,
+                    "userName": "Misha Ivanov",
+                    "userRole": "Student",
+                    "message": "Second comment",
+                    "likes": 5,
+                    "changeDate": "",
+                    "changeTime": "",
+                    "changeAutor": "",
+                    "changed": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "isNew": true,
+            "title": "Second post",
+            "date": "26/01/2018",
+            "time": "22:30",
+            "userID": 2,
+            "userName": "Misha Ivanov",
+            "userRole": "Student",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "likes": 12,
+            "changeDate": "",
+            "changeTime": "",
+            "changeAutor": "",
+            "changed": false
+        },
+        {
+            "id": 3,
+            "isNew": true,
+            "title": "Third post",
+            "date": "26/01/2018",
+            "time": "22:35",
+            "userID": 3,
+            "userName": "Andrey Tsarenok",
+            "userRole": "Student",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+            "likes": 10,
+            "changeDate": "",
+            "changeTime": "",
+            "changeAutor": "",
+            "changed": false
+        },
+        {
+            "id": 4,
+            "isNew": true,
+            "title": "Fourth post",
+            "date": "27/01/2018",
+            "time": "10:30",
+            "userID": 6,
+            "userName": "Vassysyliy Lesovatiy",
+            "userRole": "Administrator",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+            "likes": 5,
+            "changeDate": "",
+            "changeTime": "",
+            "changeAutor": "",
+            "changed": false
+        },
+        {
+            "isNew": true,
+            "title": "Next post",
+            "date": "06/02/2018",
+            "time": "13:42",
+            "userID": 6,
+            "userName": "Test user",
+            "userRole": "Student",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. la-la-la",
+            "likes": 0,
+            "changeDate": "06/02/2018",
+            "changeTime": "13:42",
+            "changeAutor": "Test user",
+            "changed": true,
+            "id": 5
+        },
+        {
+            "isNew": true,
+            "title": "Next post",
+            "date": "06/02/2018",
+            "time": "13:42",
+            "userID": 6,
+            "userName": "Test user",
+            "userRole": "Student",
+            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+            "likes": 0,
+            "changeDate": "",
+            "changeTime": "",
+            "changeAutor": "",
+            "changed": false,
+            "id": 6
+        }
+    ],
+    "user": [
+        {
+          "id": 1,
+          "firstName": "Sasha",
+          "lastName": "Ivanov",
+          "email": "ivanov@gmail.com",
+          "password": "12345",
+          "role": "Student",
+          "gruop": "fe3",
+          "couses": "FE",
+          "photo": "src",
+          "isOnline": true
+        },
+        {
+          "id": 2,
+          "firstName": "Misha",
+          "lastName": "Ivanov",
+          "email": "ivanov@gmail.com",
+          "password": "12345",
+          "role": "Student",
+          "gruop": "BackE3",
+          "couses": "BackE3",
+          "photo": "src",
+          "isOnline": true
+        },
+        {
+          "firstName": "Andrey",
+          "lastName": "Tsarenok",
+          "email": "Tsarenok@gmail.com",
+          "password": "12345",
+          "role": "Student",
+          "gruop": "fe3",
+          "couses": "FE",
+          "photo": "src",
+          "isOnline": true,
+          "id": 3
+        },
+        {
+          "firstName": "Vassysyliy",
+          "lastName": "Lesovatiy",
+          "email": "Lesovatiy@gmail.com",
+          "password": "555",
+          "role": "Administrator",
+          "gruop": "fe3",
+          "couses": "FE",
+          "photo": "src",
+          "isOnline": true,
+          "id": 6
+        },
+        {
+          "firstName": "Vasya",
+          "lastName": "Ivanovff",
+          "email": "ivanov@gmail.com",
+          "password": "12345",
+          "role": "Student",
+          "gruop": "fe3",
+          "couses": "FE",
+          "photo": "src",
+          "isOnline": true,
+          "id": 7
+        },
+        {
+          "firstName": "Vasya",
+          "lastName": "Ivanovff",
+          "email": "ivanov@gmail.com",
+          "password": "12345",
+          "role": "Student",
+          "gruop": "fe3",
+          "couses": "FE",
+          "photo": "src",
+          "isOnline": true,
+          "id": 8
+        }
+      ]
+}
