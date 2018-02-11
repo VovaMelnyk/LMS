@@ -9,6 +9,7 @@ var hwThemesLinks = document.querySelectorAll("[data='homework']");
     element.addEventListener('click', () => fetch2(idx, url));
 });
 
+mainDiv.childE
 // -------------------------V--FETCH--V-----------------------------
 
 // var newTheme = {
@@ -29,7 +30,6 @@ function init(metod, obj) {
 }
 
 var url = 'http://localhost:3000/course';
-//var urlStBase = 'https://my-json-server.typicode.com/kotyhoroshko/demo/course';
 
 var status = function(response) {
     if (response.status !== 200) {
@@ -40,6 +40,7 @@ var status = function(response) {
 var json = function(response) {
     return response.json()
 }
+
 //window.addEventListener('DOMContentLoaded', fetch2(url));
 //window.addEventListener('DOMContentLoaded', fetch2(url, init("POST", newTheme)))
 
@@ -51,7 +52,7 @@ function fetch2(num, url, init) {
             modulLength = data.length;
             modul = data[num];
             themeNum = num+1;
-            showThemDetails(modul.homeWork)
+            showThemDetails(modul.homeWork, opac)
         })
         .catch(function(error) {
             console.log('error', error)
@@ -61,7 +62,7 @@ function fetch2(num, url, init) {
 
 // ---------V-----SHOW & TOGLE theme details-----V-------------------
 
-function showThemDetails(data) {
+function showThemDetails(data, effect) {
     mainDiv.innerHTML = (`
         <div class="d-homework">
             <header class="d-header">
@@ -105,38 +106,43 @@ function showThemDetails(data) {
                 <a href="#" class="d-nav__left">Вернуться к тестам</a>
                 <a href = "javascript:showNextTheme()" class="d-nav__right">Следующая тема</a>
             </div>
-
-            <div class="right-nav">
-                <div class="m-right-nav">
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-favorites"
-                        prompt="[ Добавить в избранное _]">
-                    </a>
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-reminder"
-                        prompt="[ Напомнить позже _]">
-                    </a>
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-forum"
-                        prompt="[ Обсудить на форуме _]">
-                    </a>
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-chat"
-                        prompt="[ Обсудить в чате _]">
-                    </a>
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-mentor"
-                        prompt="[ Задать вопрос ментору _]">
-                    </a>
-                    <a href="#"
-                        class="m-right-nav__item m-right-nav__item-select"
-                        prompt="[ Выделить текст _]">
-                    </a>
-                </div>
+        </div>
+        <div class="right-nav">
+            <div class="m-right-nav">
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-favorites"
+                    prompt="[ Добавить в избранное _]">
+                </a>
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-reminder"
+                    prompt="[ Напомнить позже _]">
+                </a>
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-forum"
+                    prompt="[ Обсудить на форуме _]">
+                </a>
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-chat"
+                    prompt="[ Обсудить в чате _]">
+                </a>
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-mentor"
+                    prompt="[ Задать вопрос ментору _]">
+                </a>
+                <a href="#"
+                    class="m-right-nav__item m-right-nav__item-select"
+                    prompt="[ Выделить текст _]">
+                </a>
             </div>
         </div>
             `);
+setTimeout (effect, 10);                                  // only for specEfects
+}
 
+function opac() {                                         // only for specEfects
+  mainDiv.style.overflow="hidden";
+  mainDiv.firstElementChild.style.opacity="1";
+  mainDiv.firstElementChild.style.transform="scaleX(1)";
 }
 
 function showNextTheme() {
