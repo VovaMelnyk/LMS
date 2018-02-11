@@ -288,9 +288,9 @@
     },
     {
       "isNew": true,
-      "title": "NEwer post",
-      "date": "11/02/2018",
-      "time": "16:57",
+      "title": "Newest post",
+      "date": "12/02/2018",
+      "time": "00:46",
       "userID": 6,
       "userName": "Test user",
       "userRole": "Student",
@@ -301,38 +301,6 @@
       "changeAutor": "",
       "changed": false,
       "id": 5
-    },
-    {
-      "isNew": true,
-      "title": "NEwer post",
-      "date": "11/02/2018",
-      "time": "16:57",
-      "userID": 6,
-      "userName": "Test user",
-      "userRole": "Student",
-      "message": "<p>Hello World!</p>",
-      "likes": 0,
-      "changeDate": "",
-      "changeTime": "",
-      "changeAutor": "",
-      "changed": false,
-      "id": 6
-    },
-    {
-      "isNew": true,
-      "title": "sr6j",
-      "date": "12/02/2018",
-      "time": "00:30",
-      "userID": 6,
-      "userName": "Test user",
-      "userRole": "Student",
-      "message": "<p>Hello World!</p>",
-      "likes": 0,
-      "changeDate": "",
-      "changeTime": "",
-      "changeAutor": "",
-      "changed": false,
-      "id": 7
     }
   ],
   "comments": [
