@@ -34,12 +34,14 @@ for (let i = 0; i < navBarIcon.length; i++) {
             }
         });
 }
-let formLogin = document.querySelector('.c-header-photo-profile__form-profile');
-let photo = document.querySelector('.c-header-photo-profile__photo');
-let close = document.querySelector('.c-header-photo-profile__form-profile-close');
-photo.onclick = ()=>{
-	formLogin.style.display = 'block';
-	close.onclick = ()=>{
-		formLogin.style.display = 'none'
-	};
-};
+
+let formProfile = document.querySelector('.c-header__form-profile');
+let photoProfile = document.querySelector('.c-header__photo-profile_photo');
+let closeForm = document.querySelector('.c-header__form-profile_close');
+
+photoProfile.onclick = () => {
+	formProfile.classList.remove('c-header__form-profile_hidden');
+}
+closeForm.onclick = () => {
+		formProfile.classList.add('c-header__form-profile_hidden');
+}
