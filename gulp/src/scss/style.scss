@@ -1,6 +1,7 @@
 @import 'var';
 @import 'reset';
 @import 'fonts';
+@import 'mixins';
 @import 'theme';
 @import 'header';
 @import 'logo';
@@ -19,12 +20,15 @@
 @import 'homework-header';
 @import 'homework-upload';
 @import './m-right-nav/m-right-nav';
+@import 'visible-block';
+@import './material-admin/material-admin';
+@import 'left-menu-button';
 @import 'left-nav';
 @import 'accord';
 @import 'admin-editor';
 @import 'm-main/m-sticky';
-//////tests////////
-// @import 'tests-var';
-// @import 'tests-main-header';
-// @import 'tests-main-content';
-// @import 'tests-main-footer';
+@import './material-admin/editor';
+@import './tests-constructor/tests-constructor';
+@import 'accord';
+@import './material-admin/m-bottom-btn';
+@import 'homework-admin';

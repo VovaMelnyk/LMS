@@ -8,8 +8,6 @@ var hwThemesLinks = document.querySelectorAll("[data='homework']");
     hwThemesLinks.forEach((element, idx) => {
     element.addEventListener('click', () => fetch2(idx, url));
 });
-
-mainDiv.childE
 // -------------------------V--FETCH--V-----------------------------
 
 // var newTheme = {

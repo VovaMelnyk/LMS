@@ -1,0 +1,198 @@
+.material-admin{
+    &__title{
+    font-size: 24px;
+    color: #222c4f;
+    margin-bottom: 32px;
+    }
+
+    &__material{
+        //background-color: #e8e8e8;
+        padding: 2px 16px 0 16px;
+        color: #ef742e;
+    }
+    &__content{
+        padding-top: 24px;
+    }
+}
+.m-btn-admin{
+    box-shadow: 0 0 2px gray;
+    opacity: 0.9;
+    &:hover {
+        box-shadow: 0 0 2px black;
+        opacity: 1;
+    }
+}
+.material-admin__closer-window{
+    background-color: rgb(215, 217, 219);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    opacity: 0.9;
+    z-index: 3;
+
+}
+.hidden-closer-window{
+    margin-top: 22%;
+    padding: 24px 8px 24px 8px;
+    height: 88px;
+    width: max-content;
+    border: 2px solid #333;
+}
+.hidden-block{
+	visibility: hidden;
+    transition: linear 0.3s;
+}
+.material-admin__cross {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    box-shadow: 0 0 2px gray;
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 0 2px black;
+        }
+        &:before, &:after {
+            position: absolute;
+            left: 15px;
+            top: 4px;
+            content: ' ';
+            height: 24px;
+            width: 2px;
+            background-color: white;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+}
+
+.tabs {
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    min-height: 90vh;
+
+  & li {
+      /* float: left; */
+      display: inline-block;
+  }
+
+  & input[type="radio"] {
+      position: absolute;
+      top: 0;
+      left: -9999px;
+  }
+
+  & label[role="tab"] {
+      display: block;
+      position: relative;
+      top: 4px;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #ccc;
+      padding: 14px 21px;
+      border-radius: 2px 2px 0 0;
+      cursor: pointer;
+
+
+      transition: all 0.2s ease-in-out;
+  }
+
+  & label:hover {
+      background: #ddd;
+  }
+
+  & .tab-content {
+      z-index: 2;
+      display: none;
+      overflow: hidden;
+      width: 100%;
+      font-size: 17px;
+      line-height: 25px;
+      padding: 25px;
+      position: absolute;
+      top: 53px;
+      left: 0;
+      background: #eee;
+  }
+
+  & [id^="tab"]:checked+label {
+      top: 0;
+      padding-top: 17px;
+      background: #eee;
+  }
+
+  & [id^="tab"]:checked~[id^="tab-content"] {
+      display: block;
+  }
+}
+
+// .tabs{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     list-style: none;
+//     text-align: left;
+//     margin-bottom: 16px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     width: 95%;
+//     background-color: #e8e8e8;
+//     border-bottom: 2px solid #ef742e;
+//     margin-bottom: 24px;
+//     font-size: 20px;
+//     & .tab-content {
+//       z-index: 2;
+//       display: none;
+//       overflow: hidden;
+//       width: 97%;
+//       padding: 24px;
+//       position: absolute;
+//       top: 160px;
+//       left: 16px;
+//     }
+//     & .label {
+//       display: block;
+//       padding: 14px 21px;
+//       border-radius: 2px 2px 0 0;
+//      // border-bottom: 2px solid #ef742e;
+//       font-size: 20px;
+//       font-weight: normal;
+//       text-transform: uppercase;
+//       cursor: pointer;
+//       position: relative;
+//       top: 4px;
+//       &:hover {
+//           background: #222c4f;
+//         }
+//     }
+//     & input[type="radio"] {
+//       position: absolute;
+//       top: 0;
+//       left: -9999px;
+//     }
+// }
+// .tabs [id^="tab"]:checked + .label {
+//   top: 0;
+//   padding-top: 17px;
+//   background: #222c4f;
+// }
+// .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+//   display: block;
+// }

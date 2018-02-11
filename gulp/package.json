@@ -3,7 +3,9 @@
   "version": "1.1.0",
   "description": "LMS",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel-preset-env": "^1.5.2",
