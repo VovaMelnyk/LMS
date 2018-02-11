@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
+    // uglify = require('gulp-uglify'),
     cssnano = require('gulp-cssnano'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
@@ -74,11 +74,13 @@ var serverConfig = {
 
   gulp.task('bundleJs', function() {
       return gulp.src(path.src.js)
-      .pipe(concat('scripts.min.js'))
-      .pipe(babel({
-          presets: ['env']
-      }))
-      .pipe(uglify())
+      .pipe(sourcemaps.init())
+        .pipe(concat('scripts.min.js'))
+        .pipe(babel({
+              presets: ['env']
+        }))
+        // .pipe(uglify())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.dist.js))
       .pipe(browserSync.reload({stream: true}));
   })

@@ -219,8 +219,9 @@ function pageRender() {
             throw new Error("Error fetching data. Response status: " + response.status + " : " + response.statusText);
         })
         .then(jsonArray => {
-            for (let json in jsonArray) {
-                getPost(jsonArray[json]);
+            let jsonArray2 = jsonArray.reverse();
+            for (let json in jsonArray2) {
+                getPost(jsonArray2[json]);
             }
 
             jsonArray.forEach((json) => {
@@ -520,6 +521,14 @@ let lastNewsTitle = '[ Последние новости: ]';
 addIcon.addEventListener("click", showEditor);
 
 window.onload = pageRender();
+let boardBtn = document.querySelector('#boardBtn');
+boardBtn.addEventListener('click', ()=> {
+    // let main = document.querySelector('.main');
+    // main.innerHTML = `<div class="posts"></div>`;
+    pageRender();
+    console.log(event);
+    event.preventDefault();
+});
 
 /**
 * ID : 'post_add_editor'

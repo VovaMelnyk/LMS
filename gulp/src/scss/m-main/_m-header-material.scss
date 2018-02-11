@@ -1,0 +1,52 @@
+.m-header {
+	display: flex;
+	overflow: hidden;
+	justify-content: space-between;
+	align-items: flex-end;
+	z-index: 10;
+	&__caption {
+		font-family: $title-font;
+		font-size: 48px;
+		color: $dark-text;
+	}
+	&__title {
+		padding: 0 16px 0 8px;
+
+		font-family: $title-font;
+		font-size: 48px;
+		color: $dark-text;
+
+		background: $cyan;
+	}
+}
+
+.caption__title {
+	font-family: $text-font;
+	font-size: 24px;
+	color: $light-text;
+}
+
+.m-btn-test {
+	display: block;
+	margin-top: 24px;
+
+	text-decoration: none;
+
+	box-shadow: 0 0 2px $black;
+}
+
+.m-timer {
+	display: inline-flex;
+	margin-top: 24px;
+	font-family: $text-font;
+
+	align-items: center;
+	justify-content: flex-end;
+	&__time {
+		font-size: rem(12);
+		text-align: right;
+	}
+	&__img {
+		background: url(../img/materialHeader/time.png)no-repeat center / cover;
+	}
+}
