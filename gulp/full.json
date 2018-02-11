@@ -211,12 +211,8 @@
             "text": "CSS3 Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. Quod amet, ea nostrum aliquam repudiandae excepturi voluptatem fugit aperiam. Quaerat minima reiciendis nesciunt ut enim necessitatibus nam in voluptate debitis excepturi.<br> sit amet, consectetur adipisicing elit. Quidem sint cumque dicta officiis rem, fugit nihil ad rerum deserunt mollitia fuga, reiciendis odit, aperiam culpa vel. Voluptate nesciunt necessitatibus ipsa."
         }
     }],
-<<<<<<< HEAD
     "post": [
         {
-=======
-    "adv": [{
->>>>>>> news-board
             "id": 1,
             "isNew": true,
             "title": "First post",
@@ -226,50 +222,11 @@
             "userName": "Sasha Ivanov",
             "userRole": "Student",
             "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut",
-<<<<<<< HEAD
             "likes": 15,
             "changeDate": "05/02/2018",
             "changeTime": "12:51",
             "changeAutor": "Test user",
             "changed": true
-=======
-            "likes": 9,
-            "changeDate": "05/02/2018",
-            "changeTime": "12:51",
-            "changeAutor": "Test user",
-            "changed": true,
-            "comments": [{
-                    "id": 1,
-                    "isNew": true,
-                    "date": "26/01/2018",
-                    "time": "21:30",
-                    "userID": 2,
-                    "userName": "Misha Ivanov",
-                    "userRole": "Student",
-                    "message": "Well? hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-                    "likes": 4,
-                    "changeDate": "",
-                    "changeTime": "",
-                    "changeAutor": "",
-                    "changed": false
-                },
-                {
-                    "id": 2,
-                    "isNew": true,
-                    "date": "26/01/2018",
-                    "time": "22:30",
-                    "userID": 2,
-                    "userName": "Misha Ivanov",
-                    "userRole": "Student",
-                    "message": "Second comment",
-                    "likes": 5,
-                    "changeDate": "",
-                    "changeTime": "",
-                    "changeAutor": "",
-                    "changed": false
-                }
-            ]
->>>>>>> news-board
         },
         {
             "id": 2,
@@ -318,7 +275,6 @@
             "changeTime": "",
             "changeAutor": "",
             "changed": false
-<<<<<<< HEAD
         }
     ],
     "comments": [
@@ -398,27 +354,11 @@
             "likes": 1,
             "changeDate": "06/02/2018",
             "changeTime": "13:46",
-=======
-        },
-        {
-            "isNew": true,
-            "title": "Next post",
-            "date": "06/02/2018",
-            "time": "13:42",
-            "userID": 6,
-            "userName": "Test user",
-            "userRole": "Student",
-            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. la-la-la",
-            "likes": 0,
-            "changeDate": "06/02/2018",
-            "changeTime": "13:42",
->>>>>>> news-board
             "changeAutor": "Test user",
             "changed": true,
             "id": 5
         },
         {
-<<<<<<< HEAD
             "postID": 1,
             "isNew": true,
             "date": "09/02/2018",
@@ -427,16 +367,6 @@
             "userName": "Test user",
             "userRole": "Student",
             "message": "привет",
-=======
-            "isNew": true,
-            "title": "Next post",
-            "date": "06/02/2018",
-            "time": "13:42",
-            "userID": 6,
-            "userName": "Test user",
-            "userRole": "Student",
-            "message": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
->>>>>>> news-board
             "likes": 0,
             "changeDate": "",
             "changeTime": "",
@@ -444,83 +374,5 @@
             "changed": false,
             "id": 6
         }
-<<<<<<< HEAD
     ]
-=======
-    ],
-    "user": [
-        {
-          "id": 1,
-          "firstName": "Sasha",
-          "lastName": "Ivanov",
-          "email": "ivanov@gmail.com",
-          "password": "12345",
-          "role": "Student",
-          "gruop": "fe3",
-          "couses": "FE",
-          "photo": "src",
-          "isOnline": true
-        },
-        {
-          "id": 2,
-          "firstName": "Misha",
-          "lastName": "Ivanov",
-          "email": "ivanov@gmail.com",
-          "password": "12345",
-          "role": "Student",
-          "gruop": "BackE3",
-          "couses": "BackE3",
-          "photo": "src",
-          "isOnline": true
-        },
-        {
-          "firstName": "Andrey",
-          "lastName": "Tsarenok",
-          "email": "Tsarenok@gmail.com",
-          "password": "12345",
-          "role": "Student",
-          "gruop": "fe3",
-          "couses": "FE",
-          "photo": "src",
-          "isOnline": true,
-          "id": 3
-        },
-        {
-          "firstName": "Vassysyliy",
-          "lastName": "Lesovatiy",
-          "email": "Lesovatiy@gmail.com",
-          "password": "555",
-          "role": "Administrator",
-          "gruop": "fe3",
-          "couses": "FE",
-          "photo": "src",
-          "isOnline": true,
-          "id": 6
-        },
-        {
-          "firstName": "Vasya",
-          "lastName": "Ivanovff",
-          "email": "ivanov@gmail.com",
-          "password": "12345",
-          "role": "Student",
-          "gruop": "fe3",
-          "couses": "FE",
-          "photo": "src",
-          "isOnline": true,
-          "id": 7
-        },
-        {
-          "firstName": "Vasya",
-          "lastName": "Ivanovff",
-          "email": "ivanov@gmail.com",
-          "password": "12345",
-          "role": "Student",
-          "gruop": "fe3",
-          "couses": "FE",
-          "photo": "src",
-          "isOnline": true,
-          "id": 8
-        }
-      ]
->>>>>>> news-board
 }
