@@ -6,7 +6,6 @@
     text-decoration: none;
     text-transform: uppercase;
     background: $dark-bg;
-
     &__elem {
         display: flex;
         justify-content: center;
@@ -17,21 +16,19 @@
         font-size: 30px;
         font-weight: 900;
         letter-spacing: 4px;
-
+        position: relative;
         &-white {
             position: relative;
             justify-content: flex-start;
             padding-left: 12px;
             background: $white;
         }
-
         &-orange {
             background: $orange;
-
             &::after {
                 position: absolute;
                 top: 0;
-                left: 70px;
+                left: -20px;
                 width: 0;
                 height: 0;
                 border-top: 24px solid transparent;
