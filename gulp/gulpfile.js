@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
+    // uglify = require('gulp-uglify'),
     cssnano = require('gulp-cssnano'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
@@ -17,16 +17,18 @@ var path = {
   src : {
       html: 'src/*.html',
       sass: 'src/scss/**/*.scss',
-      js: 'src/js/*.js',
+      js: 'src/js/**/*.js',
       img: 'src/img/**/*.+(png|jpg|gif|svg)',
-      fonts: 'src/fonts/**/*.*'
+      fonts: 'src/fonts/**/*.*',
+      plugins: 'src/plugins/**/*.*'
   },
   dist: {
       html: 'dist/',
       css: 'dist/css/',
       js: 'dist/js/',
       img: 'dist/img/',
-      fonts: 'dist/fonts/'
+      fonts: 'dist/fonts/',
+      plugins: 'dist/plugins/'
   },
   watch: {
       html: 'src/**/*.html'
@@ -77,7 +79,7 @@ var serverConfig = {
         .pipe(babel({
               presets: ['env']
         }))
-        .pipe(uglify())
+        // .pipe(uglify())
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.dist.js))
       .pipe(browserSync.reload({stream: true}));
@@ -102,6 +104,13 @@ var serverConfig = {
       .pipe(gulp.dest(path.dist.fonts))
   })
 
+  //Plugins
+  gulp.task('bundlePlugins', function() {
+      return gulp.src(path.src.plugins)
+      .pipe(gulp.dest(path.dist.plugins))
+  })
+
+
   // watch
   gulp.task('watch', function() {
       gulp.watch(path.watch.html, {cwd: './'}, ['bundleHtml']);
@@ -109,6 +118,7 @@ var serverConfig = {
       gulp.watch(path.src.js, {cwd: './'}, ['bundleJs']);
       gulp.watch(path.src.img, ['bundleImg']);
       gulp.watch(path.src.fonts, ['bundleFont']);
+      gulp.watch(path.src.plugins, ['bundlePlugins']);
   });
 
   // BrowserSync server
@@ -122,7 +132,7 @@ var serverConfig = {
   });
 
   // Build task
-  gulp.task('build', ['bundleHtml', 'bundleCSS', 'bundleJs', 'bundleImg', 'bundleFont']);
+  gulp.task('build', ['bundleHtml', 'bundleCSS', 'bundleJs', 'bundleImg', 'bundleFont', 'bundlePlugins']);
 
   // Default task
   gulp.task('default', ['clean', 'build', 'webServer', 'watch']);

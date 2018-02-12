@@ -13,7 +13,7 @@ let TheoryRender = (themNum) => {
         })
         .then(data => {
 
-        let navCard = "";
+            let navCard = "";
             data[themNum].theory.content.forEach((elem, idx) => {
                 navCard += `<a href="#cnt${idx}" class="m-left-nav__link">
                 ${idx + 1}
@@ -21,14 +21,14 @@ let TheoryRender = (themNum) => {
                 </a>`;
             });
 
-        let contentCard = "";
+            let contentCard = "";
             data[themNum].theory.content.forEach((elem, idx) => {
                 contentCard += `
                 <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
                   <p class="m-content__text">${elem.contentText}</p>`;
             });
 
-        mainTheory.innerHTML = `
+            mainTheory.innerHTML = `
         <div id="m-title" class="m-header">
             <div class="m-header__caption caption">
                 <h2 class="caption__title">Теория</h2>
@@ -102,5 +102,11 @@ let TheoryRender = (themNum) => {
 };
 
 btnRender.forEach((element, idx) => {
-    element.addEventListener('click', () => TheoryRender(idx));
+    element.addEventListener('click', () => {
+        let deletePosts = document.querySelector('.posts');
+        if (deletePosts) {
+            deletePosts.innerHTML = '';
+        }
+        TheoryRender(idx)
+    });
 });

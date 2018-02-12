@@ -1,0 +1,22 @@
+.a-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: rem(24);
+
+    &__left,
+    &__right {
+        text-decoration: none;
+        font-family: $text-font;
+        font-size: rem(12);
+        font-weight: rem(300);
+        color: $light-text;
+        margin-bottom: rem(40);
+        margin-right: rem(64);
+
+        &--point {
+            font-size: rem(22);
+        }
+    }
+}

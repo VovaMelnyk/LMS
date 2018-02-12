@@ -6,7 +6,7 @@ var themeNum = 1;
 var mainDiv = document.querySelector('div.main');
 var hwThemesLinks = document.querySelectorAll("[data='homework']");
     hwThemesLinks.forEach((element, idx) => {
-    element.addEventListener('click', () => fetch2(idx, url));
+    element.addEventListener('click', () => fetch2(idx, url1));
 });
 // -------------------------V--FETCH--V-----------------------------
 
@@ -27,7 +27,8 @@ function init(metod, obj) {
     return fetchParam
 }
 
-var url = 'http://localhost:3000/course';
+let url1 = 'http://localhost:3000/course';
+//var url1StBase = 'https://my-json-server.typicode.com/kotyhoroshko/demo/course';
 
 var status = function(response) {
     if (response.status !== 200) {
@@ -38,12 +39,11 @@ var status = function(response) {
 var json = function(response) {
     return response.json()
 }
+//window.addEventListener('DOMContentLoaded', fetch2(url1));
+//window.addEventListener('DOMContentLoaded', fetch2(url1, init("POST", newTheme)))
 
-//window.addEventListener('DOMContentLoaded', fetch2(url));
-//window.addEventListener('DOMContentLoaded', fetch2(url, init("POST", newTheme)))
-
-function fetch2(num, url, init) {
-    fetch(url, init)
+function fetch2(num, url1, init) {
+    fetch(url1, init)
         .then(status)
         .then(json)
         .then(function(data) {
@@ -87,7 +87,7 @@ function showThemDetails(data, effect) {
                 </form>
                 <form class="d-rating-form" action="#" method="post">
                     <img src="img/github@1.2x.png" alt="file">
-                    <input type="url" class="d-rating__choose" name="choose" placeholder="Посилання на GitHub" title="Посилання має бути на GitHub" pattern=".*github\..*" required>
+                    <input type="url1" class="d-rating__choose" name="choose" placeholder="Посилання на GitHub" title="Посилання має бути на GitHub" pattern=".*github\..*" required>
                     <button class="d-btn d-rating__done" type="submit" name="d-sub">Готово</button>
                 </form>
                 <p class="d-rating__line">
