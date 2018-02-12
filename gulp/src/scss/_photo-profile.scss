@@ -124,9 +124,7 @@
                 font-family: $title-font;
                 font-size: 14px;
                 &:hover {
-                    font-size: 16px;
-                    transition: all ease .5s;
-                    z-index: 999999;
+                    opacity: 0.7;
                 }
             }
 
