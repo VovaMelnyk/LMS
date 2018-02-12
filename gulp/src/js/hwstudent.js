@@ -39,8 +39,8 @@ var status = function(response) {
 var json = function(response) {
     return response.json()
 }
-//window.addEventListener('DOMContentLoaded', fetch2(url1));
-//window.addEventListener('DOMContentLoaded', fetch2(url1, init("POST", newTheme)))
+//window.addEventListener('DOMContentLoaded', fetch2(themeNum, url1));
+//window.addEventListener('DOMContentLoaded', fetch2(themeNum, url1, init("POST", newTheme)))
 
 function fetch2(num, url1, init) {
     fetch(url1, init)

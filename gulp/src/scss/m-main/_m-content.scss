@@ -48,3 +48,10 @@
     box-shadow: 0 0 10px -3px #046b79;
     font-weight: bold;
 }
+
+.wrapper_theory { // only for specEfects
+    transform: scaleX(0.1);
+    opacity: 0.5;
+    // padding: 32px;
+    transition: .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }

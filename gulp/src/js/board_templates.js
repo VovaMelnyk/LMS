@@ -521,14 +521,14 @@ let lastNewsTitle = '[ Последние новости: ]';
 addIcon.addEventListener("click", showEditor);
 
 window.onload = pageRender();
-let boardBtn = document.querySelector('#boardBtn');
-boardBtn.addEventListener('click', () => {
-    // let main = document.querySelector('.main');
-    // main.innerHTML = `<div class="posts"></div>`;
-    pageRender();
-    console.log(event);
-    event.preventDefault();
-});
+// let boardBtn = document.querySelector('#boardBtn');
+// boardBtn.addEventListener('click', () => {
+//     // let main = document.querySelector('.main');
+//     // main.innerHTML = `<div class="posts"></div>`;
+//     pageRender();
+//     console.log(event);
+//     event.preventDefault();
+// });
 
 /**
  * ID : 'post_add_editor'
