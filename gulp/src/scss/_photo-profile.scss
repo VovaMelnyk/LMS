@@ -1,27 +1,12 @@
-.c-header-photo-profile {
+.c-header__photo-profile {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     line-height: 1.5;
 
-    &__block {
-        display: flex;
-        justify-content: flex-end;
-    
-        &-my-profile, &-sign-out {
-            text-align: right;
-            padding-right: 8px;
-            
-            a {
-                text-decoration: none;
-                color: $cyan;
-                font-family: $text-font;      
-            }
-        }
-    }
-
-    &__photo {
+    &_photo {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -30,7 +15,6 @@
         height: 48px;
         background-color: $white;
         border-radius: 50%;
-        position: relative;
 
         &-circle {
             width: 16px;
@@ -47,90 +31,110 @@
             border-radius: 48px 48px 0 0;
         }
     }
+}
+.c-header__profile-block {
+    display: flex;
+    flex-direction: column;
 
-    &__form-profile {
+    &_my-profile, &_sign-out {
+        padding-right: 16px;
+        font-family: $text-font;
+        text-align: right;
+        color: $cyan;
+        cursor: pointer;
+    }
+}
+.c-header__form-profile {
         position: absolute;
+        top: 0;
         z-index: 999;
-        display: none; 
-        min-width: 96px;
-        background-color: $grey-bg; 
+        min-width: 280px;
+        background-color: $white;
         border-radius: 8px;
-        margin-top: 86px;
-        margin-left: -192px;
-        
-        &-close {
+
+        &_hidden {
+            display: none;
+        }
+        &_close {
             position: absolute;
             right: 24px;
             top: 16px;
             width: 16px;
             height: 16px;
             opacity: 0.2;
+            cursor: pointer;
         }
-        &-close:hover {
+        &_close:hover {
             opacity: 1;
         }
-        &-close:before, &-close:after {
-            content:' ';
+        &_close:before, &_close:after {
+            content:'';
             position: absolute;
-            left: 15px;
+            left: 16px;
             height: 16px;
             width: 2px;
             background-color: #000;
             transform: rotate(45deg);
         }
-        &-close:after {
+        &_close:after {
             transform: rotate(-45deg);
         }
 
-        &-photo {
+        &_photo {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            //justify-content: ;
             align-items: center;
+            height: 136px;
             padding: 16px;
+            padding-bottom: 8px;
+            font-family: $text-font;
+            color: $dark-text;
 
             &-student {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
+                box-shadow: 2px 2px 2px $grey-bg;
             }
-
-            &-name, &-email {
-                font-size: 24px;
-                font-family: $text-font;
-                color: $dark-text;
+            &-name {
+                font-weight: bold;
             }
-
             &-email {
-                text-decoration: none;  
+                font-size: 14px;
+                text-decoration: none;
             }
         }
 
-        &-button {
+        &_button {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             padding: 16px;
+            padding-top: 8px;
 
             &-sign-in, &-my-profile {
-                padding: 8px 32px;
-                letter-spacing: 2.25px;
+                padding: 6px 16px;
+                font-family: $title-font;
+                font-size: 16px;
+                letter-spacing: 2.24px;
                 text-transform: uppercase;
                 color: $white;
-                border: none;
-                border-radius: 15px;
                 background-color: $grey-pholder;
-                font-family: $title-font;
-                font-size: 14px;
+                border: none;
+                border-radius: 8px;
+                opacity: 0.7;
+
                 &:hover {
-                    opacity: 0.7;
+                    opacity: 1;
                 }
             }
-
+            &-sign-in {
+                padding: 6px 30px;
+            }
             &-my-profile {
                 background-color: $orange;
             }
         }
-    }
 }

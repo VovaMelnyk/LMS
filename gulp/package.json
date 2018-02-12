@@ -21,6 +21,8 @@
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.0.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.20.1"
+  },
   "author": ""
 }
