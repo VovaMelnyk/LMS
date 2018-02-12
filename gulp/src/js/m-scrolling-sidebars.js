@@ -61,14 +61,10 @@
         document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav, false) );
     }
 
-    if (document.getElementById('main')) {
-        document.addEventListener('DOMContentLoaded', init);
-    }
-
     // add events when you change your page content
-const btnRender = document.querySelectorAll("li[data='theory']");
-    if (document.querySelectorAll("li[data='theory']") ) {
-        btnRender.forEach(elem => {
+const btnTheoryRender = document.querySelectorAll("li[data='theory']");
+    if (btnTheoryRender) {
+        btnTheoryRender.forEach(elem => {
             elem.addEventListener('click', () => {
             setTimeout(init, 1000)
             })

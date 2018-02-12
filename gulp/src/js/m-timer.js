@@ -48,19 +48,13 @@
 
     }
 
-    if (time) document.addEventListener("DOMContentLoaded", ()=>{
-        init()
-        document.addEventListener("visibilitychange", init);
-    });
-    
-    // if (document.getElementsByClassName('m-btn-test') ) {
-    //     document.getElementsByClassName('m-btn-test')[0].addEventListener('click', () => {
-    //         setTimeout(() => {
-    //             clearInterval(timerInterval);
-    //             minute = 26
-    //             init()
-    //         }, 1000)
-    //     })
-    // }
+    const btnTheoryRender = document.querySelectorAll("li[data='theory']");
+        if (btnTheoryRender) {
+            btnTheoryRender.forEach(elem => {
+                elem.addEventListener('click', () => {
+                setTimeout(init, 1000)
+                })
+            })
+        };
 
 })(document);
