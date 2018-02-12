@@ -23,6 +23,10 @@
             justify-content: flex-start;
             padding-left: 12px;
             background: $white;
+        }
+
+        &-orange {
+            background: $orange;
 
             &::after {
                 position: absolute;
@@ -35,10 +39,6 @@
                 border-left: 18px solid $white;
                 content: "";
             }
-        }
-
-        &-orange {
-            background: $orange;
         }
     }
 }
