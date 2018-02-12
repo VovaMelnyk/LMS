@@ -20,6 +20,7 @@
         background-color: $dark-button;
         border-radius: 8px;
         box-shadow: 8px 0 8px $grey-pholder;
+        transition: ease-out .2s;
 
         &::after {
             /* arrow icon */
@@ -76,6 +77,7 @@
 		/* by default hide all submenus */
 		display: none;
         padding: 4px;
+        padding-bottom: 16px;
         font-family: $text-font;
 
         &-block {
@@ -157,6 +159,9 @@
     }
     input[type=checkbox]:checked + .c-accordion-menu__submenu-button::before {
         transform: translateX(-15%) translateY(-15%) rotate(-90deg);
+    }
+    input[type=checkbox]:checked + .c-accordion-menu__submenu {
+        transition: ease 2s;
     }
 
 }

@@ -37,7 +37,7 @@
     flex-direction: column;
 
     &_my-profile, &_sign-out {
-        padding-right: 8px;
+        padding-right: 16px;
         font-family: $text-font;
         text-align: right;
         color: $cyan;
@@ -83,9 +83,9 @@
         &_photo {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            //justify-content: ;
             align-items: center;
-            height: 160px;
+            height: 136px;
             padding: 16px;
             padding-bottom: 8px;
             font-family: $text-font;
@@ -112,23 +112,27 @@
             justify-content: space-between;
             align-items: center;
             padding: 16px;
+            padding-top: 8px;
 
             &-sign-in, &-my-profile {
-                padding: 8px 32px;
-                letter-spacing: 2.25px;
+                padding: 6px 16px;
+                font-family: $title-font;
+                font-size: 16px;
+                letter-spacing: 2.24px;
                 text-transform: uppercase;
                 color: $white;
-                border: none;
-                border-radius: 15px;
                 background-color: $grey-pholder;
-                font-family: $title-font;
-                font-size: 14px;
+                border: none;
+                border-radius: 8px;
+                opacity: 0.7;
+
                 &:hover {
-                    font-size: 16px;
-                    transition: all ease .5;
+                    opacity: 1;
                 }
             }
-
+            &-sign-in {
+                padding: 6px 30px;
+            }
             &-my-profile {
                 background-color: $orange;
             }
