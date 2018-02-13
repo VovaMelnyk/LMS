@@ -1,8 +1,10 @@
 var mainDiv = document.querySelector('div.main');
 document.querySelector('#add-material').addEventListener('click', showAdmWindow);
 function showAdmWindow() {
+  opac();
+  setTimeout (()=>{
     mainDiv.innerHTML =
-        `    <div class="material-admin">
+        `<div class="material-admin">
                 <div id="cross" class="material-admin__cross icon"></div>
                 <h2 class="material-admin__title">[ Добавление темы: теория, тесты, ДЗ ]</h2>
                 <div class="material-admin__add-options">
@@ -416,11 +418,7 @@ function showAdmWindow() {
                 </div>
             </div>
         `
-        setTimeout (opac, 50);                                  // only for specEfects
-        }
-
-        function opac() {                                         // only for specEfects
-          mainDiv.style.overflow="hidden";
-          mainDiv.firstElementChild.style.opacity="1";
-          mainDiv.firstElementChild.style.transform="scaleX(1)";
-        }
+    },
+    200
+  );                       // only for specEfects
+}

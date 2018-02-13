@@ -39,8 +39,8 @@ var status = function(response) {
 var json = function(response) {
     return response.json()
 }
-//window.addEventListener('DOMContentLoaded', fetch2(themeNum, url1));
-//window.addEventListener('DOMContentLoaded', fetch2(themeNum, url1, init("POST", newTheme)))
+//window.addEventListener('DOMContentLoaded', fetch2(url1));
+//window.addEventListener('DOMContentLoaded', fetch2(themurl1, init("POST", newTheme)))
 
 function fetch2(num, url1, init) {
     fetch(url1, init)
@@ -50,7 +50,7 @@ function fetch2(num, url1, init) {
             modulLength = data.length;
             modul = data[num];
             themeNum = num+1;
-            showThemDetails(modul.homeWork, opac)
+            showThemDetails(modul.homeWork)
         })
         .catch(function(error) {
             console.log('error', error)
@@ -60,7 +60,9 @@ function fetch2(num, url1, init) {
 
 // ---------V-----SHOW & TOGLE theme details-----V-------------------
 
-function showThemDetails(data, effect) {
+function showThemDetails(data) {
+  opac();
+  setTimeout (()=>{
     mainDiv.innerHTML = (`
         <div class="d-homework">
             <header class="d-header">
@@ -133,18 +135,30 @@ function showThemDetails(data, effect) {
                 </a>
             </div>
         </div>
-            `);
-setTimeout (effect, 50);                                  // only for specEfects
+            `)
+    }, 200
+  );
 }
 
-function opac() {                                         // only for specEfects
+var opac =()=> {
   mainDiv.style.overflow="hidden";
-  mainDiv.firstElementChild.style.opacity="1";
-  mainDiv.firstElementChild.style.transform="scaleX(1)";
+  mainDiv.firstElementChild.style.opacity="0";
+  mainDiv.firstElementChild.style.transform="scaleX(0)";
+
+  setTimeout (()=>{
+    mainDiv.firstElementChild.style.opacity="1";
+    mainDiv.firstElementChild.style.transform="scaleX(1)";
+    },
+    250
+  );
 }
 
 function showNextTheme() {
-    themeNum++;
-    if (themeNum > modulLength) { themeNum = 1 };
+  themeNum++;
+  if (themeNum > modulLength) { themeNum = 1 };
+  opac();
+  setTimeout (()=>{
     TheoryRender(themeNum-1);
+    }, 200
+  );
 };
