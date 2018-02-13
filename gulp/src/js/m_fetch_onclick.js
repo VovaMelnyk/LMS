@@ -28,7 +28,7 @@ let TheoryRender = (themNum, effect) => {
                   <p class="m-content__text">${elem.contentText}</p>`;
             });
 
-    mainTheory.innerHTML = `
+            mainTheory.innerHTML = `
         <div class="wrapper_theory">
             <div id="m-title" class="m-header">
                 <div class="m-header__caption caption">
@@ -96,25 +96,28 @@ let TheoryRender = (themNum, effect) => {
             <!-- LEFT CONTENT STARTS -->
             <div class="m-left-nav" id="m-left-nav">${navCard}</div>
         </div>`;
-        //setTimeout (opac, 50);  
+            //setTimeout (opac, 50);  
         })
 
         .catch(err => console.log(err));
 
 };
 
-function opac() {                                         // only for specEfects
-  mainTheory.style.overflow="hidden";
-  mainTheory.firstElementChild.style.opacity="1";
-  mainTheory.firstElementChild.style.transform="scaleX(1)";
+function opac() { // only for specEfects
+    mainTheory.style.overflow = "hidden";
+    mainTheory.firstElementChild.style.opacity = "1";
+    mainTheory.firstElementChild.style.transform = "scaleX(1)";
 };
 
 btnTheoryRender.forEach((element, idx) => {
     element.addEventListener('click', () => {
+        document.querySelector('.main-board').style.display = "none";
         let deletePosts = document.querySelector('.posts');
         if (deletePosts) {
             deletePosts.innerHTML = '';
         }
+        let main = document.querySelector('.main');
+        main.style.display = "block";
         TheoryRender(idx, opac)
     });
 });

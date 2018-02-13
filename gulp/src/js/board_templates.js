@@ -205,7 +205,11 @@ function checkLikesCount(targetId) {
     }
 }
 
-function pageRender() {
+function pageRender() {    
+    document.querySelector('.main-board').style.display = "block";
+    let main = document.querySelector('.main');
+    main.innerHTML = "";
+    main.style.display = "none";
     select(".posts").innerHTML = "";
     console.log(`Fetching URL: ${postUrl}`);
 
@@ -386,7 +390,6 @@ function createPost(event) {
             .catch(err => {
                 console.error("Error: ", err);
             });
-
     }
 }
 
@@ -492,7 +495,7 @@ function updateMessage(targetId) {
         }
     } else {
         alert("Изменить сообщение может только автор или администратор!");
-    };
+    }
 }
 
 
@@ -521,14 +524,12 @@ let lastNewsTitle = '[ Последние новости: ]';
 addIcon.addEventListener("click", showEditor);
 
 window.onload = pageRender();
-// let boardBtn = document.querySelector('#boardBtn');
-// boardBtn.addEventListener('click', () => {
-//     // let main = document.querySelector('.main');
-//     // main.innerHTML = `<div class="posts"></div>`;
-//     pageRender();
-//     console.log(event);
-//     event.preventDefault();
-// });
+let boardBtn = document.querySelector('#boardBtn');
+boardBtn.addEventListener('click', () => {
+    pageRender();
+    // console.log(event);
+    event.preventDefault();
+});
 
 /**
  * ID : 'post_add_editor'

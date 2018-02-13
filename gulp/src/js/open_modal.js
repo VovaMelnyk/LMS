@@ -8,12 +8,12 @@ let close_login = document.getElementsByClassName('modal-window__close');
 let end_signin = document.getElementsByClassName('wrapper__modal-window--end-registration');
 let but_signin  = document.getElementsByClassName('a-entrance__btn');
 let end_mail = document.getElementsByClassName('end-registration__text--mail');
-open_login.addEventListener("click", function () {
+// open_login.addEventListener("click", function () {
 
-  modal_login[0].style.display = "block";
-  animTT(modal_login);
+//   modal_login[0].style.display = "block";
+//   animTT(modal_login);
 
-});
+// });
 close_login[0].addEventListener("click", function () {
 
     delTeg();
@@ -21,13 +21,13 @@ close_login[0].addEventListener("click", function () {
   modal_login[0].style.display = "none";
 
 });
-open_signin.addEventListener("click", function () {
+// open_signin.addEventListener("click", function () {
 
-  modal_login1[0].style.display = "block";
-  animTT(modal_login1);
-  // checkPassword();
+//   modal_login1[0].style.display = "block";
+//   animTT(modal_login1);
+//   // checkPassword();
 
-});
+// });
 
 close_login[1].addEventListener("click", function () {
     delTeg();

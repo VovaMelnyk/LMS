@@ -42,18 +42,18 @@
                 //= html/end-registration.html
 
                 <!-- MAIN start -->
-                <div class="main" id="main">
+                <div class="main-wrapper">
+                    <div class="main" id="main">
+                        <div class="right-nav">
+                            //= html/m-right-nav/m-right-nav.html
+                        </div>
+                        <!-- RIGHT-NAV end -->
+                    </div>
                     <div class="main-board">
                         //= html/board-header.html
                         <div class="posts"></div>
-                        //= html/board-theme.html
                     </div>
-
-                    <div class="right-nav">
-                        //= html/m-right-nav/m-right-nav.html
-                    </div>
-                    <!-- RIGHT-NAV end -->
-                </div>
+                   </div>
             </div>
         </div>
         //= html/scrollingLine/scrollingLine.html
@@ -61,7 +61,8 @@
 
     <script src="plugins/suneditor/js/suneditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
-    <script type="text/javascript" src="js/scripts.min.js"></script>
+    <script type="text/javascript" src="js/scripts.min.js"></script>    
+    //= html/board-theme.html
 </body>
 
 </html>
