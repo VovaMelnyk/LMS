@@ -79,31 +79,38 @@
 
 //Add event button
 .c-calendar__btn-add-event {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    height: 40px;
+    padding: 4px 16px 0 32px;
+    line-height: 32px;
     border: none;
-    border-radius: 15px;
+    border-radius: 8px;
     background-color: $orange;
     cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 //Add event button INNER
 .c-btn-add-event__plus {
-    position: relative;
+    //position: relative;
+    padding-left: 4px;
     font-size: 16px;
     font-family: $title-font;
-    letter-spacing: 2.25px;
+    letter-spacing: 2.24px;
     text-transform: uppercase;
     color: $white;
-    padding: 8px 16px 4px 24px; // Plus before button text
+    // Plus before button text
+
     &::before {
         content: '+';
         position: absolute;
         font-size: 24px;
-        left: 8px;
-        top: 4.5px;
+        left: 16px;
     }
 }
 

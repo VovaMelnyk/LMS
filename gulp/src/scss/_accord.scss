@@ -44,20 +44,20 @@
         &_add-material {
             position: relative;
             display: flex;
-            width: 32px;
-            height: 32px;
-            //margin: 8px 0;
+            width: 50px;
+            height: 50px;
             align-self: center;
             background-color: $orange;
             border-radius: 50%;
+            opacity: 0.8;
             cursor: pointer;
 
                 &::after, &::before {
                     position: absolute;
-                    left: 14px;
-                    top: 8px;
-                    width: 4px;
-                    height: 16px;
+                    left: 50%;
+                    top: 25%;
+                    width: 2px;
+                    height: 24px;
                     background-color: $white;
                     content: '';
                 }
@@ -68,7 +68,7 @@
                     transform: rotate(180deg);
                 }
                 &:hover {
-                    transform: scale(1.1);
+                    opacity: 1;
                 }
         }
     }
@@ -170,6 +170,3 @@
     display: none;
     left: 80px;
 }
-// .c-accordion-menu__submenu-item::before {
-//     transform: translateX(25%) translateY(25%) rotate(90deg);
-// }

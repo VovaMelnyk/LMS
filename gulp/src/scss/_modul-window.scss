@@ -8,8 +8,9 @@
     border: 1px solid $grey-input;
     border-radius: 8px;
     transform: translate(-50%, -50%);
+
     &-hidden {
-        display: none;
+        //display: none;
     }
     &-close {
         position: absolute;
