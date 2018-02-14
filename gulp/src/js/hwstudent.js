@@ -5,7 +5,7 @@ var modulLength;
 var themeNum = 1;
 var mainDiv = document.querySelector('div.main');
 var hwThemesLinks = document.querySelectorAll("[data='homework']");
-    hwThemesLinks.forEach((element, idx) => {
+hwThemesLinks.forEach((element, idx) => {
     element.addEventListener('click', () => fetch2(idx, url1));
 });
 // -------------------------V--FETCH--V-----------------------------
@@ -49,7 +49,7 @@ function fetch2(num, url1, init) {
         .then(function(data) {
             modulLength = data.length;
             modul = data[num];
-            themeNum = num+1;
+            themeNum = num + 1;
             showThemDetails(modul.homeWork)
         })
         .catch(function(error) {
@@ -61,9 +61,12 @@ function fetch2(num, url1, init) {
 // ---------V-----SHOW & TOGLE theme details-----V-------------------
 
 function showThemDetails(data) {
-  opac();
-  setTimeout (()=>{
-    mainDiv.innerHTML = (`
+
+    let main = document.querySelector('.main');
+    main.style.display = "block";
+    opac();
+    setTimeout(() => {
+        mainDiv.innerHTML = (`
         <div class="d-homework">
             <header class="d-header">
                 <h3 class="d-page-title">Домашнее задание</h3>
@@ -136,29 +139,30 @@ function showThemDetails(data) {
             </div>
         </div>
             `)
-    }, 200
-  );
+    }, 200);
 }
 
-var opac =()=> {
-  mainDiv.style.overflow="hidden";
-  mainDiv.firstElementChild.style.opacity="0";
-  mainDiv.firstElementChild.style.transform="scaleX(0)";
+var opac = () => {
+    mainDiv = document.querySelector('.main');
+    // console.log(mainDiv);
+    main.style.display = "block";
+    mainDiv.style.overflow = "hidden";
+    mainDiv.firstElementChild.style.opacity = "0";
+    mainDiv.firstElementChild.style.transform = "scaleX(0)";
 
-  setTimeout (()=>{
-    mainDiv.firstElementChild.style.opacity="1";
-    mainDiv.firstElementChild.style.transform="scaleX(1)";
-    },
-    250
-  );
+    setTimeout(() => {
+            mainDiv.firstElementChild.style.opacity = "1";
+            mainDiv.firstElementChild.style.transform = "scaleX(1)";
+        },
+        250
+    );
 }
 
 function showNextTheme() {
-  themeNum++;
-  if (themeNum > modulLength) { themeNum = 1 };
-  opac();
-  setTimeout (()=>{
-    TheoryRender(themeNum-1);
-    }, 200
-  );
+    themeNum++;
+    if (themeNum > modulLength) { themeNum = 1 };
+    opac();
+    setTimeout(() => {
+        TheoryRender(themeNum - 1);
+    }, 200);
 };

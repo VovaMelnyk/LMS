@@ -112,10 +112,10 @@ function opac() { // only for specEfects
 btnTheoryRender.forEach((element, idx) => {
     element.addEventListener('click', () => {
         document.querySelector('.main-board').style.display = "none";
-        let deletePosts = document.querySelector('.posts');
-        if (deletePosts) {
-            deletePosts.innerHTML = '';
-        }
+        // let deletePosts = document.querySelector('.posts');
+        // if (deletePosts) {
+        //     deletePosts.innerHTML = '';
+        // }
         let main = document.querySelector('.main');
         main.style.display = "block";
         TheoryRender(idx, opac)
