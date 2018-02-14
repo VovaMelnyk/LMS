@@ -46,10 +46,10 @@ function addBlue() {
 const pageNumder = document.getElementsByClassName("t-navigation__number");
 
 for (var q = 0; q < pageNumder.length; q++) {
-console.log("Yjvth ntcnf "+pageNumder[q]);
+
 if (localStorage.getItem(pageNumder[q])) {
 pageNumder[q].classList.add("t-navigation__number--blue");
-console.log(pageNumder[q]);
+
 }
 
 }
@@ -66,13 +66,18 @@ function getTestJson(c) { // Получаем данные с сервера и 
     })
     .then(data => {
       updateView(data, taskContainer, taskScript);
+      fineRatio();
+
       getLenghtTests(url);
+
+
 
 
       return data;
 
     })
     .then(data => {
+
 
       const btnNext = document.getElementsByClassName("t-navigation__next");
       const btnPrev = document.getElementsByClassName("t-navigation__prev");
@@ -95,6 +100,8 @@ function getTestJson(c) { // Получаем данные с сервера и 
         }
 
       });
+
+
 
 
 
@@ -152,6 +159,7 @@ function checkratio(data) {
       localStorage.setItem(data.id, next);
       console.log("Id of page " + data.id)
 
+
       let page = document.getElementsByClassName('t-navigation__number');
 
     }
@@ -177,6 +185,8 @@ function getLenghtTests(c) {
     }).then(data => {
 
 
+
+
         let pages = document.querySelector('.t-navigation__pagination');
         for (var z = 0; z < data.length; z++) {
           let li = document.createElement('li');
@@ -198,6 +208,7 @@ function getLenghtTests(c) {
             let check = document.getElementsByClassName('t-answers__item');
             for (var y = 0; y < check.length; y++) {
               if (check[y].checked) {
+
                 let next = check[y].nextSibling;
                 next = next.previousSibling.defaultValue;
 
@@ -208,10 +219,29 @@ function getLenghtTests(c) {
               // console.log("значение ли " + this.innerHTML);
               let urlNext = url + "/" + this.innerHTML;
 
+
               getTestJson(urlNext);
             });
             }
 
 
               });
+            }
+
+            function fineRatio() {
+              let liQues = document.getElementsByClassName("t-answers__choice");
+              for (let u = 0; u < liQues.length; u++) {
+                liQues[u].addEventListener("click", function () {
+                  let changeLi = liQues[u];
+                  let circle = changeLi.getElementsByClassName('circle');
+                  let circleALL = document.getElementsByClassName('circle');
+                  for (let o = 0; o < circleALL.length; o++) {
+                    circleALL[o].style.display = "none";
+                  }
+                  let check = changeLi.getElementsByClassName('t-answers__item hide');
+                  check.checked=!0;
+
+                  circle[0].style.display = "block";
+                } )
+              }
             }

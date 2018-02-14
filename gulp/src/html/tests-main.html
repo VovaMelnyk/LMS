@@ -60,22 +60,68 @@
         </div>
 
         <ul class="t-answers"> <!-- ответы на вопросы -->
-            <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i1" type="radio" value="<%- answer1 %>">
-                <label class="t-answers__label" for="i1"><%- answer1 %></label>
+          <!--Dima-->
+            <!-- <li class="t-answers__choice">
+                <label class="t-answers__label" for="i1">
+                    <input class="t-answers__item" name="quest" id="i1" type="radio">
+                    <span class="t-checkbox-custom"></span>
+                    <span class="t-label"><%- answer1 %></span>
+                </label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i2" type="radio" value="<%- answer2 %>">
-                <label class="t-answers__label" for="i2"><%- answer2 %></label>
+                <label class="t-answers__label" for="i2">
+                    <input class="t-answers__item" name="quest" id="i2" type="radio">
+                    <span class="t-checkbox-custom"></span>
+                    <span class="t-label"><%- answer2 %></span>
+                </label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i3" type="radio" value="<%- answer3 %>">
-                <label class="t-answers__label" for="i3"><%- answer3 %></label>
+                <label class="t-answers__label" for="i3">
+                    <input class="t-answers__item" name="quest" id="i3" type="radio">
+                    <span class="t-checkbox-custom"></span>
+                    <span class="t-label"><%- answer3 %></span>
+                </label>
             </li>
             <li class="t-answers__choice">
-                <input class="t-answers__item" name="quest" id="i4" type="radio" value="<%- answer4 %>">
-                <label class="t-answers__label" for="i4"><%- answer4 %></label>
-            </li>
+                <label class="t-answers__label" for="i4">
+                    <input class="t-answers__item" name="quest" id="i4" type="radio">
+                    <span class="t-checkbox-custom"></span>
+                    <span class="t-label"><%- answer4 %></span>
+                </label>
+            </li> -->
+
+
+        <!--Dima-end-->
+
+
+        <li class="t-answers__choice">
+          <div class="sque">
+            <div class="circle">
+
+            </div>
+            <input class="t-answers__item hide" name="quest" id="i1" type="radio" value="<%- answer1 %>">
+          </div>
+
+
+               <label class="t-answers__label" for="i1"><%- answer1 %></label>
+           </li>
+           <li class="t-answers__choice">
+             <div class="sque">
+               <div class="circle">
+
+               </div>
+               <input class="t-answers__item hide" name="quest" id="i2" type="radio" value="<%- answer2 %>">
+             </div>
+               <label class="t-answers__label" for="i2"><%- answer2 %></label>
+           </li>
+           <li class="t-answers__choice">
+               <input class="t-answers__item" name="quest" id="i3" type="radio" value="<%- answer3 %>">
+               <label class="t-answers__label" for="i3"><%- answer3 %></label>
+           </li>
+           <li class="t-answers__choice">
+               <input class="t-answers__item" name="quest" id="i4" type="radio" value="<%- answer4 %>">
+               <label class="t-answers__label" for="i4"><%- answer4 %></label>
+           </li>
         </ul> <!-- варианты ответов -->
         <div class="t-navigation"> <!-- навигация по вопросам -->
             <div class="t-navigation__arrows">
