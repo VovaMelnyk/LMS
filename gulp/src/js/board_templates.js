@@ -208,7 +208,6 @@ function checkLikesCount(targetId) {
 function pageRender() {    
     document.querySelector('.main-board').style.display = "block";
     let main = document.querySelector('.main');
-    // main.innerHTML = "";
     main.style.display = "none";
     select(".posts").innerHTML = "";
     console.log(`Fetching URL: ${postUrl}`);
