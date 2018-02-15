@@ -1,0 +1,18 @@
+@mixin links {
+  display: block;
+  text-decoration: none;
+  color: $white;
+}
+
+@mixin d-btn {
+  border: none;
+  font-family: $title-font;
+  font-size: 14px;
+  color: $white;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 2px 20px;
+  min-width: 112px;
+  background: $orange;
+  border-radius: 10px;
+}

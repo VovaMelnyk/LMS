@@ -1,0 +1,170 @@
+.c-accordion-menu {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  background: $white;
+  border-radius: 8px;
+
+    &__button {
+        position: relative;
+        display: block;
+        height: 56px;
+        padding-left: 16px;
+        margin-bottom: 8px;
+        font-family: $title-font;
+        font-size: 24px;
+        line-height: 56px;
+        letter-spacing: 2.24px;
+        color: $cyan;
+        text-transform: uppercase;
+        background-color: $dark-button;
+        border-radius: 8px;
+        box-shadow: 8px 0 8px $grey-pholder;
+
+        &::after {
+            /* arrow icon */
+            position: absolute;
+            top: 18px;
+            right: 8px;
+            width: 20px;
+            height: 20px;
+            background: url(../img/menu-arrow-right.svg) no-repeat;
+            content: '';
+        }
+        &_last {
+            padding-left: 40px;
+            margin-bottom: 0;
+        }
+        &_last::after {
+        /* arrow icon */
+            right: 24px;
+        }
+        //admin service button: add themes to the left menu
+        &_add-material {
+            position: relative;
+            display: flex;
+            width: 32px;
+            height: 32px;
+            //margin: 8px 0;
+            align-self: center;
+            background-color: $orange;
+            border-radius: 50%;
+            cursor: pointer;
+
+                &::after, &::before {
+                    position: absolute;
+                    left: 14px;
+                    top: 8px;
+                    width: 4px;
+                    height: 16px;
+                    background-color: $white;
+                    content: '';
+                }
+                &::after {
+                    transform: rotate(90deg);
+                }
+                &::before {
+                    transform: rotate(180deg);
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+        }
+    }
+
+    &__submenu {
+		/* by default hide all submenus */
+		display: none;
+        padding: 4px;
+        font-family: $text-font;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            margin: 8px;
+        }
+        &-button {
+            position: relative;
+            display: block;
+            padding: 8px 16px;
+            font-size: 18px;
+            color: $dark-text;
+            text-transform: uppercase;
+            
+            &::before {
+                /* arrow icons */
+                position: absolute;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background: url(../img/submenu-arrow-left.svg) no-repeat;
+                content: '';
+            }
+            &:hover > .admin-editor__instruments {
+                display: flex;
+                justify-content: space-around;
+            }
+            &:hover > .c-notifications-hidden-theme{
+                display: block;
+            }
+        }
+        &-item {
+            position: relative;
+            display: flex;
+            padding-left: 16px;
+            font-size: 16px;
+            color: $light-text;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                width: 14px;
+                height: 14px;
+                background: url(../img/link-arrow-right.svg) no-repeat;
+                content: '';
+
+                &:hover {
+                    text-decoration: underline solid $grey-pholder;
+                }
+            }
+            &:hover {
+                text-decoration: underline solid $grey-pholder;
+            }
+        }
+	}
+
+	input[type=checkbox] {
+		/* hide checkbox */
+		position: absolute;
+		opacity: 0;
+	}
+    input[type=checkbox]:checked + .c-accordion-menu__button + .c-accordion-menu__submenu, input[type=checkbox]:checked + .c-accordion-menu__submenu-button + .c-accordion-menu__submenu {
+        /* show children when item is checked */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 120px;
+    }
+    input[type=checkbox]:checked + .c-accordion-menu__button {
+        margin-bottom: 0;
+    }
+    input[type=checkbox]:checked + .c-accordion-menu__button::after {
+        transform: translateX(-25%) translateY(25%) rotate(90deg);
+    }
+    input[type=checkbox]:checked + .c-accordion-menu__submenu-button {
+        color: $orange;
+    }
+    input[type=checkbox]:checked + .c-accordion-menu__submenu-button::before {
+        transform: translateX(-15%) translateY(-15%) rotate(-90deg);
+    }
+
+}
+.c-notifications-hidden-theme {
+    position: absolute;
+    display: none;
+    left: 80px;
+}
+// .c-accordion-menu__submenu-item::before {
+//     transform: translateX(25%) translateY(25%) rotate(90deg);
+// }

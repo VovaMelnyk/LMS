@@ -1,1 +1,52 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.236 64.236" width="512" height="512"><g fill="#FFF"><path d="M16.118 23h22v2h-22zm0 10h22v2h-22zm0 10h22v2h-22zm0 10h22v2h-22zm-8-30h4v2h-4zm0 10h4v2h-4zm0 10h4v2h-4zm0 10h4v2h-4z"/><path d="M46.118 7H32.649l-.75-3h-3.781V0h-10v4h-3.781l-.75 3H.118v57h46V7zM15.899 6h4.219V2h6v4h4.219l1.5 6H14.399l1.5-6zm28.219 56h-42V9h10.969l-1.25 5h22.562l-1.25-5h10.969v53zm20-7.764V0h-10v54.236l5 10 5-10zM62.118 2v8h-6V2h6zm-6 10h6v41.764l-3 6-3-6V12z"/></g></svg>
+=======
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 64.236 64.236" style="enable-background:new 0 0 64.236 64.236;" xml:space="preserve" width="512px" height="512px">
+<g>
+	<g>
+		<rect x="16.118" y="23" width="22" height="2" fill="#FFFFFF"/>
+		<rect x="16.118" y="33" width="22" height="2" fill="#FFFFFF"/>
+		<rect x="16.118" y="43" width="22" height="2" fill="#FFFFFF"/>
+		<rect x="16.118" y="53" width="22" height="2" fill="#FFFFFF"/>
+		<rect x="8.118" y="23" width="4" height="2" fill="#FFFFFF"/>
+		<rect x="8.118" y="33" width="4" height="2" fill="#FFFFFF"/>
+		<rect x="8.118" y="43" width="4" height="2" fill="#FFFFFF"/>
+		<rect x="8.118" y="53" width="4" height="2" fill="#FFFFFF"/>
+		<path d="M46.118,7H32.649l-0.75-3h-3.781V0h-10v4h-3.781l-0.75,3H0.118v57h46V7z M15.899,6h4.219V2h6v4h4.219l1.5,6H14.399    L15.899,6z M44.118,62h-42V9h10.969l-1.25,5h22.562l-1.25-5h10.969V62z" fill="#FFFFFF"/>
+		<path d="M64.118,54.236V0h-10v54.236l5,10L64.118,54.236z M62.118,2v8h-6V2H62.118z M56.118,12h6v41.764l-3,6l-3-6V12z" fill="#FFFFFF"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+>>>>>>> materialSecondSprint

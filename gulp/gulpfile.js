@@ -72,11 +72,13 @@ var serverConfig = {
 
   gulp.task('bundleJs', function() {
       return gulp.src(path.src.js)
-      .pipe(concat('scripts.min.js'))
-      .pipe(babel({
-          presets: ['env']
-      }))
-      .pipe(uglify())
+      .pipe(sourcemaps.init())
+        .pipe(concat('scripts.min.js'))
+        .pipe(babel({
+              presets: ['env']
+        }))
+        .pipe(uglify())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.dist.js))
       .pipe(browserSync.reload({stream: true}));
   })
