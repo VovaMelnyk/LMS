@@ -2,7 +2,8 @@ var mainDiv = document.querySelector('div.main');
 document.querySelector('#add-material').addEventListener('click', showAdmWindow);
 function showAdmWindow() {
   opac();
-    
+    document.querySelector('.main-board').style.display = "none";
+  
   setTimeout (()=>{
       
     mainDiv.innerHTML =
