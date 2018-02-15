@@ -64,6 +64,7 @@ function showThemDetails(data) {
     document.querySelector('.main-board').style.display = "none";
     let main = document.querySelector('.main');
     main.style.display = "block";
+    document.querySelector('.main-board').style.display = "none";
     opac();
     setTimeout(() => {
         mainDiv.innerHTML = (`

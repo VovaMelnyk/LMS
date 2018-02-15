@@ -2,6 +2,7 @@
 
     function init() {
         const cross = document.querySelector('#cross');
+        const endBtn = document.querySelector('#endBtn');
         const btnSave = document.querySelector('.m-btn-admin__save');
         const btnNonSave = document.querySelector('.m-btn-admin__nonsave');
         const btnCansel = document.querySelector('.m-btn-admin__cansel');
@@ -15,6 +16,7 @@
                 closerWindow.classList.add('hidden-block');
             }
             cross.addEventListener("click", closeAdminWindowShower);
+            endBtn.addEventListener("click", closeAdminWindowShower);
             btnSave.addEventListener("click", closeAdminWindowHider);
             btnNonSave.addEventListener("click", closeAdminWindowHider);
             btnCansel.addEventListener("click", closeAdminWindowHider);
