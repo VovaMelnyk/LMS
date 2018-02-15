@@ -61,7 +61,7 @@ function fetch2(num, url1, init) {
 // ---------V-----SHOW & TOGLE theme details-----V-------------------
 
 function showThemDetails(data) {
-
+    document.querySelector('.main-board').style.display = "none";
     let main = document.querySelector('.main');
     main.style.display = "block";
     opac();
@@ -144,7 +144,7 @@ function showThemDetails(data) {
 
 var opac = () => {
     mainDiv = document.querySelector('.main');
-    main.style.display = "block";
+    mainDiv.style.display = "block";
     mainDiv.style.overflow = "hidden";
     mainDiv.firstElementChild.style.opacity = "0";
     mainDiv.firstElementChild.style.transform = "scaleX(0)";

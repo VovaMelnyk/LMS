@@ -2,7 +2,9 @@ var mainDiv = document.querySelector('div.main');
 document.querySelector('#add-material').addEventListener('click', showAdmWindow);
 function showAdmWindow() {
   opac();
+    
   setTimeout (()=>{
+      
     mainDiv.innerHTML =
         `<div class="material-admin">
                 <div id="cross" class="material-admin__cross icon"></div>
