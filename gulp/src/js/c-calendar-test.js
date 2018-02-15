@@ -111,7 +111,7 @@ function getDay(date) {
 // console.log(tempY.slice(0,4));
 // parseFloat(tempY);
 // console.log(parseFloat(tempY));
-// console.log(tempY);    
+// console.log(tempY);
 // if (d.getFullYear() < currentYear) {
 //     currentYear--;
 // } else {
@@ -153,21 +153,30 @@ document.querySelector('.next-month-btn').onclick = function () {
 // document.createDocumentFragment - почитать !
 
 function dayTask() {
-    
+
     let dayTask = document.querySelectorAll('.c-calendar__day-num');
-    
+
     let task = document.createElement('span');
     task.classList.add('c-calendar__task','c-calendar__task_mt');
     task.innerHTML = 'Пройти тест';
-    
-    
+
+
     dayTask[Math.floor(Math.random() * dayTask.length)].appendChild(task);
-    
+
     return dayTask;
 }
+let addEventButton = document.querySelector('.c-calendar__btn-add-event');
+let modulWindow = document.querySelector('.c-modul-window');
+let closemodulWindow = document.querySelector('.c-modul-window-close')
 
+addEventButton.onclick = () => {
+	modulWindow.classList.remove('c-modul-window-hidden');
+}
+addEventButton.onclick = () => {
+	modulWindow.classList.remove('c-modul-window-hidden');
+}
 
+closemodulWindow.onclick = () => {
+    modulWindow.classList.add('c-modul-window-hidden');
 
-
-
-
+}
