@@ -162,7 +162,7 @@ function showAdmWindow() {
                                             <button type="button" class="m-bottomBtn button-small">Предпросмотр</button>
                                             <button type="button" class="m-bottomBtn button-small">Сохранить</button>
                                             <button type="button" class="m-bottomBtn button-small">Сохранить и перейти к тестам</button>
-                                            <button type="button" class="m-bottomBtn button-small">Закончить редактирование</button>
+                                            <button type="button" id="endBtn" class="m-bottomBtn button-small">Закончить редактирование</button>
                                         </div>
                                     </div>
                                 </div>
