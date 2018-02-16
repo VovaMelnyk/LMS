@@ -1,49 +1,58 @@
 <div class="c-modul-window c-modul-window-hidden">
 	<span class="c-modul-window-close"></span>
 	<p class="c-modul-window__create-sms"> &#91; создать событие _&#93;</p>
-	<div class="c-modul-window__block">
+	<div class="c-modul-window__block c-modul-window__block-mt">
 		<label for="name-enter" class="c-modul-window__block-name">Название:</label>
-		<input type="text" placeholder="Введите название события" class="c-modul-window__block-name-enter">
+		<input type="text" placeholder="Введите название события" class="c-modul-window__block-enter">
 	</div>
 	<div class="c-modul-window__block-choice">
-		<label for="choice" class="c-modul-window__block-choice-type-sms">Тип события:</label>
-		<div class="c-modul-window__block-choice__label">
-			<label class="c-modul-window__block-choice__label-input">
-				<input type="radio" class="c-modul-window__block-choice__label-input-end">Пользовательское
+		<label for="choice" class="c-modul-window__block-choice-type-sms c-modul-window__block-choice-mt">Тип события:</label>
+		<div class="c-modul-window__block-choice__wrapper">
+			<div class="c-modul-window__block-choice__wrapper-label">
+				<label class="c-modul-window__block-choice__wrapper-label-input">
+				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Пользовательское
 			</label>
-			<label class="c-modul-window__block-choice__label-input">
-				<input type="radio" class="c-modul-window__block-choice__label-input-end">Прочитать теорию
+			<label class="c-modul-window__block-choice__wrapper-label-input">
+				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Прочитать теорию
 			</label>
-			<label class="c-modul-window__block-choice__label-input">
-				<input type="radio" class="c-modul-window__block-choice__label-input-end">Пройти тест
+			<label class="c-modul-window__block-choice__wrapper-label-input">
+				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Пройти тест
 			</label>
-			<label class="c-modul-window__block-choice__label-input">
-				<input type="radio" class="c-modul-window__block-choice__label-input-end">Сделать ДЗ
+			<label class="c-modul-window__block-choice__wrapper-label-input">
+				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Сделать ДЗ
 			</label>
+			</div>
+			<div class="c-modul-window__block-choice__wrapper-invisible"></div>
 		</div>
 	</div>
-	<div class="c-modul-window__calendar">
-		<label for="date" class="c-modul-window__calendar-label">Начало:</label>
-		<input type="date" name="calendar" class="c-modul-window__calendar-date">
-		<input type="time" name="time" class="c-modul-window__calendar-time">
+	<div class="c-modul-window__calendar c-modul-window__block-mt">
+		<label class="c-modul-window__calendar-label">Начало:</label>
+		<div class=c-modul-window__calendar-block>
+			<input type="date" name="calendar" class="c-modul-window__calendar-block-date">
+			<input type="time" name="time" class="c-modul-window__calendar-block-time">
+		</div>
+		
 	</div>
-	<div class="c-modul-window__calendar-end">
-		<label for="date" class="c-modul-window__calendar-end-label">Окончание</label>
-		<input type="date" name="calendar" class="c-modul-window__calendar-end-date">
-		<input type="time" name="time" class="c-modul-window__calendar-end-time">
+	<div class="c-modul-window__calendar-end c-modul-window__block-mt">
+		<label class="c-modul-window__calendar-end-label">Окончание:</label>
+		<div class="c-modul-window__calendar-end-block">
+			<input type="date" name="calendar" class="c-modul-window__calendar-end-block-date">
+			<input type="time" name="time" class="c-modul-window__calendar-end-block-time">
+		</div>
+
 	</div>
-	<label for="box" class="c-modul-window__check">
+	<label class="c-modul-window__check">
 		<input type="checkbox" class="c-modul-window__check-box"> Весь день
 	</label>
-	<div class="c-modul-window__place">
+	<div class="c-modul-window__place c-modul-window__block-mt">
 		<label for="event" class="c-modul-window__place-label">Место:</label>
 		<input type="text" placeholder="Место проведения события" class="c-modul-window__place-event">
 	</div>
-	<div class="c-modul-window__desc">
+	<div class="c-modul-window__desc c-modul-window__block-mt">
 		<label for="text" class="c-modul-window__desc-label">Описание:</label>
-		<textarea name="" id="" cols="28" rows="5" class="c-modul-window__desc-text" placeholder="Введите описание события"></textarea>
+		<textarea name="" id="" cols="22" rows="5" class="c-modul-window__desc-text" placeholder="Введите описание события"></textarea>
 	</div>
-	<div class="c-modul-window__button">
+	<div class="c-modul-window__button c-modul-window__block-mt">
 		<button class="c-modul-window__button-btn">Создать</button>
 	</div>
 </div>

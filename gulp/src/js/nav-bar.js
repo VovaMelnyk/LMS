@@ -43,5 +43,6 @@ photoProfile.onclick = () => {
 	formProfile.classList.remove('c-header__form-profile_hidden');
 }
 closeForm.onclick = () => {
-		formProfile.classList.add('c-header__form-profile_hidden');
+	formProfile.classList.add('c-header__form-profile_hidden');
 }
+
