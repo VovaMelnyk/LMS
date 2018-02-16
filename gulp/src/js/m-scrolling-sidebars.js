@@ -32,7 +32,7 @@ let mScrollingSidebars = () => {
         if (pagePosition > 0) {
             setTimeout( () => {
                 hidePrompts(nodeArr);
-            }, 3000 )
+            }, 1000 )
         }
         if (pagePosition <= 0) {
             setTimeout( () => {

@@ -165,6 +165,4 @@ function showNextTheme() {
     setTimeout(() => {
         TheoryRender(themeNum - 1);
     }, 200);
-    setTimeout(mScrollingSidebars, 1000);
-    setTimeout(mStickyHeader, 1000);
 };
