@@ -1,4 +1,4 @@
-;(function(){
+let mScrollingSidebars = () => {
 
     function hidePrompts (nodeArr) {
         const forEach = [].forEach;
@@ -60,15 +60,19 @@
 
         document.addEventListener('scroll', () => materialBarsPositionCheker(navParentNode, rightNav, leftNav, false) );
     }
+    //init();
 
     // add events when you change your page content
-const btnTheoryRender = document.querySelectorAll("li[data='theory']");
-    if (btnTheoryRender) {
-        btnTheoryRender.forEach(elem => {
-            elem.addEventListener('click', () => {
-            setTimeout(init, 1000)
-            })
-        })
-    }
-
-})();
+// const btnTheoryRender = document.querySelectorAll("li[data='theory']");
+//     if (btnTheoryRender) {
+//         btnTheoryRender.forEach(elem => {
+//             elem.addEventListener('click', () => {
+//             setTimeout(init, 1000);
+//             })
+//         })
+//     };
+     const hwTheoryRender = document.querySelector(".wrapper_theory");
+         if (hwTheoryRender) {
+               setTimeout(init, 1000);
+        }
+}

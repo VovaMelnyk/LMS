@@ -1,67 +1,58 @@
-// let folder = document.querySelector('#m-title');
-// let clock = document.querySelector('#m-timers');
-// let sticky = folder.getBoundingClientRect().top + window.pageYOffset;
-// let stickys = folder.getBoundingClientRect().top + window.pageYOffset;
-// let btnUp = document.querySelector('#invBtnUp');
-// let headerText = document.querySelector('.m-header__title');
-// let headerTextSm = document.querySelector('.caption__theme');
+let mStickyHeader = () => {
 
-function myFunction(folder,clock,sticky,stickys,btnUp,headerText,headerTextSm) {
-  if (window.pageYOffset >= sticky) {
-    if (folder) {
-      folder.classList.add("m-sticky");
+    function mSticky (folder,clock,sticky,stickys,btnUp,headerText,headerTextSm) {
+      if (window.pageYOffset >= sticky) {
+        if (folder) {
+          folder.classList.add("m-sticky");
+        }
+        if (btnUp) {
+          btnUp.classList.remove("invisible");
+        }
+        if (headerText) {
+          headerText.classList.add("m-slall-text");
+        }
+        if (headerTextSm) {
+          headerTextSm.classList.add("m-slall-text");
+        }
+      } if (window.pageYOffset >= stickys) {
+        if (clock) {
+          clock.classList.add("m-flex")
+        }
+      } else {
+        if (folder) {
+          folder.classList.remove("m-sticky");
+        }
+        if (clock) {
+          clock.classList.remove("m-flex");
+        }
+        if (btnUp) {
+          btnUp.classList.add("invisible");
+        }
+        if (headerText) {
+          headerText.classList.remove("m-slall-text");
+        }
+        if (headerTextSm) {
+          headerTextSm.classList.remove("m-slall-text");
+        }
+      }
     }
-    if (btnUp) {
-      btnUp.classList.remove("invisible");
-    }
-    if (headerText) {
-      headerText.classList.add("m-slall-text");
-    }
-    if (headerTextSm) {
-      headerTextSm.classList.add("m-slall-text");
-    }
-  } if (window.pageYOffset >= stickys) {
-    if (clock) {
-      clock.classList.add("m-flex")
-    }
-  } else {
-    if (folder) {
-      folder.classList.remove("m-sticky");
-    }
-    if (clock) {
-      clock.classList.remove("m-flex");
-    }
-    if (btnUp) {
-      btnUp.classList.add("invisible");
-    }
-    if (headerText) {
-      headerText.classList.remove("m-slall-text");
-    }
-    if (headerTextSm) {
-      headerTextSm.classList.remove("m-slall-text");
-    }
-  }
-}
 //window.onscroll = () => { myFunction(folder,clock,sticky,stickys,btnUp,headerText,headerTextSm) };
+    function init() {
+        const folder = document.querySelector('#m-title');
+        const clock = document.querySelector('#m-timers');
+        const sticky = folder.getBoundingClientRect().top + window.pageYOffset;
+        const stickys = folder.getBoundingClientRect().top + window.pageYOffset;
+        const btnUp = document.querySelector('#invBtnUp');
+        const headerText = document.querySelector('.m-header__title');
+        const headerTextSm = document.querySelector('.caption__theme');
 
-const btnTheorRender = document.querySelectorAll("li[data='theory']");
-    if (document.querySelectorAll("li[data='theory']") ) {
-        btnTheorRender.forEach(elem => {
-            elem.addEventListener('click', () => {
+          window.onscroll = () => {
+            mSticky(folder,clock,sticky,stickys,btnUp,headerText,headerTextSm)
+           };
+    }
 
-    setTimeout( () => {
-      const folder = document.querySelector('#m-title');
-      const clock = document.querySelector('#m-timers');
-      const sticky = folder.getBoundingClientRect().top + window.pageYOffset;
-      const stickys = folder.getBoundingClientRect().top + window.pageYOffset;
-      const btnUp = document.querySelector('#invBtnUp');
-      const headerText = document.querySelector('.m-header__title');
-      const headerTextSm = document.querySelector('.caption__theme');
-
-      window.onscroll = () => {
-        myFunction(folder,clock,sticky,stickys,btnUp,headerText,headerTextSm)
-       };
-      }, 1000)
-  })
-})
+    const btnTheorRender = document.querySelector(".wrapper_theory");
+        if (btnTheorRender) {
+            init();
+    }
 }

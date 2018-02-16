@@ -295,7 +295,7 @@
       "userName": "Test user",
       "userRole": "Student",
       "message": "<p>Hello World!</p>",
-      "likes": 0,
+      "likes": 4,
       "changeDate": "",
       "changeTime": "",
       "changeAutor": "",
@@ -399,6 +399,38 @@
       "changeAutor": "",
       "changed": false,
       "id": 6
+    },
+    {
+      "postID": 6,
+      "isNew": true,
+      "date": "16/02/2018",
+      "time": "23:18",
+      "userID": 6,
+      "userName": "Test user",
+      "userRole": "Student",
+      "message": "111",
+      "likes": 0,
+      "changeDate": "",
+      "changeTime": "",
+      "changeAutor": "",
+      "changed": false,
+      "id": 7
+    },
+    {
+      "postID": 6,
+      "isNew": true,
+      "date": "16/02/2018",
+      "time": "23:18",
+      "userID": 6,
+      "userName": "Test user",
+      "userRole": "Student",
+      "message": "222",
+      "likes": 0,
+      "changeDate": "",
+      "changeTime": "",
+      "changeAutor": "",
+      "changed": false,
+      "id": 8
     }
   ]
 }

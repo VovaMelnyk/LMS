@@ -96,11 +96,13 @@ let TheoryRender = (themNum, effect) => {
             <!-- LEFT CONTENT STARTS -->
             <div class="m-left-nav" id="m-left-nav">${navCard}</div>
         </div>`;
-            //setTimeout (opac, 50);  
+            //setTimeout (opac, 50);
         })
 
         .catch(err => console.log(err));
 
+setTimeout(mScrollingSidebars, 500);
+setTimeout(mStickyHeader, 1000);
 };
 
 function opac() { // only for specEfects
@@ -116,4 +118,5 @@ btnTheoryRender.forEach((element, idx) => {
         main.style.display = "block";
         TheoryRender(idx, opac)
     });
+
 });

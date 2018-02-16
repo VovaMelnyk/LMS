@@ -161,8 +161,10 @@ var opac = () => {
 function showNextTheme() {
     themeNum++;
     if (themeNum > modulLength) { themeNum = 1 };
-    opac();
+    //opac();
     setTimeout(() => {
         TheoryRender(themeNum - 1);
     }, 200);
+    setTimeout(mScrollingSidebars, 1000);
+    setTimeout(mStickyHeader, 1000);
 };
