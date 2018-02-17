@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Homework Admin panel</title>
+</head>
+
+<body>
+    <!-- HEADER start -->
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+
+                //= html/logo.html
+                //= html/nav-bar.html
+                //= html/photo-profile.html
+
+            </div>
+        </div>
+    </div>
+    <!-- HEADER end -->
+
+    <!-- CONTENT start -->
+    <div class="wrapper wrapper--light-gray">
+        <div class="container">
+            <div class="content">
+                <!-- LEFT-NAV start -->
+                <div class="left-nav">
+                    //= html/accord.html
+                </div>
+                <!-- LEFT-NAV end -->
+
+                <!-- MAIN start -->
+                <div class="main">
+                    <div class="d-homework">
+
+                      //= html/homework-admin.html
+
+                        <div class="d-admSection  d-admSection--right">
+                          <div class="d-deadLine">
+                            <p class="d-label">Дедлайн:</p>
+                            <input type="date" class="d-deadLine__input"></input>
+                          </div>
+                          <div class="d-timeAvarage">
+                            <p class="d-label">Час на виконання:</p>
+                            <input class="d-timeAvarage__input" type="number" min="1" step="1"></input>
+                          </div>
+                        </div>
+
+                        <div class="d-admSection d-admSection--center">
+                          <div class="d-hwThemeNum">
+                            <p class="d-label">Номер теми ДЗ:</p>
+                            <select class="d-hwThemeNum__input"></select>
+                          </div>
+                          <div class="d-themeTitle">
+                            <p class="d-label">Тема ДЗ:</p>
+                            <input class="d-themeTitle__input" type="text"></input>
+                          </div>
+                        </div>
+
+                        <div class="d-themeDesc">
+                          <p class="d-label">Умова ДЗ:</p>
+                          <textarea class="d-themeDesc__textArea" rows="10"></textarea>
+                        </div>
+
+                        <div class="d-admBtnArea">
+                          <button type="submit" class="d-btn d-admBtnArea__prewiew">Предосмотр</button>
+                          <button type="submit" class="d-btn d-admBtnArea__save">Сохранить</button>
+                          <button type="submit" class="d-btn d-admBtnArea__saveGoTest">Сохранить и перейти к тестам</button>
+                          <button type="submit" class="d-btn d-admBtnArea__endEdit">Закончить редактирование</button>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+                <!-- MAIN end -->
+
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT end -->
+</body>
+  <script type="text/javascript" src="js/scripts.min.js"></script>
+</html>

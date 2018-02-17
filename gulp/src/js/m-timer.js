@@ -28,7 +28,7 @@
         }
         if (end) {
             clearInterval(timerInterval)
-            alert("Время вышло!");
+            //alert("Время вышло!");
         }
     }
 
@@ -48,13 +48,11 @@
 
     }
 
-    const btnTheoryRender = document.querySelectorAll("li[data='theory']");
-        if (btnTheoryRender) {
-            btnTheoryRender.forEach(elem => {
-                elem.addEventListener('click', () => {
+    const hwTheoryRender = document.querySelector(".wrapper_theory");
+        if (hwTheoryRender) {
+            hwTheoryRender.addEventListener('click', () => {
                 setTimeout(init, 1000)
                 })
-            })
         };
 
 })(document);

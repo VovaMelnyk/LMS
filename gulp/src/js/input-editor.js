@@ -1,5 +1,5 @@
-(function () {
-// const addThemeBtn = document.querySelector('#add-material');
+let inputEditor = () => {
+//const addThemeBtn = document.querySelector('#add-material');
 
     function createTextarea (text) {
         const textarea = document.createElement('textarea');
@@ -72,10 +72,9 @@
             addNewArticle(addNew, mAdminInputs, article)
             addInputEditorEvents(inputsEditors, inputDeleter, inputSaver)
         })
-
     }
-
-    if ( document.getElementById('m-admin__inputs') ) {
-        document.querySelector('#add-material').addEventListener('click', init)
-    }
-})()
+    const adminRender = document.querySelector(".material-admin__title");
+        if (adminRender) {
+              setTimeout(init, 300);
+       }
+}

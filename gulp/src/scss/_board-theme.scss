@@ -1,9 +1,13 @@
 .main-board {
     flex-basis: 85%;
+    
     background-color: $light-gray;
     padding: rem(35) rem(0) rem(0);
 }
-
+.main-wrapper {
+    width: 100%;
+    margin-left: 40px;
+}
 .post-wrapper {
     margin: auto;
     background: $light-gray;
