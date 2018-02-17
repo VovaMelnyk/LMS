@@ -1,16 +1,18 @@
 .c-modul-window {
 	position: absolute;
-	top: 54%;
+	top: 56%;
 	left: 50%;
 	z-index: 99999;
-	min-width: 380px;
+	min-width: 352px;
 	background-color: $grey-bg;
 	border: 1px solid $grey-input;
 	border-radius: 8px;
 	transform: translate(-50%, -50%);
+	padding: 16px;
+	box-shadow: 0 0 8px $light-gray;
 
 	&-hidden {
-		//display: none;
+		display: none;
 	}
 	&-close {
 		position: absolute;
@@ -40,129 +42,100 @@
 		font-size: 20px;
 		font-family: $text-font;
 		text-transform: uppercase;
-		padding: 16px;
 		color: $dark-text;
-		padding-left: 16px;
-		margin: 8px 0 16px 0;
 		font-weight: bold;
 	}
 
 	&__block, &__place, &__desc {
 		display: flex;
 		flex-direction: row;
-		margin: 8px 0;
-
+		justify-content: space-between;
+		align-items: center;
 		&-name, &-label {
-			padding-left: 16px;
 			font-family: $text-font;
-			font-size: 16px;
+			font-size: 14px;
 			color: $orange;
-			line-height: 1.2;
-
-			&-enter {
-				width: 240px;
-				padding: 6px 0;
-				margin-left: 32px;
-				padding: 8px 4px;
-				border: none;
-				border-radius: 8px;
-			}
+		}
+		&-enter, &-event, &-text {
+			border: none;
+			border-radius: 4px;
+			padding: 4px 40px 4px 4px;
 		}
 	}
 
 	&__block-choice {
 		display: flex;
 		flex-direction: row;
-
+		justify-content: space-between;
+		align-items: flex-start;
 		&-type-sms {
-			padding-left: 16px;
-			margin-top: 8px;
 			font-family: $text-font;
-			font-size: 16px;
+			font-size: 14px;
 			color: $orange;
-			line-height: 1.2;
-
 		}
 
-		&__label {
+		&__wrapper {
 			display: flex;
-			flex-direction: column;
-			padding: 0	16px;
-
-			&-input {
-				padding-top: 8px;
-				font-family: $text-font;
-				color: $grey-input;
-
-				&:hover {
-					color: $dark-text;
+			flex-direction: row;
+			justify-content: space-between;
+			min-height: 96px;
+			&-label {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				&-input {
+					font-family: $text-font;
+					color: $grey-input;
+					&:hover {
+						color: $dark-text;
+					}
 				}
-
-				&-end {
-					margin-right: 8px;
-
-				}
+			}
+			&-invisible {
+				width: 54px;
 			}
 		}
 	}
 
 	&__calendar, &__calendar-end{
-		margin: 8px 0;
-
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 		&-label {
-			padding: 8px 0 0 16px;
 			font-family: $text-font;
-			font-size: 16px;
+			font-size: 14px;
 			color: $orange;
-			line-height: 1.2;
 		}
-
-		&-date {
-			width: 140px;
-			padding: 4px 8px 4px 8px;
-			margin: 8px 8px 8px 52px;
-			border: none;
-			border-radius: 8px;
-		}
-
-		&-time {
-			padding: 4px;
-			border: none;
-			border-radius: 8px;
-		}
-	}
-
-	&__calendar-end {
-
-		&-date {
-			margin: 8px 8px 8px 27px;
+		&-block {
+			&-date, &-time {
+				border: none;
+				border-radius: 4px;
+				width: 136px;
+				padding: 4px;
+			}
+			&-time {
+				width: 72px;
+			}
 		}
 	}
 
 	&__check {
-		margin-left: 136px;
+		display: block;
+		text-align: center;
 		color: $grey-input;
-		&:checked {
+		&:hover {
 			color: $dark-text;
 		}
 	}
 
-	&__place {
-
-		&-event {
-			border: none;
-			border-radius: 8px;
-			padding: 4px 52px 4px 8px;
-			margin: 8px 0 8px 64px;
-		}
-	}
 	&__desc {
-
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
 		&-text {
-			border: none;
-			border-radius: 8px;
-			padding: 4px 8px;
-			margin: 8px 0 8px 38px;
+			width: 212px;
 		}
 	}
 
@@ -170,10 +143,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-
+		align-items: center;
 		&-btn {
 			padding: 8px 32px;
-			margin: 32px;
 			letter-spacing: 2.25px;
 			text-transform: uppercase;
 			color: $white;
@@ -182,6 +154,20 @@
 			background-color: $orange;
 			font-family: $title-font;
 			font-size: 14px;
+			opacity: 0.9;
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
+}
+
+.c-modul-window__block-mt {
+	margin: 16px 0;
+}
+.c-modul-window__block-mb {
+	margin-bottom: 8px;
+}
+.c-modul-window__block-choice-mt {
+	margin-top: 2px;
 }
