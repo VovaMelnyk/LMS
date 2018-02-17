@@ -146,7 +146,6 @@ function showThemDetails(data) {
 var opac = () => {
     mainDiv = document.querySelector('.main');
     mainDiv.style.display = "block";
-    mainDiv.style.overflow = "hidden";
     mainDiv.firstElementChild.style.opacity = "0";
     mainDiv.firstElementChild.style.transform = "scaleX(0)";
 
