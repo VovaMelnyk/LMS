@@ -1,5 +1,5 @@
 (function () {
-//const addThemeBtn = document.querySelector('#add-material');
+// const addThemeBtn = document.querySelector('#add-material');
 
     function createTextarea (text) {
         const textarea = document.createElement('textarea');

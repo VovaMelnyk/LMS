@@ -51,7 +51,7 @@ function showAdmWindow() {
                                         <section class="material-admin__inputs__paragraphs" id="m-admin__inputs">
 
                                             <div class="input-editor">
-                                                <p class="input-editor__item" id="m-cont-name">Article title number ...</p>
+                                                <p class="input-editor__item m-cont-name">Article title number ...</p>
                                                 <div class="input-editor__instruments">
                                                     <i class="input-editor__edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -76,7 +76,7 @@ function showAdmWindow() {
                                                 </div>
                                             </div>
                                             <div class="input-editor">
-                                                <p class="input-editor__item" id="m-cont-name">Article title number ...</p>
+                                                <p class="input-editor__item m-cont-name">Article title number ...</p>
                                                 <div class="input-editor__instruments">
                                                     <i class="input-editor__edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -101,7 +101,7 @@ function showAdmWindow() {
                                                 </div>
                                             </div>
                                             <div class="input-editor">
-                                                <p class="input-editor__item" id="m-cont-name">Article title number ...</p>
+                                                <p class="input-editor__item m-cont-name">Article title number ...</p>
                                                 <div class="input-editor__instruments">
                                                     <i class="input-editor__edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -126,7 +126,7 @@ function showAdmWindow() {
                                                 </div>
                                             </div>
                                             <div class="input-editor">
-                                                <p class="input-editor__item" id="m-cont-name">Article title number ...</p>
+                                                <p class="input-editor__item m-cont-name">Article title number ...</p>
                                                 <div class="input-editor__instruments">
                                                     <i class="input-editor__edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -162,7 +162,7 @@ function showAdmWindow() {
                                             <button type="button" class="m-bottomBtn button-small">Предпросмотр</button>
                                             <button type="button" class="m-bottomBtn button-small">Сохранить</button>
                                             <button type="button" class="m-bottomBtn button-small">Сохранить и перейти к тестам</button>
-                                            <button type="button" class="m-bottomBtn button-small">Закончить редактирование</button>
+                                            <button type="button" id="endBtn" class="m-bottomBtn button-small">Закончить редактирование</button>
                                         </div>
                                     </div>
                                 </div>
