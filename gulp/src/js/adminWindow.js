@@ -3,9 +3,9 @@ document.querySelector('#add-material').addEventListener('click', showAdmWindow)
 function showAdmWindow() {
   opac();
     document.querySelector('.main-board').style.display = "none";
-  
+
   setTimeout (()=>{
-      
+
     mainDiv.innerHTML =
         `<div class="material-admin">
                 <div id="cross" class="material-admin__cross icon"></div>
@@ -423,5 +423,6 @@ function showAdmWindow() {
         `
     },
     200
-  );                       // only for specEfects
+  );
+      setTimeout(inputEditor, 1000);                       // only for specEfects
 }
