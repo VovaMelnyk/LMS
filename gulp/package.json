@@ -24,6 +24,7 @@
     "imagemin-pngquant": "^5.0.1"
   },
   "dependencies": {
+    "moment": "^2.20.1",
     "json-server": "^0.12.1"
   },
   "author": ""

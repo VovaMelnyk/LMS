@@ -8,6 +8,7 @@
     background: $dark-bg;
 
     &__elem {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -19,15 +20,13 @@
         letter-spacing: 4px;
 
         &-white {
-            position: relative;
-            justify-content: flex-start;
-            padding-left: 12px;
+            display: flex;
+            justify-content: flex-end;
             background: $white;
 
             &::after {
                 position: absolute;
                 top: 0;
-                left: 70px;
                 width: 0;
                 height: 0;
                 border-top: 24px solid transparent;
@@ -36,7 +35,6 @@
                 content: "";
             }
         }
-
         &-orange {
             background: $orange;
         }

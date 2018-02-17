@@ -33,7 +33,16 @@ for (let i = 0; i < navBarIcon.length; i++) {
             tooltips[i].classList.add('c-header__tooltip-clicked');
             }
         });
-
-
-
 }
+
+let formProfile = document.querySelector('.c-header__form-profile');
+let photoProfile = document.querySelector('.c-header__photo-profile_photo');
+let closeForm = document.querySelector('.c-header__form-profile_close');
+
+photoProfile.onclick = () => {
+	formProfile.classList.remove('c-header__form-profile_hidden');
+}
+closeForm.onclick = () => {
+	formProfile.classList.add('c-header__form-profile_hidden');
+}
+
