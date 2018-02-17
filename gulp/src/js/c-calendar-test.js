@@ -1,3 +1,99 @@
+let main = document.querySelector('.main');
+
+let calendarButton = document.querySelector('.c-header__icon-calendar');
+
+calendarButton.addEventListener('click', function () {
+    main.innerHTML = `
+    <div class="c-calendar">
+        <div class="c-calendar__header">
+            <div class="c-calendar__transparent"></div>
+            <div class="c-calendar__month">
+                <div class="prev-month-btn"></div>
+                <span class="c-calendar__month-name">
+                        January</span>
+                <span class="c-calendar__year">2018_</span>
+                <div class="next-month-btn"></div>
+            </div>
+            <div class="c-calendar__btn-add-event">
+                <span class="c-btn-add-event__plus">Добавить событие</span>
+            </div>
+        </div>
+        <div class="c-calendar__main">
+            <ul class="c-calendar__week-day-name">
+                <li class="c-calendar__day-name">Monday</li>
+                <li class="c-calendar__day-name">Tuesday</li>
+                <li class="c-calendar__day-name">Wednesday</li>
+                <li class="c-calendar__day-name">Thursday</li>
+                <li class="c-calendar__day-name">Friday</li>
+                <li class="c-calendar__day-name">Saturday</li>
+                <li class="c-calendar__day-name">Sunday</li>
+            </ul>
+            <div class="c-calendar__main-inner"></div>
+        </div>
+    </div>
+    <div class="c-modul-window c-modul-window-hidden">
+    	<span class="c-modul-window-close"></span>
+    	<p class="c-modul-window__create-sms"> &#91; создать событие _&#93;</p>
+    	<div class="c-modul-window__block c-modul-window__block-mt">
+    		<label for="name-enter" class="c-modul-window__block-name">Название:</label>
+    		<input type="text" placeholder="Введите название события" class="c-modul-window__block-enter">
+    	</div>
+    	<div class="c-modul-window__block-choice">
+    		<label for="choice" class="c-modul-window__block-choice-type-sms c-modul-window__block-choice-mt">Тип события:</label>
+    		<div class="c-modul-window__block-choice__wrapper">
+    			<div class="c-modul-window__block-choice__wrapper-label">
+    				<label class="c-modul-window__block-choice__wrapper-label-input">
+    				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Пользовательское
+    			</label>
+    			<label class="c-modul-window__block-choice__wrapper-label-input">
+    				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Прочитать теорию
+    			</label>
+    			<label class="c-modul-window__block-choice__wrapper-label-input">
+    				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Пройти тест
+    			</label>
+    			<label class="c-modul-window__block-choice__wrapper-label-input">
+    				<input type="radio" name="user" class="c-modul-window__block-choice__wrapper-label-input-end"> Сделать ДЗ
+    			</label>
+    			</div>
+    			<div class="c-modul-window__block-choice__wrapper-invisible"></div>
+    		</div>
+    	</div>
+    	<div class="c-modul-window__calendar c-modul-window__block-mt">
+    		<label class="c-modul-window__calendar-label">Начало:</label>
+    		<div class=c-modul-window__calendar-block>
+    			<input type="date" name="calendar" class="c-modul-window__calendar-block-date">
+    			<input type="time" name="time" class="c-modul-window__calendar-block-time">
+    		</div>
+
+    	</div>
+    	<div class="c-modul-window__calendar-end c-modul-window__block-mt">
+    		<label class="c-modul-window__calendar-end-label">Окончание:</label>
+    		<div class="c-modul-window__calendar-end-block">
+    			<input type="date" name="calendar" class="c-modul-window__calendar-end-block-date">
+    			<input type="time" name="time" class="c-modul-window__calendar-end-block-time">
+    		</div>
+
+    	</div>
+    	<label class="c-modul-window__check">
+    		<input type="checkbox" class="c-modul-window__check-box"> Весь день
+    	</label>
+    	<div class="c-modul-window__place c-modul-window__block-mt">
+    		<label for="event" class="c-modul-window__place-label">Место:</label>
+    		<input type="text" placeholder="Место проведения события" class="c-modul-window__place-event">
+    	</div>
+    	<div class="c-modul-window__desc c-modul-window__block-mt">
+    		<label for="text" class="c-modul-window__desc-label">Описание:</label>
+    		<textarea name="" id="" cols="22" rows="5" class="c-modul-window__desc-text" placeholder="Введите описание события"></textarea>
+    	</div>
+    	<div class="c-modul-window__button c-modul-window__block-mt">
+    		<button class="c-modul-window__button-btn">Создать</button>
+    	</div>
+    </div>
+    `;
+    showCalendar();
+});
+
+function showCalendar() {
 
 let today = new Date(); // Текущий день - Sun Feb 04 2018 15:35:42 GMT+0200 (EET)
 
@@ -45,6 +141,7 @@ function createCalendar(currentYear, currentMonth, firstCurrentMonthDay, current
     // заполнить первый ряд от понедельника
     // и до дня, с которого начинается месяц
     // * * * | 1  2  3  4
+
     for (let i = 0; i < getDay(d); i++) {
         mainCal.innerHTML += `
             <div class='c-calendar__day-num'>
@@ -167,7 +264,7 @@ function dayTask() {
 }
 let addEventButton = document.querySelector('.c-calendar__btn-add-event');
 let modulWindow = document.querySelector('.c-modul-window');
-let closemodulWindow = document.querySelector('.c-modul-window-close')
+let closemodulWindow = document.querySelector('.c-modul-window-close');
 
 addEventButton.onclick = () => {
 	modulWindow.classList.remove('c-modul-window-hidden');
@@ -178,5 +275,10 @@ addEventButton.onclick = () => {
 
 closemodulWindow.onclick = () => {
     modulWindow.classList.add('c-modul-window-hidden');
+}
 
 }
+    calendarButton.addEventListener('click', () => {
+        document.querySelector('.main-board').style.display = "none";
+        main.style.display = "block";
+    });

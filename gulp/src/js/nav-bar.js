@@ -15,8 +15,8 @@ for (let i = 0; i < navBarIcon.length; i++) {
         let notification = this.nextElementSibling;
         let notificationCollection = document.querySelectorAll('.c-notifications-hidden');
         let tooltips = document.getElementsByClassName('c-header__tooltip');
-        console.log(this);
-        console.log(notification);
+        //console.log(this);
+        //console.log(notification);
         //console.log(notificationCollection);
 
         if (notification.style.display === 'block') {
@@ -45,4 +45,3 @@ photoProfile.onclick = () => {
 closeForm.onclick = () => {
 	formProfile.classList.add('c-header__form-profile_hidden');
 }
-
