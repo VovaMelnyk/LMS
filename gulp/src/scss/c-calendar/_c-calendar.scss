@@ -1,0 +1,211 @@
+.c-calendar {
+    font-family: $title-font;
+    background-color: $dark-bg;
+    padding: 0 40px 40px;
+    transform: scaleX(0.1);
+    opacity: 0.5;
+    // padding: 32px;
+    transition: .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+// Calendar HEADER
+.c-calendar__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 112px;
+}
+
+.c-calendar__transparent {
+    display: flex;
+    min-height: 40px;
+    width: 168px;
+}
+
+.c-calendar__month {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    width: 256px;
+    background-color: $cyan;
+    padding: 0 8px;
+    position: relative;
+    font-size: 32px;
+    // cursor: pointer;
+    &::before {
+        content: '[';
+        position: absolute;
+        left: 8px;
+        padding-top: 5px;
+    }
+    &::after {
+        content: ']';
+        position: absolute;
+        right: 8px;
+        padding-top: 5px;
+    }
+}
+
+.prev-month-btn {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid $grey-pholder;
+    left: -16px;
+    cursor: pointer;
+}
+
+.next-month-btn {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid $grey-pholder;
+    right: -16px;
+    cursor: pointer;
+}
+
+//Month and year name
+.c-calendar__month-name,
+.c-calendar__year {
+    display: flex;
+    color: $dark-bg;
+    font-size: 32px;
+    padding-top: 5px;
+    letter-spacing: 2.25px;
+}
+
+//Add event button
+.c-calendar__btn-add-event {
+    position: relative;
+    display: flex;
+    height: 40px;
+    padding: 4px 16px 0 32px;
+    line-height: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: $orange;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+//Add event button INNER
+.c-btn-add-event__plus {
+    //position: relative;
+    padding-left: 4px;
+    font-size: 16px;
+    font-family: $title-font;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    color: $white;
+    // Plus before button text
+
+    &::before {
+        content: '+';
+        position: absolute;
+        font-size: 24px;
+        left: 16px;
+    }
+}
+
+//Main calendar feald
+.c-calendar__main,
+.c-calendar__main-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+//Name day of a week BLOCK-WEEK
+.c-calendar__week-day-name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: $white;
+    font-family: $text-font;
+    padding: 0 0 24px;
+}
+
+//Name day of a week EACH-DAY
+.c-calendar__day-name {
+    display: flex;
+    flex-basis: 14%;
+    padding-left: 8px;
+    flex-shrink: 1;
+}
+
+//Number of a week BLOCK-WEEK
+.c-calendar__week-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-family: $text-font;
+    height: 100px;
+}
+
+//Number of a day EACH-DAY
+.c-calendar__day-num {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 14.285714286%;
+    height: 88px;
+    padding: 8px;
+    border-top: 1px solid $dark-text;
+    border-right: 1px solid $dark-text;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $light-gray;
+        opacity: 0.5;
+        transition: all 0.25s;
+    }
+}
+
+//Number of a day EACH-DAY INNER
+.c-day-num {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    min-height: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: $white;
+    background-color: $dark-bg; //today
+    &_today {
+        background: $orange;
+    }
+    // Next month day
+    &_prev-month,
+    &_next-month {
+        padding: 4px;
+        color: $light-text;
+    }
+}
+
+.c-calendar__task {
+    display: flex;
+    justify-content: center;
+    font-family: $text-font;
+    font-size: 10px;
+    color: $white;
+    background: #7c4dff;
+    padding: 1px 2px;
+    border-radius: 8px;
+    &_mt {
+        margin-top: 4px;
+    }
+}

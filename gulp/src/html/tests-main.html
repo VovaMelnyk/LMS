@@ -1,193 +1,198 @@
-<div id="begin_test">
+<div class="t-main-tests">
+    <div id="begin_test">
 
-    <div class="t-header">
-        <div class="t-title">  <!-- заголовок тестов -->
-            <h1 class="t-title__subtitle">Тесты</h1>
-            <h2 class="t-title__number">Тема 2</h2>
-        </div>
-        <div class="t-theme">
-            <h2 class="t-theme__name">[ XXXXXXX _ ]</h2>
-        </div>
-        <div class="t-timer">
-            <p class="t-timer__time">15 м <br> на прохождение </p>
-            <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
-        </div>
-    </div>
-
-    <div class="t-content t-content--position">
-        <p class="t-content__question">[ Количество вопросов: <span class="t-content__amount" id="q-amount">20</span> _]</p>
-        <p class="t-content__attempts">[ Количество попыток: <span class="t-content__amount" at-amount>3</span> _]</p>
-        <button class="button-big t-btn__start" id="start_test">Начать тест!</button>
-    </div>
-
-    <div class="t-footer">
-        <div class="t-control">
-            <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
-            <span class="t-control__word">Вернуться к теории</span>
-        </div>
-    </div>
-
-</div>
-
-
-
-<script type="text/template" id="tests-task">
-
-    <div class="t-header"> <!-- шапка -->
-
-        <div class="t-title">  <!-- заголовок тестов -->
-            <h1 class="t-title__subtitle">Тесты</h1> <!-- верхняя часть общая часть -->
-            <h2 class="t-title__number">ТЕМА 2</h2>
+        <div class="t-header">
+            <div class="t-title">
+                <!-- заголовок тестов -->
+                <h1 class="t-title__subtitle">Тесты</h1>
+                <h2 class="t-title__number">Тема 2</h2>
+            </div>
+            <div class="t-theme">
+                <h2 class="t-theme__name">[ XXXXXXX _ ]</h2>
+            </div>
+            <div class="t-timer">
+                <p class="t-timer__time">15 м
+                    <br> на прохождение </p>
+                <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
+            </div>
         </div>
 
-        <div class="t-theme"><!-- часть с названием теста -->
-            <h2 class="t-theme__name">[ XXXXXX_ ]</h2>
+        <div class="t-content t-content--position">
+            <p class="t-content__question">[ Количество вопросов:
+                <span class="t-content__amount" id="q-amount">20</span> _]</p>
+            <p class="t-content__attempts">[ Количество попыток:
+                <span class="t-content__amount" at-amount>3</span> _]</p>
+            <button class="button-big t-btn__start" id="start_test">Начать тест!</button>
         </div>
 
-        <div class="t-timer">     <!-- часы -->
-            <p class="t-timer__time">14:09</p>
-            <img  class="t-timer__clock" src="img/clock.png" alt="clock-img">
-
+        <div class="t-footer">
+            <div class="t-control">
+                <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
+                <span class="t-control__word">Вернуться к теории</span>
+            </div>
         </div>
 
     </div>
 
-    <div class="t-content t-content--withmargin"> <!-- основной контент -->
 
-        <div class="t-question"><!-- описание вопроса -->
-            <h2 class="t-question__point">Вопросов 20/20</h2> <!-- количество ответов/вопросов-->
-            <h3 class="t-question__task"><%- title %></h3> <!-- задание-->
+
+    <script type="text/template" id="tests-task">
+
+        <div class="t-header">
+            <!-- шапка -->
+
+            <div class="t-title">
+                <!-- заголовок тестов -->
+                <h1 class="t-title__subtitle">Тесты</h1>
+                <!-- верхняя часть общая часть -->
+                <h2 class="t-title__number">ТЕМА 2</h2>
+            </div>
+
+            <div class="t-theme">
+                <!-- часть с названием теста -->
+                <h2 class="t-theme__name">[ XXXXXX_ ]</h2>
+            </div>
+
+            <div class="t-timer">
+                <!-- часы -->
+                <p class="t-timer__time">14:09</p>
+                <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
+
+            </div>
+
         </div>
 
-        <ul class="t-answers"> <!-- ответы на вопросы -->
-          <!--Dima-->
-            <!-- <li class="t-answers__choice">
-                <label class="t-answers__label" for="i1">
-                    <input class="t-answers__item" name="quest" id="i1" type="radio">
-                    <span class="t-checkbox-custom"></span>
-                    <span class="t-label"><%- answer1 %></span>
-                </label>
-            </li>
-            <li class="t-answers__choice">
-                <label class="t-answers__label" for="i2">
-                    <input class="t-answers__item" name="quest" id="i2" type="radio">
-                    <span class="t-checkbox-custom"></span>
-                    <span class="t-label"><%- answer2 %></span>
-                </label>
-            </li>
-            <li class="t-answers__choice">
-                <label class="t-answers__label" for="i3">
-                    <input class="t-answers__item" name="quest" id="i3" type="radio">
-                    <span class="t-checkbox-custom"></span>
-                    <span class="t-label"><%- answer3 %></span>
-                </label>
-            </li>
-            <li class="t-answers__choice">
-                <label class="t-answers__label" for="i4">
-                    <input class="t-answers__item" name="quest" id="i4" type="radio">
-                    <span class="t-checkbox-custom"></span>
-                    <span class="t-label"><%- answer4 %></span>
-                </label>
-            </li> -->
+        <div class="t-content t-content--withmargin">
+            <!-- основной контент -->
 
+            <div class="t-question">
+                <!-- описание вопроса -->
+                <h2 class="t-question__point">Вопросов 20/20</h2>
+                <!-- количество ответов/вопросов-->
+                <h3 class="t-question__task">
+                    <%- title %>
+                </h3>
+                <!-- задание-->
+            </div>
 
-        <!--Dima-end-->
+            <ul class="t-answers">
+                <!-- ответы на вопросы -->
 
+                <li class="t-answers__choice">
+                    <input class="t-answers__item" name="quest" id="i1" type="radio" value="<%- answer1 %>">
+                    <label class="t-answers__label" for="i1">
+                        <%- answer1 %>
+                    </label>
+                </li>
+                <li class="t-answers__choice">
+                    <input class="t-answers__item" name="quest" id="i2" type="radio" value="<%- answer2 %>">
+                    <label class="t-answers__label" for="i2">
+                        <%- answer2 %>
+                    </label>
+                </li>
+                <li class="t-answers__choice">
+                    <input class="t-answers__item" name="quest" id="i3" type="radio" value="<%- answer3 %>">
+                    <label class="t-answers__label" for="i3">
+                        <%- answer3 %>
+                    </label>
+                </li>
+                <li class="t-answers__choice">
+                    <input class="t-answers__item" name="quest" id="i4" type="radio" value="<%- answer4 %>">
+                    <label class="t-answers__label" for="i4">
+                        <%- answer4 %>
+                    </label>
+                </li>
+            </ul>
+            <!-- варианты ответов -->
+            <div class="t-navigation">
+                <!-- навигация по вопросам -->
+                <div class="t-navigation__arrows">
+                    <span class="t-navigation__prev"> &lt </span>
+                    <span class="t-navigation__next"> &gt </span>
+                </div>
+                <!-- стрелочки -->
+                <ul class="t-navigation__pagination">
 
-        <li class="t-answers__choice">
-            <input class="t-answers__item" name="quest" id="i1" type="radio" value="<%- answer1 %>">
-            <label class="t-answers__label" for="i1"><%- answer1 %></label>
-        </li>
-           <li class="t-answers__choice">
-               <input class="t-answers__item" name="quest" id="i2" type="radio" value="<%- answer2 %>">
-               <label class="t-answers__label" for="i2"><%- answer2 %></label>
-           </li>
-           <li class="t-answers__choice">
-               <input class="t-answers__item" name="quest" id="i3" type="radio" value="<%- answer3 %>">
-               <label class="t-answers__label" for="i3"><%- answer3 %></label>
-           </li>
-           <li class="t-answers__choice">
-               <input class="t-answers__item" name="quest" id="i4" type="radio" value="<%- answer4 %>">
-               <label class="t-answers__label" for="i4"><%- answer4 %></label>
-           </li>
-        </ul> <!-- варианты ответов -->
-        <div class="t-navigation"> <!-- навигация по вопросам -->
-            <div class="t-navigation__arrows">
-                <span class="t-navigation__prev"> &lt </span>
-                <span class="t-navigation__next"> &gt </span></div> <!-- стрелочки -->
-            <ul class="t-navigation__pagination">
-                <!-- <li class="t-navigation__number t-navigation__number--arrow"><img src="img/left_arrow.gif" alt="left_arrow"></li>
-
-                <li class="t-navigation__number t-navigation__number--blue">12</li>
-
-                <li class="t-navigation__number t-navigation__number--blue">16</li>
-                <li class="t-navigation__number">17</li>     <li class="t-navigation__number t-navigation__number--arrow"><img src="img/rght_arrow.gif" alt="right_arrow" class="t-navigation__switch"></li> -->
-            </ul> <!-- пагинация -->
-        </div>
-    </div>
-
-
-    <div class="t-footer"> <!-- футер -->
-        <div class="t-control">
-            <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
-            <span class="t-control__word">Вернуться к теории</span>
-        </div> <!-- вернуться к теории -->
-        <button class="button-big t-btn__finish" id="end_test">Завершить тест!</button>
-    </div>
-
-</script>
-
-
-
-<script type="text/template" id="tests-result">
-    <div class="t-header">
-
-        <!-- start t-title -->
-        <div class="t-title">
-            <h1 class="t-title__subtitle">Тесты: результат</h1>
-            <h2 class="t-title__number">Тема 2</h2>
-        </div>
-        <div class="t-theme">
-            <h2 class="t-theme__name t-theme__results">[ XXXXXX _ ]</h2>
-        </div>
-        <div class="t-timer">
-            <p class="t-timer__time">14:09</p>
-            <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
-        </div><!-- end t-title -->
-    </div>
-
-    <!-- start t-content -->
-    <div class="t-content t-content--margin">
-        <div class="t-results">
-            <p class="t-results__marks" id="result-test"></p>
-            <p class="t-results__summ-time">пройдено за 14:25м</p>
+                </ul>
+                <!-- пагинация -->
+            </div>
         </div>
 
-        <!-- start t-content__mistakes -->
-        <div class="t-mistakes">
-            <ul class="t-mistakes__list">
 
-                    <li class="t-mistakes__description"><span class="t-mistakes__numbers t-mistakes__numbers-wrong"><<%- id%>></span><%- title %>
-                        <p class="t-mistakes__explanation">Советуем почитать тут: <span class="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>
+        <div class="t-footer">
+            <!-- футер -->
+            <div class="t-control">
+                <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
+                <span class="t-control__word">Вернуться к теории</span>
+            </div>
+            <!-- вернуться к теории -->
+            <button class="button-big t-btn__finish" id="end_test">Завершить тест!</button>
+        </div>
+
+    </script>
+
+
+
+    <script type="text/template" id="tests-result">
+        <div class="t-header">
+
+            <!-- start t-title -->
+            <div class="t-title">
+                <h1 class="t-title__subtitle">Тесты: результат</h1>
+                <h2 class="t-title__number">Тема 2</h2>
+            </div>
+            <div class="t-theme">
+                <h2 class="t-theme__name t-theme__results">[ XXXXXX _ ]</h2>
+            </div>
+            <div class="t-timer">
+                <p class="t-timer__time">14:09</p>
+                <img class="t-timer__clock" src="img/clock.png" alt="clock-img">
+            </div>
+            <!-- end t-title -->
+        </div>
+
+        <!-- start t-content -->
+        <div class="t-content t-content--margin">
+            <div class="t-results">
+                <p class="t-results__marks" id="result-test"></p>
+                <p class="t-results__summ-time">пройдено за 14:25м</p>
+            </div>
+
+            <!-- start t-content__mistakes -->
+            <div class="t-mistakes">
+                <ul class="t-mistakes__list">
+
+                    <li class="t-mistakes__description">
+                        <span class="t-mistakes__numbers t-mistakes__numbers-wrong">
+                            <<%- id%>></span>
+                        <%- title %>
+                            <p class="t-mistakes__explanation">Советуем почитать тут:
+                                <span class="t-mistakes__link">[
+                                    <a href="#">ссылка</a>]</span>
+                            </p>
                     </li>
 
-            </ul>
-        </div> <!-- end t-content__mistakes -->
+                </ul>
+            </div>
+            <!-- end t-content__mistakes -->
 
-        <!-- start t-btn -->
+            <!-- start t-btn -->
 
-        <button class="button-big">Пройти ещё раз</button>
-    </div> <!-- end t-content -->
-
-    <!-- start t-footer -->
-    <div class="t-footer">
-        <div class="t-control">
-            <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
-            <span class="t-control__word">Вернутся к теории</span>
+            <button class="button-big">Пройти ещё раз</button>
         </div>
-        <div class="t-control">
-            <span class="t-control__word">Дальше к ДЗ</span>
-            <img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
+        <!-- end t-content -->
+
+        <!-- start t-footer -->
+        <div class="t-footer">
+            <div class="t-control">
+                <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
+                <span class="t-control__word">Вернутся к теории</span>
+            </div>
+            <div class="t-control">
+                <span class="t-control__word">Дальше к ДЗ</span>
+                <img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
+            </div>
         </div>
-    </div> <!-- end t-footer -->
-</script>
+        <!-- end t-footer -->
+    </script>
+</div>

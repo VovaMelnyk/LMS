@@ -1,0 +1,14 @@
+.m-bottomBtnBox {
+	padding-top:20px;
+	display: flex;
+	justify-content: space-around;
+}
+.m-bottomBtn {
+	border: 3px solid white;
+	padding: 8px;
+
+	&:first-child {
+		margin-right: 6%;
+		margin-left:0;
+	}
+}

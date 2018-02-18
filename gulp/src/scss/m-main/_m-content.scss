@@ -1,0 +1,64 @@
+// .wrapper_theory{
+//   transform: scaleX(0.1);
+//   opacity: 0.5;
+//   // padding: 32px;
+//   transition: .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+// }
+
+.m-content {
+    padding-top: 20px;
+    padding-right: 10px;
+    font-family: $text-font;
+    font-size: rem(14);
+    word-wrap: break-word;
+    &__text {
+        display: block;
+        margin-bottom: 16px;
+    }
+}
+
+.m-btn-up {
+    position: fixed;
+    right: 24px;
+    bottom: 32px;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: $orange;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.5s;
+    &::after {
+        display: block;
+        content: '';
+        height: 100%;
+        background: white;
+        clip-path: polygon(15% 70%, 50% 15%, 85% 70%);
+    }
+    &:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+.invisible{
+    display: none;
+}
+.m-content__content-title{
+    background-color: $cyan;
+    width: 100%;
+    text-align: center;
+    margin: 0 0px 16px 0px;
+    border-radius: 40px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 0 10px -3px #046b79;
+    font-weight: bold;
+}
+
+// .wrapper_theory { // only for specEfects
+//     transform: scaleX(0.1);
+//     opacity: 0.5;
+//     // padding: 32px;
+//     transition: .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+//   }

@@ -3,7 +3,9 @@
   "version": "1.1.0",
   "description": "LMS",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel-preset-env": "^1.5.2",
@@ -21,6 +23,10 @@
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.0.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.17.1",
+    "json-server": "^0.12.1",
+    "moment": "^2.20.1"
+  },
   "author": ""
 }
