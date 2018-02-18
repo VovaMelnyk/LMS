@@ -27,7 +27,8 @@ let TheoryRender = (themNum, effect) => {
                 <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
                   <p class="m-content__text">${elem.contentText}</p>`;
             });
-
+            opac();
+            setTimeout(() => {
             mainTheory.innerHTML = `
         <div class="wrapper_theory">
             <div id="m-title" class="m-header">
@@ -96,6 +97,8 @@ let TheoryRender = (themNum, effect) => {
             <!-- LEFT CONTENT STARTS -->
             <div class="m-left-nav" id="m-left-nav">${navCard}</div>
         </div>`;
+  }, 200);
+
             //setTimeout (opac, 50);
         })
 
@@ -103,12 +106,6 @@ let TheoryRender = (themNum, effect) => {
 
 setTimeout(mScrollingSidebars, 500);
 setTimeout(mStickyHeader, 1000);
-};
-
-function opac() { // only for specEfects
-    mainTheory.style.overflow = "hidden";
-    mainTheory.firstElementChild.style.opacity = "1";
-    mainTheory.firstElementChild.style.transform = "scaleX(1)";
 };
 
 btnTheoryRender.forEach((element, idx) => {

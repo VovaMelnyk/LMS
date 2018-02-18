@@ -151,7 +151,7 @@ var opac = () => {
 
     setTimeout(() => {
             mainDiv.firstElementChild.style.opacity = "1";
-            mainDiv.firstElementChild.style.transform = "scaleX(1)";
+            mainDiv.firstElementChild.style.transform = "unset";
         },
         250
     );
