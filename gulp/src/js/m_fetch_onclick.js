@@ -27,8 +27,8 @@ let TheoryRender = (themNum, effect) => {
                 <h4 class="m-content__content-title" id="cnt${idx}">[ ${elem.contentTitle} _] </h4>
                   <p class="m-content__text">${elem.contentText}</p>`;
             });
-            opac();
-            setTimeout(() => {
+            // opac();
+            // setTimeout(() => {
             mainTheory.innerHTML = `
         <div class="wrapper_theory">
             <div id="m-title" class="m-header">
@@ -97,7 +97,7 @@ let TheoryRender = (themNum, effect) => {
             <!-- LEFT CONTENT STARTS -->
             <div class="m-left-nav" id="m-left-nav">${navCard}</div>
         </div>`;
-  }, 200);
+  // }, 200);
 
             //setTimeout (opac, 50);
         })
