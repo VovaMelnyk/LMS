@@ -30,7 +30,7 @@ function slider() {
 
     axios('http://localhost:3004/users').then(
         function (data) {
-         newm = data;  
+         newm = data;
 console.log(newm);
 
            for(var i=0; i<data.data.length; i++){
@@ -90,6 +90,8 @@ goToProfile.addEventListener('click', () => {
     // window.location = 'http://localhost:3000/index.html';
     document.querySelector('.main-board').style.display = "none";
     main.style.display = "block";
+    opac()
+    setTimeout(() => {
     main.innerHTML = profile1;
     document.querySelector('#profile_photo').setAttribute('src', 'img/users/' + img);
     document.querySelector('#user-name').innerHTML = name + ' ' + lastName + '&#8194;';
@@ -98,6 +100,7 @@ goToProfile.addEventListener('click', () => {
     document.querySelector('#user-google').setAttribute('href', google);
     document.querySelector('#user-linkedin').setAttribute('href', linkedin);
     slider();
+    }, 200);
 });
 
 

@@ -3,6 +3,9 @@ let main = document.querySelector('.main');
 let calendarButton = document.querySelector('.c-header__icon-calendar');
 
 calendarButton.addEventListener('click', function () {
+  opac();
+  setTimeout(() => {
+
     main.innerHTML = `
     <div class="c-calendar">
         <div class="c-calendar__header">
@@ -91,6 +94,7 @@ calendarButton.addEventListener('click', function () {
     </div>
     `;
     showCalendar();
+    }, 200);
 });
 
 function showCalendar() {
