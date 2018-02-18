@@ -5,10 +5,19 @@
 const btnTests = document.querySelector("li[data='tests']");
 
 let testRender = () => {
-  document.querySelector('.main-board').style.display = "none";
-  let main = document.querySelector('.main');
-  main.style.display = "block";
-  main.innerHTML = testsRender;
+    document.querySelector('.main-board').style.display = "none";
+    let main = document.querySelector('.main');
+    main.style.display = "block";
+    main.innerHTML = testsRender;
+    let returnTheory = document.querySelector('#returnToTheory');
+    returnTheory.addEventListener('click', function (){
+        TheoryRender(themeNum - 1);
+    });
+    // let goToHW = document.querySelector('#goHW');
+    // goToHW.addEventListener('click', function(){
+    //     fetch2(themeNum - 1, url1);
+    // });
+    
 
 ///////////////////Globals/////////////////////////
 const url42 = `http://localhost:3000/tests`;
@@ -252,7 +261,7 @@ let testsRender = `
         </div>
 
         <div class="t-footer">
-            <div class="t-control">
+            <div class="t-control" id="returnToTheory">
                 <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
                 <span class="t-control__word">Вернуться к теории</span>
             </div>
@@ -414,11 +423,12 @@ let testsRender = `
                 <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
                 <span class="t-control__word">Вернутся к теории</span>
             </div>
-            <div class="t-control">
-                <span class="t-control__word">Дальше к ДЗ</span>
+            <div class="t-control" id="goHW">
+                <span class="t-control__word" >Дальше к ДЗ</span>
                 <img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
             </div>
         </div>
         <!-- end t-footer -->
     </script>
 </div>`
+
