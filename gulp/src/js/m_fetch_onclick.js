@@ -2,6 +2,10 @@ const btnTheoryRender = document.querySelectorAll("li[data='theory']");
 const mainTheory = document.querySelector(".main");
 
 let TheoryRender = (themNum, effect) => {
+    // let testRenderer = () => {
+    //     //const btnTest = document.querySelector('.m-btn-test');
+    //         setTimeout(() => testRender,1000);
+    // }
 
     fetch("http://localhost:3000/course")
         .then(response => {
@@ -48,7 +52,7 @@ let TheoryRender = (themNum, effect) => {
                         <div class="m-timer__img icon" id="m-timer__img"></div>
                     </div>
                     <div>
-                        <a class="m-btn-test button-small">к тестам!</a>
+                        <a href = "javascript:testRender()" class="m-btn-test button-small">к тестам!</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +110,9 @@ let TheoryRender = (themNum, effect) => {
 
 setTimeout(mScrollingSidebars, 500);
 setTimeout(mStickyHeader, 1000);
+
 };
+
 
 btnTheoryRender.forEach((element, idx) => {
     element.addEventListener('click', () => {
