@@ -30,36 +30,36 @@ function slider() {
 
     axios('http://localhost:3004/users').then(
         function (data) {
-         newm = data;
+         newm = data;  
 console.log(newm);
 
            for(var i=0; i<data.data.length; i++){
               if(data.data[i].group == "FrontEnd_1"){
                  slides.push(`
-                     <div class="slider-item">
+                     <div class="p-slider-item">
                      <p class="p-item-img"><img src="img/users/${data.data[i].img}" alt=""></p>
-                     <p class="item-name">${data.data[i].name} ${data.data[i].lastName}</p>
-                     <p class="item-score">${data.data[i].grade}</p>
+                     <p class="p-item-name">${data.data[i].name} ${data.data[i].lastName}</p>
+                     <p class="p-item-score">${data.data[i].grade}</p>
                      </div>`);
                  counter++;
              }
          }
 
  localStorage.setItem('lms_name', data.data[0].name);
-localStorage.setItem('lms_lastName', data.data[0].lastName);
-localStorage.setItem('lms_email', data.data[0].email);
-localStorage.setItem('lms_img', data.data[0].img);
-localStorage.setItem('lms_pass', data.data[0].pass);
-localStorage.setItem('lms_group', data.data[0].group);
-localStorage.setItem('lms_facebook', data.data[0].facebook);
-localStorage.setItem('lms_google', data.data[0].google);
-localStorage.setItem('lms_linkedin', data.data[0].linkedin);
-localStorage.setItem('lms_profile', data.data[0].public);
+                    localStorage.setItem('lms_lastName', data.data[0].lastName);
+                    localStorage.setItem('lms_email', data.data[0].email);
+                    localStorage.setItem('lms_img', data.data[0].img);
+                    localStorage.setItem('lms_pass', data.data[0].pass);
+                    localStorage.setItem('lms_group', data.data[0].group);
+                    localStorage.setItem('lms_facebook', data.data[0].facebook);
+                    localStorage.setItem('lms_google', data.data[0].google);
+                    localStorage.setItem('lms_linkedin', data.data[0].linkedin);
+                    localStorage.setItem('lms_profile', data.data[0].public);
 
 
-         document.querySelector('.slider-stripe').innerHTML = slides.join('');
-         document.querySelector('.arrowLeft').addEventListener('click', left);
-         document.querySelector('.arrowRight').addEventListener('click', right);
+         document.querySelector('.p-slider-stripe').innerHTML = slides.join('');
+         document.querySelector('.p-arrowLeft').addEventListener('click', left);
+         document.querySelector('.p-arrowRight').addEventListener('click', right);
 
          function left() {
 
@@ -68,7 +68,7 @@ localStorage.setItem('lms_profile', data.data[0].public);
             if (margin < -150 * (counter -5 )) {
                 margin = 0
             }
-            document.querySelector('.slider-stripe').style.marginLeft = margin + 'px';
+            document.querySelector('.p-slider-stripe').style.marginLeft = margin + 'px';
         }
 
         function right() {
@@ -78,7 +78,7 @@ localStorage.setItem('lms_profile', data.data[0].public);
                 margin = -150 * (counter -5 );
             }
 
-            document.querySelector('.slider-stripe').style.marginLeft = margin + 'px';
+            document.querySelector('.p-slider-stripe').style.marginLeft = margin + 'px';
         }
     });
 }
@@ -155,19 +155,19 @@ var profile1 = `
             </div>
         </div>
     </div>
-    <div class="slider-wrap">
-        <div class="profile-slider">
-            <p class="slider-title">[ Група FE#1_]</p>
-            <div class="slider-stripe">
-                <div class="slider-item">
+    <div class="p-slider-wrap">
+        <div class="p-profile-slider">
+            <p class="p-slider-title">[ Група FE#1_]</p>
+            <div class="p-slider-stripe">
+                <div class="p-slider-item">
                     <div class="p-item-img" style="background-image: url(img/users/johnbush.jpg)"></div>
-                    <p class="item-name">Blabla BlaBlovich</p>
-                    <p class="item-score">333</p>
+                    <p class="p-item-name">Blabla BlaBlovich</p>
+                    <p class="p-item-score">333</p>
                 </div>
             </div>
         </div>
-        <img class="arrowLeft arrow" src="img/left_arrow.gif" alt="">
-        <img class="arrowRight arrow" src="img/right_arrow.gif" alt="">
+        <img class="p-arrowLeft p-arrow" src="img/left_arrow.gif" alt="">
+        <img class="p-arrowRight p-arrow" src="img/right_arrow.gif" alt="">
     </div>
 </div>
 `
