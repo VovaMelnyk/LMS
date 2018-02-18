@@ -3,7 +3,8 @@
 // Прописать алгоритм: СТУДЕНТ открывает тест, сервер отдает ему данные, и студент видит тест.
 // При клике студента на ЗАВЕРШИТЬ ТЕСТ система подсчитывает кол-во правильных ответов и выдает баллы.
 const btnTests = document.querySelector("li[data='tests']");
-btnTests.addEventListener('click', function(){
+
+let testRender = () => {
   document.querySelector('.main-board').style.display = "none";
   let main = document.querySelector('.main');
   main.style.display = "block";
@@ -220,7 +221,8 @@ function fineRatio() {
     })
   }
   }
-});
+};
+btnTests.addEventListener('click', testRender);
 let testsRender = `
 <div class="t-main-tests">
     <div id="begin_test">
