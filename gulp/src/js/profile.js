@@ -30,7 +30,7 @@ function slider() {
 
     axios('http://localhost:3004/users').then(
         function (data) {
-         newm = data;  
+         newm = data;
 console.log(newm);
 
            for(var i=0; i<data.data.length; i++){
@@ -46,15 +46,15 @@ console.log(newm);
          }
 
  localStorage.setItem('lms_name', data.data[0].name);
-                    localStorage.setItem('lms_lastName', data.data[0].lastName);
-                    localStorage.setItem('lms_email', data.data[0].email);
-                    localStorage.setItem('lms_img', data.data[0].img);
-                    localStorage.setItem('lms_pass', data.data[0].pass);
-                    localStorage.setItem('lms_group', data.data[0].group);
-                    localStorage.setItem('lms_facebook', data.data[0].facebook);
-                    localStorage.setItem('lms_google', data.data[0].google);
-                    localStorage.setItem('lms_linkedin', data.data[0].linkedin);
-                    localStorage.setItem('lms_profile', data.data[0].public);
+localStorage.setItem('lms_lastName', data.data[0].lastName);
+localStorage.setItem('lms_email', data.data[0].email);
+localStorage.setItem('lms_img', data.data[0].img);
+localStorage.setItem('lms_pass', data.data[0].pass);
+localStorage.setItem('lms_group', data.data[0].group);
+localStorage.setItem('lms_facebook', data.data[0].facebook);
+localStorage.setItem('lms_google', data.data[0].google);
+localStorage.setItem('lms_linkedin', data.data[0].linkedin);
+localStorage.setItem('lms_profile', data.data[0].public);
 
 
          document.querySelector('.slider-stripe').innerHTML = slides.join('');
