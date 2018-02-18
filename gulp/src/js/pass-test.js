@@ -69,6 +69,7 @@ function getTestJson(c) { // Получаем данные с сервера и 
       fineRatio();
 
       getLenghtTests(url);
+      
 
 
 
@@ -179,6 +180,8 @@ function getLenghtTests(c) {
     .then(response => {
       if (response.ok) return response.json();
       throw new Error("Error");
+
+
       return data;
 
 
