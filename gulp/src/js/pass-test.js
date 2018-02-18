@@ -69,7 +69,7 @@ function getTestJson(c) { // Получаем данные с сервера и 
       fineRatio();
 
       getLenghtTests(url);
-      
+
 
 
 
@@ -196,6 +196,7 @@ function getLenghtTests(c) {
           li.innerHTML = z + 1;
           pages.append(li);
           li.classList = "t-navigation__number";
+          li.style.cursor = "pointer";
           if (localStorage.getItem(li.innerHTML)) {
             li.classList.add("t-navigation__number--blue");
           }
