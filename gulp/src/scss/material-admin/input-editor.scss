@@ -1,0 +1,62 @@
+.input-editor {
+    position: relative;
+    display: inline-block;
+    margin-top: 16px;
+    width: max-content;
+    max-width: 100%;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:hover > &__instruments {
+        display: block;
+    }
+    &__item {
+        border: none;
+        box-sizing: border-box;
+        background: inherit;
+        width: max-content;
+        max-width: 100%;
+        & textarea {
+            min-width: 300px;
+            min-height: 40px;
+        }
+    }
+    &__instruments {
+        position: absolute;
+        display: none;
+        right: -48px;
+        height: 100%;
+        top: 0;
+
+    }
+    &__edit {
+        display: inline-block;
+        height: 100%;
+        width: 15px;
+        margin-left: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__delete {
+        display: inline-block;
+        height: 100%;
+        margin-left: 10px;
+        width: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__save {
+        display: inline-block;
+        height: 100%;
+        margin-left: 10px;
+        width: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.m-cont-name{
+    padding-right: 40px;
+}

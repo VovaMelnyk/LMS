@@ -8,22 +8,25 @@
     background: $dark-bg;
 
     &__elem {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 70px;
+        height: 48px;
         font-family: Arial, sans-serif;
         font-size: 30px;
         font-weight: 900;
         letter-spacing: 4px;
 
         &-white {
-            justify-content: flex-start;
-            padding-left: 12px;
+            display: flex;
+            justify-content: flex-end;
             background: $white;
 
             &::after {
-                display: block;
+                position: absolute;
+                top: 0;
                 width: 0;
                 height: 0;
                 border-top: 24px solid transparent;
@@ -32,7 +35,6 @@
                 content: "";
             }
         }
-
         &-orange {
             background: $orange;
         }

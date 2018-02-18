@@ -1,0 +1,146 @@
+<!-- <div class="posts">
+</div> -->
+<script type="text/template" id="post-template">
+    <div class="post">
+        <div class="user post__user">
+            <a href="#" class="ava user__ava">
+                <div class="ava__circle"></div>
+                <div class="ava__semicircle"></div>
+                <div class="ava__tooltip"></div>
+            </a>
+            <h4 class="user__name">
+                    <%- userName %>
+                </h4>
+            <h4 class="user__role">
+                    <%- userRole %>
+                </h4>
+            <h4 class="user__to-chat">Перейти<br>к чату >></h4>
+        </div>
+        <div class="contents post__contents">
+            <div class="contents__header">
+                <h3 class="post-title contents__post-title">
+                    <%- title %>
+                    </h3>
+                <div class="control contents__control">
+                    <div class="edit control__edit">
+                        <img class="edit" src="/img/pen.png" alt="">
+                    </div>
+                    <div class="delete control__delete">&#10005;</div>
+                </div>
+            </div>
+            <div class="date-stamp contents__date-stamp">
+                <div class="date-stamp__date">
+                    <%- date %>
+                </div>
+                <div class="date-stamp__time">
+                    <%- time %>
+                </div>
+            </div>
+            <p class="contents__text">
+                <%- message %>
+            </p>
+            <div class="counter contents__counter">
+                <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon"><span class="counter__likes">
+                    <%- likes %>
+                </span><span> likes</span>
+                <img class="icon counter__icon icon--comment" src="/img/comments-full.png" alt="comment icon"><span class="counter__comments">
+                </span><span> comments</span>
+                <div class="make-correction">Отредактировано:
+                    <%- changeDate %> в
+                        <%- changeTime %>
+                            пользователем
+                            <%- changeAutor %>
+                </div>
+            </div>
+            <div class="comments" onclick="event.stopPropagation()"></div>
+            <div class="pointer post__pointer">
+                <div class="pointer__arrow pointer--down"></div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="comment-template">
+    <!-- Комментарии к посту -->
+    <div class="comment contents__comment">
+        <div class="user comment__user">
+            <a href="#" class="ava user__ava">
+                <div class="ava__circle"></div>
+                <div class="ava__semicircle"></div>
+                <div class="ava__tooltip"></div>
+            </a>
+            <h4 class="user__name">
+                <%- userName %>
+            </h4>
+            <h4 class="user__role">
+                <%- userRole %>
+            </h4>
+        </div>
+        <div class="contents comment__contents">
+            <div class="contents__header">
+                <div class="date-stamp contents__date-stamp">
+                    <div class="date-stamp__date">
+                        <%- date %>
+                    </div>
+                    <div class="date-stamp__time">
+                        <%- time %>
+                    </div>
+                </div>
+                <div class="control contents__control">
+                    <div class="edit control__edit">
+                        <img class="edit" src="/img/pen.png" alt="">
+                    </div>
+                    <div class="delete control__delete">&#10005;</div>
+                </div>
+            </div>
+            <p class="contents__text">
+                <%- message %>
+            </p>
+            <div class="counter contents__counter">
+                <img class="icon counter__icon icon--like" src="/img/like.png" alt="like icon">
+                <span class="counter__likes">
+                    <%- likes %>
+                </span><span> likes</span>
+                <div class="make-correction">Отредактировано:
+                    <%- changeDate %> в
+                        <%- changeTime %>
+                            пользователем
+                            <%- changeAutor %>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="new-comment-template">
+    <!-- Новые комментарии -->
+    <div class="new-comment contents__new-comment">
+        <div class="new-comment">
+            <form class="area new-comment__area" action="#" method="post">
+                <!-- <label class="new-comment__name"> -->
+                <div class="new-comment__emoji" aria-hidden="true"></div>
+                <div class="new-comment__upload" aria-hidden="true"></div>
+                <textarea class="new-comment__title" name="new-comment" value="" placeholder="Написать комментарий"></textarea>
+                <button class="btn-post new-comment__btn-post" type="button" name="sub" value="sent">Отправить</button>
+            </form>
+        </div>
+        <a href="#" class="ava user__ava">
+            <div class="ava__circle"></div>
+            <div class="ava__semicircle"></div>
+            <div class="ava__tooltip"></div>
+        </a>
+    </div>
+</script>
+<script type="text/template" id="correction-template">
+    <!-- редактирование -->
+    <div class="new-comment contents__new-comment">
+        <div class="new-comment">
+            <form class="area new-comment__area" action="#" method="post">
+                <!-- <label class="new-comment__name"> -->
+                <textarea class="new-comment__title" name="new-comment" value=""></textarea>
+                <div class="new-comment__buttons-field">
+                    <button class="btn" id="change" type="button" name="sub" value="sent">Изменить</button>
+                    <button class="btn" id="cancel" type="button" name="sub" value="sent">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>

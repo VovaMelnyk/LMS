@@ -1,25 +1,140 @@
 .c-header__photo-profile {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+
+    &_photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        background-color: $white;
+        border-radius: 50%;
+
+        &-circle {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 2px;
+            background-color: $grey-bg;
+            border-radius: 50%;
+        }
+
+        &-semicircle {
+            width: 32px;
+            height: 16px;
+            background-color: $grey-bg;
+            border-radius: 48px 48px 0 0;
+        }
+    }
+}
+.c-header__profile-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    background-color: $white;
-    border-radius: 50%;
 
-    &-circle {
-        width: 16px;
-        height: 16px;
-        margin-bottom: 2px;
-        background-color: $grey-bg;
-        border-radius: 50%;
+    &_my-profile, &_sign-out {
+        padding-right: 16px;
+        font-family: $text-font;
+        text-align: right;
+        color: $cyan;
+        cursor: pointer;
     }
+}
+.c-header__form-profile {
+        position: absolute;
+        top: 0;
+        z-index: 999;
+        min-width: 280px;
+        background-color: $white;
+        border-radius: 8px;
 
-    &-semicircle {
-        width: 32px;
-        height: 16px;
-        background-color: $grey-bg;
-        border-radius: 48px 48px 0 0;
-    }
+        &_hidden {
+            display: none;
+        }
+        &_close {
+            position: absolute;
+            right: 24px;
+            top: 16px;
+            width: 16px;
+            height: 16px;
+            opacity: 0.2;
+            cursor: pointer;
+        }
+        &_close:hover {
+            opacity: 1;
+        }
+        &_close:before, &_close:after {
+            content:'';
+            position: absolute;
+            left: 16px;
+            height: 16px;
+            width: 2px;
+            background-color: #000;
+            transform: rotate(45deg);
+        }
+        &_close:after {
+            transform: rotate(-45deg);
+        }
+
+        &_photo {
+            display: flex;
+            flex-direction: column;
+            //justify-content: ;
+            align-items: center;
+            height: 136px;
+            padding: 16px;
+            padding-bottom: 8px;
+            font-family: $text-font;
+            color: $dark-text;
+
+            &-student {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                box-shadow: 2px 2px 2px $grey-bg;
+            }
+            &-name {
+                font-weight: bold;
+            }
+            &-email {
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+
+        &_button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            padding-top: 8px;
+
+            &-sign-in, &-my-profile {
+                padding: 6px 16px;
+                font-family: $title-font;
+                font-size: 16px;
+                letter-spacing: 2.24px;
+                text-transform: uppercase;
+                color: $white;
+                background-color: $grey-pholder;
+                border: none;
+                border-radius: 8px;
+                opacity: 0.7;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &-sign-in {
+                padding: 6px 30px;
+            }
+            &-my-profile {
+                background-color: $orange;
+            }
+        }
 }
