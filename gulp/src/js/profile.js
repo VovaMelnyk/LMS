@@ -45,16 +45,16 @@ console.log(newm);
              }
          }
 
- localStorage.setItem('lms_name', data.data[0].name);
-                    localStorage.setItem('lms_lastName', data.data[0].lastName);
-                    localStorage.setItem('lms_email', data.data[0].email);
-                    localStorage.setItem('lms_img', data.data[0].img);
-                    localStorage.setItem('lms_pass', data.data[0].pass);
-                    localStorage.setItem('lms_group', data.data[0].group);
-                    localStorage.setItem('lms_facebook', data.data[0].facebook);
-                    localStorage.setItem('lms_google', data.data[0].google);
-                    localStorage.setItem('lms_linkedin', data.data[0].linkedin);
-                    localStorage.setItem('lms_profile', data.data[0].public);
+ localStorage.setItem('lms_name', data.data[4].name);
+                    localStorage.setItem('lms_lastName', data.data[4].lastName);
+                    localStorage.setItem('lms_email', data.data[4].email);
+                    localStorage.setItem('lms_img', data.data[4].img);
+                    localStorage.setItem('lms_pass', data.data[4].pass);
+                    localStorage.setItem('lms_group', data.data[4].group);
+                    localStorage.setItem('lms_facebook', data.data[4].facebook);
+                    localStorage.setItem('lms_google', data.data[4].google);
+                    localStorage.setItem('lms_linkedin', data.data[4].linkedin);
+                    localStorage.setItem('lms_profile', data.data[4].public);
 
 
          document.querySelector('.p-slider-stripe').innerHTML = slides.join('');
@@ -163,7 +163,7 @@ var profile1 = `
             <p class="p-slider-title">[ Група FE#1_]</p>
             <div class="p-slider-stripe">
                 <div class="p-slider-item">
-                    <div class="p-item-img" style="background-image: url(img/users/johnbush.jpg)"></div>
+                    <div class="p-item-img" style="background-image: url(img/users/franklinbush.jpg)"></div>
                     <p class="p-item-name">Blabla BlaBlovich</p>
                     <p class="p-item-score">333</p>
                 </div>

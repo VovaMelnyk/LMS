@@ -13,10 +13,7 @@ let testRender = () => {
     returnTheory.addEventListener('click', function (){
         TheoryRender(themeNum - 1);
     });
-    // let goToHW = document.querySelector('#goHW');
-    // goToHW.addEventListener('click', function(){
-    //     fetch2(themeNum - 1, url1);
-    // });
+    
     
 
 ///////////////////Globals/////////////////////////
@@ -148,7 +145,10 @@ const resultTest = (templateData) => {
       }
     }
   });
-
+    let goToHW = document.querySelector('.goHW');
+    goToHW.addEventListener('click', function(){
+        fetch2(themeNum - 1, url1);
+    });
   result = Math.floor((rightAnswer / 1) * 10); // если вопросов много, тогда вместо единицы подставляем кол-во вопросов т.е. длинну массива
   resultTest.innerHTML = `${result}/10 баллов`;
 };
@@ -160,7 +160,7 @@ function checkratio(data) {
       let next = check[i].nextSibling;
       next = next.previousSibling.defaultValue;
       localStorage.setItem(data.id, next);
-      console.log("Id of page " + data.id)
+      console.log("Id of page " + data.id);
       let page = document.getElementsByClassName('t-navigation__number');
 
     }
@@ -423,7 +423,7 @@ let testsRender = `
                 <img class="t-control__arrow" src="img/left_arrow.gif" alt="left_arrow">
                 <span class="t-control__word">Вернутся к теории</span>
             </div>
-            <div class="t-control" id="goHW">
+            <div class="t-control goHW">
                 <span class="t-control__word" >Дальше к ДЗ</span>
                 <img class="t-control__arrow" src="img/right_arrow.gif" alt="right_arrow">
             </div>
